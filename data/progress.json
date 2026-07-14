@@ -1,15 +1,15 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-15T01:41:24.137670+08:00",
+  "updated_at": "2026-07-15T01:46:20.646274+08:00",
   "refresh_seconds": 15,
   "total_studies": 3943,
-  "segmentation_complete": 3363,
+  "segmentation_complete": 3374,
   "reports_complete": 0,
   "errors": 0,
   "report_rate_per_hour": 0.0,
-  "segmentation_rate_per_hour": 103.46,
+  "segmentation_rate_per_hour": 111.5,
   "report_eta_hours": null,
-  "segmentation_eta_hours": 5.61,
+  "segmentation_eta_hours": 5.1,
   "stalled_advisory": false,
   "processes": {
     "kunming_segmentation_workers": 3,
@@ -20,13 +20,13 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 25980,
-      "utilization_pct": 48
+      "memory_mib": 28240,
+      "utilization_pct": 98
     },
     {
       "gpu": 1,
       "memory_mib": 40262,
-      "utilization_pct": 47
+      "utilization_pct": 64
     },
     {
       "gpu": 2,
@@ -36,49 +36,49 @@
     {
       "gpu": 3,
       "memory_mib": 9600,
-      "utilization_pct": 25
+      "utilization_pct": 0
     },
     {
       "gpu": 4,
       "memory_mib": 9518,
-      "utilization_pct": 35
+      "utilization_pct": 0
     },
     {
       "gpu": 5,
       "memory_mib": 9518,
-      "utilization_pct": 0
+      "utilization_pct": 23
     },
     {
       "gpu": 6,
-      "memory_mib": 9550,
-      "utilization_pct": 88
+      "memory_mib": 9518,
+      "utilization_pct": 55
     },
     {
       "gpu": 7,
       "memory_mib": 9518,
-      "utilization_pct": 0
+      "utilization_pct": 23
     }
   ],
   "centers": [
     {
       "center": "UKB",
       "total": 1000,
-      "segmentation_complete": 758,
+      "segmentation_complete": 767,
       "cache_4ch": 1000,
-      "cache_sax": 758,
+      "cache_sax": 767,
       "reports": 0,
       "errors": 0,
-      "segmentation_partial": 242
+      "segmentation_partial": 233
     },
     {
       "center": "Kunming",
       "total": 2011,
-      "segmentation_complete": 1847,
-      "cache_4ch": 1848,
-      "cache_sax": 1847,
+      "segmentation_complete": 1849,
+      "cache_4ch": 1850,
+      "cache_sax": 1849,
       "reports": 0,
       "errors": 0,
-      "pending": 163,
+      "pending": 161,
       "segmentation_partial": 1
     },
     {
@@ -16369,9 +16369,9 @@
     {
       "study_uid": "KUNS-830ec97e7b305999",
       "center": "Kunming",
-      "stage": "pending",
-      "seg_4ch": "pending",
-      "seg_sax": "pending",
+      "stage": "segmentation_complete",
+      "seg_4ch": "complete",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -16941,9 +16941,9 @@
     {
       "study_uid": "KUNS-8a59144a7b394c92",
       "center": "Kunming",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -20846,8 +20846,8 @@
     {
       "study_uid": "KUNS-b7a241a2b9b879a4",
       "center": "Kunming",
-      "stage": "pending",
-      "seg_4ch": "pending",
+      "stage": "segmentation_partial",
+      "seg_4ch": "complete",
       "seg_sax": "pending",
       "precompute": "pending",
       "llm": "pending",
@@ -33023,9 +33023,9 @@
     {
       "study_uid": "UKBS-0a98765bb482a8e7",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -35234,9 +35234,9 @@
     {
       "study_uid": "UKBS-3d338792470e13fc",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -35751,9 +35751,9 @@
     {
       "study_uid": "UKBS-4abec07e28866a04",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -37379,9 +37379,9 @@
     {
       "study_uid": "UKBS-70ac495629ec5f1c",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -38292,9 +38292,9 @@
     {
       "study_uid": "UKBS-89a9ab884f65da6d",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -38710,9 +38710,9 @@
     {
       "study_uid": "UKBS-9494a614a5934248",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -41020,9 +41020,9 @@
     {
       "study_uid": "UKBS-cb22fdca51ae46ff",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -43000,9 +43000,9 @@
     {
       "study_uid": "UKBS-f4e415f82cf730d5",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -43429,9 +43429,9 @@
     {
       "study_uid": "UKBS-fe5a2a105658b559",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
