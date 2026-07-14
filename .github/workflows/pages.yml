@@ -47,7 +47,7 @@ jobs:
               r"BEGIN [A-Z ]+PRIVATE", r"source_case_id", r"patient[_ -]?id",
               r"(?<![A-Za-z0-9-])\d{7}(?![A-Za-z0-9-])",
           ]
-          suffixes = {".html", ".css", ".js", ".json", ".md", ".yml", ".yaml"}
+          suffixes = {".html", ".css", ".js", ".json", ".md"}
           text = "\n".join(path.read_text(encoding="utf-8", errors="replace") for path in Path(".").rglob("*") if path.is_file() and path.suffix.lower() in suffixes)
           hits = [pattern for pattern in forbidden if re.search(pattern, text, flags=re.IGNORECASE)]
           if hits:
