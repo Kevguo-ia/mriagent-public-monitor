@@ -1,0 +1,74 @@
+name: Deploy anonymous monitor
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate monitor and privacy boundary
+        run: |
+          node --check app.js
+          python3 - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          required = [Path("index.html"), Path("styles.css"), Path("app.js"), Path("data/progress.json")]
+          missing = [str(path) for path in required if not path.is_file()]
+          if missing:
+              raise SystemExit("Missing monitor files: " + ", ".join(missing))
+
+          payload = json.loads(Path("data/progress.json").read_text(encoding="utf-8"))
+          if payload.get("schema_version") != "monitor_safe_v1" or payload.get("total_studies") != 3943:
+              raise SystemExit("Unexpected safe monitor schema or cohort size")
+          allowed_case = {"study_uid", "center", "stage", "seg_4ch", "seg_sax", "precompute", "llm", "report", "error_class"}
+          for case in payload.get("cases", []):
+              if set(case) - allowed_case:
+                  raise SystemExit("Unexpected case-level field")
+              if not re.fullmatch(r"[A-Z]{3,4}S-[0-9a-f]{16}", str(case.get("study_uid", ""))):
+                  raise SystemExit("Non-anonymous study identifier")
+
+          forbidden = [
+              r"/work/", r"/home/", r"/Users/", r"Traceback", r"API[_ -]?KEY",
+              r"BEGIN [A-Z ]+PRIVATE", r"source_case_id", r"patient[_ -]?id",
+              r"(?<![A-Za-z0-9-])\d{7}(?![A-Za-z0-9-])",
+          ]
+          suffixes = {".html", ".css", ".js", ".json", ".md", ".yml", ".yaml"}
+          text = "\n".join(path.read_text(encoding="utf-8", errors="replace") for path in Path(".").rglob("*") if path.is_file() and path.suffix.lower() in suffixes)
+          hits = [pattern for pattern in forbidden if re.search(pattern, text, flags=re.IGNORECASE)]
+          if hits:
+              raise SystemExit("Privacy boundary check failed: " + ", ".join(hits))
+          print("Anonymous monitor validation passed")
+          PY
+
+  deploy:
+    needs: validate
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

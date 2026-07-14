@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="MRIAgent 3,943例多中心完整流程匿名实验进度">
+  <title>MRIAgent · 多中心实验进度</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="MRIAgent 实验进度首页">
+      <span class="brand-mark">M</span>
+      <span><b>MRIAgent</b><small>Experimental Operations</small></span>
+    </a>
+    <div class="live"><i aria-hidden="true"></i><span id="freshness">连接中</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span id="phase-badge" class="phase-badge">读取状态</span>
+        <h1>多中心完整 Agent 实验</h1>
+        <p>3,943个独立检查 · 4CH V3缓存强制 · 4CH/SAX直接读缓存 · 有LGE病例运行完整LGE流程</p>
+      </div>
+      <div class="hero-meta"><span>数据更新时间</span><strong id="updated-at">—</strong></div>
+    </section>
+
+    <section id="alert" class="alert hidden" role="status"></section>
+
+    <section class="overview panel">
+      <div class="overview-copy">
+        <small>CURRENT PHASE</small>
+        <div class="overview-title"><h2 id="phase-title">准备中</h2><strong id="phase-percent">0%</strong></div>
+        <div class="progress progress-large"><i id="phase-progress"></i></div>
+        <p id="phase-detail">正在读取实验状态。</p>
+      </div>
+      <ol class="pipeline" id="pipeline" aria-label="实验流水线">
+        <li data-step="cohort"><i>1</i><span>队列</span></li>
+        <li data-step="cache"><i>2</i><span>分割缓存</span></li>
+        <li data-step="qc"><i>3</i><span>缓存 QC</span></li>
+        <li data-step="smoke"><i>4</i><span>四中心 Smoke</span></li>
+        <li data-step="agent"><i>5</i><span>完整 Agent</span></li>
+        <li data-step="final"><i>6</i><span>最终 QC</span></li>
+      </ol>
+    </section>
+
+    <section class="cards" id="summary-cards" aria-label="核心指标"></section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><small>CENTRE PROGRESS</small><h2>各中心进度</h2><p>缓存完成率与报告完成率分开显示，避免Agent尚未开始时误显示全部0%。</p></div>
+      </div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>中心</th><th>检查数</th><th>4CH缓存</th><th>SAX缓存</th><th>缓存完成</th><th>报告</th><th>错误</th></tr></thead>
+        <tbody id="center-rows"></tbody>
+      </table></div>
+    </section>
+
+    <section class="split">
+      <article class="panel">
+        <div class="panel-head"><div><small>GPU STATUS</small><h2>计算资源</h2><p>利用率是采集瞬间值。DICOM转换、磁盘读写和等待推理时显示0%属于正常现象。</p></div></div>
+        <div id="gpu-grid" class="gpu-grid"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><div><small>WORKERS</small><h2>后台任务</h2><p>仅展示匿名聚合进程数，不提供远程控制。</p></div></div>
+        <div id="worker-list" class="worker-list"></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head cases-head">
+        <div><small>ANONYMOUS CASE STATUS</small><h2>匿名病例状态</h2><p id="case-caption">最多显示前1,000条，可按匿名ID检索。</p></div>
+        <label><span class="sr-only">搜索匿名 study_uid</span><input id="search" placeholder="搜索匿名 study_uid" autocomplete="off"></label>
+      </div>
+      <div class="table-wrap cases"><table>
+        <thead><tr><th>匿名ID</th><th>中心</th><th>4CH</th><th>SAX</th><th>预计算</th><th>LLM</th><th>报告</th><th>错误类别</th></tr></thead>
+        <tbody id="case-rows"></tbody>
+      </table></div>
+    </section>
+
+    <footer><span>仅含匿名ID、阶段状态、聚合数量与错误类别</span><span>V3-only · Read-only monitor</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
