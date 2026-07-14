@@ -1,15 +1,15 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-15T00:19:43.295264+08:00",
+  "updated_at": "2026-07-15T00:24:39.030023+08:00",
   "refresh_seconds": 15,
   "total_studies": 3943,
-  "segmentation_complete": 3189,
+  "segmentation_complete": 3202,
   "reports_complete": 0,
   "errors": 0,
   "report_rate_per_hour": 0.0,
-  "segmentation_rate_per_hour": 168.16,
+  "segmentation_rate_per_hour": 168.17,
   "report_eta_hours": null,
-  "segmentation_eta_hours": 4.48,
+  "segmentation_eta_hours": 4.41,
   "stalled_advisory": false,
   "processes": {
     "kunming_segmentation_workers": 11,
@@ -20,18 +20,18 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 22197,
-      "utilization_pct": 72
+      "memory_mib": 17663,
+      "utilization_pct": 0
     },
     {
       "gpu": 1,
-      "memory_mib": 40991,
+      "memory_mib": 32661,
       "utilization_pct": 0
     },
     {
       "gpu": 2,
       "memory_mib": 9600,
-      "utilization_pct": 0
+      "utilization_pct": 25
     },
     {
       "gpu": 3,
@@ -40,45 +40,45 @@
     },
     {
       "gpu": 4,
-      "memory_mib": 9518,
+      "memory_mib": 1188,
       "utilization_pct": 0
     },
     {
       "gpu": 5,
-      "memory_mib": 9538,
+      "memory_mib": 1188,
       "utilization_pct": 0
     },
     {
       "gpu": 6,
-      "memory_mib": 9558,
-      "utilization_pct": 87
+      "memory_mib": 9518,
+      "utilization_pct": 100
     },
     {
       "gpu": 7,
-      "memory_mib": 9550,
-      "utilization_pct": 0
+      "memory_mib": 9518,
+      "utilization_pct": 90
     }
   ],
   "centers": [
     {
       "center": "UKB",
       "total": 1000,
-      "segmentation_complete": 648,
+      "segmentation_complete": 655,
       "cache_4ch": 1000,
-      "cache_sax": 648,
+      "cache_sax": 655,
       "reports": 0,
       "errors": 0,
-      "segmentation_partial": 352
+      "segmentation_partial": 345
     },
     {
       "center": "Kunming",
       "total": 2011,
-      "segmentation_complete": 1783,
-      "cache_4ch": 1787,
-      "cache_sax": 1783,
+      "segmentation_complete": 1789,
+      "cache_4ch": 1793,
+      "cache_sax": 1789,
       "reports": 0,
       "errors": 0,
-      "pending": 224,
+      "pending": 218,
       "segmentation_partial": 4
     },
     {
@@ -6777,8 +6777,8 @@
     {
       "study_uid": "KUNS-17f83a2db6e6e98d",
       "center": "Kunming",
-      "stage": "pending",
-      "seg_4ch": "pending",
+      "stage": "segmentation_partial",
+      "seg_4ch": "complete",
       "seg_sax": "pending",
       "precompute": "pending",
       "llm": "pending",
@@ -13575,9 +13575,9 @@
     {
       "study_uid": "KUNS-651acefd9925c665",
       "center": "Kunming",
-      "stage": "pending",
-      "seg_4ch": "pending",
-      "seg_sax": "pending",
+      "stage": "segmentation_complete",
+      "seg_4ch": "complete",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -13641,9 +13641,9 @@
     {
       "study_uid": "KUNS-65c35eda153990fc",
       "center": "Kunming",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -17920,8 +17920,8 @@
     {
       "study_uid": "KUNS-9592536e0e7b89fc",
       "center": "Kunming",
-      "stage": "pending",
-      "seg_4ch": "pending",
+      "stage": "segmentation_partial",
+      "seg_4ch": "complete",
       "seg_sax": "pending",
       "precompute": "pending",
       "llm": "pending",
@@ -19526,8 +19526,8 @@
     {
       "study_uid": "KUNS-a7f98d9ce876b7c2",
       "center": "Kunming",
-      "stage": "pending",
-      "seg_4ch": "pending",
+      "stage": "segmentation_partial",
+      "seg_4ch": "complete",
       "seg_sax": "pending",
       "precompute": "pending",
       "llm": "pending",
@@ -21033,9 +21033,9 @@
     {
       "study_uid": "KUNS-baffe26daca3058b",
       "center": "Kunming",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -21231,8 +21231,8 @@
     {
       "study_uid": "KUNS-bdfd5be59d0ef326",
       "center": "Kunming",
-      "stage": "pending",
-      "seg_4ch": "pending",
+      "stage": "segmentation_partial",
+      "seg_4ch": "complete",
       "seg_sax": "pending",
       "precompute": "pending",
       "llm": "pending",
@@ -21363,9 +21363,9 @@
     {
       "study_uid": "KUNS-bef8c4f00df125b3",
       "center": "Kunming",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -23959,9 +23959,9 @@
     {
       "study_uid": "KUNS-dbcf4c66e8e179cd",
       "center": "Kunming",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -25961,9 +25961,9 @@
     {
       "study_uid": "KUNS-f4740bf309b79f39",
       "center": "Kunming",
-      "stage": "pending",
-      "seg_4ch": "pending",
-      "seg_sax": "pending",
+      "stage": "segmentation_complete",
+      "seg_4ch": "complete",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -32759,9 +32759,9 @@
     {
       "study_uid": "UKBS-03ee14c18ba685b3",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -36279,9 +36279,9 @@
     {
       "study_uid": "UKBS-589b939192dcb3a5",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -37313,9 +37313,9 @@
     {
       "study_uid": "UKBS-6f3d96642e7d17eb",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -37478,9 +37478,9 @@
     {
       "study_uid": "UKBS-74a1de9736c219d4",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -38226,9 +38226,9 @@
     {
       "study_uid": "UKBS-87ef02ec76c9bd44",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -40723,9 +40723,9 @@
     {
       "study_uid": "UKBS-c4fcde832c3e54aa",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -42241,9 +42241,9 @@
     {
       "study_uid": "UKBS-e550e045254972ed",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
