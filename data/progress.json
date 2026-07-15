@@ -1,14 +1,14 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-16T00:20:43.036305+08:00",
+  "updated_at": "2026-07-16T00:25:40.151144+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
   "reports_complete": 120,
   "errors": 7,
-  "report_rate_per_hour": 123.25,
+  "report_rate_per_hour": 94.96,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 30.72,
+  "report_eta_hours": 39.87,
   "segmentation_eta_hours": null,
   "stalled_advisory": true,
   "processes": {
@@ -20,13 +20,13 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 24373,
-      "utilization_pct": 39
+      "memory_mib": 28899,
+      "utilization_pct": 0
     },
     {
       "gpu": 1,
       "memory_mib": 9624,
-      "utilization_pct": 0
+      "utilization_pct": 9
     },
     {
       "gpu": 2,
@@ -41,11 +41,11 @@
     {
       "gpu": 4,
       "memory_mib": 9624,
-      "utilization_pct": 46
+      "utilization_pct": 0
     },
     {
       "gpu": 5,
-      "memory_mib": 1196,
+      "memory_mib": 9526,
       "utilization_pct": 0
     },
     {
@@ -56,7 +56,7 @@
     {
       "gpu": 7,
       "memory_mib": 9624,
-      "utilization_pct": 2
+      "utilization_pct": 0
     }
   ],
   "centers": [
