@@ -1,8 +1,8 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-15T18:23:06.174336+08:00",
+  "updated_at": "2026-07-15T18:33:00.769284+08:00",
   "refresh_seconds": 15,
-  "total_studies": 3924,
+  "total_studies": 3923,
   "segmentation_complete": 3923,
   "reports_complete": 0,
   "errors": 0,
@@ -20,18 +20,18 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 25980,
-      "utilization_pct": 41
+      "memory_mib": 25986,
+      "utilization_pct": 0
     },
     {
       "gpu": 1,
       "memory_mib": 8871,
-      "utilization_pct": 0
+      "utilization_pct": 28
     },
     {
       "gpu": 2,
       "memory_mib": 10176,
-      "utilization_pct": 23
+      "utilization_pct": 43
     },
     {
       "gpu": 3,
@@ -41,22 +41,22 @@
     {
       "gpu": 4,
       "memory_mib": 10846,
-      "utilization_pct": 94
+      "utilization_pct": 7
     },
     {
       "gpu": 5,
       "memory_mib": 10130,
-      "utilization_pct": 29
+      "utilization_pct": 69
     },
     {
       "gpu": 6,
       "memory_mib": 8871,
-      "utilization_pct": 66
+      "utilization_pct": 0
     },
     {
       "gpu": 7,
       "memory_mib": 8871,
-      "utilization_pct": 0
+      "utilization_pct": 79
     }
   ],
   "centers": [
@@ -89,13 +89,12 @@
     },
     {
       "center": "SCS",
-      "total": 511,
+      "total": 510,
       "segmentation_complete": 510,
-      "cache_4ch": 511,
+      "cache_4ch": 510,
       "cache_sax": 510,
       "reports": 0,
-      "errors": 0,
-      "segmentation_partial": 1
+      "errors": 0
     },
     {
       "center": "YA"
@@ -27355,17 +27354,6 @@
       "stage": "segmentation_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
-      "error_class": ""
-    },
-    {
-      "study_uid": "SCSS-1a818b3ce1e250ce",
-      "center": "SCS",
-      "stage": "segmentation_partial",
-      "seg_4ch": "complete",
-      "seg_sax": "pending",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
