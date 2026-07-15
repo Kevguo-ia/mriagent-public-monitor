@@ -1,11 +1,11 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-16T02:23:21.328721+08:00",
+  "updated_at": "2026-07-16T02:28:18.106953+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
   "reports_complete": 120,
-  "errors": 18,
+  "errors": 23,
   "report_rate_per_hour": 0.0,
   "segmentation_rate_per_hour": 0.0,
   "report_eta_hours": null,
@@ -20,8 +20,8 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 26645,
-      "utilization_pct": 45
+      "memory_mib": 26633,
+      "utilization_pct": 34
     },
     {
       "gpu": 1,
@@ -30,23 +30,23 @@
     },
     {
       "gpu": 2,
-      "memory_mib": 1294,
-      "utilization_pct": 0
+      "memory_mib": 9624,
+      "utilization_pct": 24
     },
     {
       "gpu": 3,
       "memory_mib": 9526,
-      "utilization_pct": 33
+      "utilization_pct": 0
     },
     {
       "gpu": 4,
       "memory_mib": 9624,
-      "utilization_pct": 3
+      "utilization_pct": 16
     },
     {
       "gpu": 5,
       "memory_mib": 9526,
-      "utilization_pct": 41
+      "utilization_pct": 83
     },
     {
       "gpu": 6,
@@ -56,7 +56,7 @@
     {
       "gpu": 7,
       "memory_mib": 9624,
-      "utilization_pct": 0
+      "utilization_pct": 47
     }
   ],
   "centers": [
@@ -81,13 +81,13 @@
     {
       "center": "Chengdu",
       "total": 402,
-      "segmentation_complete": 264,
+      "segmentation_complete": 259,
       "cache_4ch": 402,
       "cache_sax": 402,
       "reports": 120,
-      "errors": 18,
+      "errors": 23,
       "report_complete": 120,
-      "error": 18
+      "error": 23
     },
     {
       "center": "SCS",
@@ -480,13 +480,13 @@
     {
       "study_uid": "CHES-1718cf58fd368a0d",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "error",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
-      "error_class": ""
+      "precompute": "complete",
+      "llm": "error",
+      "report": "error",
+      "error_class": "AuthenticationError"
     },
     {
       "study_uid": "CHES-176de3c92c824a98",
@@ -2460,13 +2460,13 @@
     {
       "study_uid": "CHES-8386dd248c9e2ec9",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "error",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
-      "error_class": ""
+      "precompute": "complete",
+      "llm": "error",
+      "report": "error",
+      "error_class": "AuthenticationError"
     },
     {
       "study_uid": "CHES-84cc9358873a600d",
@@ -3120,13 +3120,13 @@
     {
       "study_uid": "CHES-b14d6c5fcd7c23d4",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "error",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
-      "error_class": ""
+      "precompute": "complete",
+      "llm": "error",
+      "report": "error",
+      "error_class": "AuthenticationError"
     },
     {
       "study_uid": "CHES-b15fcf9d3355eacb",
@@ -3879,13 +3879,13 @@
     {
       "study_uid": "CHES-dba18525f0a0962f",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "error",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
-      "error_class": ""
+      "precompute": "complete",
+      "llm": "error",
+      "report": "error",
+      "error_class": "AuthenticationError"
     },
     {
       "study_uid": "CHES-dc914981b73df159",
@@ -4242,13 +4242,13 @@
     {
       "study_uid": "CHES-f1cf4ff89593f6fe",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "error",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
-      "error_class": ""
+      "precompute": "complete",
+      "llm": "error",
+      "report": "error",
+      "error_class": "AuthenticationError"
     },
     {
       "study_uid": "CHES-f2d8ed6dc2627e6c",
