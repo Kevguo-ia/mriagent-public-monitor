@@ -1,15 +1,15 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-15T12:45:51.589329+08:00",
+  "updated_at": "2026-07-15T12:50:48.393150+08:00",
   "refresh_seconds": 15,
   "total_studies": 3924,
-  "segmentation_complete": 3837,
+  "segmentation_complete": 3839,
   "reports_complete": 0,
   "errors": 0,
   "report_rate_per_hour": 0.0,
   "segmentation_rate_per_hour": 24.27,
   "report_eta_hours": null,
-  "segmentation_eta_hours": 3.58,
+  "segmentation_eta_hours": 3.5,
   "stalled_advisory": false,
   "processes": {
     "kunming_segmentation_workers": 0,
@@ -20,7 +20,7 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 21456,
+      "memory_mib": 19196,
       "utilization_pct": 0
     },
     {
@@ -50,13 +50,13 @@
     },
     {
       "gpu": 6,
-      "memory_mib": 541,
+      "memory_mib": 8871,
       "utilization_pct": 0
     },
     {
       "gpu": 7,
-      "memory_mib": 1270,
-      "utilization_pct": 0
+      "memory_mib": 9600,
+      "utilization_pct": 50
     }
   ],
   "centers": [
@@ -90,12 +90,12 @@
     {
       "center": "SCS",
       "total": 511,
-      "segmentation_complete": 424,
-      "cache_4ch": 426,
-      "cache_sax": 424,
+      "segmentation_complete": 426,
+      "cache_4ch": 428,
+      "cache_sax": 426,
       "reports": 0,
       "errors": 0,
-      "pending": 85,
+      "pending": 83,
       "segmentation_partial": 2
     },
     {
@@ -27683,9 +27683,9 @@
     {
       "study_uid": "SCSS-298acd80b689c4dc",
       "center": "SCS",
-      "stage": "pending",
-      "seg_4ch": "pending",
-      "seg_sax": "pending",
+      "stage": "segmentation_complete",
+      "seg_4ch": "complete",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -27848,9 +27848,9 @@
     {
       "study_uid": "SCSS-326ab729e973bd5b",
       "center": "SCS",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -28222,8 +28222,8 @@
     {
       "study_uid": "SCSS-406a89bd7eef7e27",
       "center": "SCS",
-      "stage": "pending",
-      "seg_4ch": "pending",
+      "stage": "segmentation_partial",
+      "seg_4ch": "complete",
       "seg_sax": "pending",
       "precompute": "pending",
       "llm": "pending",
