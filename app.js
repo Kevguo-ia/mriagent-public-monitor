@@ -15,7 +15,7 @@ function card(label,value,note,error=false){return `<article class="card ${error
 function inferPhase(d){
   const total=d.total_studies||0,reports=d.reports_complete||0,seg=d.segmentation_complete||0;
   const agentWorkers=(d.processes?.hospital_agent_workers||0)+(d.processes?.ukb_agent_workers||0);
-  if(total&&reports>=total)return {key:"final",title:"全部完成",value:reports,total,detail:"3,943例缓存、完整Agent与最终报告均已完成。"};
+  if(total&&reports>=total)return {key:"final",title:"全部完成",value:reports,total,detail:"3,924例缓存、完整Agent与最终报告均已完成。"};
   if(reports>0||agentWorkers>0)return {key:"agent",title:"完整 Agent 运行中",value:reports,total,detail:`报告 ${fmt(reports)}/${fmt(total)} · ${eta(d.report_eta_hours)}`};
   if(total&&seg>=total)return {key:"qc",title:"缓存 QC / Smoke",value:seg,total,detail:"缓存已齐备，正在执行质量门禁与四中心完整流程smoke。"};
   return {key:"cache",title:"分割缓存生成中",value:seg,total,detail:`4CH与SAX均完成 ${fmt(seg)}/${fmt(total)} · ${eta(d.segmentation_eta_hours)}`};

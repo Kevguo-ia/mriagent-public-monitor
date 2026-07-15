@@ -33,7 +33,7 @@ jobs:
               raise SystemExit("Missing monitor files: " + ", ".join(missing))
 
           payload = json.loads(Path("data/progress.json").read_text(encoding="utf-8"))
-          if payload.get("schema_version") != "monitor_safe_v1" or payload.get("total_studies") != 3943:
+          if payload.get("schema_version") != "monitor_safe_v1" or payload.get("total_studies") != 3924:
               raise SystemExit("Unexpected safe monitor schema or cohort size")
           allowed_case = {"study_uid", "center", "stage", "seg_4ch", "seg_sax", "precompute", "llm", "report", "error_class"}
           for case in payload.get("cases", []):
