@@ -1,27 +1,27 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-15T10:17:34.902313+08:00",
+  "updated_at": "2026-07-15T10:22:31.480953+08:00",
   "refresh_seconds": 15,
   "total_studies": 3943,
-  "segmentation_complete": 3787,
+  "segmentation_complete": 3788,
   "reports_complete": 0,
   "errors": 0,
   "report_rate_per_hour": 0.0,
-  "segmentation_rate_per_hour": 0.0,
+  "segmentation_rate_per_hour": 2.03,
   "report_eta_hours": null,
-  "segmentation_eta_hours": null,
+  "segmentation_eta_hours": 76.54,
   "stalled_advisory": false,
   "processes": {
     "kunming_segmentation_workers": 0,
-    "full_cohort_segmentation_workers": 0,
+    "full_cohort_segmentation_workers": 3,
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0
   },
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 19226,
-      "utilization_pct": 100
+      "memory_mib": 28232,
+      "utilization_pct": 0
     },
     {
       "gpu": 1,
@@ -31,7 +31,7 @@
     {
       "gpu": 2,
       "memory_mib": 8871,
-      "utilization_pct": 0
+      "utilization_pct": 18
     },
     {
       "gpu": 3,
@@ -41,34 +41,33 @@
     {
       "gpu": 4,
       "memory_mib": 8871,
-      "utilization_pct": 65
+      "utilization_pct": 0
     },
     {
       "gpu": 5,
       "memory_mib": 8871,
-      "utilization_pct": 86
+      "utilization_pct": 0
     },
     {
       "gpu": 6,
       "memory_mib": 8871,
-      "utilization_pct": 0
+      "utilization_pct": 62
     },
     {
       "gpu": 7,
-      "memory_mib": 541,
-      "utilization_pct": 0
+      "memory_mib": 9300,
+      "utilization_pct": 18
     }
   ],
   "centers": [
     {
       "center": "UKB",
       "total": 1000,
-      "segmentation_complete": 999,
+      "segmentation_complete": 1000,
       "cache_4ch": 1000,
-      "cache_sax": 999,
+      "cache_sax": 1000,
       "reports": 0,
-      "errors": 0,
-      "segmentation_partial": 1
+      "errors": 0
     },
     {
       "center": "Kunming",
@@ -37662,9 +37661,9 @@
     {
       "study_uid": "UKBS-7ab2b9502f91f4cd",
       "center": "UKB",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
