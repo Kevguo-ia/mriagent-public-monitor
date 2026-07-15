@@ -1,62 +1,62 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-15T19:08:50.746743+08:00",
+  "updated_at": "2026-07-15T19:14:21.167836+08:00",
   "refresh_seconds": 15,
   "total_studies": 3923,
-  "segmentation_complete": 3921,
+  "segmentation_complete": 3923,
   "reports_complete": 0,
   "errors": 0,
   "report_rate_per_hour": 0.0,
-  "segmentation_rate_per_hour": -4.03,
+  "segmentation_rate_per_hour": 0.0,
   "report_eta_hours": null,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "processes": {
     "kunming_segmentation_workers": 0,
-    "full_cohort_segmentation_workers": 11,
+    "full_cohort_segmentation_workers": 2,
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0
   },
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 23718,
-      "utilization_pct": 27
+      "memory_mib": 19896,
+      "utilization_pct": 0
     },
     {
       "gpu": 1,
-      "memory_mib": 9506,
+      "memory_mib": 8871,
       "utilization_pct": 0
     },
     {
       "gpu": 2,
       "memory_mib": 10176,
-      "utilization_pct": 27
+      "utilization_pct": 10
     },
     {
       "gpu": 3,
-      "memory_mib": 9526,
-      "utilization_pct": 0
+      "memory_mib": 9506,
+      "utilization_pct": 32
     },
     {
       "gpu": 4,
       "memory_mib": 10846,
-      "utilization_pct": 5
+      "utilization_pct": 13
     },
     {
       "gpu": 5,
       "memory_mib": 10130,
-      "utilization_pct": 7
+      "utilization_pct": 20
     },
     {
       "gpu": 6,
-      "memory_mib": 9506,
+      "memory_mib": 8871,
       "utilization_pct": 0
     },
     {
       "gpu": 7,
       "memory_mib": 8871,
-      "utilization_pct": 0
+      "utilization_pct": 29
     }
   ],
   "centers": [
@@ -72,12 +72,11 @@
     {
       "center": "Kunming",
       "total": 2011,
-      "segmentation_complete": 2009,
+      "segmentation_complete": 2011,
       "cache_4ch": 2011,
-      "cache_sax": 2009,
+      "cache_sax": 2011,
       "reports": 0,
-      "errors": 0,
-      "segmentation_partial": 2
+      "errors": 0
     },
     {
       "center": "Chengdu",
@@ -23645,9 +23644,9 @@
     {
       "study_uid": "KUNS-db10aef58e332367",
       "center": "Kunming",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -23656,9 +23655,9 @@
     {
       "study_uid": "KUNS-db1ca6b0a8323258",
       "center": "Kunming",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
