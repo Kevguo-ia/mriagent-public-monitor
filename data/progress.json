@@ -1,11 +1,11 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-16T01:06:54.346850+08:00",
+  "updated_at": "2026-07-16T01:11:51.350427+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
   "reports_complete": 120,
-  "errors": 9,
+  "errors": 10,
   "report_rate_per_hour": 0.0,
   "segmentation_rate_per_hour": 0.0,
   "report_eta_hours": null,
@@ -20,28 +20,28 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 24377,
-      "utilization_pct": 23
+      "memory_mib": 28891,
+      "utilization_pct": 69
     },
     {
       "gpu": 1,
       "memory_mib": 9624,
-      "utilization_pct": 0
+      "utilization_pct": 10
     },
     {
       "gpu": 2,
       "memory_mib": 9624,
-      "utilization_pct": 77
+      "utilization_pct": 47
     },
     {
       "gpu": 3,
-      "memory_mib": 1196,
+      "memory_mib": 9526,
       "utilization_pct": 0
     },
     {
       "gpu": 4,
       "memory_mib": 9624,
-      "utilization_pct": 21
+      "utilization_pct": 100
     },
     {
       "gpu": 5,
@@ -51,12 +51,12 @@
     {
       "gpu": 6,
       "memory_mib": 9526,
-      "utilization_pct": 64
+      "utilization_pct": 0
     },
     {
       "gpu": 7,
       "memory_mib": 9624,
-      "utilization_pct": 70
+      "utilization_pct": 0
     }
   ],
   "centers": [
@@ -81,13 +81,13 @@
     {
       "center": "Chengdu",
       "total": 402,
-      "segmentation_complete": 273,
+      "segmentation_complete": 272,
       "cache_4ch": 402,
       "cache_sax": 402,
       "reports": 120,
-      "errors": 9,
+      "errors": 10,
       "report_complete": 120,
-      "error": 9
+      "error": 10
     },
     {
       "center": "SCS",
@@ -1558,13 +1558,13 @@
     {
       "study_uid": "CHES-570aa3de26a454f0",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "error",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
-      "error_class": ""
+      "precompute": "complete",
+      "llm": "error",
+      "report": "error",
+      "error_class": "AuthenticationError"
     },
     {
       "study_uid": "CHES-5754e02418480532",
