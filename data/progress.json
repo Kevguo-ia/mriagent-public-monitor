@@ -1,27 +1,27 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-15T12:55:45.204404+08:00",
+  "updated_at": "2026-07-15T13:00:41.771308+08:00",
   "refresh_seconds": 15,
   "total_studies": 3924,
-  "segmentation_complete": 3841,
+  "segmentation_complete": 3842,
   "reports_complete": 0,
   "errors": 0,
   "report_rate_per_hour": 0.0,
-  "segmentation_rate_per_hour": 24.27,
+  "segmentation_rate_per_hour": 22.25,
   "report_eta_hours": null,
-  "segmentation_eta_hours": 3.42,
+  "segmentation_eta_hours": 3.69,
   "stalled_advisory": false,
   "processes": {
     "kunming_segmentation_workers": 0,
-    "full_cohort_segmentation_workers": 2,
+    "full_cohort_segmentation_workers": 3,
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0
   },
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 23728,
-      "utilization_pct": 0
+      "memory_mib": 21466,
+      "utilization_pct": 24
     },
     {
       "gpu": 1,
@@ -30,17 +30,17 @@
     },
     {
       "gpu": 2,
-      "memory_mib": 541,
+      "memory_mib": 8871,
       "utilization_pct": 0
     },
     {
       "gpu": 3,
-      "memory_mib": 8871,
-      "utilization_pct": 81
+      "memory_mib": 541,
+      "utilization_pct": 0
     },
     {
       "gpu": 4,
-      "memory_mib": 8871,
+      "memory_mib": 693,
       "utilization_pct": 0
     },
     {
@@ -50,12 +50,12 @@
     },
     {
       "gpu": 6,
-      "memory_mib": 693,
+      "memory_mib": 8871,
       "utilization_pct": 0
     },
     {
       "gpu": 7,
-      "memory_mib": 9744,
+      "memory_mib": 9600,
       "utilization_pct": 0
     }
   ],
@@ -90,13 +90,13 @@
     {
       "center": "SCS",
       "total": 511,
-      "segmentation_complete": 428,
-      "cache_4ch": 430,
-      "cache_sax": 428,
+      "segmentation_complete": 429,
+      "cache_4ch": 431,
+      "cache_sax": 429,
       "reports": 0,
       "errors": 0,
-      "segmentation_partial": 2,
-      "pending": 81
+      "pending": 80,
+      "segmentation_partial": 2
     },
     {
       "center": "YA"
@@ -26682,9 +26682,9 @@
     {
       "study_uid": "SCSS-015a5143693f0566",
       "center": "SCS",
-      "stage": "segmentation_partial",
+      "stage": "segmentation_complete",
       "seg_4ch": "complete",
-      "seg_sax": "pending",
+      "seg_sax": "complete",
       "precompute": "pending",
       "llm": "pending",
       "report": "pending",
@@ -28376,8 +28376,8 @@
     {
       "study_uid": "SCSS-48976dbaaa732d00",
       "center": "SCS",
-      "stage": "pending",
-      "seg_4ch": "pending",
+      "stage": "segmentation_partial",
+      "seg_4ch": "complete",
       "seg_sax": "pending",
       "precompute": "pending",
       "llm": "pending",
