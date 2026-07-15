@@ -1,11 +1,11 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-16T07:19:40.575638+08:00",
+  "updated_at": "2026-07-16T07:24:37.308709+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
   "reports_complete": 120,
-  "errors": 58,
+  "errors": 60,
   "report_rate_per_hour": 0.0,
   "segmentation_rate_per_hour": 0.0,
   "report_eta_hours": null,
@@ -20,43 +20,43 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 24377,
-      "utilization_pct": 31
+      "memory_mib": 21610,
+      "utilization_pct": 0
     },
     {
       "gpu": 1,
       "memory_mib": 9624,
-      "utilization_pct": 47
+      "utilization_pct": 0
     },
     {
       "gpu": 2,
       "memory_mib": 9624,
-      "utilization_pct": 66
+      "utilization_pct": 0
     },
     {
       "gpu": 3,
-      "memory_mib": 9526,
-      "utilization_pct": 43
+      "memory_mib": 659,
+      "utilization_pct": 0
     },
     {
       "gpu": 4,
-      "memory_mib": 9624,
+      "memory_mib": 1294,
       "utilization_pct": 0
     },
     {
       "gpu": 5,
       "memory_mib": 9526,
-      "utilization_pct": 79
+      "utilization_pct": 0
     },
     {
       "gpu": 6,
       "memory_mib": 9526,
-      "utilization_pct": 0
+      "utilization_pct": 6
     },
     {
       "gpu": 7,
       "memory_mib": 9624,
-      "utilization_pct": 92
+      "utilization_pct": 87
     }
   ],
   "centers": [
@@ -81,12 +81,12 @@
     {
       "center": "Chengdu",
       "total": 402,
-      "segmentation_complete": 224,
+      "segmentation_complete": 222,
       "cache_4ch": 402,
       "cache_sax": 402,
       "reports": 120,
-      "errors": 58,
-      "error": 58,
+      "errors": 60,
+      "error": 60,
       "report_complete": 120
     },
     {
@@ -3450,13 +3450,13 @@
     {
       "study_uid": "CHES-c37f8acbb1985855",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "error",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
-      "error_class": ""
+      "precompute": "complete",
+      "llm": "error",
+      "report": "error",
+      "error_class": "AuthenticationError"
     },
     {
       "study_uid": "CHES-c3b671bd59c48393",
@@ -3890,13 +3890,13 @@
     {
       "study_uid": "CHES-dc914981b73df159",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "error",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
-      "error_class": ""
+      "precompute": "complete",
+      "llm": "error",
+      "report": "error",
+      "error_class": "AuthenticationError"
     },
     {
       "study_uid": "CHES-dcad1d9b67677f16",
