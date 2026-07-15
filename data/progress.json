@@ -1,11 +1,11 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-16T07:09:13.713264+08:00",
+  "updated_at": "2026-07-16T07:14:43.584644+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
   "reports_complete": 120,
-  "errors": 57,
+  "errors": 58,
   "report_rate_per_hour": 0.0,
   "segmentation_rate_per_hour": 0.0,
   "report_eta_hours": null,
@@ -20,33 +20,33 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 18295,
-      "utilization_pct": 54
+      "memory_mib": 28901,
+      "utilization_pct": 24
     },
     {
       "gpu": 1,
       "memory_mib": 9624,
-      "utilization_pct": 47
+      "utilization_pct": 0
     },
     {
       "gpu": 2,
-      "memory_mib": 1294,
+      "memory_mib": 9624,
       "utilization_pct": 0
     },
     {
       "gpu": 3,
       "memory_mib": 9526,
-      "utilization_pct": 47
+      "utilization_pct": 0
     },
     {
       "gpu": 4,
       "memory_mib": 9624,
-      "utilization_pct": 0
+      "utilization_pct": 100
     },
     {
       "gpu": 5,
       "memory_mib": 9526,
-      "utilization_pct": 0
+      "utilization_pct": 39
     },
     {
       "gpu": 6,
@@ -81,12 +81,12 @@
     {
       "center": "Chengdu",
       "total": 402,
-      "segmentation_complete": 225,
+      "segmentation_complete": 224,
       "cache_4ch": 402,
       "cache_sax": 402,
       "reports": 120,
-      "errors": 57,
-      "error": 57,
+      "errors": 58,
+      "error": 58,
       "report_complete": 120
     },
     {
@@ -1943,13 +1943,13 @@
     {
       "study_uid": "CHES-699ea67213715a83",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "error",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
-      "error_class": ""
+      "precompute": "complete",
+      "llm": "error",
+      "report": "error",
+      "error_class": "AuthenticationError"
     },
     {
       "study_uid": "CHES-69ee6289e85afc95",
