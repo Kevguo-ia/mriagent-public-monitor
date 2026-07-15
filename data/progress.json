@@ -1,14 +1,14 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-15T23:54:52.259481+08:00",
+  "updated_at": "2026-07-16T00:00:22.498220+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "reports_complete": 70,
+  "reports_complete": 82,
   "errors": 1,
-  "report_rate_per_hour": 109.08,
+  "report_rate_per_hour": 119.16,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 35.17,
+  "report_eta_hours": 32.09,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "processes": {
@@ -20,18 +20,18 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 24369,
-      "utilization_pct": 24
+      "memory_mib": 22111,
+      "utilization_pct": 0
     },
     {
       "gpu": 1,
       "memory_mib": 9624,
-      "utilization_pct": 0
+      "utilization_pct": 90
     },
     {
       "gpu": 2,
       "memory_mib": 9624,
-      "utilization_pct": 0
+      "utilization_pct": 60
     },
     {
       "gpu": 3,
@@ -41,21 +41,21 @@
     {
       "gpu": 4,
       "memory_mib": 9624,
-      "utilization_pct": 0
+      "utilization_pct": 1
     },
     {
       "gpu": 5,
       "memory_mib": 9526,
-      "utilization_pct": 33
+      "utilization_pct": 0
     },
     {
       "gpu": 6,
-      "memory_mib": 1196,
+      "memory_mib": 1348,
       "utilization_pct": 0
     },
     {
       "gpu": 7,
-      "memory_mib": 9624,
+      "memory_mib": 1706,
       "utilization_pct": 0
     }
   ],
@@ -81,14 +81,15 @@
     {
       "center": "Chengdu",
       "total": 402,
-      "segmentation_complete": 328,
+      "segmentation_complete": 313,
       "cache_4ch": 402,
       "cache_sax": 402,
-      "reports": 70,
+      "reports": 82,
       "errors": 1,
-      "report_complete": 70,
-      "llm_complete": 3,
-      "error": 1
+      "report_complete": 82,
+      "error": 1,
+      "precompute_complete": 2,
+      "llm_complete": 4
     },
     {
       "center": "SCS",
@@ -789,12 +790,12 @@
     {
       "study_uid": "CHES-2afbec4f4d97b247",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -877,12 +878,12 @@
     {
       "study_uid": "CHES-30f8aaaf85739458",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -1306,12 +1307,12 @@
     {
       "study_uid": "CHES-4618db39b97f7a45",
       "center": "Chengdu",
-      "stage": "llm_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
       "precompute": "complete",
       "llm": "complete",
-      "report": "pending",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -1691,12 +1692,12 @@
     {
       "study_uid": "CHES-5dce16bc1709dcd4",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -2318,10 +2319,10 @@
     {
       "study_uid": "CHES-7ce571d07c37ddb7",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "precompute_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
+      "precompute": "complete",
       "llm": "pending",
       "report": "pending",
       "error_class": ""
@@ -2340,12 +2341,12 @@
     {
       "study_uid": "CHES-7e1458da7f76e7ec",
       "center": "Chengdu",
-      "stage": "llm_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
       "precompute": "complete",
       "llm": "complete",
-      "report": "pending",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -2362,11 +2363,11 @@
     {
       "study_uid": "CHES-7e8b2d7d0092e7c5",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "llm_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
+      "precompute": "complete",
+      "llm": "complete",
       "report": "pending",
       "error_class": ""
     },
@@ -2472,12 +2473,12 @@
     {
       "study_uid": "CHES-84cc9358873a600d",
       "center": "Chengdu",
-      "stage": "llm_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
       "precompute": "complete",
       "llm": "complete",
-      "report": "pending",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -2703,11 +2704,11 @@
     {
       "study_uid": "CHES-9532902318397f41",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "llm_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
+      "precompute": "complete",
+      "llm": "complete",
       "report": "pending",
       "error_class": ""
     },
@@ -2824,11 +2825,11 @@
     {
       "study_uid": "CHES-9d0ab574cdfce780",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "llm_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
+      "precompute": "complete",
+      "llm": "complete",
       "report": "pending",
       "error_class": ""
     },
@@ -2978,11 +2979,11 @@
     {
       "study_uid": "CHES-a42d53166dc51431",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "llm_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
+      "precompute": "complete",
+      "llm": "complete",
       "report": "pending",
       "error_class": ""
     },
@@ -3088,12 +3089,12 @@
     {
       "study_uid": "CHES-aca28228565d3aac",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -3297,12 +3298,12 @@
     {
       "study_uid": "CHES-b9e6afb889bd4352",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -3660,12 +3661,12 @@
     {
       "study_uid": "CHES-cfb9d2f241f18937",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -3814,10 +3815,10 @@
     {
       "study_uid": "CHES-d8b82c916c9e5e8c",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "precompute_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
+      "precompute": "complete",
       "llm": "pending",
       "report": "pending",
       "error_class": ""
@@ -3869,12 +3870,12 @@
     {
       "study_uid": "CHES-db6575844635eddb",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -4045,12 +4046,12 @@
     {
       "study_uid": "CHES-e46f5ed4439b5845",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -4254,12 +4255,12 @@
     {
       "study_uid": "CHES-f2d8ed6dc2627e6c",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
