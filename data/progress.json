@@ -1,11 +1,11 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-16T09:32:34.263040+08:00",
+  "updated_at": "2026-07-16T09:37:30.564504+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
   "reports_complete": 120,
-  "errors": 79,
+  "errors": 80,
   "report_rate_per_hour": 0.0,
   "segmentation_rate_per_hour": 0.0,
   "report_eta_hours": null,
@@ -81,12 +81,12 @@
     {
       "center": "Chengdu",
       "total": 402,
-      "segmentation_complete": 203,
+      "segmentation_complete": 202,
       "cache_4ch": 402,
       "cache_sax": 402,
       "reports": 120,
-      "errors": 79,
-      "error": 79,
+      "errors": 80,
+      "error": 80,
       "report_complete": 120
     },
     {
@@ -2856,13 +2856,13 @@
     {
       "study_uid": "CHES-9fed6a7a72ec5702",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "error",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
-      "error_class": ""
+      "precompute": "complete",
+      "llm": "error",
+      "report": "error",
+      "error_class": "AuthenticationError"
     },
     {
       "study_uid": "CHES-a0628c9909d0ea88",
