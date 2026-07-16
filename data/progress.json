@@ -1,12 +1,12 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-16T12:46:57.659775+08:00",
+  "updated_at": "2026-07-16T12:51:54.109280+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "reports_complete": 16,
+  "reports_complete": 20,
   "errors": 0,
-  "report_rate_per_hour": -210.76,
+  "report_rate_per_hour": -202.64,
   "segmentation_rate_per_hour": 0.0,
   "report_eta_hours": null,
   "segmentation_eta_hours": null,
@@ -81,12 +81,14 @@
     {
       "center": "Chengdu",
       "total": 402,
-      "segmentation_complete": 386,
+      "segmentation_complete": 378,
       "cache_4ch": 402,
       "cache_sax": 402,
-      "reports": 16,
+      "reports": 20,
       "errors": 0,
-      "report_complete": 16
+      "report_complete": 20,
+      "precompute_complete": 1,
+      "llm_complete": 3
     },
     {
       "center": "SCS",
@@ -435,12 +437,12 @@
     {
       "study_uid": "CHES-136acc885bf83218",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -897,10 +899,10 @@
     {
       "study_uid": "CHES-32a1dba9ea5bb52e",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "precompute_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
+      "precompute": "complete",
       "llm": "pending",
       "report": "pending",
       "error_class": ""
@@ -1425,12 +1427,12 @@
     {
       "study_uid": "CHES-4ff7db3778eb338b",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -2063,11 +2065,11 @@
     {
       "study_uid": "CHES-6ef5e158a30ec381",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "llm_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
+      "precompute": "complete",
+      "llm": "complete",
       "report": "pending",
       "error_class": ""
     },
@@ -2910,12 +2912,12 @@
     {
       "study_uid": "CHES-a2bcbeca82d9f376",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -3592,12 +3594,12 @@
     {
       "study_uid": "CHES-cbcbe2f631f520e5",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -3900,11 +3902,11 @@
     {
       "study_uid": "CHES-dcad1d9b67677f16",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "llm_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
+      "precompute": "complete",
+      "llm": "complete",
       "report": "pending",
       "error_class": ""
     },
@@ -4494,11 +4496,11 @@
     {
       "study_uid": "CHES-fd70e9fec0575f4d",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "llm_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
+      "precompute": "complete",
+      "llm": "complete",
       "report": "pending",
       "error_class": ""
     },
