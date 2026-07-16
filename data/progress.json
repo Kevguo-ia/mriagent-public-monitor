@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-16T15:20:49.030625+08:00",
+  "updated_at": "2026-07-16T15:25:48.184826+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 184,
-  "llm_complete": 183,
-  "reports_complete": 181,
+  "precompute_complete": 189,
+  "llm_complete": 187,
+  "reports_complete": 186,
   "errors": 0,
-  "report_rate_per_hour": 72.23,
+  "report_rate_per_hour": 68.22,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 51.57,
+  "report_eta_hours": 54.53,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -64,24 +64,24 @@
     {
       "gpu": 6,
       "memory_mib": 14636,
-      "utilization_pct": 7
+      "utilization_pct": 0
     },
     {
       "gpu": 7,
-      "memory_mib": 757,
+      "memory_mib": 1169,
       "utilization_pct": 0
     }
   ],
   "artifacts": {
-    "metrics": 184,
-    "evidence": 183,
-    "plan": 184,
-    "report_json": 181,
-    "report_md": 181,
-    "lge_visuals": 189,
-    "lge_fallback": 0,
-    "lge_complete": 184,
-    "model_verified": 181
+    "metrics": 189,
+    "evidence": 187,
+    "plan": 189,
+    "report_json": 186,
+    "report_md": 186,
+    "lge_visuals": 194,
+    "lge_fallback": 1,
+    "lge_complete": 188,
+    "model_verified": 186
   },
   "centers": [
     {
@@ -111,12 +111,12 @@
       "total": 402,
       "cache_4ch": 402,
       "cache_sax": 402,
-      "precompute": 184,
-      "llm": 183,
-      "reports": 181,
+      "precompute": 189,
+      "llm": 187,
+      "reports": 186,
       "errors": 0,
       "lge_total": 402,
-      "lge_complete": 184
+      "lge_complete": 188
     },
     {
       "center": "SCS",
@@ -134,42 +134,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784184488,
-      "reports": 144
-    },
-    {
-      "timestamp": 1784184521,
-      "reports": 145
-    },
-    {
-      "timestamp": 1784184555,
-      "reports": 145
-    },
-    {
-      "timestamp": 1784184588,
-      "reports": 145
-    },
-    {
-      "timestamp": 1784184621,
-      "reports": 145
-    },
-    {
-      "timestamp": 1784184654,
-      "reports": 145
-    },
-    {
-      "timestamp": 1784184688,
-      "reports": 148
-    },
-    {
-      "timestamp": 1784184721,
-      "reports": 148
-    },
-    {
-      "timestamp": 1784184754,
-      "reports": 148
-    },
     {
       "timestamp": 1784184787,
       "reports": 148
@@ -373,6 +337,42 @@
     {
       "timestamp": 1784186449,
       "reports": 181
+    },
+    {
+      "timestamp": 1784186482,
+      "reports": 182
+    },
+    {
+      "timestamp": 1784186515,
+      "reports": 183
+    },
+    {
+      "timestamp": 1784186548,
+      "reports": 183
+    },
+    {
+      "timestamp": 1784186581,
+      "reports": 185
+    },
+    {
+      "timestamp": 1784186615,
+      "reports": 185
+    },
+    {
+      "timestamp": 1784186648,
+      "reports": 185
+    },
+    {
+      "timestamp": 1784186681,
+      "reports": 186
+    },
+    {
+      "timestamp": 1784186714,
+      "reports": 186
+    },
+    {
+      "timestamp": 1784186748,
+      "reports": 186
     }
   ]
 }
