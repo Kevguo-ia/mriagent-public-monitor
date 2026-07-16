@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-17T00:57:52.056842+08:00",
+  "updated_at": "2026-07-17T01:02:54.623867+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -43,8 +43,8 @@
     },
     {
       "gpu": 2,
-      "memory_mib": 4662,
-      "utilization_pct": 5
+      "memory_mib": 3017,
+      "utilization_pct": 0
     },
     {
       "gpu": 3,
@@ -54,7 +54,7 @@
     {
       "gpu": 4,
       "memory_mib": 4920,
-      "utilization_pct": 5
+      "utilization_pct": 19
     },
     {
       "gpu": 5,
@@ -136,42 +136,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784219086,
-      "reports": 944
-    },
-    {
-      "timestamp": 1784219120,
-      "reports": 944
-    },
-    {
-      "timestamp": 1784219153,
-      "reports": 944
-    },
-    {
-      "timestamp": 1784219187,
-      "reports": 944
-    },
-    {
-      "timestamp": 1784219221,
-      "reports": 944
-    },
-    {
-      "timestamp": 1784219254,
-      "reports": 944
-    },
-    {
-      "timestamp": 1784219288,
-      "reports": 944
-    },
-    {
-      "timestamp": 1784219321,
-      "reports": 944
-    },
-    {
-      "timestamp": 1784219355,
-      "reports": 944
-    },
     {
       "timestamp": 1784219388,
       "reports": 944
@@ -374,6 +338,42 @@
     },
     {
       "timestamp": 1784221072,
+      "reports": 944
+    },
+    {
+      "timestamp": 1784221105,
+      "reports": 944
+    },
+    {
+      "timestamp": 1784221139,
+      "reports": 944
+    },
+    {
+      "timestamp": 1784221172,
+      "reports": 944
+    },
+    {
+      "timestamp": 1784221206,
+      "reports": 944
+    },
+    {
+      "timestamp": 1784221240,
+      "reports": 944
+    },
+    {
+      "timestamp": 1784221273,
+      "reports": 944
+    },
+    {
+      "timestamp": 1784221307,
+      "reports": 944
+    },
+    {
+      "timestamp": 1784221340,
+      "reports": 944
+    },
+    {
+      "timestamp": 1784221374,
       "reports": 944
     }
   ]
