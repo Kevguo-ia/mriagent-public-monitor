@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-16T20:06:41.160408+08:00",
+  "updated_at": "2026-07-16T20:11:42.960658+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 652,
-  "llm_complete": 650,
-  "reports_complete": 645,
+  "precompute_complete": 654,
+  "llm_complete": 654,
+  "reports_complete": 654,
   "errors": 4,
-  "report_rate_per_hour": 230.78,
+  "report_rate_per_hour": 200.47,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 14.13,
+  "report_eta_hours": 16.22,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -27,61 +27,61 @@
   "processes": {
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 9,
+    "active_codex_calls": 0,
     "formal_supervisor_alive": false
   },
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 757,
+      "memory_mib": 1,
       "utilization_pct": 0
     },
     {
       "gpu": 1,
-      "memory_mib": 757,
+      "memory_mib": 1,
       "utilization_pct": 0
     },
     {
       "gpu": 2,
-      "memory_mib": 2402,
-      "utilization_pct": 12
+      "memory_mib": 1649,
+      "utilization_pct": 16
     },
     {
       "gpu": 3,
-      "memory_mib": 757,
+      "memory_mib": 1,
       "utilization_pct": 0
     },
     {
       "gpu": 4,
-      "memory_mib": 3413,
-      "utilization_pct": 25
+      "memory_mib": 1907,
+      "utilization_pct": 7
     },
     {
       "gpu": 5,
-      "memory_mib": 2160,
-      "utilization_pct": 9
+      "memory_mib": 1407,
+      "utilization_pct": 3
     },
     {
       "gpu": 6,
-      "memory_mib": 16557,
-      "utilization_pct": 9
+      "memory_mib": 15804,
+      "utilization_pct": 45
     },
     {
       "gpu": 7,
-      "memory_mib": 24782,
-      "utilization_pct": 97
+      "memory_mib": 24029,
+      "utilization_pct": 38
     }
   ],
   "artifacts": {
-    "metrics": 652,
-    "evidence": 650,
-    "plan": 652,
-    "report_json": 645,
-    "report_md": 645,
+    "metrics": 654,
+    "evidence": 654,
+    "plan": 654,
+    "report_json": 654,
+    "report_md": 654,
     "lge_visuals": 658,
     "lge_fallback": 3,
-    "lge_complete": 649,
-    "model_verified": 645
+    "lge_complete": 651,
+    "model_verified": 654
   },
   "centers": [
     {
@@ -123,54 +123,18 @@
       "total": 510,
       "cache_4ch": 510,
       "cache_sax": 510,
-      "precompute": 250,
-      "llm": 248,
-      "reports": 243,
+      "precompute": 252,
+      "llm": 252,
+      "reports": 252,
       "errors": 4,
       "lge_total": 503,
-      "lge_complete": 250
+      "lge_complete": 252
     },
     {
       "center": "YA"
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784201621,
-      "reports": 526
-    },
-    {
-      "timestamp": 1784201655,
-      "reports": 527
-    },
-    {
-      "timestamp": 1784201688,
-      "reports": 530
-    },
-    {
-      "timestamp": 1784201722,
-      "reports": 531
-    },
-    {
-      "timestamp": 1784201755,
-      "reports": 531
-    },
-    {
-      "timestamp": 1784201789,
-      "reports": 531
-    },
-    {
-      "timestamp": 1784201822,
-      "reports": 531
-    },
-    {
-      "timestamp": 1784201856,
-      "reports": 531
-    },
-    {
-      "timestamp": 1784201890,
-      "reports": 532
-    },
     {
       "timestamp": 1784201923,
       "reports": 533
@@ -374,6 +338,42 @@
     {
       "timestamp": 1784203601,
       "reports": 645
+    },
+    {
+      "timestamp": 1784203634,
+      "reports": 650
+    },
+    {
+      "timestamp": 1784203668,
+      "reports": 650
+    },
+    {
+      "timestamp": 1784203701,
+      "reports": 651
+    },
+    {
+      "timestamp": 1784203735,
+      "reports": 652
+    },
+    {
+      "timestamp": 1784203768,
+      "reports": 652
+    },
+    {
+      "timestamp": 1784203802,
+      "reports": 652
+    },
+    {
+      "timestamp": 1784203835,
+      "reports": 652
+    },
+    {
+      "timestamp": 1784203869,
+      "reports": 653
+    },
+    {
+      "timestamp": 1784203902,
+      "reports": 654
     }
   ]
 }
