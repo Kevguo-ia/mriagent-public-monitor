@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-16T13:35:01.140198+08:00",
+  "updated_at": "2026-07-16T13:35:34.331667+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
   "precompute_complete": 71,
-  "llm_complete": 69,
-  "reports_complete": 66,
+  "llm_complete": 70,
+  "reports_complete": 68,
   "errors": 0,
-  "report_rate_per_hour": 68.14,
+  "report_rate_per_hour": 70.13,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 56.36,
+  "report_eta_hours": 54.73,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -27,7 +27,7 @@
   "processes": {
     "hospital_agent_workers": 8,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 8,
+    "active_codex_calls": 6,
     "formal_supervisor_alive": true
   },
   "gpus": [
@@ -64,7 +64,7 @@
     {
       "gpu": 6,
       "memory_mib": 14636,
-      "utilization_pct": 6
+      "utilization_pct": 0
     },
     {
       "gpu": 7,
@@ -74,14 +74,14 @@
   ],
   "artifacts": {
     "metrics": 71,
-    "evidence": 69,
+    "evidence": 70,
     "plan": 71,
-    "report_json": 66,
-    "report_md": 66,
-    "lge_visuals": 74,
+    "report_json": 68,
+    "report_md": 68,
+    "lge_visuals": 76,
     "lge_fallback": 0,
     "lge_complete": 71,
-    "model_verified": 66
+    "model_verified": 68
   },
   "centers": [
     {
@@ -112,8 +112,8 @@
       "cache_4ch": 402,
       "cache_sax": 402,
       "precompute": 71,
-      "llm": 69,
-      "reports": 66,
+      "llm": 70,
+      "reports": 68,
       "errors": 0,
       "lge_total": 402,
       "lge_complete": 71
@@ -134,10 +134,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784178172,
-      "reports": 32
-    },
     {
       "timestamp": 1784178205,
       "reports": 32
@@ -373,6 +369,10 @@
     {
       "timestamp": 1784180101,
       "reports": 66
+    },
+    {
+      "timestamp": 1784180134,
+      "reports": 68
     }
   ]
 }
