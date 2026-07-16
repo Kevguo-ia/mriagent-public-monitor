@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-16T17:13:23.775130+08:00",
+  "updated_at": "2026-07-16T17:18:23.968358+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 304,
-  "llm_complete": 303,
-  "reports_complete": 303,
+  "precompute_complete": 308,
+  "llm_complete": 307,
+  "reports_complete": 307,
   "errors": 0,
-  "report_rate_per_hour": 62.05,
+  "report_rate_per_hour": 62.03,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 58.07,
+  "report_eta_hours": 58.02,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -73,15 +73,15 @@
     }
   ],
   "artifacts": {
-    "metrics": 304,
-    "evidence": 303,
-    "plan": 304,
-    "report_json": 303,
-    "report_md": 303,
-    "lge_visuals": 311,
+    "metrics": 308,
+    "evidence": 307,
+    "plan": 308,
+    "report_json": 307,
+    "report_md": 307,
+    "lge_visuals": 315,
     "lge_fallback": 3,
-    "lge_complete": 301,
-    "model_verified": 303
+    "lge_complete": 305,
+    "model_verified": 307
   },
   "centers": [
     {
@@ -111,12 +111,12 @@
       "total": 402,
       "cache_4ch": 402,
       "cache_sax": 402,
-      "precompute": 304,
-      "llm": 303,
-      "reports": 303,
+      "precompute": 308,
+      "llm": 307,
+      "reports": 307,
       "errors": 0,
       "lge_total": 402,
-      "lge_complete": 301
+      "lge_complete": 305
     },
     {
       "center": "SCS",
@@ -134,42 +134,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784191238,
-      "reports": 268
-    },
-    {
-      "timestamp": 1784191271,
-      "reports": 268
-    },
-    {
-      "timestamp": 1784191305,
-      "reports": 270
-    },
-    {
-      "timestamp": 1784191338,
-      "reports": 271
-    },
-    {
-      "timestamp": 1784191371,
-      "reports": 272
-    },
-    {
-      "timestamp": 1784191405,
-      "reports": 272
-    },
-    {
-      "timestamp": 1784191438,
-      "reports": 273
-    },
-    {
-      "timestamp": 1784191471,
-      "reports": 273
-    },
-    {
-      "timestamp": 1784191505,
-      "reports": 273
-    },
     {
       "timestamp": 1784191538,
       "reports": 273
@@ -373,6 +337,42 @@
     {
       "timestamp": 1784193203,
       "reports": 303
+    },
+    {
+      "timestamp": 1784193237,
+      "reports": 303
+    },
+    {
+      "timestamp": 1784193270,
+      "reports": 303
+    },
+    {
+      "timestamp": 1784193303,
+      "reports": 304
+    },
+    {
+      "timestamp": 1784193337,
+      "reports": 305
+    },
+    {
+      "timestamp": 1784193370,
+      "reports": 305
+    },
+    {
+      "timestamp": 1784193404,
+      "reports": 305
+    },
+    {
+      "timestamp": 1784193437,
+      "reports": 306
+    },
+    {
+      "timestamp": 1784193470,
+      "reports": 306
+    },
+    {
+      "timestamp": 1784193503,
+      "reports": 307
     }
   ]
 }
