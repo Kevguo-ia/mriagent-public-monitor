@@ -1,14 +1,14 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-16T13:22:38.646308+08:00",
+  "updated_at": "2026-07-16T13:27:35.239219+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "reports_complete": 55,
+  "reports_complete": 57,
   "errors": 0,
-  "report_rate_per_hour": 64.77,
+  "report_rate_per_hour": 64.76,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 59.46,
+  "report_eta_hours": 59.43,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "processes": {
@@ -51,7 +51,7 @@
     {
       "gpu": 6,
       "memory_mib": 14636,
-      "utilization_pct": 48
+      "utilization_pct": 0
     },
     {
       "gpu": 7,
@@ -81,13 +81,14 @@
     {
       "center": "Chengdu",
       "total": 402,
-      "segmentation_complete": 346,
+      "segmentation_complete": 339,
       "cache_4ch": 402,
       "cache_sax": 402,
-      "reports": 55,
+      "reports": 57,
       "errors": 0,
-      "report_complete": 55,
-      "llm_complete": 1
+      "report_complete": 57,
+      "llm_complete": 3,
+      "precompute_complete": 3
     },
     {
       "center": "SCS",
@@ -216,11 +217,11 @@
     {
       "study_uid": "CHES-09a3fac3a64240d7",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "llm_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
+      "precompute": "complete",
+      "llm": "complete",
       "report": "pending",
       "error_class": ""
     },
@@ -282,10 +283,10 @@
     {
       "study_uid": "CHES-0c77d14e99821cce",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "precompute_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
+      "precompute": "complete",
       "llm": "pending",
       "report": "pending",
       "error_class": ""
@@ -315,11 +316,11 @@
     {
       "study_uid": "CHES-0d5f70b873395abd",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "llm_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
+      "precompute": "complete",
+      "llm": "complete",
       "report": "pending",
       "error_class": ""
     },
@@ -1228,12 +1229,12 @@
     {
       "study_uid": "CHES-4001173a2db26275",
       "center": "Chengdu",
-      "stage": "llm_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
       "precompute": "complete",
       "llm": "complete",
-      "report": "pending",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -2768,12 +2769,12 @@
     {
       "study_uid": "CHES-9a5b6fc7d371cc33",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "report_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
-      "report": "pending",
+      "precompute": "complete",
+      "llm": "complete",
+      "report": "complete",
       "error_class": ""
     },
     {
@@ -3208,10 +3209,10 @@
     {
       "study_uid": "CHES-b708605d90bf9480",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "precompute_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
+      "precompute": "complete",
       "llm": "pending",
       "report": "pending",
       "error_class": ""
@@ -3362,10 +3363,10 @@
     {
       "study_uid": "CHES-bdeac27254b742dc",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "precompute_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
+      "precompute": "complete",
       "llm": "pending",
       "report": "pending",
       "error_class": ""
@@ -3461,11 +3462,11 @@
     {
       "study_uid": "CHES-c3b671bd59c48393",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "llm_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
-      "llm": "pending",
+      "precompute": "complete",
+      "llm": "complete",
       "report": "pending",
       "error_class": ""
     },
