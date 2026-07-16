@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v1",
-  "updated_at": "2026-07-16T09:12:16.009187+08:00",
+  "updated_at": "2026-07-16T09:17:12.306114+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -81,13 +81,14 @@
     {
       "center": "Chengdu",
       "total": 402,
-      "segmentation_complete": 207,
+      "segmentation_complete": 206,
       "cache_4ch": 402,
       "cache_sax": 402,
       "reports": 120,
       "errors": 75,
       "error": 75,
-      "report_complete": 120
+      "report_complete": 120,
+      "precompute_complete": 1
     },
     {
       "center": "SCS",
@@ -3571,10 +3572,10 @@
     {
       "study_uid": "CHES-cb5e63ddf2ed2ea3",
       "center": "Chengdu",
-      "stage": "segmentation_complete",
+      "stage": "precompute_complete",
       "seg_4ch": "complete",
       "seg_sax": "complete",
-      "precompute": "pending",
+      "precompute": "complete",
       "llm": "pending",
       "report": "pending",
       "error_class": ""
