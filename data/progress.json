@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-16T13:32:48.285416+08:00",
+  "updated_at": "2026-07-16T13:35:01.140198+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 65,
-  "llm_complete": 65,
-  "reports_complete": 64,
+  "precompute_complete": 71,
+  "llm_complete": 69,
+  "reports_complete": 66,
   "errors": 0,
-  "report_rate_per_hour": 64.16,
+  "report_rate_per_hour": 68.14,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 59.88,
+  "report_eta_hours": 56.36,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -64,7 +64,7 @@
     {
       "gpu": 6,
       "memory_mib": 14636,
-      "utilization_pct": 27
+      "utilization_pct": 6
     },
     {
       "gpu": 7,
@@ -73,15 +73,15 @@
     }
   ],
   "artifacts": {
-    "metrics": 65,
-    "evidence": 65,
-    "plan": 65,
-    "report_json": 64,
-    "report_md": 64,
-    "lge_visuals": 72,
+    "metrics": 71,
+    "evidence": 69,
+    "plan": 71,
+    "report_json": 66,
+    "report_md": 66,
+    "lge_visuals": 74,
     "lge_fallback": 0,
-    "lge_complete": 65,
-    "model_verified": 64
+    "lge_complete": 71,
+    "model_verified": 66
   },
   "centers": [
     {
@@ -111,12 +111,12 @@
       "total": 402,
       "cache_4ch": 402,
       "cache_sax": 402,
-      "precompute": 65,
-      "llm": 65,
-      "reports": 64,
+      "precompute": 71,
+      "llm": 69,
+      "reports": 66,
       "errors": 0,
       "lge_total": 402,
-      "lge_complete": 65
+      "lge_complete": 71
     },
     {
       "center": "SCS",
@@ -134,22 +134,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784178041,
-      "reports": 31
-    },
-    {
-      "timestamp": 1784178074,
-      "reports": 31
-    },
-    {
-      "timestamp": 1784178106,
-      "reports": 31
-    },
-    {
-      "timestamp": 1784178139,
-      "reports": 32
-    },
     {
       "timestamp": 1784178172,
       "reports": 32
@@ -373,6 +357,22 @@
     {
       "timestamp": 1784179968,
       "reports": 64
+    },
+    {
+      "timestamp": 1784180001,
+      "reports": 65
+    },
+    {
+      "timestamp": 1784180034,
+      "reports": 65
+    },
+    {
+      "timestamp": 1784180067,
+      "reports": 65
+    },
+    {
+      "timestamp": 1784180101,
+      "reports": 66
     }
   ]
 }
