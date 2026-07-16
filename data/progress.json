@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-16T17:07:50.622309+08:00",
+  "updated_at": "2026-07-16T17:13:23.775130+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 298,
-  "llm_complete": 297,
-  "reports_complete": 296,
+  "precompute_complete": 304,
+  "llm_complete": 303,
+  "reports_complete": 303,
   "errors": 0,
   "report_rate_per_hour": 62.05,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 58.18,
+  "report_eta_hours": 58.07,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -27,7 +27,7 @@
   "processes": {
     "hospital_agent_workers": 8,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 8,
+    "active_codex_calls": 7,
     "formal_supervisor_alive": true
   },
   "gpus": [
@@ -38,7 +38,7 @@
     },
     {
       "gpu": 1,
-      "memory_mib": 1169,
+      "memory_mib": 757,
       "utilization_pct": 0
     },
     {
@@ -73,15 +73,15 @@
     }
   ],
   "artifacts": {
-    "metrics": 298,
-    "evidence": 297,
-    "plan": 298,
-    "report_json": 296,
-    "report_md": 296,
-    "lge_visuals": 304,
-    "lge_fallback": 2,
-    "lge_complete": 296,
-    "model_verified": 296
+    "metrics": 304,
+    "evidence": 303,
+    "plan": 304,
+    "report_json": 303,
+    "report_md": 303,
+    "lge_visuals": 311,
+    "lge_fallback": 3,
+    "lge_complete": 301,
+    "model_verified": 303
   },
   "centers": [
     {
@@ -111,12 +111,12 @@
       "total": 402,
       "cache_4ch": 402,
       "cache_sax": 402,
-      "precompute": 298,
-      "llm": 297,
-      "reports": 296,
+      "precompute": 304,
+      "llm": 303,
+      "reports": 303,
       "errors": 0,
       "lge_total": 402,
-      "lge_complete": 296
+      "lge_complete": 301
     },
     {
       "center": "SCS",
@@ -134,46 +134,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784190905,
-      "reports": 262
-    },
-    {
-      "timestamp": 1784190938,
-      "reports": 263
-    },
-    {
-      "timestamp": 1784190972,
-      "reports": 264
-    },
-    {
-      "timestamp": 1784191005,
-      "reports": 265
-    },
-    {
-      "timestamp": 1784191038,
-      "reports": 265
-    },
-    {
-      "timestamp": 1784191072,
-      "reports": 265
-    },
-    {
-      "timestamp": 1784191105,
-      "reports": 265
-    },
-    {
-      "timestamp": 1784191138,
-      "reports": 265
-    },
-    {
-      "timestamp": 1784191171,
-      "reports": 265
-    },
-    {
-      "timestamp": 1784191205,
-      "reports": 265
-    },
     {
       "timestamp": 1784191238,
       "reports": 268
@@ -373,6 +333,46 @@
     {
       "timestamp": 1784192870,
       "reports": 296
+    },
+    {
+      "timestamp": 1784192903,
+      "reports": 297
+    },
+    {
+      "timestamp": 1784192937,
+      "reports": 297
+    },
+    {
+      "timestamp": 1784192970,
+      "reports": 298
+    },
+    {
+      "timestamp": 1784193003,
+      "reports": 298
+    },
+    {
+      "timestamp": 1784193037,
+      "reports": 299
+    },
+    {
+      "timestamp": 1784193070,
+      "reports": 299
+    },
+    {
+      "timestamp": 1784193103,
+      "reports": 300
+    },
+    {
+      "timestamp": 1784193137,
+      "reports": 300
+    },
+    {
+      "timestamp": 1784193170,
+      "reports": 302
+    },
+    {
+      "timestamp": 1784193203,
+      "reports": 303
     }
   ]
 }
