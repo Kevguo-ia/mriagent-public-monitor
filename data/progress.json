@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-16T20:47:38.208276+08:00",
+  "updated_at": "2026-07-16T20:52:41.400273+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 776,
-  "llm_complete": 774,
-  "reports_complete": 768,
+  "precompute_complete": 787,
+  "llm_complete": 785,
+  "reports_complete": 782,
   "errors": 5,
-  "report_rate_per_hour": 230.0,
+  "report_rate_per_hour": 197.68,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 13.64,
+  "report_eta_hours": 15.8,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -27,7 +27,7 @@
   "processes": {
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 28,
+    "active_codex_calls": 32,
     "formal_supervisor_alive": false
   },
   "gpus": [
@@ -38,28 +38,28 @@
     },
     {
       "gpu": 1,
-      "memory_mib": 3429,
+      "memory_mib": 3017,
       "utilization_pct": 0
     },
     {
       "gpu": 2,
       "memory_mib": 4662,
-      "utilization_pct": 9
+      "utilization_pct": 15
     },
     {
       "gpu": 3,
-      "memory_mib": 3429,
+      "memory_mib": 3017,
       "utilization_pct": 0
     },
     {
       "gpu": 4,
       "memory_mib": 4920,
-      "utilization_pct": 7
+      "utilization_pct": 12
     },
     {
       "gpu": 5,
       "memory_mib": 4420,
-      "utilization_pct": 23
+      "utilization_pct": 3
     },
     {
       "gpu": 6,
@@ -73,15 +73,15 @@
     }
   ],
   "artifacts": {
-    "metrics": 776,
-    "evidence": 774,
-    "plan": 776,
-    "report_json": 768,
-    "report_md": 768,
-    "lge_visuals": 805,
+    "metrics": 787,
+    "evidence": 785,
+    "plan": 787,
+    "report_json": 782,
+    "report_md": 782,
+    "lge_visuals": 819,
     "lge_fallback": 3,
-    "lge_complete": 773,
-    "model_verified": 768
+    "lge_complete": 784,
+    "model_verified": 782
   },
   "centers": [
     {
@@ -123,54 +123,18 @@
       "total": 510,
       "cache_4ch": 510,
       "cache_sax": 510,
-      "precompute": 374,
-      "llm": 372,
-      "reports": 366,
+      "precompute": 385,
+      "llm": 383,
+      "reports": 380,
       "errors": 5,
       "lge_total": 503,
-      "lge_complete": 374
+      "lge_complete": 385
     },
     {
       "center": "YA"
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784204072,
-      "reports": 654
-    },
-    {
-      "timestamp": 1784204105,
-      "reports": 654
-    },
-    {
-      "timestamp": 1784204139,
-      "reports": 654
-    },
-    {
-      "timestamp": 1784204172,
-      "reports": 654
-    },
-    {
-      "timestamp": 1784204206,
-      "reports": 654
-    },
-    {
-      "timestamp": 1784204240,
-      "reports": 654
-    },
-    {
-      "timestamp": 1784204273,
-      "reports": 654
-    },
-    {
-      "timestamp": 1784204307,
-      "reports": 654
-    },
-    {
-      "timestamp": 1784204341,
-      "reports": 655
-    },
     {
       "timestamp": 1784204374,
       "reports": 655
@@ -374,6 +338,42 @@
     {
       "timestamp": 1784206058,
       "reports": 768
+    },
+    {
+      "timestamp": 1784206091,
+      "reports": 773
+    },
+    {
+      "timestamp": 1784206125,
+      "reports": 774
+    },
+    {
+      "timestamp": 1784206159,
+      "reports": 775
+    },
+    {
+      "timestamp": 1784206192,
+      "reports": 776
+    },
+    {
+      "timestamp": 1784206226,
+      "reports": 777
+    },
+    {
+      "timestamp": 1784206260,
+      "reports": 780
+    },
+    {
+      "timestamp": 1784206293,
+      "reports": 781
+    },
+    {
+      "timestamp": 1784206327,
+      "reports": 781
+    },
+    {
+      "timestamp": 1784206361,
+      "reports": 782
     }
   ]
 }
