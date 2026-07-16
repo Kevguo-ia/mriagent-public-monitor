@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-16T14:29:50.923004+08:00",
+  "updated_at": "2026-07-16T14:34:50.309793+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 126,
-  "llm_complete": 126,
-  "reports_complete": 126,
+  "precompute_complete": 133,
+  "llm_complete": 131,
+  "reports_complete": 129,
   "errors": 0,
-  "report_rate_per_hour": 62.18,
+  "report_rate_per_hour": 58.16,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 60.8,
+  "report_eta_hours": 64.94,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -73,15 +73,15 @@
     }
   ],
   "artifacts": {
-    "metrics": 126,
-    "evidence": 126,
-    "plan": 126,
-    "report_json": 126,
-    "report_md": 126,
-    "lge_visuals": 134,
+    "metrics": 133,
+    "evidence": 131,
+    "plan": 133,
+    "report_json": 129,
+    "report_md": 129,
+    "lge_visuals": 137,
     "lge_fallback": 0,
-    "lge_complete": 126,
-    "model_verified": 126
+    "lge_complete": 133,
+    "model_verified": 129
   },
   "centers": [
     {
@@ -111,12 +111,12 @@
       "total": 402,
       "cache_4ch": 402,
       "cache_sax": 402,
-      "precompute": 126,
-      "llm": 126,
-      "reports": 126,
+      "precompute": 133,
+      "llm": 131,
+      "reports": 129,
       "errors": 0,
       "lge_total": 402,
-      "lge_complete": 126
+      "lge_complete": 133
     },
     {
       "center": "SCS",
@@ -134,42 +134,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784181429,
-      "reports": 92
-    },
-    {
-      "timestamp": 1784181463,
-      "reports": 92
-    },
-    {
-      "timestamp": 1784181496,
-      "reports": 93
-    },
-    {
-      "timestamp": 1784181529,
-      "reports": 94
-    },
-    {
-      "timestamp": 1784181562,
-      "reports": 94
-    },
-    {
-      "timestamp": 1784181595,
-      "reports": 95
-    },
-    {
-      "timestamp": 1784181629,
-      "reports": 95
-    },
-    {
-      "timestamp": 1784181662,
-      "reports": 96
-    },
-    {
-      "timestamp": 1784181695,
-      "reports": 96
-    },
     {
       "timestamp": 1784181728,
       "reports": 96
@@ -373,6 +337,42 @@
     {
       "timestamp": 1784183390,
       "reports": 126
+    },
+    {
+      "timestamp": 1784183424,
+      "reports": 126
+    },
+    {
+      "timestamp": 1784183457,
+      "reports": 126
+    },
+    {
+      "timestamp": 1784183490,
+      "reports": 126
+    },
+    {
+      "timestamp": 1784183524,
+      "reports": 126
+    },
+    {
+      "timestamp": 1784183557,
+      "reports": 127
+    },
+    {
+      "timestamp": 1784183590,
+      "reports": 128
+    },
+    {
+      "timestamp": 1784183623,
+      "reports": 129
+    },
+    {
+      "timestamp": 1784183657,
+      "reports": 129
+    },
+    {
+      "timestamp": 1784183690,
+      "reports": 129
     }
   ]
 }
