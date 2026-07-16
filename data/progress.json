@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-16T19:35:55.757260+08:00",
+  "updated_at": "2026-07-16T19:41:31.457302+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 532,
-  "llm_complete": 531,
-  "reports_complete": 531,
-  "errors": 2,
-  "report_rate_per_hour": 238.57,
+  "precompute_complete": 562,
+  "llm_complete": 559,
+  "reports_complete": 552,
+  "errors": 3,
+  "report_rate_per_hour": 238.51,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 14.15,
+  "report_eta_hours": 14.06,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -27,24 +27,24 @@
   "processes": {
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 32,
+    "active_codex_calls": 27,
     "formal_supervisor_alive": false
   },
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 3017,
+      "memory_mib": 3427,
       "utilization_pct": 0
     },
     {
       "gpu": 1,
-      "memory_mib": 28920,
+      "memory_mib": 29332,
       "utilization_pct": 0
     },
     {
       "gpu": 2,
       "memory_mib": 4662,
-      "utilization_pct": 4
+      "utilization_pct": 10
     },
     {
       "gpu": 3,
@@ -54,17 +54,17 @@
     {
       "gpu": 4,
       "memory_mib": 4920,
-      "utilization_pct": 4
+      "utilization_pct": 25
     },
     {
       "gpu": 5,
-      "memory_mib": 4420,
-      "utilization_pct": 3
+      "memory_mib": 4852,
+      "utilization_pct": 4
     },
     {
       "gpu": 6,
       "memory_mib": 18817,
-      "utilization_pct": 8
+      "utilization_pct": 0
     },
     {
       "gpu": 7,
@@ -73,15 +73,15 @@
     }
   ],
   "artifacts": {
-    "metrics": 532,
-    "evidence": 531,
-    "plan": 532,
-    "report_json": 531,
-    "report_md": 531,
-    "lge_visuals": 565,
+    "metrics": 562,
+    "evidence": 559,
+    "plan": 562,
+    "report_json": 553,
+    "report_md": 553,
+    "lge_visuals": 587,
     "lge_fallback": 3,
-    "lge_complete": 529,
-    "model_verified": 531
+    "lge_complete": 559,
+    "model_verified": 553
   },
   "centers": [
     {
@@ -123,58 +123,18 @@
       "total": 510,
       "cache_4ch": 510,
       "cache_sax": 510,
-      "precompute": 130,
-      "llm": 129,
-      "reports": 129,
-      "errors": 2,
+      "precompute": 160,
+      "llm": 157,
+      "reports": 150,
+      "errors": 3,
       "lge_total": 503,
-      "lge_complete": 130
+      "lge_complete": 160
     },
     {
       "center": "YA"
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784199774,
-      "reports": 402
-    },
-    {
-      "timestamp": 1784199808,
-      "reports": 402
-    },
-    {
-      "timestamp": 1784199841,
-      "reports": 402
-    },
-    {
-      "timestamp": 1784199874,
-      "reports": 402
-    },
-    {
-      "timestamp": 1784199908,
-      "reports": 402
-    },
-    {
-      "timestamp": 1784199941,
-      "reports": 404
-    },
-    {
-      "timestamp": 1784199975,
-      "reports": 413
-    },
-    {
-      "timestamp": 1784200009,
-      "reports": 419
-    },
-    {
-      "timestamp": 1784200042,
-      "reports": 426
-    },
-    {
-      "timestamp": 1784200076,
-      "reports": 432
-    },
     {
       "timestamp": 1784200109,
       "reports": 434
@@ -374,6 +334,46 @@
     {
       "timestamp": 1784201755,
       "reports": 531
+    },
+    {
+      "timestamp": 1784201789,
+      "reports": 531
+    },
+    {
+      "timestamp": 1784201822,
+      "reports": 531
+    },
+    {
+      "timestamp": 1784201856,
+      "reports": 531
+    },
+    {
+      "timestamp": 1784201890,
+      "reports": 532
+    },
+    {
+      "timestamp": 1784201923,
+      "reports": 533
+    },
+    {
+      "timestamp": 1784201957,
+      "reports": 536
+    },
+    {
+      "timestamp": 1784201990,
+      "reports": 541
+    },
+    {
+      "timestamp": 1784202024,
+      "reports": 546
+    },
+    {
+      "timestamp": 1784202057,
+      "reports": 549
+    },
+    {
+      "timestamp": 1784202091,
+      "reports": 552
     }
   ]
 }
