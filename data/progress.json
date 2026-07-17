@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-17T12:32:17.244277+08:00",
+  "updated_at": "2026-07-17T12:37:21.472271+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 1268,
-  "llm_complete": 1265,
-  "reports_complete": 1262,
+  "precompute_complete": 1297,
+  "llm_complete": 1291,
+  "reports_complete": 1286,
   "errors": 13,
-  "report_rate_per_hour": 349.91,
+  "report_rate_per_hour": 341.83,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 7.56,
+  "report_eta_hours": 7.66,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -34,7 +34,7 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 2625,
+      "memory_mib": 3157,
       "utilization_pct": 0
     },
     {
@@ -49,7 +49,7 @@
     },
     {
       "gpu": 3,
-      "memory_mib": 3157,
+      "memory_mib": 2625,
       "utilization_pct": 0
     },
     {
@@ -59,7 +59,7 @@
     },
     {
       "gpu": 5,
-      "memory_mib": 3157,
+      "memory_mib": 2625,
       "utilization_pct": 0
     },
     {
@@ -69,20 +69,20 @@
     },
     {
       "gpu": 7,
-      "memory_mib": 2625,
+      "memory_mib": 3157,
       "utilization_pct": 0
     }
   ],
   "artifacts": {
-    "metrics": 1268,
-    "evidence": 1266,
-    "plan": 1268,
-    "report_json": 1262,
-    "report_md": 1262,
-    "lge_visuals": 1265,
+    "metrics": 1298,
+    "evidence": 1291,
+    "plan": 1298,
+    "report_json": 1287,
+    "report_md": 1287,
+    "lge_visuals": 1287,
     "lge_fallback": 3,
-    "lge_complete": 1223,
-    "model_verified": 1262
+    "lge_complete": 1251,
+    "model_verified": 1287
   },
   "centers": [
     {
@@ -101,12 +101,12 @@
       "total": 1994,
       "cache_4ch": 1994,
       "cache_sax": 1994,
-      "precompute": 363,
-      "llm": 360,
-      "reports": 357,
+      "precompute": 392,
+      "llm": 386,
+      "reports": 381,
       "errors": 6,
       "lge_total": 1606,
-      "lge_complete": 321
+      "lge_complete": 349
     },
     {
       "center": "Chengdu",
@@ -137,42 +137,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784260744,
-      "reports": 1073
-    },
-    {
-      "timestamp": 1784260778,
-      "reports": 1079
-    },
-    {
-      "timestamp": 1784260812,
-      "reports": 1081
-    },
-    {
-      "timestamp": 1784260845,
-      "reports": 1084
-    },
-    {
-      "timestamp": 1784260879,
-      "reports": 1085
-    },
-    {
-      "timestamp": 1784260913,
-      "reports": 1087
-    },
-    {
-      "timestamp": 1784260947,
-      "reports": 1088
-    },
-    {
-      "timestamp": 1784260980,
-      "reports": 1091
-    },
-    {
-      "timestamp": 1784261014,
-      "reports": 1092
-    },
     {
       "timestamp": 1784261048,
       "reports": 1093
@@ -376,6 +340,42 @@
     {
       "timestamp": 1784262737,
       "reports": 1262
+    },
+    {
+      "timestamp": 1784262771,
+      "reports": 1264
+    },
+    {
+      "timestamp": 1784262804,
+      "reports": 1266
+    },
+    {
+      "timestamp": 1784262838,
+      "reports": 1268
+    },
+    {
+      "timestamp": 1784262872,
+      "reports": 1269
+    },
+    {
+      "timestamp": 1784262906,
+      "reports": 1273
+    },
+    {
+      "timestamp": 1784262940,
+      "reports": 1275
+    },
+    {
+      "timestamp": 1784262973,
+      "reports": 1278
+    },
+    {
+      "timestamp": 1784263007,
+      "reports": 1282
+    },
+    {
+      "timestamp": 1784263041,
+      "reports": 1286
     }
   ]
 }
