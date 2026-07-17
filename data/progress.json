@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-17T18:29:45.981460+08:00",
+  "updated_at": "2026-07-17T18:34:39.789488+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -12,64 +12,67 @@
   "segmentation_rate_per_hour": 0.0,
   "report_eta_hours": null,
   "segmentation_eta_hours": null,
-  "stalled_advisory": false,
+  "stalled_advisory": true,
   "workflow": {
     "stage": "agent",
     "state": "running",
     "automatic_retry": false
   },
   "model": {
-    "name": "gpt-5.5",
+    "name": "gpt-5.4-mini",
     "api": "Responses",
     "reasoning_effort": "medium",
     "prompt_profile": "balanced_v2"
   },
   "processes": {
-    "hospital_agent_workers": 0,
+    "hospital_agent_workers": 32,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 0,
-    "formal_supervisor_alive": false,
-    "reasoning_effort": "medium"
+    "active_codex_calls": 32,
+    "formal_supervisor_alive": true,
+    "reasoning_effort": "medium",
+    "active_models": [
+      "gpt-5.4-mini"
+    ]
   },
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 1,
+      "memory_mib": 2593,
       "utilization_pct": 0
     },
     {
       "gpu": 1,
-      "memory_mib": 1,
+      "memory_mib": 1298,
       "utilization_pct": 0
     },
     {
       "gpu": 2,
-      "memory_mib": 1,
+      "memory_mib": 1945,
       "utilization_pct": 0
     },
     {
       "gpu": 3,
-      "memory_mib": 1,
+      "memory_mib": 2593,
       "utilization_pct": 0
     },
     {
       "gpu": 4,
-      "memory_mib": 1,
+      "memory_mib": 2593,
       "utilization_pct": 0
     },
     {
       "gpu": 5,
-      "memory_mib": 1,
+      "memory_mib": 2593,
       "utilization_pct": 0
     },
     {
       "gpu": 6,
-      "memory_mib": 1,
+      "memory_mib": 2593,
       "utilization_pct": 0
     },
     {
       "gpu": 7,
-      "memory_mib": 1,
+      "memory_mib": 2593,
       "utilization_pct": 0
     }
   ],
@@ -137,42 +140,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784282171,
-      "reports": 2170
-    },
-    {
-      "timestamp": 1784282206,
-      "reports": 2170
-    },
-    {
-      "timestamp": 1784282240,
-      "reports": 2170
-    },
-    {
-      "timestamp": 1784282274,
-      "reports": 2170
-    },
-    {
-      "timestamp": 1784282308,
-      "reports": 2170
-    },
-    {
-      "timestamp": 1784282342,
-      "reports": 2170
-    },
-    {
-      "timestamp": 1784282377,
-      "reports": 2170
-    },
-    {
-      "timestamp": 1784282411,
-      "reports": 2170
-    },
-    {
-      "timestamp": 1784282445,
-      "reports": 2170
-    },
     {
       "timestamp": 1784282479,
       "reports": 2170
@@ -375,6 +342,42 @@
     },
     {
       "timestamp": 1784284185,
+      "reports": 2170
+    },
+    {
+      "timestamp": 1784284220,
+      "reports": 2170
+    },
+    {
+      "timestamp": 1784284254,
+      "reports": 2170
+    },
+    {
+      "timestamp": 1784284288,
+      "reports": 2170
+    },
+    {
+      "timestamp": 1784284322,
+      "reports": 2170
+    },
+    {
+      "timestamp": 1784284356,
+      "reports": 2170
+    },
+    {
+      "timestamp": 1784284390,
+      "reports": 2170
+    },
+    {
+      "timestamp": 1784284425,
+      "reports": 2170
+    },
+    {
+      "timestamp": 1784284459,
+      "reports": 2170
+    },
+    {
+      "timestamp": 1784284479,
       "reports": 2170
     }
   ]
