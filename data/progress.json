@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-17T14:55:19.823280+08:00",
+  "updated_at": "2026-07-17T15:00:26.289015+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 1987,
-  "llm_complete": 1974,
-  "reports_complete": 1971,
+  "precompute_complete": 2009,
+  "llm_complete": 2003,
+  "reports_complete": 1997,
   "errors": 16,
-  "report_rate_per_hour": 158.75,
+  "report_rate_per_hour": 201.38,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 12.19,
+  "report_eta_hours": 9.48,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -59,8 +59,8 @@
     },
     {
       "gpu": 5,
-      "memory_mib": 3017,
-      "utilization_pct": 0
+      "memory_mib": 3427,
+      "utilization_pct": 7
     },
     {
       "gpu": 6,
@@ -74,15 +74,15 @@
     }
   ],
   "artifacts": {
-    "metrics": 1987,
-    "evidence": 1974,
-    "plan": 1987,
-    "report_json": 1971,
-    "report_md": 1971,
-    "lge_visuals": 1824,
+    "metrics": 2009,
+    "evidence": 2003,
+    "plan": 2009,
+    "report_json": 1998,
+    "report_md": 1998,
+    "lge_visuals": 1850,
     "lge_fallback": 3,
-    "lge_complete": 1789,
-    "model_verified": 1971
+    "lge_complete": 1811,
+    "model_verified": 1998
   },
   "centers": [
     {
@@ -101,12 +101,12 @@
       "total": 1994,
       "cache_4ch": 1994,
       "cache_sax": 1994,
-      "precompute": 1082,
-      "llm": 1069,
-      "reports": 1066,
+      "precompute": 1104,
+      "llm": 1098,
+      "reports": 1092,
       "errors": 9,
       "lge_total": 1606,
-      "lge_complete": 887
+      "lge_complete": 909
     },
     {
       "center": "Chengdu",
@@ -137,42 +137,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784269313,
-      "reports": 1888
-    },
-    {
-      "timestamp": 1784269347,
-      "reports": 1888
-    },
-    {
-      "timestamp": 1784269381,
-      "reports": 1888
-    },
-    {
-      "timestamp": 1784269415,
-      "reports": 1888
-    },
-    {
-      "timestamp": 1784269449,
-      "reports": 1890
-    },
-    {
-      "timestamp": 1784269483,
-      "reports": 1891
-    },
-    {
-      "timestamp": 1784269517,
-      "reports": 1892
-    },
-    {
-      "timestamp": 1784269551,
-      "reports": 1893
-    },
-    {
-      "timestamp": 1784269584,
-      "reports": 1894
-    },
     {
       "timestamp": 1784269618,
       "reports": 1895
@@ -376,6 +340,42 @@
     {
       "timestamp": 1784271319,
       "reports": 1971
+    },
+    {
+      "timestamp": 1784271353,
+      "reports": 1973
+    },
+    {
+      "timestamp": 1784271387,
+      "reports": 1977
+    },
+    {
+      "timestamp": 1784271421,
+      "reports": 1984
+    },
+    {
+      "timestamp": 1784271455,
+      "reports": 1991
+    },
+    {
+      "timestamp": 1784271490,
+      "reports": 1993
+    },
+    {
+      "timestamp": 1784271524,
+      "reports": 1995
+    },
+    {
+      "timestamp": 1784271558,
+      "reports": 1995
+    },
+    {
+      "timestamp": 1784271592,
+      "reports": 1996
+    },
+    {
+      "timestamp": 1784271626,
+      "reports": 1997
     }
   ]
 }
