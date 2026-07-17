@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-17T14:40:01.007013+08:00",
+  "updated_at": "2026-07-17T14:45:07.278262+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 1901,
-  "llm_complete": 1901,
-  "reports_complete": 1900,
-  "errors": 14,
-  "report_rate_per_hour": 93.74,
+  "precompute_complete": 1932,
+  "llm_complete": 1932,
+  "reports_complete": 1931,
+  "errors": 15,
+  "report_rate_per_hour": 116.11,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 21.4,
+  "report_eta_hours": 17.01,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -27,7 +27,7 @@
   "processes": {
     "hospital_agent_workers": 32,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 30,
+    "active_codex_calls": 31,
     "formal_supervisor_alive": true,
     "reasoning_effort": "medium"
   },
@@ -74,15 +74,15 @@
     }
   ],
   "artifacts": {
-    "metrics": 1901,
-    "evidence": 1901,
-    "plan": 1901,
-    "report_json": 1900,
-    "report_md": 1900,
-    "lge_visuals": 1751,
+    "metrics": 1932,
+    "evidence": 1932,
+    "plan": 1932,
+    "report_json": 1931,
+    "report_md": 1931,
+    "lge_visuals": 1783,
     "lge_fallback": 3,
-    "lge_complete": 1703,
-    "model_verified": 1900
+    "lge_complete": 1734,
+    "model_verified": 1931
   },
   "centers": [
     {
@@ -101,12 +101,12 @@
       "total": 1994,
       "cache_4ch": 1994,
       "cache_sax": 1994,
-      "precompute": 996,
-      "llm": 996,
-      "reports": 995,
-      "errors": 7,
+      "precompute": 1027,
+      "llm": 1027,
+      "reports": 1026,
+      "errors": 8,
       "lge_total": 1606,
-      "lge_complete": 801
+      "lge_complete": 832
     },
     {
       "center": "Chengdu",
@@ -137,42 +137,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784268396,
-      "reports": 1836
-    },
-    {
-      "timestamp": 1784268430,
-      "reports": 1837
-    },
-    {
-      "timestamp": 1784268464,
-      "reports": 1839
-    },
-    {
-      "timestamp": 1784268498,
-      "reports": 1843
-    },
-    {
-      "timestamp": 1784268532,
-      "reports": 1846
-    },
-    {
-      "timestamp": 1784268566,
-      "reports": 1849
-    },
-    {
-      "timestamp": 1784268600,
-      "reports": 1850
-    },
-    {
-      "timestamp": 1784268634,
-      "reports": 1854
-    },
-    {
-      "timestamp": 1784268668,
-      "reports": 1855
-    },
     {
       "timestamp": 1784268702,
       "reports": 1857
@@ -376,6 +340,42 @@
     {
       "timestamp": 1784270401,
       "reports": 1900
+    },
+    {
+      "timestamp": 1784270434,
+      "reports": 1901
+    },
+    {
+      "timestamp": 1784270468,
+      "reports": 1901
+    },
+    {
+      "timestamp": 1784270502,
+      "reports": 1901
+    },
+    {
+      "timestamp": 1784270536,
+      "reports": 1901
+    },
+    {
+      "timestamp": 1784270570,
+      "reports": 1908
+    },
+    {
+      "timestamp": 1784270605,
+      "reports": 1924
+    },
+    {
+      "timestamp": 1784270639,
+      "reports": 1930
+    },
+    {
+      "timestamp": 1784270673,
+      "reports": 1931
+    },
+    {
+      "timestamp": 1784270707,
+      "reports": 1931
     }
   ]
 }
