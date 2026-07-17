@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-17T19:20:41.587044+08:00",
+  "updated_at": "2026-07-17T19:25:47.878267+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 2361,
-  "llm_complete": 2345,
-  "reports_complete": 2340,
+  "precompute_complete": 2391,
+  "llm_complete": 2378,
+  "reports_complete": 2367,
   "errors": 20,
-  "report_rate_per_hour": 227.36,
+  "report_rate_per_hour": 249.79,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 6.89,
+  "report_eta_hours": 6.16,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -27,7 +27,7 @@
   "processes": {
     "hospital_agent_workers": 32,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 28,
+    "active_codex_calls": 31,
     "formal_supervisor_alive": true,
     "reasoning_effort": "medium",
     "active_models": [
@@ -37,32 +37,32 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 2625,
-      "utilization_pct": 0
-    },
-    {
-      "gpu": 1,
-      "memory_mib": 3157,
-      "utilization_pct": 0
-    },
-    {
-      "gpu": 2,
       "memory_mib": 3689,
       "utilization_pct": 0
     },
     {
-      "gpu": 3,
+      "gpu": 1,
+      "memory_mib": 3689,
+      "utilization_pct": 0
+    },
+    {
+      "gpu": 2,
       "memory_mib": 3157,
+      "utilization_pct": 0
+    },
+    {
+      "gpu": 3,
+      "memory_mib": 3689,
       "utilization_pct": 0
     },
     {
       "gpu": 4,
-      "memory_mib": 3157,
+      "memory_mib": 3689,
       "utilization_pct": 0
     },
     {
       "gpu": 5,
-      "memory_mib": 4221,
+      "memory_mib": 3689,
       "utilization_pct": 0
     },
     {
@@ -77,15 +77,15 @@
     }
   ],
   "artifacts": {
-    "metrics": 2361,
-    "evidence": 2345,
-    "plan": 2361,
-    "report_json": 2342,
-    "report_md": 2342,
-    "lge_visuals": 2143,
+    "metrics": 2391,
+    "evidence": 2378,
+    "plan": 2391,
+    "report_json": 2368,
+    "report_md": 2368,
+    "lge_visuals": 2153,
     "lge_fallback": 3,
-    "lge_complete": 2110,
-    "model_verified": 2342
+    "lge_complete": 2122,
+    "model_verified": 2368
   },
   "centers": [
     {
@@ -104,12 +104,12 @@
       "total": 1994,
       "cache_4ch": 1994,
       "cache_sax": 1994,
-      "precompute": 1456,
-      "llm": 1440,
-      "reports": 1435,
+      "precompute": 1486,
+      "llm": 1473,
+      "reports": 1462,
       "errors": 13,
       "lge_total": 1606,
-      "lge_complete": 1208
+      "lge_complete": 1220
     },
     {
       "center": "Chengdu",
@@ -140,42 +140,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784285229,
-      "reports": 2209
-    },
-    {
-      "timestamp": 1784285263,
-      "reports": 2209
-    },
-    {
-      "timestamp": 1784285297,
-      "reports": 2210
-    },
-    {
-      "timestamp": 1784285331,
-      "reports": 2214
-    },
-    {
-      "timestamp": 1784285365,
-      "reports": 2214
-    },
-    {
-      "timestamp": 1784285399,
-      "reports": 2219
-    },
-    {
-      "timestamp": 1784285434,
-      "reports": 2225
-    },
-    {
-      "timestamp": 1784285468,
-      "reports": 2228
-    },
-    {
-      "timestamp": 1784285502,
-      "reports": 2231
-    },
     {
       "timestamp": 1784285536,
       "reports": 2232
@@ -379,6 +343,42 @@
     {
       "timestamp": 1784287241,
       "reports": 2340
+    },
+    {
+      "timestamp": 1784287275,
+      "reports": 2343
+    },
+    {
+      "timestamp": 1784287309,
+      "reports": 2345
+    },
+    {
+      "timestamp": 1784287343,
+      "reports": 2354
+    },
+    {
+      "timestamp": 1784287377,
+      "reports": 2357
+    },
+    {
+      "timestamp": 1784287411,
+      "reports": 2357
+    },
+    {
+      "timestamp": 1784287445,
+      "reports": 2360
+    },
+    {
+      "timestamp": 1784287479,
+      "reports": 2362
+    },
+    {
+      "timestamp": 1784287513,
+      "reports": 2366
+    },
+    {
+      "timestamp": 1784287547,
+      "reports": 2367
     }
   ]
 }
