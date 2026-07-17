@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-18T01:33:32.267118+08:00",
+  "updated_at": "2026-07-18T01:38:42.036214+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -27,7 +27,7 @@
   "processes": {
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 32,
+    "active_codex_calls": 31,
     "formal_supervisor_alive": false,
     "reasoning_effort": "high",
     "active_models": [
@@ -68,7 +68,7 @@
     {
       "gpu": 6,
       "memory_mib": 21980,
-      "utilization_pct": 70
+      "utilization_pct": 13
     },
     {
       "gpu": 7,
@@ -140,42 +140,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784307580,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784307614,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784307649,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784307683,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784307718,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784307752,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784307787,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784307821,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784307856,
-      "reports": 3883
-    },
     {
       "timestamp": 1784307890,
       "reports": 3883
@@ -378,6 +342,42 @@
     },
     {
       "timestamp": 1784309612,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784309646,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784309681,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784309715,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784309749,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784309784,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784309818,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784309853,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784309887,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784309922,
       "reports": 3883
     }
   ]
