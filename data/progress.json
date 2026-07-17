@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-17T20:52:52.925279+08:00",
+  "updated_at": "2026-07-17T20:58:00.618915+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 2748,
-  "llm_complete": 2734,
-  "reports_complete": 2731,
+  "precompute_complete": 2766,
+  "llm_complete": 2752,
+  "reports_complete": 2748,
   "errors": 22,
-  "report_rate_per_hour": 232.57,
+  "report_rate_per_hour": 230.58,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 5.05,
+  "report_eta_hours": 5.02,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -42,12 +42,12 @@
     },
     {
       "gpu": 1,
-      "memory_mib": 4053,
-      "utilization_pct": 2
+      "memory_mib": 2625,
+      "utilization_pct": 0
     },
     {
       "gpu": 2,
-      "memory_mib": 2625,
+      "memory_mib": 3689,
       "utilization_pct": 0
     },
     {
@@ -57,7 +57,7 @@
     },
     {
       "gpu": 4,
-      "memory_mib": 2625,
+      "memory_mib": 3157,
       "utilization_pct": 0
     },
     {
@@ -77,15 +77,15 @@
     }
   ],
   "artifacts": {
-    "metrics": 2748,
-    "evidence": 2735,
-    "plan": 2748,
-    "report_json": 2731,
-    "report_md": 2731,
-    "lge_visuals": 2429,
+    "metrics": 2766,
+    "evidence": 2753,
+    "plan": 2766,
+    "report_json": 2748,
+    "report_md": 2748,
+    "lge_visuals": 2444,
     "lge_fallback": 3,
-    "lge_complete": 2389,
-    "model_verified": 2731
+    "lge_complete": 2405,
+    "model_verified": 2748
   },
   "centers": [
     {
@@ -104,12 +104,12 @@
       "total": 1994,
       "cache_4ch": 1994,
       "cache_sax": 1994,
-      "precompute": 1843,
-      "llm": 1829,
-      "reports": 1826,
+      "precompute": 1861,
+      "llm": 1847,
+      "reports": 1843,
       "errors": 15,
       "lge_total": 1606,
-      "lge_complete": 1487
+      "lge_complete": 1503
     },
     {
       "center": "Chengdu",
@@ -140,42 +140,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784290753,
-      "reports": 2598
-    },
-    {
-      "timestamp": 1784290787,
-      "reports": 2599
-    },
-    {
-      "timestamp": 1784290821,
-      "reports": 2603
-    },
-    {
-      "timestamp": 1784290855,
-      "reports": 2605
-    },
-    {
-      "timestamp": 1784290890,
-      "reports": 2608
-    },
-    {
-      "timestamp": 1784290924,
-      "reports": 2612
-    },
-    {
-      "timestamp": 1784290958,
-      "reports": 2615
-    },
-    {
-      "timestamp": 1784290992,
-      "reports": 2616
-    },
-    {
-      "timestamp": 1784291027,
-      "reports": 2617
-    },
     {
       "timestamp": 1784291061,
       "reports": 2618
@@ -379,6 +343,42 @@
     {
       "timestamp": 1784292772,
       "reports": 2731
+    },
+    {
+      "timestamp": 1784292807,
+      "reports": 2732
+    },
+    {
+      "timestamp": 1784292841,
+      "reports": 2735
+    },
+    {
+      "timestamp": 1784292875,
+      "reports": 2736
+    },
+    {
+      "timestamp": 1784292909,
+      "reports": 2738
+    },
+    {
+      "timestamp": 1784292943,
+      "reports": 2739
+    },
+    {
+      "timestamp": 1784292978,
+      "reports": 2741
+    },
+    {
+      "timestamp": 1784293012,
+      "reports": 2744
+    },
+    {
+      "timestamp": 1784293046,
+      "reports": 2747
+    },
+    {
+      "timestamp": 1784293080,
+      "reports": 2748
     }
   ]
 }
