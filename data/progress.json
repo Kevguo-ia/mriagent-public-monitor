@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-18T00:37:15.961284+08:00",
+  "updated_at": "2026-07-18T00:42:25.826275+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -19,20 +19,18 @@
     "automatic_retry": false
   },
   "model": {
-    "name": "gpt-5.4",
+    "name": "mixed recorded provenance",
     "api": "Responses",
-    "reasoning_effort": "high",
+    "reasoning_effort": "medium",
     "prompt_profile": "balanced_v2"
   },
   "processes": {
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 1,
+    "active_codex_calls": 0,
     "formal_supervisor_alive": false,
-    "reasoning_effort": "high",
-    "active_models": [
-      "gpt-5.4"
-    ]
+    "reasoning_effort": "medium",
+    "active_models": []
   },
   "gpus": [
     {
@@ -140,42 +138,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784304203,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784304237,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784304272,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784304307,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784304341,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784304375,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784304410,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784304444,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784304479,
-      "reports": 3883
-    },
     {
       "timestamp": 1784304513,
       "reports": 3883
@@ -378,6 +340,42 @@
     },
     {
       "timestamp": 1784306235,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784306270,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784306304,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784306339,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784306373,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784306407,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784306442,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784306476,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784306511,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784306545,
       "reports": 3883
     }
   ]
