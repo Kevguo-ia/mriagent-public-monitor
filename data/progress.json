@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-17T23:31:17.130581+08:00",
+  "updated_at": "2026-07-17T23:36:26.300830+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 3854,
-  "llm_complete": 3838,
-  "reports_complete": 3822,
+  "precompute_complete": 3880,
+  "llm_complete": 3871,
+  "reports_complete": 3868,
   "errors": 27,
-  "report_rate_per_hour": 538.22,
+  "report_rate_per_hour": 520.22,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 0.16,
+  "report_eta_hours": 0.07,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -26,8 +26,8 @@
   },
   "processes": {
     "hospital_agent_workers": 0,
-    "ukb_agent_workers": 29,
-    "active_codex_calls": 28,
+    "ukb_agent_workers": 9,
+    "active_codex_calls": 8,
     "formal_supervisor_alive": true,
     "reasoning_effort": "high",
     "active_models": [
@@ -37,55 +37,55 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 4673,
+      "memory_mib": 1171,
       "utilization_pct": 0
     },
     {
       "gpu": 1,
-      "memory_mib": 4673,
+      "memory_mib": 1171,
       "utilization_pct": 0
     },
     {
       "gpu": 2,
-      "memory_mib": 3505,
+      "memory_mib": 4,
       "utilization_pct": 0
     },
     {
       "gpu": 3,
-      "memory_mib": 4673,
+      "memory_mib": 1171,
       "utilization_pct": 0
     },
     {
       "gpu": 4,
-      "memory_mib": 2338,
+      "memory_mib": 1171,
       "utilization_pct": 0
     },
     {
       "gpu": 5,
-      "memory_mib": 4673,
+      "memory_mib": 2338,
       "utilization_pct": 0
     },
     {
       "gpu": 6,
-      "memory_mib": 24145,
-      "utilization_pct": 3
+      "memory_mib": 19476,
+      "utilization_pct": 2
     },
     {
       "gpu": 7,
-      "memory_mib": 4673,
+      "memory_mib": 2338,
       "utilization_pct": 0
     }
   ],
   "artifacts": {
-    "metrics": 3854,
-    "evidence": 3838,
-    "plan": 3854,
-    "report_json": 3822,
-    "report_md": 3822,
+    "metrics": 3880,
+    "evidence": 3871,
+    "plan": 3880,
+    "report_json": 3868,
+    "report_md": 3868,
     "lge_visuals": 2533,
     "lge_fallback": 3,
     "lge_complete": 2508,
-    "model_verified": 3822
+    "model_verified": 3868
   },
   "centers": [
     {
@@ -93,9 +93,9 @@
       "total": 1000,
       "cache_4ch": 1000,
       "cache_sax": 1000,
-      "precompute": 970,
-      "llm": 954,
-      "reports": 938,
+      "precompute": 996,
+      "llm": 987,
+      "reports": 984,
       "errors": 5,
       "lge_total": 0
     },
@@ -140,42 +140,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784300256,
-      "reports": 3510
-    },
-    {
-      "timestamp": 1784300291,
-      "reports": 3518
-    },
-    {
-      "timestamp": 1784300325,
-      "reports": 3526
-    },
-    {
-      "timestamp": 1784300360,
-      "reports": 3532
-    },
-    {
-      "timestamp": 1784300394,
-      "reports": 3536
-    },
-    {
-      "timestamp": 1784300428,
-      "reports": 3544
-    },
-    {
-      "timestamp": 1784300463,
-      "reports": 3549
-    },
-    {
-      "timestamp": 1784300497,
-      "reports": 3556
-    },
-    {
-      "timestamp": 1784300532,
-      "reports": 3565
-    },
     {
       "timestamp": 1784300566,
       "reports": 3565
@@ -379,6 +343,42 @@
     {
       "timestamp": 1784302277,
       "reports": 3822
+    },
+    {
+      "timestamp": 1784302311,
+      "reports": 3830
+    },
+    {
+      "timestamp": 1784302345,
+      "reports": 3837
+    },
+    {
+      "timestamp": 1784302380,
+      "reports": 3841
+    },
+    {
+      "timestamp": 1784302414,
+      "reports": 3844
+    },
+    {
+      "timestamp": 1784302448,
+      "reports": 3848
+    },
+    {
+      "timestamp": 1784302483,
+      "reports": 3852
+    },
+    {
+      "timestamp": 1784302517,
+      "reports": 3858
+    },
+    {
+      "timestamp": 1784302551,
+      "reports": 3863
+    },
+    {
+      "timestamp": 1784302586,
+      "reports": 3868
     }
   ]
 }
