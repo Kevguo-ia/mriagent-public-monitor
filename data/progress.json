@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-17T22:09:24.040285+08:00",
+  "updated_at": "2026-07-17T22:14:33.242700+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 3068,
-  "llm_complete": 3044,
-  "reports_complete": 3036,
+  "precompute_complete": 3122,
+  "llm_complete": 3103,
+  "reports_complete": 3092,
   "errors": 23,
-  "report_rate_per_hour": 320.77,
+  "report_rate_per_hour": 429.54,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 2.71,
+  "report_eta_hours": 1.9,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -27,7 +27,7 @@
   "processes": {
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 32,
-    "active_codex_calls": 32,
+    "active_codex_calls": 30,
     "formal_supervisor_alive": true,
     "reasoning_effort": "medium",
     "active_models": [
@@ -38,7 +38,7 @@
     {
       "gpu": 0,
       "memory_mib": 8910,
-      "utilization_pct": 31
+      "utilization_pct": 25
     },
     {
       "gpu": 1,
@@ -67,8 +67,8 @@
     },
     {
       "gpu": 6,
-      "memory_mib": 22645,
-      "utilization_pct": 26
+      "memory_mib": 24143,
+      "utilization_pct": 22
     },
     {
       "gpu": 7,
@@ -77,15 +77,15 @@
     }
   ],
   "artifacts": {
-    "metrics": 3068,
-    "evidence": 3045,
-    "plan": 3068,
-    "report_json": 3036,
-    "report_md": 3036,
+    "metrics": 3123,
+    "evidence": 3103,
+    "plan": 3123,
+    "report_json": 3094,
+    "report_md": 3094,
     "lge_visuals": 2533,
     "lge_fallback": 3,
     "lge_complete": 2508,
-    "model_verified": 3036
+    "model_verified": 3094
   },
   "centers": [
     {
@@ -93,9 +93,9 @@
       "total": 1000,
       "cache_4ch": 1000,
       "cache_sax": 1000,
-      "precompute": 184,
-      "llm": 160,
-      "reports": 152,
+      "precompute": 238,
+      "llm": 219,
+      "reports": 208,
       "errors": 1,
       "lge_total": 0
     },
@@ -140,42 +140,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784295339,
-      "reports": 2874
-    },
-    {
-      "timestamp": 1784295373,
-      "reports": 2874
-    },
-    {
-      "timestamp": 1784295408,
-      "reports": 2875
-    },
-    {
-      "timestamp": 1784295442,
-      "reports": 2875
-    },
-    {
-      "timestamp": 1784295476,
-      "reports": 2875
-    },
-    {
-      "timestamp": 1784295510,
-      "reports": 2876
-    },
-    {
-      "timestamp": 1784295545,
-      "reports": 2876
-    },
-    {
-      "timestamp": 1784295579,
-      "reports": 2877
-    },
-    {
-      "timestamp": 1784295613,
-      "reports": 2877
-    },
     {
       "timestamp": 1784295648,
       "reports": 2877
@@ -379,6 +343,42 @@
     {
       "timestamp": 1784297364,
       "reports": 3036
+    },
+    {
+      "timestamp": 1784297398,
+      "reports": 3044
+    },
+    {
+      "timestamp": 1784297432,
+      "reports": 3046
+    },
+    {
+      "timestamp": 1784297467,
+      "reports": 3050
+    },
+    {
+      "timestamp": 1784297501,
+      "reports": 3060
+    },
+    {
+      "timestamp": 1784297535,
+      "reports": 3068
+    },
+    {
+      "timestamp": 1784297570,
+      "reports": 3074
+    },
+    {
+      "timestamp": 1784297604,
+      "reports": 3077
+    },
+    {
+      "timestamp": 1784297638,
+      "reports": 3082
+    },
+    {
+      "timestamp": 1784297673,
+      "reports": 3092
     }
   ]
 }
