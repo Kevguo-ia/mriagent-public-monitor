@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-18T00:22:20.606049+08:00",
+  "updated_at": "2026-07-18T00:27:30.582212+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -8,9 +8,9 @@
   "llm_complete": 3883,
   "reports_complete": 3883,
   "errors": 23,
-  "report_rate_per_hour": 8.04,
+  "report_rate_per_hour": 0.0,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 2.86,
+  "report_eta_hours": null,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -138,42 +138,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784303306,
-      "reports": 3879
-    },
-    {
-      "timestamp": 1784303340,
-      "reports": 3879
-    },
-    {
-      "timestamp": 1784303375,
-      "reports": 3879
-    },
-    {
-      "timestamp": 1784303409,
-      "reports": 3879
-    },
-    {
-      "timestamp": 1784303443,
-      "reports": 3879
-    },
-    {
-      "timestamp": 1784303478,
-      "reports": 3879
-    },
-    {
-      "timestamp": 1784303515,
-      "reports": 3879
-    },
-    {
-      "timestamp": 1784303550,
-      "reports": 3879
-    },
-    {
-      "timestamp": 1784303584,
-      "reports": 3879
-    },
     {
       "timestamp": 1784303618,
       "reports": 3879
@@ -376,6 +340,42 @@
     },
     {
       "timestamp": 1784305340,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784305375,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784305409,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784305443,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784305478,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784305512,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784305547,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784305581,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784305616,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784305650,
       "reports": 3883
     }
   ]
