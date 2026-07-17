@@ -1,16 +1,16 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-17T20:37:28.480267+08:00",
+  "updated_at": "2026-07-17T20:42:36.846743+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
-  "precompute_complete": 2687,
-  "llm_complete": 2678,
-  "reports_complete": 2671,
+  "precompute_complete": 2706,
+  "llm_complete": 2698,
+  "reports_complete": 2690,
   "errors": 22,
-  "report_rate_per_hour": 242.98,
+  "report_rate_per_hour": 236.75,
   "segmentation_rate_per_hour": 0.0,
-  "report_eta_hours": 5.08,
+  "report_eta_hours": 5.14,
   "segmentation_eta_hours": null,
   "stalled_advisory": false,
   "workflow": {
@@ -27,7 +27,7 @@
   "processes": {
     "hospital_agent_workers": 32,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 32,
+    "active_codex_calls": 31,
     "formal_supervisor_alive": true,
     "reasoning_effort": "medium",
     "active_models": [
@@ -37,7 +37,7 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 2625,
+      "memory_mib": 3157,
       "utilization_pct": 0
     },
     {
@@ -57,7 +57,7 @@
     },
     {
       "gpu": 4,
-      "memory_mib": 3689,
+      "memory_mib": 2625,
       "utilization_pct": 0
     },
     {
@@ -72,20 +72,20 @@
     },
     {
       "gpu": 7,
-      "memory_mib": 2625,
+      "memory_mib": 2645,
       "utilization_pct": 0
     }
   ],
   "artifacts": {
-    "metrics": 2687,
-    "evidence": 2678,
-    "plan": 2687,
-    "report_json": 2671,
-    "report_md": 2671,
-    "lge_visuals": 2375,
+    "metrics": 2706,
+    "evidence": 2698,
+    "plan": 2706,
+    "report_json": 2690,
+    "report_md": 2690,
+    "lge_visuals": 2392,
     "lge_fallback": 3,
-    "lge_complete": 2334,
-    "model_verified": 2671
+    "lge_complete": 2351,
+    "model_verified": 2690
   },
   "centers": [
     {
@@ -104,12 +104,12 @@
       "total": 1994,
       "cache_4ch": 1994,
       "cache_sax": 1994,
-      "precompute": 1782,
-      "llm": 1773,
-      "reports": 1766,
+      "precompute": 1801,
+      "llm": 1793,
+      "reports": 1785,
       "errors": 15,
       "lge_total": 1606,
-      "lge_complete": 1432
+      "lge_complete": 1449
     },
     {
       "center": "Chengdu",
@@ -140,42 +140,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784289831,
-      "reports": 2535
-    },
-    {
-      "timestamp": 1784289865,
-      "reports": 2536
-    },
-    {
-      "timestamp": 1784289899,
-      "reports": 2538
-    },
-    {
-      "timestamp": 1784289934,
-      "reports": 2541
-    },
-    {
-      "timestamp": 1784289968,
-      "reports": 2544
-    },
-    {
-      "timestamp": 1784290002,
-      "reports": 2547
-    },
-    {
-      "timestamp": 1784290036,
-      "reports": 2548
-    },
-    {
-      "timestamp": 1784290070,
-      "reports": 2551
-    },
-    {
-      "timestamp": 1784290104,
-      "reports": 2554
-    },
     {
       "timestamp": 1784290138,
       "reports": 2555
@@ -379,6 +343,42 @@
     {
       "timestamp": 1784291848,
       "reports": 2671
+    },
+    {
+      "timestamp": 1784291882,
+      "reports": 2674
+    },
+    {
+      "timestamp": 1784291916,
+      "reports": 2675
+    },
+    {
+      "timestamp": 1784291951,
+      "reports": 2680
+    },
+    {
+      "timestamp": 1784291985,
+      "reports": 2681
+    },
+    {
+      "timestamp": 1784292019,
+      "reports": 2683
+    },
+    {
+      "timestamp": 1784292054,
+      "reports": 2685
+    },
+    {
+      "timestamp": 1784292088,
+      "reports": 2687
+    },
+    {
+      "timestamp": 1784292122,
+      "reports": 2689
+    },
+    {
+      "timestamp": 1784292156,
+      "reports": 2690
     }
   ]
 }
