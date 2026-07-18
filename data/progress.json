@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-18T17:58:39.076975+08:00",
+  "updated_at": "2026-07-18T18:03:49.464611+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -27,7 +27,7 @@
   "processes": {
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 1,
+    "active_codex_calls": 32,
     "formal_supervisor_alive": false,
     "reasoning_effort": "high",
     "active_models": [
@@ -140,42 +140,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784366688,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784366722,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784366757,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784366791,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784366826,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784366860,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784366895,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784366929,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784366963,
-      "reports": 3883
-    },
     {
       "timestamp": 1784366998,
       "reports": 3883
@@ -378,6 +342,42 @@
     },
     {
       "timestamp": 1784368719,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784368753,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784368788,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784368822,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784368857,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784368891,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784368926,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784368960,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784368995,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784369029,
       "reports": 3883
     }
   ]
