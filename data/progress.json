@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-19T14:59:32.380694+08:00",
+  "updated_at": "2026-07-19T15:04:42.034911+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -35,13 +35,13 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 1,
-      "utilization_pct": 0
+      "memory_mib": 2242,
+      "utilization_pct": 100
     },
     {
       "gpu": 1,
-      "memory_mib": 1,
-      "utilization_pct": 0
+      "memory_mib": 1821,
+      "utilization_pct": 100
     },
     {
       "gpu": 2,
@@ -138,42 +138,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784442343,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784442377,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784442411,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784442446,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784442480,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784442514,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784442549,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784442583,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784442618,
-      "reports": 3883
-    },
     {
       "timestamp": 1784442652,
       "reports": 3883
@@ -376,6 +340,42 @@
     },
     {
       "timestamp": 1784444372,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784444406,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784444441,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784444475,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784444510,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784444544,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784444578,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784444613,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784444647,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784444682,
       "reports": 3883
     }
   ]
