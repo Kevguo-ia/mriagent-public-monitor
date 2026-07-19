@@ -12,13 +12,12 @@ const yaStageNames={waiting_upload:"等待上传",verify_archives:"归档校验"
 function fmt(value){return new Intl.NumberFormat("zh-CN").format(Number(value||0));}
 function pct(value,total){return total?Math.min(100,Math.round(Number(value||0)/total*100)):0;}
 function eta(hours){if(hours==null||!Number.isFinite(Number(hours))||hours<=0)return "待速度稳定后计算";if(hours<1)return `约 ${Math.max(1,Math.round(hours*60))} 分钟`;if(hours<48)return `约 ${hours.toFixed(1)} 小时`;return `约 ${(hours/24).toFixed(1)} 天`;}
-function badge(value){const cls=value==="complete"||value==="report_complete"?"complete":value==="error"?"error":"";return `<span class="status ${cls}">${esc(labels[value]||value||"等待")}</span>`;}
 function card(label,value,note,error=false){return `<article class="card ${error?"error":""}"><span class="label">${esc(label)}</span><strong>${esc(value)}</strong><small>${esc(note)}</small></article>`;}
 
 function inferPhase(d){
   const total=d.total_studies||0,reports=d.reports_complete||0,seg=d.segmentation_complete||0;
   const agentWorkers=(d.processes?.hospital_agent_workers||0)+(d.processes?.ukb_agent_workers||0);
-  if(total&&reports>=total)return {key:"final",title:"全部完成",value:reports,total,detail:"3,924例缓存、完整Agent与最终报告均已完成。"};
+  if(total&&reports>=total)return {key:"final",title:"全部完成",value:reports,total,detail:"3,906例缓存、完整Agent与最终报告均已完成。"};
   if(reports>0||agentWorkers>0)return {key:"agent",title:"完整 Agent 运行中",value:reports,total,detail:`报告 ${fmt(reports)}/${fmt(total)} · ${eta(d.report_eta_hours)}`};
   if(total&&seg>=total)return {key:"qc",title:"缓存 QC / Smoke",value:seg,total,detail:"缓存已齐备，正在执行质量门禁与四中心完整流程smoke。"};
   return {key:"cache",title:"分割缓存生成中",value:seg,total,detail:`4CH与SAX均完成 ${fmt(seg)}/${fmt(total)} · ${eta(d.segmentation_eta_hours)}`};
@@ -54,15 +53,6 @@ function renderGpu(d){
   $("#worker-list").innerHTML=Object.entries(d.processes||{}).map(([key,value])=>`<div class="worker"><span>${esc(workerNames[key]||key.replaceAll("_"," "))}</span><b>${fmt(value)}</b></div>`).join("");
 }
 
-function renderCases(){
-  if(!state)return;
-  const query=$("#search").value.trim().toLowerCase();
-  const matched=(state.cases||[]).filter((item)=>!query||String(item.study_uid).toLowerCase().includes(query));
-  const rows=matched.slice(0,1000);
-  $("#case-caption").textContent=`匹配 ${fmt(matched.length)} 条，当前显示 ${fmt(rows.length)} 条；仅含匿名ID。`;
-  $("#case-rows").innerHTML=rows.map((item)=>`<tr><td><code>${esc(item.study_uid)}</code></td><td>${esc(centreNames[item.center]||item.center)}</td><td>${badge(item.seg_4ch)}</td><td>${badge(item.seg_sax)}</td><td>${badge(item.precompute)}</td><td>${badge(item.llm)}</td><td>${badge(item.report)}</td><td>${item.error_class?`<span class="status error">${esc(item.error_class)}</span>`:"—"}</td></tr>`).join("");
-}
-
 function render(d){
   state=d;
   const phase=inferPhase(d),phasePct=pct(phase.value,phase.total);
@@ -83,7 +73,7 @@ function render(d){
   $("#freshness").textContent=age<90?`${isPublic?"安全快照":"实时"} · ${Math.round(age)}秒前`:`${isPublic?"安全快照":"状态"}延迟 ${Math.round(age/60)}分钟`;
   $("#alert").classList.toggle("hidden",!d.stalled_advisory);
   $("#alert").textContent="连续5分钟未观察到病例级进展；系统只提示，不会自动终止或重试任务。";
-  renderCentres(d);renderGpu(d);renderCases();
+  renderCentres(d);renderGpu(d);
 }
 
 function renderYa(d){
@@ -121,5 +111,4 @@ async function loadYa(){
   catch(error){$("#ya-state").textContent="状态未连接";$("#ya-detail").textContent="YA安全状态快照尚未生成或暂时不可用。";}
 }
 
-$("#search").addEventListener("input",renderCases);
 load();loadYa();setInterval(load,15000);setInterval(loadYa,15000);
