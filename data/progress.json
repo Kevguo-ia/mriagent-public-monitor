@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-19T18:34:18.154386+08:00",
+  "updated_at": "2026-07-19T18:39:28.075687+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -35,8 +35,8 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 1613,
-      "utilization_pct": 87
+      "memory_mib": 1615,
+      "utilization_pct": 91
     },
     {
       "gpu": 1,
@@ -70,7 +70,7 @@
     },
     {
       "gpu": 7,
-      "memory_mib": 3441,
+      "memory_mib": 635,
       "utilization_pct": 0
     }
   ],
@@ -138,42 +138,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784455227,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784455261,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784455296,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784455330,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784455365,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784455399,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784455434,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784455468,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784455502,
-      "reports": 3883
-    },
     {
       "timestamp": 1784455537,
       "reports": 3883
@@ -376,6 +340,42 @@
     },
     {
       "timestamp": 1784457258,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784457292,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784457327,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784457361,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784457395,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784457430,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784457464,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784457499,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784457533,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784457568,
       "reports": 3883
     }
   ]
