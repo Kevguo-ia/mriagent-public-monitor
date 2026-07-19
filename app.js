@@ -1,134 +1,125 @@
 const $ = (selector) => document.querySelector(selector);
 const esc = (value) => String(value ?? "").replace(/[&<>'"]/g, (char) => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[char]));
+let state = null;
+let yaState = null;
+
+const labels = {pending:"等待",segmentation_partial:"部分分割",segmentation_complete:"分割完成",precompute_complete:"预计算完成",llm_complete:"LLM完成",report_complete:"报告完成",complete:"完成",error:"错误"};
 const centreNames = {UKB:"UK Biobank",Kunming:"Kunming",Chengdu:"Chengdu",SCS:"SCS",YA:"YA"};
-const workerNames = {hospital_agent_workers:"医院 Agent workers",ukb_agent_workers:"UKB Agent workers",active_codex_calls:"活跃 Codex 调用",formal_supervisor_alive:"正式主管"};
+const workerNames = {kunming_segmentation_workers:"昆明既有缓存进程",full_cohort_segmentation_workers:"正式医院缓存进程",hospital_agent_workers:"医院完整 Agent",ukb_agent_workers:"UKB 完整 Agent"};
+const yaStages=["waiting_upload","verify_archives","extract","inventory_qc","cache_smoke","cache_full","cache_qc","agent_smoke","agent_full","final_qc","complete"];
+const yaStageNames={waiting_upload:"等待上传",verify_archives:"归档校验",extract:"安全解压",inventory_qc:"数据质量检查",cache_smoke:"缓存Smoke",cache_full:"全量缓存",cache_qc:"缓存QC",agent_smoke:"Agent Smoke",agent_full:"全量Agent",final_qc:"最终QC",complete:"完成"};
 
 function fmt(value){return new Intl.NumberFormat("zh-CN").format(Number(value||0));}
-function pct(value,total){return total?Math.min(100,Math.round(Number(value||0)/Number(total)*100)):0;}
-function eta(hours){
-  const value=Number(hours);
-  if(!Number.isFinite(value)||value<=0)return "待速度稳定";
-  if(value<1)return `约 ${Math.max(1,Math.round(value*60))} 分钟`;
-  if(value<48)return `约 ${value.toFixed(1)} 小时`;
-  return `约 ${(value/24).toFixed(1)} 天`;
-}
+function pct(value,total){return total?Math.min(100,Math.round(Number(value||0)/total*100)):0;}
+function eta(hours){if(hours==null||!Number.isFinite(Number(hours))||hours<=0)return "待速度稳定后计算";if(hours<1)return `约 ${Math.max(1,Math.round(hours*60))} 分钟`;if(hours<48)return `约 ${hours.toFixed(1)} 小时`;return `约 ${(hours/24).toFixed(1)} 天`;}
+function badge(value){const cls=value==="complete"||value==="report_complete"?"complete":value==="error"?"error":"";return `<span class="status ${cls}">${esc(labels[value]||value||"等待")}</span>`;}
 function card(label,value,note,error=false){return `<article class="card ${error?"error":""}"><span class="label">${esc(label)}</span><strong>${esc(value)}</strong><small>${esc(note)}</small></article>`;}
-function miniProgress(value,total,label){const percent=pct(value,total);return `<div class="mini-progress"><div><span>${esc(label)}</span><b>${fmt(value)}/${fmt(total)}</b></div><div class="bar"><i style="width:${percent}%"></i></div></div>`;}
 
 function inferPhase(d){
-  const total=Number(d.total_studies||0),reports=Number(d.reports_complete||0),pre=Number(d.precompute_complete||0),seg=Number(d.segmentation_complete||0);
-  const workflow=d.workflow||{};
-  if(total&&reports>=total)return {key:"final",title:"全部完成",value:reports,total,detail:"全部缓存、中间产物、最终报告及模型溯源已通过QC。"};
-  if(workflow.stage==="agent_qc")return {key:"final",title:"最终质量审计",value:reports,total,detail:`报告 ${fmt(reports)}/${fmt(total)} · 正在执行完整性与模型溯源门禁`};
-  if(reports>0||pre>0)return {key:"agent",title:"完整 Agent 运行中",value:reports,total,detail:`报告 ${fmt(reports)}/${fmt(total)} · ${eta(d.report_eta_hours)} · 不自动重试`};
-  if(total&&seg>=total)return {key:"precompute",title:"测量与LGE准备",value:pre,total,detail:"分割缓存已齐备，正在生成测量、LGE和证据中间产物。"};
-  return {key:"cache",title:"分割缓存生成中",value:seg,total,detail:`4CH与SAX均完成 ${fmt(seg)}/${fmt(total)}`};
+  const total=d.total_studies||0,reports=d.reports_complete||0,seg=d.segmentation_complete||0;
+  const agentWorkers=(d.processes?.hospital_agent_workers||0)+(d.processes?.ukb_agent_workers||0);
+  if(total&&reports>=total)return {key:"final",title:"全部完成",value:reports,total,detail:"3,924例缓存、完整Agent与最终报告均已完成。"};
+  if(reports>0||agentWorkers>0)return {key:"agent",title:"完整 Agent 运行中",value:reports,total,detail:`报告 ${fmt(reports)}/${fmt(total)} · ${eta(d.report_eta_hours)}`};
+  if(total&&seg>=total)return {key:"qc",title:"缓存 QC / Smoke",value:seg,total,detail:"缓存已齐备，正在执行质量门禁与四中心完整流程smoke。"};
+  return {key:"cache",title:"分割缓存生成中",value:seg,total,detail:`4CH与SAX均完成 ${fmt(seg)}/${fmt(total)} · ${eta(d.segmentation_eta_hours)}`};
 }
 
 function renderPipeline(active){
-  const order=["cohort","cache","smoke","precompute","agent","final"],index=order.indexOf(active);
+  const order=["cohort","cache","qc","smoke","agent","final"];
+  const index=order.indexOf(active);
   document.querySelectorAll("#pipeline li").forEach((node,i)=>{node.classList.toggle("done",i<index);node.classList.toggle("active",i===index);});
 }
 
 function renderCentres(d){
-  $("#center-rows").innerHTML=(d.centers||[]).filter((c)=>Number(c.total||0)>0).map((c)=>{
-    const total=Number(c.total||0),cache=Math.min(Number(c.cache_4ch||0),Number(c.cache_sax||0));
-    const lgeTotal=Number(c.lge_total||0),lgeComplete=Number(c.lge_complete||0);
+  $("#center-rows").innerHTML=(d.centers||[]).map((c)=>{
+    const total=c.total||0;
+    const cacheComplete=(c.segmentation_complete||0)+(c.precompute_complete||0)+(c.llm_complete||0)+(c.report_complete||0);
+    const cachePct=pct(cacheComplete,total), reportPct=pct(c.reports||0,total);
     return `<tr>
       <td><span class="centre">${esc(centreNames[c.center]||c.center)}</span></td><td>${fmt(total)}</td>
-      <td>${miniProgress(cache,total,"4CH+SAX")}</td>
-      <td>${miniProgress(c.precompute||0,total,"metrics")}</td>
-      <td>${miniProgress(c.llm||0,total,"evidence")}</td>
-      <td>${lgeTotal?miniProgress(lgeComplete,lgeTotal,"gpt-5.5"):"<span class=\"muted-cell\">无LGE队列</span>"}</td>
-      <td>${miniProgress(c.reports||0,total,"JSON+MD")}</td>
+      <td>${fmt(c.cache_4ch)}/${fmt(total)}</td><td>${fmt(c.cache_sax)}/${fmt(total)}</td>
+      <td class="metric-cell"><div class="metric-line"><span>4CH+SAX</span><b>${cachePct}%</b></div><div class="bar"><i style="width:${cachePct}%"></i></div></td>
+      <td class="metric-cell"><div class="metric-line"><span>${fmt(c.reports)}/${fmt(total)}</span><b>${reportPct}%</b></div><div class="bar"><i style="width:${reportPct}%"></i></div></td>
       <td>${c.errors?`<span class="status error">${fmt(c.errors)}</span>`:`<span class="status complete">0</span>`}</td>
     </tr>`;
   }).join("");
 }
 
-function renderArtifacts(d){
-  const a=d.artifacts||{},total=Number(d.total_studies||0);
-  const items=[
-    ["测量汇总",a.metrics||0,total,"metrics"],
-    ["结构化证据",a.evidence||0,total,"evidence"],
-    ["推理计划",a.plan||0,total,"plan"],
-    ["报告 JSON",a.report_json||0,total,"report.json"],
-    ["报告 Markdown",a.report_md||0,total,"report.md"],
-    ["模型溯源",a.model_verified||0,total,"gpt-5.5"],
-  ];
-  $("#artifact-grid").innerHTML=items.map(([label,value,target,note])=>`<div class="artifact"><span>${esc(label)}</span><strong>${fmt(value)}</strong><small>${esc(note)} · ${pct(value,target)}%</small><div class="bar"><i style="width:${pct(value,target)}%"></i></div></div>`).join("");
-}
-
-function renderWorkers(d){
-  const model=d.model||{};
-  $("#model-summary").innerHTML=`<div><span>模型</span><b>${esc(model.name||"—")}</b></div><div><span>接口</span><b>${esc(model.api||"—")}</b></div><div><span>推理强度</span><b>${esc(model.reasoning_effort||"—")}</b></div>`;
-  $("#worker-list").innerHTML=Object.entries(d.processes||{}).map(([key,value])=>{
-    const shown=typeof value==="boolean"?(value?"在线":"离线"):fmt(value);
-    const cls=(typeof value==="boolean"&&!value)?"worker-off":"";
-    return `<div class="worker ${cls}"><span>${esc(workerNames[key]||key.replaceAll("_"," "))}</span><b>${esc(shown)}</b></div>`;
-  }).join("");
-}
-
 function renderGpu(d){
   $("#gpu-grid").innerHTML=(d.gpus||[]).map((g)=>{
-    const util=Number(g.utilization_pct||0),loaded=Number(g.memory_mib||0)>500;
-    const stateText=util>5?"计算中":loaded?"已加载":"空闲";
+    const util=Number(g.utilization_pct||0), loaded=Number(g.memory_mib||0)>1000;
+    const stateText=util>5?"计算中":loaded?"已加载":"数据准备";
     return `<div class="gpu"><div class="gpu-top"><strong>GPU ${esc(g.gpu)}</strong><span class="gpu-state ${util>5?"active":""}">${stateText}</span></div><div class="bar"><i style="width:${Math.min(100,util)}%"></i></div><div class="gpu-meta"><span>瞬时 ${util}%</span><span>${fmt(g.memory_mib)} MiB</span></div></div>`;
   }).join("");
+  $("#worker-list").innerHTML=Object.entries(d.processes||{}).map(([key,value])=>`<div class="worker"><span>${esc(workerNames[key]||key.replaceAll("_"," "))}</span><b>${fmt(value)}</b></div>`).join("");
 }
 
-function renderTrend(d){
-  const svg=$("#trend-chart"),history=(d.report_history||[]).slice(-60);
-  $("#rate-value").textContent=`${Number(d.report_rate_per_hour||0).toFixed(1)} 例/小时`;
-  $("#trend-caption").textContent=`累计 ${fmt(d.reports_complete)} 份报告 · 预计剩余 ${eta(d.report_eta_hours)}`;
-  if(history.length<2){svg.innerHTML='<text x="500" y="115" text-anchor="middle" class="chart-empty">等待更多进度点</text>';return;}
-  const width=1000,height=220,padX=48,padY=28;
-  const first=history[0].timestamp,last=history[history.length-1].timestamp||first+1;
-  const values=history.map((p)=>Number(p.reports||0)),min=Math.min(...values),max=Math.max(...values),span=Math.max(1,max-min);
-  const x=(t)=>padX+(Number(t)-first)/Math.max(1,last-first)*(width-padX*2);
-  const y=(v)=>height-padY-(Number(v)-min)/span*(height-padY*2);
-  const points=history.map((p)=>`${x(p.timestamp).toFixed(1)},${y(p.reports).toFixed(1)}`).join(" ");
-  const area=`${padX},${height-padY} ${points} ${width-padX},${height-padY}`;
-  svg.innerHTML=`
-    <line x1="${padX}" y1="${padY}" x2="${padX}" y2="${height-padY}" class="chart-axis"/>
-    <line x1="${padX}" y1="${height-padY}" x2="${width-padX}" y2="${height-padY}" class="chart-axis"/>
-    <polygon points="${area}" class="chart-area"/><polyline points="${points}" class="chart-line"/>
-    <circle cx="${x(last)}" cy="${y(values[values.length-1])}" r="6" class="chart-point"/>
-    <text x="${padX}" y="18" class="chart-label">${fmt(max)}</text>
-    <text x="${padX}" y="${height-6}" class="chart-label">${new Date(first*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text>
-    <text x="${width-padX}" y="${height-6}" text-anchor="end" class="chart-label">${new Date(last*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text>`;
+function renderCases(){
+  if(!state)return;
+  const query=$("#search").value.trim().toLowerCase();
+  const matched=(state.cases||[]).filter((item)=>!query||String(item.study_uid).toLowerCase().includes(query));
+  const rows=matched.slice(0,1000);
+  $("#case-caption").textContent=`匹配 ${fmt(matched.length)} 条，当前显示 ${fmt(rows.length)} 条；仅含匿名ID。`;
+  $("#case-rows").innerHTML=rows.map((item)=>`<tr><td><code>${esc(item.study_uid)}</code></td><td>${esc(centreNames[item.center]||item.center)}</td><td>${badge(item.seg_4ch)}</td><td>${badge(item.seg_sax)}</td><td>${badge(item.precompute)}</td><td>${badge(item.llm)}</td><td>${badge(item.report)}</td><td>${item.error_class?`<span class="status error">${esc(item.error_class)}</span>`:"—"}</td></tr>`).join("");
 }
 
 function render(d){
+  state=d;
   const phase=inferPhase(d),phasePct=pct(phase.value,phase.total);
-  $("#phase-badge").textContent=phase.title;$("#phase-title").textContent=phase.title;$("#phase-percent").textContent=`${phasePct}%`;
-  $("#phase-progress").style.width=`${phasePct}%`;$("#phase-detail").textContent=phase.detail;renderPipeline(phase.key);
+  $("#phase-badge").textContent=phase.title;
+  $("#phase-title").textContent=phase.title;
+  $("#phase-percent").textContent=`${phasePct}%`;
+  $("#phase-progress").style.width=`${phasePct}%`;
+  $("#phase-detail").textContent=phase.detail;
+  renderPipeline(phase.key);
   $("#summary-cards").innerHTML=[
-    card("正式队列",fmt(d.total_studies),"四中心 + UK Biobank"),
-    card("最终报告",`${fmt(d.reports_complete)} / ${fmt(d.total_studies)}`,`${pct(d.reports_complete,d.total_studies)}% · JSON + Markdown`),
-    card("当前速度",`${Number(d.report_rate_per_hour||0).toFixed(1)} 例/小时`,eta(d.report_eta_hours)),
-    card("未解决错误",fmt(d.errors),d.errors?"需要人工审核":"当前为0",Boolean(d.errors)),
+    card("独立检查",fmt(d.total_studies),"Kunming · Chengdu · SCS · UKB"),
+    card("缓存完成",fmt(d.segmentation_complete),`${pct(d.segmentation_complete,d.total_studies)}% · 4CH + SAX`),
+    card("最终报告",fmt(d.reports_complete),`${pct(d.reports_complete,d.total_studies)}% · 完整 Agent`),
+    card("未解决错误",fmt(d.errors),d.errors?"需要人工审核":"当前无错误",Boolean(d.errors))
   ].join("");
   const updated=new Date(d.updated_at),age=Math.max(0,(Date.now()-updated.getTime())/1000),isPublic=location.hostname.endsWith("github.io");
   $("#updated-at").textContent=updated.toLocaleString("zh-CN",{hour12:false});
-  $("#freshness").textContent=age<120?`${isPublic?"安全快照":"实时"} · ${Math.round(age)}秒前`:`${isPublic?"安全快照":"状态"}延迟 ${Math.round(age/60)}分钟`;
-  const workflowFailed=(d.workflow||{}).state==="failed";
-  $("#alert").classList.toggle("hidden",!d.stalled_advisory&&!workflowFailed);
-  $("#alert").textContent=workflowFailed?"正式流程报告失败状态，请查看服务器私有日志。":"连续5分钟未观察到报告级进展；系统只提示，不会自动终止或重试。";
-  renderTrend(d);renderCentres(d);renderArtifacts(d);renderWorkers(d);renderGpu(d);
+  $("#freshness").textContent=age<90?`${isPublic?"安全快照":"实时"} · ${Math.round(age)}秒前`:`${isPublic?"安全快照":"状态"}延迟 ${Math.round(age/60)}分钟`;
+  $("#alert").classList.toggle("hidden",!d.stalled_advisory);
+  $("#alert").textContent="连续5分钟未观察到病例级进展；系统只提示，不会自动终止或重试任务。";
+  renderCentres(d);renderGpu(d);renderCases();
+}
+
+function renderYa(d){
+  yaState=d;
+  const stage=d.stage||"waiting_upload",stageIndex=Math.max(0,yaStages.indexOf(stage));
+  const counts=d.counts||{},upload=d.upload||{},rates=d.rates||{},workers=d.workers||{};
+  document.querySelector(".ya-panel").classList.toggle("failed",d.state==="failed");
+  $("#ya-state").textContent=d.state==="failed"?"失败停机":(yaStageNames[stage]||stage);
+  document.querySelectorAll("#ya-pipeline li").forEach((node,index)=>{
+    node.classList.toggle("done",index<stageIndex||stage==="complete");
+    node.classList.toggle("active",index===stageIndex&&stage!=="complete");
+  });
+  const eligible=counts.cache_valid||counts.eligible||0;
+  const cacheComplete=Math.min(counts.cache_4ch||0,counts.cache_sax||0);
+  const reports=counts.reports||0,errors=(counts.agent_errors||0)+(counts.report_errors||0);
+  $("#ya-cards").innerHTML=[
+    card("上传归档",`${fmt(upload.archives_ready)}/${fmt(upload.archives_expected||3)}`,`${fmt(upload.partial_files)} 个临时文件 · 稳定检查 ${fmt(upload.stable_observations)}/2`),
+    card("Agent合格检查",fmt(eligible),counts.raw_cases?`库存 ${fmt(counts.raw_cases)} · 技术无效 ${fmt(counts.technical_invalid||0)}`:"等待数据QC"),
+    card("4CH + SAX缓存",fmt(cacheComplete),rates.cache_per_hour?`${fmt(rates.cache_per_hour)}/小时`:"速度尚未稳定"),
+    card("最终报告",fmt(reports),rates.report_eta_hours?`${fmt(rates.reports_per_hour)}/小时 · ${eta(rates.report_eta_hours)}`:"速度尚未稳定",Boolean(errors)),
+  ].join("");
+  $("#ya-detail").textContent=d.state==="failed"?"流水线已安全停机，不会自动重试。":
+    `${yaStageNames[stage]||stage} · 缓存worker ${fmt(workers.cache_workers||0)} · Agent worker ${fmt(workers.agent_workers||0)} · 错误 ${fmt(errors)}`;
+  $("#ya-models").textContent=`${d.models?.text||"deepseek-chat"} 文本 · ${d.models?.image||"[j]gpt-5.4"} ${d.models?.image_reasoning_effort||"medium"} 图像`;
+  $("#ya-updated").textContent=`更新时间 ${new Date(d.updated_at).toLocaleString("zh-CN",{hour12:false})}`;
 }
 
 async function load(){
-  try{
-    const response=await fetch(`data/progress.json?t=${Date.now()}`,{cache:"no-store"});
-    if(!response.ok)throw new Error(`HTTP ${response.status}`);
-    const data=await response.json();
-    if(data.schema_version!=="monitor_safe_v2")throw new Error("等待新版安全快照");
-    render(data);
-  }catch(error){
-    $("#freshness").textContent="状态连接中";$("#alert").classList.remove("hidden");
-    $("#alert").textContent="新版聚合状态正在同步，请稍后自动刷新。";
-  }
+  try{const response=await fetch(`data/progress.json?t=${Date.now()}`,{cache:"no-store"});if(!response.ok)throw new Error(`HTTP ${response.status}`);render(await response.json());}
+  catch(error){$("#freshness").textContent="状态连接失败";$("#alert").classList.remove("hidden");$("#alert").textContent="暂时无法读取安全状态快照，请稍后刷新。";}
 }
 
-load();setInterval(load,15000);
+async function loadYa(){
+  try{const response=await fetch(`data/ya_progress.json?t=${Date.now()}`,{cache:"no-store"});if(!response.ok)throw new Error(`HTTP ${response.status}`);renderYa(await response.json());}
+  catch(error){$("#ya-state").textContent="状态未连接";$("#ya-detail").textContent="YA安全状态快照尚未生成或暂时不可用。";}
+}
+
+$("#search").addEventListener("input",renderCases);
+load();loadYa();setInterval(load,15000);setInterval(loadYa,15000);

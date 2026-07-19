@@ -1,0 +1,82 @@
+{
+  "schema_version": "ya_monitor_safe_v1",
+  "updated_at": "2026-07-19T17:51:04.784399+08:00",
+  "job": "ya_full_pipeline_20260719_v1",
+  "stage": "waiting_upload",
+  "state": "waiting",
+  "automatic_retry": false,
+  "upload": {
+    "archives_ready": 1,
+    "archives_expected": 3,
+    "stable_observations": 0,
+    "partial_files": 1,
+    "active_transfers": 0,
+    "bytes_received": 85356810240
+  },
+  "counts": {
+    "cache_4ch": 0,
+    "cache_sax": 0,
+    "reports": 0,
+    "agent_errors": 0
+  },
+  "rates": {
+    "cache_per_hour": 0.0,
+    "reports_per_hour": 0.0,
+    "report_eta_hours": null
+  },
+  "workers": {
+    "supervisor_alive": true,
+    "transfer_or_extract": 0,
+    "cache_workers": 0,
+    "agent_workers": 0,
+    "active_image_calls": 0
+  },
+  "gpus": [
+    {
+      "gpu": 0,
+      "memory_mib": 18996,
+      "utilization_pct": 100
+    },
+    {
+      "gpu": 1,
+      "memory_mib": 14477,
+      "utilization_pct": 100
+    },
+    {
+      "gpu": 2,
+      "memory_mib": 14257,
+      "utilization_pct": 100
+    },
+    {
+      "gpu": 3,
+      "memory_mib": 14453,
+      "utilization_pct": 98
+    },
+    {
+      "gpu": 4,
+      "memory_mib": 13379,
+      "utilization_pct": 97
+    },
+    {
+      "gpu": 5,
+      "memory_mib": 14453,
+      "utilization_pct": 98
+    },
+    {
+      "gpu": 6,
+      "memory_mib": 623,
+      "utilization_pct": 0
+    },
+    {
+      "gpu": 7,
+      "memory_mib": 3243,
+      "utilization_pct": 47
+    }
+  ],
+  "models": {
+    "text": "deepseek-chat",
+    "image": "[j]gpt-5.4",
+    "image_reasoning_effort": "medium"
+  },
+  "errors": {}
+}
