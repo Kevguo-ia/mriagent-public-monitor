@@ -1,6 +1,6 @@
 {
   "schema_version": "ya_monitor_safe_v1",
-  "updated_at": "2026-07-19T17:54:57.437567+08:00",
+  "updated_at": "2026-07-19T17:58:29.761808+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "waiting_upload",
   "state": "waiting",
@@ -35,12 +35,12 @@
     {
       "gpu": 0,
       "memory_mib": 18996,
-      "utilization_pct": 100
+      "utilization_pct": 9
     },
     {
       "gpu": 1,
       "memory_mib": 14477,
-      "utilization_pct": 100
+      "utilization_pct": 0
     },
     {
       "gpu": 2,
@@ -55,12 +55,12 @@
     {
       "gpu": 4,
       "memory_mib": 13379,
-      "utilization_pct": 100
+      "utilization_pct": 0
     },
     {
       "gpu": 5,
       "memory_mib": 14453,
-      "utilization_pct": 100
+      "utilization_pct": 0
     },
     {
       "gpu": 6,
@@ -69,7 +69,7 @@
     },
     {
       "gpu": 7,
-      "memory_mib": 617,
+      "memory_mib": 4,
       "utilization_pct": 0
     }
   ],
