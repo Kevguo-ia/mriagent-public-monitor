@@ -1,6 +1,6 @@
 {
   "schema_version": "ya_monitor_safe_v1",
-  "updated_at": "2026-07-19T18:54:35.350319+08:00",
+  "updated_at": "2026-07-19T18:59:38.547547+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "waiting_upload",
   "state": "waiting",
@@ -35,7 +35,7 @@
     {
       "gpu": 0,
       "memory_mib": 10149,
-      "utilization_pct": 0
+      "utilization_pct": 45
     },
     {
       "gpu": 1,
@@ -69,7 +69,7 @@
     },
     {
       "gpu": 7,
-      "memory_mib": 641,
+      "memory_mib": 1,
       "utilization_pct": 0
     }
   ],
