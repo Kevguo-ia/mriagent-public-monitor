@@ -5,11 +5,17 @@ let yaState = null;
 
 const labels = {pending:"等待",segmentation_partial:"部分分割",segmentation_complete:"分割完成",precompute_complete:"预计算完成",llm_complete:"LLM完成",report_complete:"报告完成",complete:"完成",error:"错误"};
 const centreNames = {UKB:"UK Biobank",Kunming:"Kunming",Chengdu:"Chengdu",SCS:"SCS",YA:"YA"};
-const workerNames = {kunming_segmentation_workers:"昆明既有缓存进程",full_cohort_segmentation_workers:"正式医院缓存进程",hospital_agent_workers:"医院完整 Agent",ukb_agent_workers:"UKB 完整 Agent"};
+const workerNames = {kunming_segmentation_workers:"昆明既有缓存进程",full_cohort_segmentation_workers:"正式医院缓存进程",hospital_agent_workers:"医院完整 Agent",ukb_agent_workers:"UKB 完整 Agent",active_codex_calls:"活跃图像调用",formal_supervisor_alive:"正式主管存活",reasoning_effort:"推理强度",active_models:"活跃模型"};
 const yaStages=["waiting_upload","verify_archives","extract","inventory_qc","cache_smoke","cache_full","cache_qc","agent_smoke","agent_full","final_qc","complete"];
 const yaStageNames={waiting_upload:"等待上传",verify_archives:"归档校验",extract:"安全解压",inventory_qc:"数据质量检查",cache_smoke:"缓存Smoke",cache_full:"全量缓存",cache_qc:"缓存QC",agent_smoke:"Agent Smoke",agent_full:"全量Agent",final_qc:"最终QC",complete:"完成"};
 
 function fmt(value){return new Intl.NumberFormat("zh-CN").format(Number(value||0));}
+function displayValue(value){
+  if(Array.isArray(value))return value.length?value.join(" · "):"无";
+  if(typeof value==="boolean")return value?"是":"否";
+  if(typeof value==="number")return fmt(value);
+  return String(value??"—");
+}
 function pct(value,total){return total?Math.min(100,Math.round(Number(value||0)/total*100)):0;}
 function eta(hours){if(hours==null||!Number.isFinite(Number(hours))||hours<=0)return "待速度稳定后计算";if(hours<1)return `约 ${Math.max(1,Math.round(hours*60))} 分钟`;if(hours<48)return `约 ${hours.toFixed(1)} 小时`;return `约 ${(hours/24).toFixed(1)} 天`;}
 function card(label,value,note,error=false){return `<article class="card ${error?"error":""}"><span class="label">${esc(label)}</span><strong>${esc(value)}</strong><small>${esc(note)}</small></article>`;}
@@ -32,7 +38,7 @@ function renderPipeline(active){
 function renderCentres(d){
   $("#center-rows").innerHTML=(d.centers||[]).map((c)=>{
     const total=c.total||0;
-    const cacheComplete=(c.segmentation_complete||0)+(c.precompute_complete||0)+(c.llm_complete||0)+(c.report_complete||0);
+    const cacheComplete=Math.min(Number(c.cache_4ch||0),Number(c.cache_sax||0));
     const cachePct=pct(cacheComplete,total), reportPct=pct(c.reports||0,total);
     return `<tr>
       <td><span class="centre">${esc(centreNames[c.center]||c.center)}</span></td><td>${fmt(total)}</td>
@@ -50,7 +56,7 @@ function renderGpu(d){
     const stateText=util>5?"计算中":loaded?"已加载":"数据准备";
     return `<div class="gpu"><div class="gpu-top"><strong>GPU ${esc(g.gpu)}</strong><span class="gpu-state ${util>5?"active":""}">${stateText}</span></div><div class="bar"><i style="width:${Math.min(100,util)}%"></i></div><div class="gpu-meta"><span>瞬时 ${util}%</span><span>${fmt(g.memory_mib)} MiB</span></div></div>`;
   }).join("");
-  $("#worker-list").innerHTML=Object.entries(d.processes||{}).map(([key,value])=>`<div class="worker"><span>${esc(workerNames[key]||key.replaceAll("_"," "))}</span><b>${fmt(value)}</b></div>`).join("");
+  $("#worker-list").innerHTML=Object.entries(d.processes||{}).map(([key,value])=>`<div class="worker"><span>${esc(workerNames[key]||key.replaceAll("_"," "))}</span><b>${esc(displayValue(value))}</b></div>`).join("");
 }
 
 function render(d){
