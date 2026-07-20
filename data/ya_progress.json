@@ -1,6 +1,6 @@
 {
   "schema_version": "ya_monitor_safe_v1",
-  "updated_at": "2026-07-20T17:39:03.779512+08:00",
+  "updated_at": "2026-07-20T17:44:07.481463+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "agent_smoke",
   "state": "pending",
@@ -33,7 +33,7 @@
     "agent_errors": 0
   },
   "rates": {
-    "cache_per_hour": 77.35,
+    "cache_per_hour": 61.28,
     "reports_per_hour": 0.0,
     "report_eta_hours": null
   },
@@ -53,7 +53,7 @@
     {
       "gpu": 1,
       "memory_mib": 3239,
-      "utilization_pct": 0
+      "utilization_pct": 4
     },
     {
       "gpu": 2,
@@ -78,7 +78,7 @@
     {
       "gpu": 6,
       "memory_mib": 14436,
-      "utilization_pct": 88
+      "utilization_pct": 96
     },
     {
       "gpu": 7,
