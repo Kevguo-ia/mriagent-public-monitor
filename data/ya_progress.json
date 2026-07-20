@@ -1,9 +1,9 @@
 {
   "schema_version": "ya_monitor_safe_v1",
-  "updated_at": "2026-07-20T10:59:40.816077+08:00",
+  "updated_at": "2026-07-20T11:04:44.221430+08:00",
   "job": "ya_full_pipeline_20260719_v1",
-  "stage": "cache_qc",
-  "state": "failed",
+  "stage": "cache_smoke",
+  "state": "running",
   "automatic_retry": false,
   "upload": {
     "archives_ready": 0,
@@ -23,7 +23,7 @@
     "index_duplicate_extra": 1,
     "lge_available": 563,
     "dicom_headers": 170956,
-    "cache_4ch": 0,
+    "cache_4ch": 2,
     "cache_sax": 0,
     "reports": 0,
     "agent_errors": 0
@@ -34,21 +34,21 @@
     "report_eta_hours": null
   },
   "workers": {
-    "supervisor_alive": false,
+    "supervisor_alive": true,
     "transfer_or_extract": 0,
-    "cache_workers": 0,
+    "cache_workers": 6,
     "agent_workers": 0,
     "active_image_calls": 0
   },
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 1,
+      "memory_mib": 733,
       "utilization_pct": 0
     },
     {
       "gpu": 1,
-      "memory_mib": 1,
+      "memory_mib": 733,
       "utilization_pct": 0
     },
     {
@@ -87,7 +87,5 @@
     "image": "[j]gpt-5.4",
     "image_reasoning_effort": "medium"
   },
-  "errors": {
-    "pipeline": 1
-  }
+  "errors": {}
 }
