@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-20T09:43:08.004640+08:00",
+  "updated_at": "2026-07-20T09:48:18.736296+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -35,13 +35,13 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 1,
-      "utilization_pct": 0
+      "memory_mib": 1199,
+      "utilization_pct": 5
     },
     {
       "gpu": 1,
-      "memory_mib": 1,
-      "utilization_pct": 0
+      "memory_mib": 4675,
+      "utilization_pct": 5
     },
     {
       "gpu": 2,
@@ -138,42 +138,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784509756,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784509790,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784509825,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784509859,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784509894,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784509928,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784509962,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784509997,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784510031,
-      "reports": 3883
-    },
     {
       "timestamp": 1784510066,
       "reports": 3883
@@ -376,6 +340,42 @@
     },
     {
       "timestamp": 1784511788,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784511822,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784511856,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784511891,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784511925,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784511960,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784511994,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784512029,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784512064,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784512098,
       "reports": 3883
     }
   ]
