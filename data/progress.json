@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-20T12:31:24.857261+08:00",
+  "updated_at": "2026-07-20T13:23:54.728262+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -45,7 +45,7 @@
     },
     {
       "gpu": 2,
-      "memory_mib": 877,
+      "memory_mib": 733,
       "utilization_pct": 0
     },
     {
@@ -60,7 +60,7 @@
     },
     {
       "gpu": 5,
-      "memory_mib": 877,
+      "memory_mib": 733,
       "utilization_pct": 0
     },
     {
@@ -138,14 +138,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784519764,
-      "reports": 3883
-    },
-    {
-      "timestamp": 1784519799,
-      "reports": 3883
-    },
     {
       "timestamp": 1784519834,
       "reports": 3883
@@ -376,6 +368,14 @@
     },
     {
       "timestamp": 1784521884,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784522490,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784525034,
       "reports": 3883
     }
   ]
