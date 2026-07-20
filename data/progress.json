@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-20T12:30:50.377262+08:00",
+  "updated_at": "2026-07-20T12:31:24.857261+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -70,8 +70,8 @@
     },
     {
       "gpu": 7,
-      "memory_mib": 4243,
-      "utilization_pct": 37
+      "memory_mib": 1,
+      "utilization_pct": 0
     }
   ],
   "artifacts": {
@@ -138,10 +138,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784519729,
-      "reports": 3883
-    },
     {
       "timestamp": 1784519764,
       "reports": 3883
@@ -376,6 +372,10 @@
     },
     {
       "timestamp": 1784521850,
+      "reports": 3883
+    },
+    {
+      "timestamp": 1784521884,
       "reports": 3883
     }
   ]
