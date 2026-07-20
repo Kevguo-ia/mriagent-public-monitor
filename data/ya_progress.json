@@ -1,6 +1,6 @@
 {
   "schema_version": "ya_monitor_safe_v1",
-  "updated_at": "2026-07-20T14:24:41.400946+08:00",
+  "updated_at": "2026-07-20T14:29:44.974769+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "cache_full",
   "state": "running",
@@ -23,13 +23,13 @@
     "index_duplicate_extra": 1,
     "lge_available": 563,
     "dicom_headers": 170956,
-    "cache_4ch": 297,
-    "cache_sax": 290,
+    "cache_4ch": 313,
+    "cache_sax": 306,
     "reports": 0,
     "agent_errors": 0
   },
   "rates": {
-    "cache_per_hour": 111.51,
+    "cache_per_hour": 118.29,
     "reports_per_hour": 0.0,
     "report_eta_hours": null
   },
@@ -48,7 +48,7 @@
     },
     {
       "gpu": 1,
-      "memory_mib": 877,
+      "memory_mib": 733,
       "utilization_pct": 0
     },
     {
@@ -64,7 +64,7 @@
     {
       "gpu": 4,
       "memory_mib": 733,
-      "utilization_pct": 29
+      "utilization_pct": 0
     },
     {
       "gpu": 5,
