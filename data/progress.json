@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-21T11:21:55.555273+08:00",
+  "updated_at": "2026-07-21T11:26:29.893982+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -27,7 +27,7 @@
   "processes": {
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 14,
+    "active_codex_calls": 15,
     "formal_supervisor_alive": false,
     "reasoning_effort": "medium",
     "active_models": [
@@ -37,42 +37,42 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 1298,
+      "memory_mib": 1314,
       "utilization_pct": 0
     },
     {
       "gpu": 1,
-      "memory_mib": 6277,
+      "memory_mib": 6293,
       "utilization_pct": 0
     },
     {
       "gpu": 2,
-      "memory_mib": 1298,
+      "memory_mib": 1314,
       "utilization_pct": 0
     },
     {
       "gpu": 3,
-      "memory_mib": 1298,
+      "memory_mib": 1314,
       "utilization_pct": 0
     },
     {
       "gpu": 4,
-      "memory_mib": 2971,
-      "utilization_pct": 3
+      "memory_mib": 2987,
+      "utilization_pct": 4
     },
     {
       "gpu": 5,
-      "memory_mib": 1298,
+      "memory_mib": 1314,
       "utilization_pct": 0
     },
     {
       "gpu": 6,
-      "memory_mib": 14059,
-      "utilization_pct": 0
+      "memory_mib": 14075,
+      "utilization_pct": 7
     },
     {
       "gpu": 7,
-      "memory_mib": 1298,
+      "memory_mib": 1314,
       "utilization_pct": 0
     }
   ],
@@ -140,38 +140,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784602092,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784602126,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784602161,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784602195,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784602229,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784602264,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784602298,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784602332,
-      "reports": 3898
-    },
     {
       "timestamp": 1784602366,
       "reports": 3898
@@ -378,6 +346,38 @@
     },
     {
       "timestamp": 1784604115,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784604149,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784604184,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784604218,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784604252,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784604287,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784604321,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784604355,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784604389,
       "reports": 3898
     }
   ]

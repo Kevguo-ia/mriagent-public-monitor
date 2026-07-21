@@ -1,6 +1,6 @@
 {
   "schema_version": "ya_monitor_safe_v1",
-  "updated_at": "2026-07-21T11:21:32.324572+08:00",
+  "updated_at": "2026-07-21T11:27:06.442708+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "agent_full",
   "state": "running",
@@ -29,60 +29,60 @@
     "cache_view_sax": 570,
     "cache_4ch": 570,
     "cache_sax": 570,
-    "reports": 34,
+    "reports": 51,
     "agent_errors": 0
   },
   "rates": {
     "cache_per_hour": 0.0,
-    "reports_per_hour": 34.17,
-    "report_eta_hours": 15.68
+    "reports_per_hour": 51.25,
+    "report_eta_hours": 10.13
   },
   "workers": {
     "supervisor_alive": true,
     "transfer_or_extract": 0,
     "cache_workers": 0,
     "agent_workers": 32,
-    "active_image_calls": 13
+    "active_image_calls": 11
   },
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 1298,
+      "memory_mib": 1314,
       "utilization_pct": 0
     },
     {
       "gpu": 1,
-      "memory_mib": 6277,
+      "memory_mib": 6293,
       "utilization_pct": 0
     },
     {
       "gpu": 2,
-      "memory_mib": 1298,
+      "memory_mib": 1314,
       "utilization_pct": 0
     },
     {
       "gpu": 3,
-      "memory_mib": 1298,
+      "memory_mib": 1314,
       "utilization_pct": 0
     },
     {
       "gpu": 4,
-      "memory_mib": 2971,
-      "utilization_pct": 3
+      "memory_mib": 2987,
+      "utilization_pct": 6
     },
     {
       "gpu": 5,
-      "memory_mib": 1298,
+      "memory_mib": 1314,
       "utilization_pct": 0
     },
     {
       "gpu": 6,
-      "memory_mib": 14059,
-      "utilization_pct": 0
+      "memory_mib": 14075,
+      "utilization_pct": 7
     },
     {
       "gpu": 7,
-      "memory_mib": 1298,
+      "memory_mib": 1314,
       "utilization_pct": 0
     }
   ],
