@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-21T12:27:44.778689+08:00",
+  "updated_at": "2026-07-21T12:32:53.402264+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -27,7 +27,7 @@
   "processes": {
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 9,
+    "active_codex_calls": 8,
     "formal_supervisor_alive": false,
     "reasoning_effort": "medium",
     "active_models": [
@@ -57,8 +57,8 @@
     },
     {
       "gpu": 4,
-      "memory_mib": 3595,
-      "utilization_pct": 15
+      "memory_mib": 3183,
+      "utilization_pct": 19
     },
     {
       "gpu": 5,
@@ -68,11 +68,11 @@
     {
       "gpu": 6,
       "memory_mib": 14271,
-      "utilization_pct": 0
+      "utilization_pct": 28
     },
     {
       "gpu": 7,
-      "memory_mib": 1922,
+      "memory_mib": 1510,
       "utilization_pct": 0
     }
   ],
@@ -140,42 +140,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784606038,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606072,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606106,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606141,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606175,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606209,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606244,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606278,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606312,
-      "reports": 3898
-    },
     {
       "timestamp": 1784606347,
       "reports": 3898
@@ -378,6 +342,42 @@
     },
     {
       "timestamp": 1784608064,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608099,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608133,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608167,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608201,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608236,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608270,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608304,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608339,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608373,
       "reports": 3898
     }
   ]
