@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-21T12:38:02.112590+08:00",
+  "updated_at": "2026-07-21T12:43:10.625879+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -27,7 +27,7 @@
   "processes": {
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 8,
+    "active_codex_calls": 7,
     "formal_supervisor_alive": false,
     "reasoning_effort": "medium",
     "active_models": [
@@ -37,17 +37,17 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 1510,
+      "memory_mib": 757,
       "utilization_pct": 0
     },
     {
       "gpu": 1,
-      "memory_mib": 6901,
+      "memory_mib": 6489,
       "utilization_pct": 0
     },
     {
       "gpu": 2,
-      "memory_mib": 1510,
+      "memory_mib": 757,
       "utilization_pct": 0
     },
     {
@@ -58,21 +58,21 @@
     {
       "gpu": 4,
       "memory_mib": 3183,
-      "utilization_pct": 5
+      "utilization_pct": 3
     },
     {
       "gpu": 5,
-      "memory_mib": 1510,
+      "memory_mib": 757,
       "utilization_pct": 0
     },
     {
       "gpu": 6,
-      "memory_mib": 14271,
-      "utilization_pct": 7
+      "memory_mib": 13518,
+      "utilization_pct": 47
     },
     {
       "gpu": 7,
-      "memory_mib": 1510,
+      "memory_mib": 757,
       "utilization_pct": 0
     }
   ],
@@ -140,42 +140,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784606656,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606690,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606725,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606759,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606794,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606828,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606862,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606897,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784606931,
-      "reports": 3898
-    },
     {
       "timestamp": 1784606965,
       "reports": 3898
@@ -378,6 +342,42 @@
     },
     {
       "timestamp": 1784608682,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608716,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608750,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608784,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608819,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608853,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608887,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608922,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608956,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784608990,
       "reports": 3898
     }
   ]
