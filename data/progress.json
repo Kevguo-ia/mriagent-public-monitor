@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-21T12:15:10.078273+08:00",
+  "updated_at": "2026-07-21T12:17:27.414329+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -27,7 +27,7 @@
   "processes": {
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 21,
+    "active_codex_calls": 11,
     "formal_supervisor_alive": false,
     "reasoning_effort": "medium",
     "active_models": [
@@ -37,13 +37,13 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 2821,
+      "memory_mib": 3353,
       "utilization_pct": 0
     },
     {
       "gpu": 1,
       "memory_mib": 7800,
-      "utilization_pct": 3
+      "utilization_pct": 2
     },
     {
       "gpu": 2,
@@ -57,8 +57,8 @@
     },
     {
       "gpu": 4,
-      "memory_mib": 5026,
-      "utilization_pct": 12
+      "memory_mib": 4514,
+      "utilization_pct": 3
     },
     {
       "gpu": 5,
@@ -67,7 +67,7 @@
     },
     {
       "gpu": 6,
-      "memory_mib": 15582,
+      "memory_mib": 15994,
       "utilization_pct": 0
     },
     {
@@ -140,22 +140,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784605282,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784605317,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784605351,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784605385,
-      "reports": 3898
-    },
     {
       "timestamp": 1784605420,
       "reports": 3898
@@ -378,6 +362,22 @@
     },
     {
       "timestamp": 1784607310,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784607344,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784607378,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784607413,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784607447,
       "reports": 3898
     }
   ]
