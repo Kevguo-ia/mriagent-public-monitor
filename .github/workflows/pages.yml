@@ -44,7 +44,7 @@ jobs:
               raise SystemExit("Aggregate monitor payload is unexpectedly large")
 
           ya_payload = json.loads(Path("data/ya_progress.json").read_text(encoding="utf-8"))
-          if ya_payload.get("schema_version") != "ya_monitor_safe_v1":
+          if ya_payload.get("schema_version") != "ya_monitor_safe_v2":
               raise SystemExit("Unexpected YA safe monitor schema")
           if ya_payload.get("automatic_retry") is not False:
               raise SystemExit("YA monitor must explicitly disable automatic retry")
