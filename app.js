@@ -19,6 +19,7 @@ function displayValue(value){
 function pct(value,total){return total?Math.min(100,Math.round(Number(value||0)/total*100)):0;}
 function eta(hours){if(hours==null||!Number.isFinite(Number(hours))||hours<=0)return "待速度稳定后计算";if(hours<1)return `约 ${Math.max(1,Math.round(hours*60))} 分钟`;if(hours<48)return `约 ${hours.toFixed(1)} 小时`;return `约 ${(hours/24).toFixed(1)} 天`;}
 function card(label,value,note,error=false){return `<article class="card ${error?"error":""}"><span class="label">${esc(label)}</span><strong>${esc(value)}</strong><small>${esc(note)}</small></article>`;}
+function sumValues(value){return Object.values(value||{}).reduce((sum,item)=>sum+Number(item||0),0);}
 
 function inferPhase(d){
   const total=d.total_studies||0,reports=d.reports_complete||0,seg=d.segmentation_complete||0;
@@ -86,25 +87,59 @@ function renderYa(d){
   yaState=d;
   const stage=d.stage||"waiting_upload",stageIndex=Math.max(0,yaStages.indexOf(stage));
   const counts=d.counts||{},upload=d.upload||{},rates=d.rates||{},workers=d.workers||{};
-  document.querySelector(".ya-panel").classList.toggle("failed",d.state==="failed");
-  $("#ya-state").textContent=d.state==="failed"?"失败停机":(yaStageNames[stage]||stage);
+  const failed=d.state==="failed",paused=d.state==="paused";
+  document.querySelector(".ya-panel").classList.toggle("failed",failed);
+  $("#ya-state").textContent=failed?"失败停机":paused?"已暂停":(yaStageNames[stage]||stage);
   document.querySelectorAll("#ya-pipeline li").forEach((node,index)=>{
     node.classList.toggle("done",index<stageIndex||stage==="complete");
     node.classList.toggle("active",index===stageIndex&&stage!=="complete");
   });
   const eligible=counts.cache_valid||counts.eligible||0;
   const cacheComplete=Math.min(counts.cache_4ch||0,counts.cache_sax||0);
-  const reports=counts.reports||0,errors=(counts.agent_errors||0)+(counts.report_errors||0);
+  const reports=counts.reports||0,errors=Math.max(Number(counts.agent_errors||0)+Number(counts.report_errors||0),sumValues(d.errors));
+  const percent=pct(reports,eligible),reportRate=Number(rates.reports_per_hour||0);
+  $("#ya-progress-copy").textContent=`报告 ${fmt(reports)} / ${fmt(eligible)}`;
+  $("#ya-percent").textContent=`${percent}%`;
+  $("#ya-progress").style.width=`${percent}%`;
   $("#ya-cards").innerHTML=[
-    card("上传归档",`${fmt(upload.archives_ready)}/${fmt(upload.archives_expected||3)}`,`${fmt(upload.partial_files)} 个临时文件 · 稳定检查 ${fmt(upload.stable_observations)}/2`),
-    card("Agent合格检查",fmt(eligible),counts.raw_cases?`库存 ${fmt(counts.raw_cases)} · 技术无效 ${fmt(counts.technical_invalid||0)}`:"等待数据QC"),
-    card("4CH + SAX缓存",fmt(cacheComplete),rates.cache_per_hour?`${fmt(rates.cache_per_hour)}/小时`:"速度尚未稳定"),
-    card("最终报告",fmt(reports),rates.report_eta_hours?`${fmt(rates.reports_per_hour)}/小时 · ${eta(rates.report_eta_hours)}`:"速度尚未稳定",Boolean(errors)),
+    card("最终报告",`${fmt(reports)} / ${fmt(eligible)}`,`${percent}% · 完整JSON与Markdown`),
+    card("近30分钟速度",reportRate?`${reportRate.toFixed(1)} 例/小时`:"待稳定",reportRate?"至少30分钟连续窗口":"累计≥10例后显示"),
+    card("可靠 ETA",eta(rates.report_eta_hours),reportRate?`剩余 ${fmt(Math.max(0,eligible-reports))} 例`:"暂停时不估算"),
+    card("错误病例",fmt(errors),errors?"记录后跳过，不自动重试":"当前为0",Boolean(errors)),
   ].join("");
-  $("#ya-detail").textContent=d.state==="failed"?"流水线已安全停机，不会自动重试。":
-    `${yaStageNames[stage]||stage} · 缓存worker ${fmt(workers.cache_workers||0)} · Agent worker ${fmt(workers.agent_workers||0)} · 错误 ${fmt(errors)}`;
+  $("#ya-detail").textContent=failed?"流水线已安全停机，不会自动重试。":paused?"任务已人工暂停，等待继续指令。":
+    `${yaStageNames[stage]||stage} · 4CH/SAX缓存 ${fmt(cacheComplete)}/${fmt(eligible)} · 已完成病例自动跳过`;
   $("#ya-models").textContent=`${d.models?.text||"deepseek-chat"} 文本 · ${d.models?.image||"[j]gpt-5.4"} ${d.models?.image_reasoning_effort||"medium"} 图像`;
   $("#ya-updated").textContent=`更新时间 ${new Date(d.updated_at).toLocaleString("zh-CN",{hour12:false})}`;
+  $("#ya-rate").textContent=reportRate?`${reportRate.toFixed(1)} 例/小时`:"速度校准中";
+  $("#ya-supervisor").className=`status ${workers.supervisor_alive?"complete":"error"}`;
+  $("#ya-supervisor").textContent=workers.supervisor_alive?"主管在线":"主管离线";
+  $("#ya-live-stats").innerHTML=[
+    ["真实 Agent worker",fmt(workers.agent_workers||0)],
+    ["活跃图像调用",fmt(workers.active_image_calls||0)],
+    ["4CH缓存",`${fmt(counts.cache_4ch||0)}/${fmt(eligible)}`],
+    ["SAX缓存",`${fmt(counts.cache_sax||0)}/${fmt(eligible)}`],
+  ].map(([label,value])=>`<div><span>${esc(label)}</span><b>${esc(value)}</b></div>`).join("");
+  const health=d.health||{};
+  const healthItems=[
+    ["401",health.http_401||0],["429",health.http_429||0],["超时",health.timeouts||0],
+    ["缓存缺失",health.cache_missing||0],["路由异常",health.route_mismatch||0],["异常栈",health.exceptions||0],
+  ];
+  const errorItems=Object.entries(d.errors||{}).map(([label,value])=>`<span class="error-chip">${esc(label)} <b>${fmt(value)}</b></span>`);
+  $("#ya-error-list").innerHTML=healthItems.map(([label,value])=>`<span class="health-chip ${Number(value)?"bad":""}">${esc(label)} <b>${fmt(value)}</b></span>`).join("")+errorItems.join("");
+  renderYaTrend(rates.report_history||[]);
+}
+
+function renderYaTrend(history){
+  const svg=$("#ya-trend"),points=(history||[]).slice(-120);
+  if(points.length<2){svg.innerHTML='<text x="380" y="90" text-anchor="middle" class="chart-empty">等待更多聚合快照</text>';return;}
+  const width=760,height=170,padX=36,padY=24,first=Number(points[0].timestamp),last=Number(points.at(-1).timestamp)||first+1;
+  const values=points.map((item)=>Number(item.reports||0)),min=Math.min(...values),max=Math.max(...values),span=Math.max(1,max-min);
+  const x=(value)=>padX+(Number(value)-first)/Math.max(1,last-first)*(width-padX*2);
+  const y=(value)=>height-padY-(Number(value)-min)/span*(height-padY*2);
+  const line=points.map((item)=>`${x(item.timestamp).toFixed(1)},${y(item.reports).toFixed(1)}`).join(" ");
+  const area=`${padX},${height-padY} ${line} ${width-padX},${height-padY}`;
+  svg.innerHTML=`<line x1="${padX}" y1="${height-padY}" x2="${width-padX}" y2="${height-padY}" class="chart-axis"/><polygon points="${area}" class="chart-area"/><polyline points="${line}" class="chart-line"/><circle cx="${x(last)}" cy="${y(values.at(-1))}" r="5" class="chart-point"/><text x="${padX}" y="17" class="chart-label">${fmt(max)}</text><text x="${padX}" y="${height-5}" class="chart-label">${new Date(first*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text><text x="${width-padX}" y="${height-5}" text-anchor="end" class="chart-label">${new Date(last*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text>`;
 }
 
 async function load(){

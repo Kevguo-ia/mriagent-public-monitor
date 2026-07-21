@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="dark">
   <meta name="description" content="MRIAgent多中心及YA新批次匿名实验进度">
   <title>MRIAgent · 多中心实验进度</title>
-  <link rel="stylesheet" href="styles.css?v=ya-v1">
+  <link rel="stylesheet" href="styles.css?v=ya-v2">
 </head>
 <body>
   <header class="topbar">
@@ -46,7 +46,22 @@
         <li data-stage="agent_full"><i>9</i><span>全量Agent</span></li>
         <li data-stage="final_qc"><i>10</i><span>最终QC</span></li>
       </ol>
+      <div class="ya-run-progress">
+        <div><span id="ya-progress-copy">报告 0 / 570</span><strong id="ya-percent">0%</strong></div>
+        <div class="progress progress-large"><i id="ya-progress"></i></div>
+      </div>
       <div id="ya-cards" class="cards ya-cards"></div>
+      <div class="ya-live-grid">
+        <article class="ya-live-card">
+          <div class="ya-live-head"><div><small>30-MINUTE TREND</small><h3>报告产出趋势</h3></div><b id="ya-rate">—</b></div>
+          <svg id="ya-trend" viewBox="0 0 760 170" role="img" aria-label="YA累计报告趋势"></svg>
+        </article>
+        <article class="ya-live-card">
+          <div class="ya-live-head"><div><small>LIVE HEALTH</small><h3>运行与错误门禁</h3></div><span id="ya-supervisor" class="status">—</span></div>
+          <div id="ya-live-stats" class="ya-live-stats"></div>
+          <div id="ya-error-list" class="ya-error-list"></div>
+        </article>
+      </div>
       <div class="ya-foot"><span id="ya-models">DeepSeek文本 · [j]gpt-5.4 medium图像</span><span id="ya-updated">—</span></div>
     </section>
 
@@ -92,6 +107,6 @@
 
     <footer><span>仅展示阶段状态、聚合数量与错误类别</span><span>V3-only · Read-only monitor</span></footer>
   </main>
-  <script src="app.js?v=ya-v1"></script>
+  <script src="app.js?v=ya-v2"></script>
 </body>
 </html>
