@@ -1,6 +1,6 @@
 {
-  "schema_version": "ya_monitor_safe_v1",
-  "updated_at": "2026-07-21T11:37:13.862746+08:00",
+  "schema_version": "ya_monitor_safe_v2",
+  "updated_at": "2026-07-21T12:07:10.911668+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "agent_full",
   "state": "running",
@@ -29,60 +29,542 @@
     "cache_view_sax": 570,
     "cache_4ch": 570,
     "cache_sax": 570,
-    "reports": 99,
-    "agent_errors": 0
+    "reports": 327,
+    "agent_errors": 2
   },
   "rates": {
     "cache_per_hour": 0.0,
-    "reports_per_hour": 99.48,
-    "report_eta_hours": 4.73
+    "reports_per_hour": 456.75,
+    "report_eta_hours": 0.53,
+    "report_history": [
+      {
+        "timestamp": 1784603242,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603273,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603303,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603333,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603364,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603394,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603424,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603455,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603485,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603515,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603546,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603576,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603607,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603637,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603667,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603698,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603728,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603758,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603789,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603819,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603849,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603880,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603910,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603940,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784603971,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784604001,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784604032,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784604062,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784604092,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784604123,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784604153,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784604183,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784604214,
+        "reports": 34
+      },
+      {
+        "timestamp": 1784604244,
+        "reports": 39
+      },
+      {
+        "timestamp": 1784604274,
+        "reports": 45
+      },
+      {
+        "timestamp": 1784604305,
+        "reports": 50
+      },
+      {
+        "timestamp": 1784604335,
+        "reports": 50
+      },
+      {
+        "timestamp": 1784604366,
+        "reports": 51
+      },
+      {
+        "timestamp": 1784604396,
+        "reports": 51
+      },
+      {
+        "timestamp": 1784604426,
+        "reports": 51
+      },
+      {
+        "timestamp": 1784604457,
+        "reports": 55
+      },
+      {
+        "timestamp": 1784604487,
+        "reports": 61
+      },
+      {
+        "timestamp": 1784604518,
+        "reports": 65
+      },
+      {
+        "timestamp": 1784604548,
+        "reports": 66
+      },
+      {
+        "timestamp": 1784604578,
+        "reports": 66
+      },
+      {
+        "timestamp": 1784604609,
+        "reports": 67
+      },
+      {
+        "timestamp": 1784604639,
+        "reports": 68
+      },
+      {
+        "timestamp": 1784604669,
+        "reports": 73
+      },
+      {
+        "timestamp": 1784604700,
+        "reports": 75
+      },
+      {
+        "timestamp": 1784604730,
+        "reports": 80
+      },
+      {
+        "timestamp": 1784604761,
+        "reports": 83
+      },
+      {
+        "timestamp": 1784604791,
+        "reports": 83
+      },
+      {
+        "timestamp": 1784604821,
+        "reports": 84
+      },
+      {
+        "timestamp": 1784604852,
+        "reports": 86
+      },
+      {
+        "timestamp": 1784604882,
+        "reports": 89
+      },
+      {
+        "timestamp": 1784604912,
+        "reports": 94
+      },
+      {
+        "timestamp": 1784604943,
+        "reports": 97
+      },
+      {
+        "timestamp": 1784604973,
+        "reports": 99
+      },
+      {
+        "timestamp": 1784605003,
+        "reports": 99
+      },
+      {
+        "timestamp": 1784605034,
+        "reports": 99
+      },
+      {
+        "timestamp": 1784605064,
+        "reports": 101
+      },
+      {
+        "timestamp": 1784605095,
+        "reports": 106
+      },
+      {
+        "timestamp": 1784605125,
+        "reports": 111
+      },
+      {
+        "timestamp": 1784605155,
+        "reports": 113
+      },
+      {
+        "timestamp": 1784605186,
+        "reports": 115
+      },
+      {
+        "timestamp": 1784605216,
+        "reports": 115
+      },
+      {
+        "timestamp": 1784605247,
+        "reports": 115
+      },
+      {
+        "timestamp": 1784605277,
+        "reports": 121
+      },
+      {
+        "timestamp": 1784605308,
+        "reports": 123
+      },
+      {
+        "timestamp": 1784605338,
+        "reports": 128
+      },
+      {
+        "timestamp": 1784605368,
+        "reports": 129
+      },
+      {
+        "timestamp": 1784605399,
+        "reports": 129
+      },
+      {
+        "timestamp": 1784605429,
+        "reports": 131
+      },
+      {
+        "timestamp": 1784605459,
+        "reports": 133
+      },
+      {
+        "timestamp": 1784605490,
+        "reports": 140
+      },
+      {
+        "timestamp": 1784605520,
+        "reports": 146
+      },
+      {
+        "timestamp": 1784605551,
+        "reports": 157
+      },
+      {
+        "timestamp": 1784605581,
+        "reports": 161
+      },
+      {
+        "timestamp": 1784605611,
+        "reports": 161
+      },
+      {
+        "timestamp": 1784605642,
+        "reports": 162
+      },
+      {
+        "timestamp": 1784605672,
+        "reports": 165
+      },
+      {
+        "timestamp": 1784605703,
+        "reports": 171
+      },
+      {
+        "timestamp": 1784605733,
+        "reports": 171
+      },
+      {
+        "timestamp": 1784605764,
+        "reports": 178
+      },
+      {
+        "timestamp": 1784605794,
+        "reports": 191
+      },
+      {
+        "timestamp": 1784605824,
+        "reports": 195
+      },
+      {
+        "timestamp": 1784605855,
+        "reports": 195
+      },
+      {
+        "timestamp": 1784605885,
+        "reports": 195
+      },
+      {
+        "timestamp": 1784605916,
+        "reports": 198
+      },
+      {
+        "timestamp": 1784605946,
+        "reports": 203
+      },
+      {
+        "timestamp": 1784605976,
+        "reports": 204
+      },
+      {
+        "timestamp": 1784606007,
+        "reports": 213
+      },
+      {
+        "timestamp": 1784606037,
+        "reports": 224
+      },
+      {
+        "timestamp": 1784606068,
+        "reports": 227
+      },
+      {
+        "timestamp": 1784606098,
+        "reports": 227
+      },
+      {
+        "timestamp": 1784606128,
+        "reports": 230
+      },
+      {
+        "timestamp": 1784606159,
+        "reports": 233
+      },
+      {
+        "timestamp": 1784606189,
+        "reports": 238
+      },
+      {
+        "timestamp": 1784606220,
+        "reports": 243
+      },
+      {
+        "timestamp": 1784606250,
+        "reports": 250
+      },
+      {
+        "timestamp": 1784606280,
+        "reports": 257
+      },
+      {
+        "timestamp": 1784606311,
+        "reports": 259
+      },
+      {
+        "timestamp": 1784606341,
+        "reports": 260
+      },
+      {
+        "timestamp": 1784606372,
+        "reports": 262
+      },
+      {
+        "timestamp": 1784606402,
+        "reports": 265
+      },
+      {
+        "timestamp": 1784606432,
+        "reports": 267
+      },
+      {
+        "timestamp": 1784606463,
+        "reports": 273
+      },
+      {
+        "timestamp": 1784606493,
+        "reports": 278
+      },
+      {
+        "timestamp": 1784606524,
+        "reports": 283
+      },
+      {
+        "timestamp": 1784606554,
+        "reports": 291
+      },
+      {
+        "timestamp": 1784606584,
+        "reports": 293
+      },
+      {
+        "timestamp": 1784606611,
+        "reports": 294
+      },
+      {
+        "timestamp": 1784606614,
+        "reports": 294
+      },
+      {
+        "timestamp": 1784606643,
+        "reports": 297
+      },
+      {
+        "timestamp": 1784606674,
+        "reports": 301
+      },
+      {
+        "timestamp": 1784606705,
+        "reports": 304
+      },
+      {
+        "timestamp": 1784606737,
+        "reports": 314
+      },
+      {
+        "timestamp": 1784606768,
+        "reports": 319
+      },
+      {
+        "timestamp": 1784606799,
+        "reports": 324
+      },
+      {
+        "timestamp": 1784606831,
+        "reports": 327
+      }
+    ]
   },
   "workers": {
     "supervisor_alive": true,
     "transfer_or_extract": 0,
     "cache_workers": 0,
     "agent_workers": 32,
-    "active_image_calls": 9
+    "active_image_calls": 26
   },
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 1314,
+      "memory_mib": 2821,
       "utilization_pct": 0
     },
     {
       "gpu": 1,
-      "memory_mib": 6293,
-      "utilization_pct": 0
+      "memory_mib": 7800,
+      "utilization_pct": 4
     },
     {
       "gpu": 2,
-      "memory_mib": 1314,
+      "memory_mib": 3233,
       "utilization_pct": 0
     },
     {
       "gpu": 3,
-      "memory_mib": 1314,
+      "memory_mib": 2821,
       "utilization_pct": 0
     },
     {
       "gpu": 4,
-      "memory_mib": 2987,
-      "utilization_pct": 3
+      "memory_mib": 4494,
+      "utilization_pct": 4
     },
     {
       "gpu": 5,
-      "memory_mib": 1314,
+      "memory_mib": 2821,
       "utilization_pct": 0
     },
     {
       "gpu": 6,
-      "memory_mib": 14075,
-      "utilization_pct": 7
+      "memory_mib": 15582,
+      "utilization_pct": 0
     },
     {
       "gpu": 7,
-      "memory_mib": 1314,
+      "memory_mib": 2821,
       "utilization_pct": 0
     }
   ],
@@ -91,5 +573,15 @@
     "image": "[j]gpt-5.4",
     "image_reasoning_effort": "medium"
   },
-  "errors": {}
+  "errors": {
+    "LGE影像目录无DICOM": 2
+  },
+  "health": {
+    "http_401": 0,
+    "http_429": 0,
+    "timeouts": 0,
+    "exceptions": 2,
+    "cache_missing": 0,
+    "route_mismatch": 0
+  }
 }
