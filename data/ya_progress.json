@@ -1,6 +1,6 @@
 {
   "schema_version": "ya_monitor_safe_v1",
-  "updated_at": "2026-07-21T11:11:25.135760+08:00",
+  "updated_at": "2026-07-21T11:16:28.672508+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "agent_full",
   "state": "paused",
@@ -34,7 +34,7 @@
   },
   "rates": {
     "cache_per_hour": 0.0,
-    "reports_per_hour": 34.18,
+    "reports_per_hour": 34.17,
     "report_eta_hours": 15.68
   },
   "workers": {
@@ -68,7 +68,7 @@
     {
       "gpu": 4,
       "memory_mib": 1677,
-      "utilization_pct": 3
+      "utilization_pct": 11
     },
     {
       "gpu": 5,
