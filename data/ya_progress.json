@@ -1,6 +1,6 @@
 {
   "schema_version": "ya_monitor_safe_v2",
-  "updated_at": "2026-07-21T12:22:28.301501+08:00",
+  "updated_at": "2026-07-21T12:27:46.661355+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "agent_full",
   "state": "running",
@@ -29,54 +29,14 @@
     "cache_view_sax": 570,
     "cache_4ch": 570,
     "cache_sax": 570,
-    "reports": 454,
-    "agent_errors": 2
+    "reports": 478,
+    "agent_errors": 4
   },
   "rates": {
     "cache_per_hour": 0.0,
-    "reports_per_hour": 507.92,
-    "report_eta_hours": 0.23,
+    "reports_per_hour": 445.4,
+    "report_eta_hours": 0.21,
     "report_history": [
-      {
-        "timestamp": 1784604123,
-        "reports": 34
-      },
-      {
-        "timestamp": 1784604153,
-        "reports": 34
-      },
-      {
-        "timestamp": 1784604183,
-        "reports": 34
-      },
-      {
-        "timestamp": 1784604214,
-        "reports": 34
-      },
-      {
-        "timestamp": 1784604244,
-        "reports": 39
-      },
-      {
-        "timestamp": 1784604274,
-        "reports": 45
-      },
-      {
-        "timestamp": 1784604305,
-        "reports": 50
-      },
-      {
-        "timestamp": 1784604335,
-        "reports": 50
-      },
-      {
-        "timestamp": 1784604366,
-        "reports": 51
-      },
-      {
-        "timestamp": 1784604396,
-        "reports": 51
-      },
       {
         "timestamp": 1784604426,
         "reports": 51
@@ -516,6 +476,46 @@
       {
         "timestamp": 1784607748,
         "reports": 454
+      },
+      {
+        "timestamp": 1784607780,
+        "reports": 456
+      },
+      {
+        "timestamp": 1784607812,
+        "reports": 458
+      },
+      {
+        "timestamp": 1784607844,
+        "reports": 460
+      },
+      {
+        "timestamp": 1784607875,
+        "reports": 465
+      },
+      {
+        "timestamp": 1784607907,
+        "reports": 467
+      },
+      {
+        "timestamp": 1784607939,
+        "reports": 469
+      },
+      {
+        "timestamp": 1784607971,
+        "reports": 472
+      },
+      {
+        "timestamp": 1784608003,
+        "reports": 473
+      },
+      {
+        "timestamp": 1784608035,
+        "reports": 474
+      },
+      {
+        "timestamp": 1784608067,
+        "reports": 478
       }
     ]
   },
@@ -523,19 +523,19 @@
     "supervisor_alive": true,
     "transfer_or_extract": 0,
     "cache_workers": 0,
-    "agent_workers": 16,
-    "active_image_calls": 12
+    "agent_workers": 17,
+    "active_image_calls": 10
   },
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 1922,
+      "memory_mib": 1510,
       "utilization_pct": 0
     },
     {
       "gpu": 1,
       "memory_mib": 6489,
-      "utilization_pct": 0
+      "utilization_pct": 3
     },
     {
       "gpu": 2,
@@ -549,8 +549,8 @@
     },
     {
       "gpu": 4,
-      "memory_mib": 3183,
-      "utilization_pct": 19
+      "memory_mib": 3595,
+      "utilization_pct": 3
     },
     {
       "gpu": 5,
@@ -560,11 +560,11 @@
     {
       "gpu": 6,
       "memory_mib": 14271,
-      "utilization_pct": 31
+      "utilization_pct": 0
     },
     {
       "gpu": 7,
-      "memory_mib": 1510,
+      "memory_mib": 1922,
       "utilization_pct": 0
     }
   ],
@@ -574,13 +574,13 @@
     "image_reasoning_effort": "medium"
   },
   "errors": {
-    "LGE影像目录无DICOM": 2
+    "LGE影像目录无DICOM": 4
   },
   "health": {
     "http_401": 0,
     "http_429": 0,
     "timeouts": 0,
-    "exceptions": 8,
+    "exceptions": 10,
     "cache_missing": 12,
     "route_mismatch": 0
   }
