@@ -1,6 +1,6 @@
 {
   "schema_version": "ya_monitor_safe_v2",
-  "updated_at": "2026-07-21T12:53:06.227669+08:00",
+  "updated_at": "2026-07-21T12:53:25.113324+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "complete",
   "state": "complete_with_errors",
@@ -31,13 +31,9 @@
   },
   "rates": {
     "cache_per_hour": 0.0,
-    "reports_per_hour": 213.03,
+    "reports_per_hour": 210.79,
     "report_eta_hours": 0.03,
     "report_history": [
-      {
-        "timestamp": 1784605885,
-        "reports": 195
-      },
       {
         "timestamp": 1784605916,
         "reports": 198
@@ -513,6 +509,10 @@
       {
         "timestamp": 1784609586,
         "reports": 563
+      },
+      {
+        "timestamp": 1784609605,
+        "reports": 563
       }
     ]
   },
@@ -547,7 +547,7 @@
     {
       "gpu": 4,
       "memory_mib": 1677,
-      "utilization_pct": 13
+      "utilization_pct": 3
     },
     {
       "gpu": 5,
@@ -557,7 +557,7 @@
     {
       "gpu": 6,
       "memory_mib": 12765,
-      "utilization_pct": 53
+      "utilization_pct": 27
     },
     {
       "gpu": 7,
