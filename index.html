@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="dark">
   <meta name="description" content="MRIAgent多中心及YA新批次匿名实验进度">
   <title>MRIAgent · 多中心实验进度</title>
-  <link rel="stylesheet" href="styles.css?v=ya-v2">
+  <link rel="stylesheet" href="styles.css?v=ukb-sax-v1">
 </head>
 <body>
   <header class="topbar">
@@ -28,6 +28,38 @@
     </section>
 
     <section id="alert" class="alert hidden" role="status"></section>
+
+    <section class="panel ukb-sax-panel" aria-labelledby="ukb-sax-title">
+      <div class="panel-head">
+        <div><small>UKB SAX REBUILD</small><h2 id="ukb-sax-title">UKB心功能版本化修复</h2><p id="ukb-sax-detail">正在读取全量SAX缓存进度。</p></div>
+        <span id="ukb-sax-state" class="phase-badge">连接中</span>
+      </div>
+      <ol class="pipeline ukb-sax-pipeline" id="ukb-sax-pipeline" aria-label="UKB SAX修复流水线">
+        <li data-stage="smoke"><i>1</i><span>Smoke</span></li>
+        <li data-stage="cache_full"><i>2</i><span>全量缓存</span></li>
+        <li data-stage="cache_qc"><i>3</i><span>缓存审计</span></li>
+        <li data-stage="precompute"><i>4</i><span>数值重建</span></li>
+        <li data-stage="complete"><i>5</i><span>指标完成</span></li>
+      </ol>
+      <div class="ya-run-progress">
+        <div><span id="ukb-sax-progress-copy">合格缓存 0 / 999</span><strong id="ukb-sax-percent">0%</strong></div>
+        <div class="progress progress-large"><i id="ukb-sax-progress"></i></div>
+      </div>
+      <div id="ukb-sax-cards" class="cards ya-cards"></div>
+      <div class="ya-live-grid">
+        <article class="ya-live-card">
+          <div class="ya-live-head"><div><small>30-MINUTE TREND</small><h3>合格缓存趋势</h3></div><b id="ukb-sax-rate">—</b></div>
+          <svg id="ukb-sax-trend" viewBox="0 0 760 170" role="img" aria-label="UKB SAX合格缓存趋势"></svg>
+        </article>
+        <article class="ya-live-card">
+          <div class="ya-live-head"><div><small>LIVE HEALTH</small><h3>工作进程与安全门禁</h3></div><span id="ukb-sax-supervisor" class="status">—</span></div>
+          <div id="ukb-sax-live-stats" class="ya-live-stats"></div>
+          <div id="ukb-sax-error-list" class="ya-error-list"></div>
+        </article>
+      </div>
+      <div class="ukb-sax-gpu-wrap"><div class="ya-live-head"><div><small>GPU ASSIGNMENT</small><h3>8卡实时状态</h3></div><span>GPU 0–6 修复 · GPU 7 其他任务</span></div><div id="ukb-sax-gpus" class="gpu-grid"></div></div>
+      <div class="ya-foot"><span>确定性nnUNet · 无API调用 · 不覆盖旧结果</span><span id="ukb-sax-updated">—</span></div>
+    </section>
 
     <section class="panel ya-panel" aria-labelledby="ya-title">
       <div class="panel-head">
@@ -107,6 +139,6 @@
 
     <footer><span>仅展示阶段状态、聚合数量与错误类别</span><span>V3-only · Read-only monitor</span></footer>
   </main>
-  <script src="app.js?v=ya-v2"></script>
+  <script src="app.js?v=ukb-sax-v1"></script>
 </body>
 </html>

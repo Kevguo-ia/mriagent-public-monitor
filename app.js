@@ -2,12 +2,15 @@ const $ = (selector) => document.querySelector(selector);
 const esc = (value) => String(value ?? "").replace(/[&<>'"]/g, (char) => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[char]));
 let state = null;
 let yaState = null;
+let ukbSaxState = null;
 
 const labels = {pending:"等待",segmentation_partial:"部分分割",segmentation_complete:"分割完成",precompute_complete:"预计算完成",llm_complete:"LLM完成",report_complete:"报告完成",complete:"完成",error:"错误"};
 const centreNames = {UKB:"UK Biobank",Kunming:"Kunming",Chengdu:"Chengdu",SCS:"SCS",YA:"YA"};
 const workerNames = {kunming_segmentation_workers:"昆明既有缓存进程",full_cohort_segmentation_workers:"正式医院缓存进程",hospital_agent_workers:"医院完整 Agent",ukb_agent_workers:"UKB 完整 Agent",active_codex_calls:"活跃图像调用",formal_supervisor_alive:"正式主管存活",reasoning_effort:"推理强度",active_models:"活跃模型"};
 const yaStages=["waiting_upload","verify_archives","extract","inventory_qc","cache_smoke","cache_full","cache_qc","agent_smoke","agent_full","final_qc","complete"];
 const yaStageNames={waiting_upload:"等待上传",verify_archives:"归档校验",extract:"安全解压",inventory_qc:"数据质量检查",cache_smoke:"缓存Smoke",cache_full:"全量缓存",cache_qc:"缓存QC",agent_smoke:"Agent Smoke",agent_full:"全量Agent",final_qc:"最终QC",complete:"完成"};
+const ukbSaxStages=["smoke","cache_full","cache_qc","precompute","complete"];
+const ukbSaxStageNames={smoke:"Smoke门禁",cache_full:"全量缓存重建",cache_qc:"缓存一致性审计",precompute:"心功能数值重建",complete:"指标计算完成"};
 
 function fmt(value){return new Intl.NumberFormat("zh-CN").format(Number(value||0));}
 function displayValue(value){
@@ -142,6 +145,65 @@ function renderYaTrend(history){
   svg.innerHTML=`<line x1="${padX}" y1="${height-padY}" x2="${width-padX}" y2="${height-padY}" class="chart-axis"/><polygon points="${area}" class="chart-area"/><polyline points="${line}" class="chart-line"/><circle cx="${x(last)}" cy="${y(values.at(-1))}" r="5" class="chart-point"/><text x="${padX}" y="17" class="chart-label">${fmt(max)}</text><text x="${padX}" y="${height-5}" class="chart-label">${new Date(first*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text><text x="${width-padX}" y="${height-5}" text-anchor="end" class="chart-label">${new Date(last*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text>`;
 }
 
+function renderUkbSax(d){
+  ukbSaxState=d;
+  const stage=d.stage||"cache_full",stageIndex=Math.max(0,ukbSaxStages.indexOf(stage));
+  const eligible=Number(d.eligible||999),completed=Number(d.completed||0),remaining=Number(d.remaining||0),errors=Number(d.errors||0);
+  const workers=d.workers||{},percent=pct(completed,eligible),rate=Number(d.rate_per_hour||0);
+  $("#ukb-sax-state").textContent=ukbSaxStageNames[stage]||stage;
+  document.querySelectorAll("#ukb-sax-pipeline li").forEach((node,index)=>{
+    node.classList.toggle("done",index<stageIndex||stage==="complete");
+    node.classList.toggle("active",index===stageIndex&&stage!=="complete");
+  });
+  $("#ukb-sax-progress-copy").textContent=`合格缓存 ${fmt(completed)} / ${fmt(eligible)}`;
+  $("#ukb-sax-percent").textContent=`${percent}%`;
+  $("#ukb-sax-progress").style.width=`${percent}%`;
+  $("#ukb-sax-detail").textContent=`${ukbSaxStageNames[stage]||stage} · 已排除源数据QC失败 ${fmt(d.excluded_source_qc||0)} 例 · 不自动重试`;
+  $("#ukb-sax-cards").innerHTML=[
+    card("合格缓存",`${fmt(completed)} / ${fmt(eligible)}`,`${percent}% · 每例16/16时相`),
+    card("近30分钟速度",rate?`${rate.toFixed(1)} 例/小时`:"校准中",rate?"连续窗口新增≥10例":"运行满30分钟后显示"),
+    card("可靠 ETA",eta(d.eta_hours),rate?`剩余 ${fmt(remaining)} 例`:"速度稳定前不估算"),
+    card("运行错误",fmt(errors),errors?"记录并排除，不自动重试":"当前为0",Boolean(errors)),
+  ].join("");
+  $("#ukb-sax-rate").textContent=rate?`${rate.toFixed(1)} 例/小时`:"速度校准中";
+  $("#ukb-sax-supervisor").className=`status ${workers.supervisors_alive?"complete":"error"}`;
+  $("#ukb-sax-supervisor").textContent=workers.supervisors_alive?"主管在线":"主管离线";
+  $("#ukb-sax-live-stats").innerHTML=[
+    ["真实GPU worker",`${fmt(workers.active_workers||0)} / 8`],
+    ["基础 / 加速",`${fmt(workers.base_workers||0)} + ${fmt(workers.acceleration_workers||0)}`],
+    ["活跃API调用",fmt(workers.api_calls||0)],
+    ["剩余病例",fmt(remaining)],
+  ].map(([label,value])=>`<div><span>${esc(label)}</span><b>${esc(value)}</b></div>`).join("");
+  const gate=d.gates||{};
+  const gateItems=[
+    ["Smoke缓存",gate.smoke_cache||"—",false],
+    ["数值门禁",gate.smoke_precompute||"—",false],
+    ["输入契约",gate.input_contract||"—",false],
+    ["自动重试",gate.automatic_retry?"开启":"关闭",Boolean(gate.automatic_retry)],
+  ];
+  const errorItems=Object.entries(d.error_types||{}).map(([label,value])=>`<span class="error-chip">${esc(label)} <b>${fmt(value)}</b></span>`);
+  $("#ukb-sax-error-list").innerHTML=gateItems.map(([label,value,bad])=>`<span class="health-chip ${bad?"bad":""}">${esc(label)} <b>${esc(value)}</b></span>`).join("")+errorItems.join("");
+  $("#ukb-sax-gpus").innerHTML=(d.gpus||[]).map((g)=>{
+    const util=Number(g.utilization_pct||0),memory=Number(g.memory_mib||0),assigned=Boolean(g.assigned_to_rebuild);
+    const stateText=assigned?(util>5?"分割中":"已分配"):(memory>1000?"其他任务":"空闲");
+    return `<div class="gpu ${assigned?"gpu-owned":"gpu-external"}"><div class="gpu-top"><strong>GPU ${esc(g.gpu)}</strong><span class="gpu-state ${util>5?"active":""}">${esc(stateText)}</span></div><div class="bar"><i style="width:${Math.min(100,util)}%"></i></div><div class="gpu-meta"><span>${esc(g.role||"—")}</span><span>${fmt(memory)} MiB</span></div></div>`;
+  }).join("");
+  $("#ukb-sax-updated").textContent=`安全快照 ${new Date(d.updated_at).toLocaleString("zh-CN",{hour12:false})}`;
+  renderUkbSaxTrend(d.history||[]);
+}
+
+function renderUkbSaxTrend(history){
+  const svg=$("#ukb-sax-trend"),points=(history||[]).slice(-120);
+  if(points.length<2){svg.innerHTML='<text x="380" y="90" text-anchor="middle" class="chart-empty">等待更多聚合快照</text>';return;}
+  const width=760,height=170,padX=36,padY=24,first=Number(points[0].timestamp),last=Number(points.at(-1).timestamp)||first+1;
+  const values=points.map((item)=>Number(item.completed||0)),min=Math.min(...values),max=Math.max(...values),span=Math.max(1,max-min);
+  const x=(value)=>padX+(Number(value)-first)/Math.max(1,last-first)*(width-padX*2);
+  const y=(value)=>height-padY-(Number(value)-min)/span*(height-padY*2);
+  const line=points.map((item)=>`${x(item.timestamp).toFixed(1)},${y(item.completed).toFixed(1)}`).join(" ");
+  const area=`${padX},${height-padY} ${line} ${width-padX},${height-padY}`;
+  svg.innerHTML=`<line x1="${padX}" y1="${height-padY}" x2="${width-padX}" y2="${height-padY}" class="chart-axis"/><polygon points="${area}" class="chart-area"/><polyline points="${line}" class="chart-line"/><circle cx="${x(last)}" cy="${y(values.at(-1))}" r="5" class="chart-point"/><text x="${padX}" y="17" class="chart-label">${fmt(max)}</text><text x="${padX}" y="${height-5}" class="chart-label">${new Date(first*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text><text x="${width-padX}" y="${height-5}" text-anchor="end" class="chart-label">${new Date(last*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text>`;
+}
+
 async function load(){
   try{const response=await fetch(`data/progress.json?t=${Date.now()}`,{cache:"no-store"});if(!response.ok)throw new Error(`HTTP ${response.status}`);render(await response.json());}
   catch(error){$("#freshness").textContent="状态连接失败";$("#alert").classList.remove("hidden");$("#alert").textContent="暂时无法读取安全状态快照，请稍后刷新。";}
@@ -152,4 +214,9 @@ async function loadYa(){
   catch(error){$("#ya-state").textContent="状态未连接";$("#ya-detail").textContent="YA安全状态快照尚未生成或暂时不可用。";}
 }
 
-load();loadYa();setInterval(load,15000);setInterval(loadYa,15000);
+async function loadUkbSax(){
+  try{const response=await fetch(`data/ukb_sax_progress.json?t=${Date.now()}`,{cache:"no-store"});if(!response.ok)throw new Error(`HTTP ${response.status}`);renderUkbSax(await response.json());}
+  catch(error){$("#ukb-sax-state").textContent="状态未连接";$("#ukb-sax-detail").textContent="UKB SAX安全状态快照尚未生成或暂时不可用。";}
+}
+
+load();loadYa();loadUkbSax();setInterval(load,15000);setInterval(loadYa,15000);setInterval(loadUkbSax,15000);
