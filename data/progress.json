@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-22T16:37:41.839302+08:00",
+  "updated_at": "2026-07-22T16:42:55.537266+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -19,7 +19,7 @@
     "automatic_retry": false
   },
   "model": {
-    "name": "mixed recorded provenance",
+    "name": "[j]gpt-5.4",
     "api": "Responses",
     "reasoning_effort": "medium",
     "prompt_profile": "balanced_v2"
@@ -27,10 +27,12 @@
   "processes": {
     "hospital_agent_workers": 0,
     "ukb_agent_workers": 0,
-    "active_codex_calls": 0,
+    "active_codex_calls": 26,
     "formal_supervisor_alive": false,
     "reasoning_effort": "medium",
-    "active_models": []
+    "active_models": [
+      "[j]gpt-5.4"
+    ]
   },
   "gpus": [
     {
@@ -45,8 +47,8 @@
     },
     {
       "gpu": 2,
-      "memory_mib": 651,
-      "utilization_pct": 0
+      "memory_mib": 39942,
+      "utilization_pct": 100
     },
     {
       "gpu": 3,
@@ -61,12 +63,12 @@
     {
       "gpu": 5,
       "memory_mib": 13412,
-      "utilization_pct": 0
+      "utilization_pct": 19
     },
     {
       "gpu": 6,
       "memory_mib": 17632,
-      "utilization_pct": 100
+      "utilization_pct": 0
     },
     {
       "gpu": 7,
@@ -138,42 +140,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784707391,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784707426,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784707461,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784707496,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784707531,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784707566,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784707601,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784707636,
-      "reports": 3898
-    },
-    {
-      "timestamp": 1784707671,
-      "reports": 3898
-    },
     {
       "timestamp": 1784707706,
       "reports": 3898
@@ -376,6 +342,42 @@
     },
     {
       "timestamp": 1784709461,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784709496,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784709531,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784709566,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784709600,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784709635,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784709670,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784709705,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784709740,
+      "reports": 3898
+    },
+    {
+      "timestamp": 1784709775,
       "reports": 3898
     }
   ]
