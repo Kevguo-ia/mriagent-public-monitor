@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_sax_monitor_safe_v1",
-  "updated_at": "2026-07-22T11:47:25.268030+08:00",
+  "updated_at": "2026-07-22T11:52:29.699856+08:00",
   "job": "ukb_sax_rebuild_20260721_v1",
   "stage": "cache_full",
   "state": "waiting_or_complete",
@@ -14,46 +14,6 @@
   "rate_per_hour": 0.0,
   "eta_hours": null,
   "history": [
-    {
-      "timestamp": 1784688420,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784688450,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784688481,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784688511,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784688542,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784688572,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784688603,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784688633,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784688664,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784688694,
-      "completed": 83
-    },
     {
       "timestamp": 1784688724,
       "completed": 83
@@ -493,6 +453,46 @@
     {
       "timestamp": 1784692045,
       "completed": 83
+    },
+    {
+      "timestamp": 1784692076,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784692106,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784692137,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784692167,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784692198,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784692228,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784692258,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784692289,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784692319,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784692350,
+      "completed": 83
     }
   ],
   "workers": {
@@ -520,8 +520,8 @@
     },
     {
       "gpu": 2,
-      "memory_mib": 651,
-      "utilization_pct": 0,
+      "memory_mib": 1559,
+      "utilization_pct": 100,
       "assigned_to_rebuild": true,
       "role": "主分片"
     },
@@ -556,7 +556,7 @@
     {
       "gpu": 7,
       "memory_mib": 44762,
-      "utilization_pct": 100,
+      "utilization_pct": 0,
       "assigned_to_rebuild": false,
       "role": "其他任务"
     }

@@ -1,6 +1,6 @@
 {
   "schema_version": "ya_monitor_safe_v2",
-  "updated_at": "2026-07-22T11:47:06.252765+08:00",
+  "updated_at": "2026-07-22T11:52:27.975982+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "complete",
   "state": "complete_with_errors",
@@ -34,46 +34,6 @@
     "reports_per_hour": 0.0,
     "report_eta_hours": null,
     "report_history": [
-      {
-        "timestamp": 1784688196,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784688229,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784688261,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784688293,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784688325,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784688357,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784688390,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784688422,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784688454,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784688486,
-        "reports": 563
-      },
       {
         "timestamp": 1784688518,
         "reports": 563
@@ -513,6 +473,46 @@
       {
         "timestamp": 1784692026,
         "reports": 563
+      },
+      {
+        "timestamp": 1784692058,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784692091,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784692123,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784692155,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784692187,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784692219,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784692252,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784692284,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784692316,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784692348,
+        "reports": 563
       }
     ]
   },
@@ -536,8 +536,8 @@
     },
     {
       "gpu": 2,
-      "memory_mib": 651,
-      "utilization_pct": 0
+      "memory_mib": 1559,
+      "utilization_pct": 7
     },
     {
       "gpu": 3,
@@ -562,7 +562,7 @@
     {
       "gpu": 7,
       "memory_mib": 44762,
-      "utilization_pct": 100
+      "utilization_pct": 0
     }
   ],
   "models": {
