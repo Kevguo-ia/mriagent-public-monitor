@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_sax_monitor_safe_v1",
-  "updated_at": "2026-07-22T11:37:16.484930+08:00",
+  "updated_at": "2026-07-22T11:42:20.962298+08:00",
   "job": "ukb_sax_rebuild_20260721_v1",
   "stage": "cache_full",
   "state": "waiting_or_complete",
@@ -14,46 +14,6 @@
   "rate_per_hour": 0.0,
   "eta_hours": null,
   "history": [
-    {
-      "timestamp": 1784687811,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784687841,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784687872,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784687902,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784687933,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784687963,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784687994,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784688024,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784688054,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784688085,
-      "completed": 83
-    },
     {
       "timestamp": 1784688115,
       "completed": 83
@@ -493,13 +453,53 @@
     {
       "timestamp": 1784691436,
       "completed": 83
+    },
+    {
+      "timestamp": 1784691467,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784691498,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784691528,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784691559,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784691589,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784691619,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784691650,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784691680,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784691711,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784691741,
+      "completed": 83
     }
   ],
   "workers": {
     "base_workers": 0,
     "acceleration_workers": 0,
     "active_workers": 0,
-    "worker_process_tree": 0,
+    "worker_process_tree": 2,
     "api_calls": 0,
     "supervisors_alive": false
   },
@@ -520,7 +520,7 @@
     },
     {
       "gpu": 2,
-      "memory_mib": 4,
+      "memory_mib": 651,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "主分片"
@@ -556,7 +556,7 @@
     {
       "gpu": 7,
       "memory_mib": 44762,
-      "utilization_pct": 0,
+      "utilization_pct": 7,
       "assigned_to_rebuild": false,
       "role": "其他任务"
     }
