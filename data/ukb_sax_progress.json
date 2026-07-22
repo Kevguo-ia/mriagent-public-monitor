@@ -1,13 +1,13 @@
 {
   "schema_version": "ukb_sax_monitor_safe_v1",
-  "updated_at": "2026-07-22T10:25:40.714420+08:00",
+  "updated_at": "2026-07-22T10:30:45.626206+08:00",
   "job": "ukb_sax_rebuild_20260721_v1",
   "stage": "cache_full",
   "state": "running",
   "eligible": 999,
   "excluded_source_qc": 1,
-  "completed": 65,
-  "remaining": 934,
+  "completed": 82,
+  "remaining": 917,
   "errors": 0,
   "error_types": {},
   "required_timepoints": 16,
@@ -89,13 +89,53 @@
     {
       "timestamp": 1784687141,
       "completed": 65
+    },
+    {
+      "timestamp": 1784687171,
+      "completed": 69
+    },
+    {
+      "timestamp": 1784687202,
+      "completed": 69
+    },
+    {
+      "timestamp": 1784687232,
+      "completed": 72
+    },
+    {
+      "timestamp": 1784687263,
+      "completed": 72
+    },
+    {
+      "timestamp": 1784687293,
+      "completed": 75
+    },
+    {
+      "timestamp": 1784687324,
+      "completed": 76
+    },
+    {
+      "timestamp": 1784687354,
+      "completed": 77
+    },
+    {
+      "timestamp": 1784687385,
+      "completed": 79
+    },
+    {
+      "timestamp": 1784687415,
+      "completed": 79
+    },
+    {
+      "timestamp": 1784687446,
+      "completed": 82
     }
   ],
   "workers": {
     "base_workers": 5,
     "acceleration_workers": 2,
     "active_workers": 7,
-    "worker_process_tree": 13,
+    "worker_process_tree": 11,
     "api_calls": 0,
     "supervisors_alive": true
   },
@@ -109,8 +149,8 @@
     },
     {
       "gpu": 1,
-      "memory_mib": 651,
-      "utilization_pct": 0,
+      "memory_mib": 671,
+      "utilization_pct": 2,
       "assigned_to_rebuild": true,
       "role": "主分片"
     },
@@ -130,21 +170,21 @@
     },
     {
       "gpu": 4,
-      "memory_mib": 651,
-      "utilization_pct": 0,
+      "memory_mib": 671,
+      "utilization_pct": 53,
       "assigned_to_rebuild": true,
       "role": "主分片"
     },
     {
       "gpu": 5,
-      "memory_mib": 651,
+      "memory_mib": 671,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "加速分片"
     },
     {
       "gpu": 6,
-      "memory_mib": 651,
+      "memory_mib": 671,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "加速分片"
