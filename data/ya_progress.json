@@ -1,6 +1,6 @@
 {
   "schema_version": "ya_monitor_safe_v2",
-  "updated_at": "2026-07-23T00:38:04.728993+08:00",
+  "updated_at": "2026-07-23T00:42:53.992009+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "complete",
   "state": "complete_with_errors",
@@ -34,42 +34,6 @@
     "reports_per_hour": 0.0,
     "report_eta_hours": null,
     "report_history": [
-      {
-        "timestamp": 1784734457,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784734489,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784734521,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784734554,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784734586,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784734618,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784734650,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784734682,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784734715,
-        "reports": 563
-      },
       {
         "timestamp": 1784734747,
         "reports": 563
@@ -513,6 +477,42 @@
       {
         "timestamp": 1784738285,
         "reports": 563
+      },
+      {
+        "timestamp": 1784738317,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784738349,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784738381,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784738413,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784738445,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784738478,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784738510,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784738542,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784738574,
+        "reports": 563
       }
     ]
   },
@@ -552,7 +552,7 @@
     {
       "gpu": 5,
       "memory_mib": 14259,
-      "utilization_pct": 7
+      "utilization_pct": 50
     },
     {
       "gpu": 6,
