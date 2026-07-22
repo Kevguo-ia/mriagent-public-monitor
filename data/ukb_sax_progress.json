@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_monitor_safe_v2",
-  "updated_at": "2026-07-22T16:57:56.538267+08:00",
+  "updated_at": "2026-07-22T17:03:06.146675+08:00",
   "job": "cvd_lvgt_matched_1000_20260722_v2",
   "stage": "cache_full",
   "state": "running",
@@ -11,77 +11,17 @@
   "pixel_preflight_passed": 1000,
   "pixel_preflight_excluded": 11,
   "cache_4ch": 1000,
-  "cache_sax": 508,
-  "cache_units_complete": 1508,
+  "cache_sax": 513,
+  "cache_units_complete": 1513,
   "cache_units_total": 2000,
-  "completed": 508,
-  "remaining": 492,
+  "completed": 513,
+  "remaining": 487,
   "errors": 0,
   "error_types": {},
   "required_timepoints": 16,
-  "rate_per_hour": 276.88,
-  "eta_hours": 1.78,
+  "rate_per_hour": 282.75,
+  "eta_hours": 1.72,
   "history": [
-    {
-      "timestamp": 1784706993,
-      "cache_4ch": 875,
-      "cache_sax": 422,
-      "units": 1297
-    },
-    {
-      "timestamp": 1784707024,
-      "cache_4ch": 875,
-      "cache_sax": 425,
-      "units": 1300
-    },
-    {
-      "timestamp": 1784707055,
-      "cache_4ch": 875,
-      "cache_sax": 426,
-      "units": 1301
-    },
-    {
-      "timestamp": 1784707086,
-      "cache_4ch": 875,
-      "cache_sax": 427,
-      "units": 1302
-    },
-    {
-      "timestamp": 1784707117,
-      "cache_4ch": 875,
-      "cache_sax": 428,
-      "units": 1303
-    },
-    {
-      "timestamp": 1784707148,
-      "cache_4ch": 875,
-      "cache_sax": 431,
-      "units": 1306
-    },
-    {
-      "timestamp": 1784707179,
-      "cache_4ch": 875,
-      "cache_sax": 433,
-      "units": 1308
-    },
-    {
-      "timestamp": 1784707210,
-      "cache_4ch": 875,
-      "cache_sax": 433,
-      "units": 1308
-    },
-    {
-      "timestamp": 1784707241,
-      "cache_4ch": 875,
-      "cache_sax": 434,
-      "units": 1309
-    },
-    {
-      "timestamp": 1784707272,
-      "cache_4ch": 875,
-      "cache_sax": 435,
-      "units": 1310
-    },
     {
       "timestamp": 1784707302,
       "cache_4ch": 875,
@@ -741,6 +681,66 @@
       "cache_4ch": 1000,
       "cache_sax": 508,
       "units": 1508
+    },
+    {
+      "timestamp": 1784710708,
+      "cache_4ch": 1000,
+      "cache_sax": 508,
+      "units": 1508
+    },
+    {
+      "timestamp": 1784710739,
+      "cache_4ch": 1000,
+      "cache_sax": 510,
+      "units": 1510
+    },
+    {
+      "timestamp": 1784710770,
+      "cache_4ch": 1000,
+      "cache_sax": 510,
+      "units": 1510
+    },
+    {
+      "timestamp": 1784710801,
+      "cache_4ch": 1000,
+      "cache_sax": 511,
+      "units": 1511
+    },
+    {
+      "timestamp": 1784710832,
+      "cache_4ch": 1000,
+      "cache_sax": 511,
+      "units": 1511
+    },
+    {
+      "timestamp": 1784710863,
+      "cache_4ch": 1000,
+      "cache_sax": 511,
+      "units": 1511
+    },
+    {
+      "timestamp": 1784710893,
+      "cache_4ch": 1000,
+      "cache_sax": 512,
+      "units": 1512
+    },
+    {
+      "timestamp": 1784710924,
+      "cache_4ch": 1000,
+      "cache_sax": 512,
+      "units": 1512
+    },
+    {
+      "timestamp": 1784710955,
+      "cache_4ch": 1000,
+      "cache_sax": 512,
+      "units": 1512
+    },
+    {
+      "timestamp": 1784710986,
+      "cache_4ch": 1000,
+      "cache_sax": 513,
+      "units": 1513
     }
   ],
   "workers": {
@@ -761,7 +761,7 @@
     "sax_shards": 7,
     "successful_shards": 0,
     "failed_shards": 0,
-    "worker_process_tree": 11,
+    "worker_process_tree": 12,
     "api_calls": 0,
     "supervisors_alive": true
   },
@@ -769,14 +769,14 @@
     {
       "gpu": 0,
       "memory_mib": 42077,
-      "utilization_pct": 21,
+      "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "SAX分片",
       "shard_state": "running_sax"
     },
     {
       "gpu": 1,
-      "memory_mib": 651,
+      "memory_mib": 683,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "SAX分片",
@@ -800,7 +800,7 @@
     },
     {
       "gpu": 4,
-      "memory_mib": 651,
+      "memory_mib": 683,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "SAX分片",
@@ -817,7 +817,7 @@
     {
       "gpu": 6,
       "memory_mib": 17632,
-      "utilization_pct": 100,
+      "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "SAX分片",
       "shard_state": "running_sax"
