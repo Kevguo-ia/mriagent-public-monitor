@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-23T05:03:26.873863+08:00",
+  "updated_at": "2026-07-23T05:08:35.374207+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -40,7 +40,7 @@
     },
     {
       "gpu": 1,
-      "memory_mib": 4,
+      "memory_mib": 2315,
       "utilization_pct": 0
     },
     {
@@ -61,7 +61,7 @@
     {
       "gpu": 5,
       "memory_mib": 14259,
-      "utilization_pct": 7
+      "utilization_pct": 29
     },
     {
       "gpu": 6,
@@ -138,42 +138,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784752185,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784752219,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784752254,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784752288,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784752322,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784752356,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784752391,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784752425,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784752459,
-      "reports": 3905
-    },
     {
       "timestamp": 1784752493,
       "reports": 3905
@@ -376,6 +340,42 @@
     },
     {
       "timestamp": 1784754206,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784754241,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784754275,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784754309,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784754343,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784754378,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784754412,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784754446,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784754481,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784754515,
       "reports": 3905
     }
   ]
