@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_sax_monitor_safe_v1",
-  "updated_at": "2026-07-22T12:12:47.451008+08:00",
+  "updated_at": "2026-07-22T12:17:53.451016+08:00",
   "job": "ukb_sax_rebuild_20260721_v1",
   "stage": "cache_full",
   "state": "waiting_or_complete",
@@ -14,46 +14,6 @@
   "rate_per_hour": 0.0,
   "eta_hours": null,
   "history": [
-    {
-      "timestamp": 1784689943,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784689974,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690004,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690035,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690065,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690095,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690126,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690156,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690187,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690217,
-      "completed": 83
-    },
     {
       "timestamp": 1784690248,
       "completed": 83
@@ -493,62 +453,102 @@
     {
       "timestamp": 1784693567,
       "completed": 83
+    },
+    {
+      "timestamp": 1784693598,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784693628,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784693659,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784693689,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784693720,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784693751,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784693782,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784693812,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784693843,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784693873,
+      "completed": 83
     }
   ],
   "workers": {
     "base_workers": 0,
     "acceleration_workers": 0,
     "active_workers": 0,
-    "worker_process_tree": 2,
+    "worker_process_tree": 10,
     "api_calls": 0,
     "supervisors_alive": false
   },
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 651,
+      "memory_mib": 4,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "主分片"
     },
     {
       "gpu": 1,
-      "memory_mib": 4,
+      "memory_mib": 651,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "主分片"
     },
     {
       "gpu": 2,
-      "memory_mib": 4,
-      "utilization_pct": 0,
+      "memory_mib": 671,
+      "utilization_pct": 56,
       "assigned_to_rebuild": true,
       "role": "主分片"
     },
     {
       "gpu": 3,
-      "memory_mib": 4,
+      "memory_mib": 651,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "主分片"
     },
     {
       "gpu": 4,
-      "memory_mib": 4,
+      "memory_mib": 651,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "主分片"
     },
     {
       "gpu": 5,
-      "memory_mib": 4,
+      "memory_mib": 651,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "加速分片"
     },
     {
       "gpu": 6,
-      "memory_mib": 4,
+      "memory_mib": 671,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "加速分片"
