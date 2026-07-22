@@ -1,13 +1,13 @@
 {
   "schema_version": "ukb_sax_monitor_safe_v1",
-  "updated_at": "2026-07-22T10:18:34.443709+08:00",
+  "updated_at": "2026-07-22T10:20:36.263040+08:00",
   "job": "ukb_sax_rebuild_20260721_v1",
   "stage": "cache_full",
   "state": "running",
   "eligible": 999,
   "excluded_source_qc": 1,
-  "completed": 50,
-  "remaining": 949,
+  "completed": 51,
+  "remaining": 948,
   "errors": 0,
   "error_types": {},
   "required_timepoints": 16,
@@ -33,20 +33,36 @@
     {
       "timestamp": 1784686714,
       "completed": 50
+    },
+    {
+      "timestamp": 1784686745,
+      "completed": 51
+    },
+    {
+      "timestamp": 1784686776,
+      "completed": 51
+    },
+    {
+      "timestamp": 1784686806,
+      "completed": 51
+    },
+    {
+      "timestamp": 1784686836,
+      "completed": 51
     }
   ],
   "workers": {
     "base_workers": 5,
     "acceleration_workers": 2,
     "active_workers": 7,
-    "worker_process_tree": 12,
+    "worker_process_tree": 14,
     "api_calls": 0,
     "supervisors_alive": true
   },
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 651,
+      "memory_mib": 683,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "主分片"
@@ -96,7 +112,7 @@
     {
       "gpu": 7,
       "memory_mib": 44762,
-      "utilization_pct": 0,
+      "utilization_pct": 7,
       "assigned_to_rebuild": false,
       "role": "其他任务"
     }
