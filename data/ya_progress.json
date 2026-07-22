@@ -1,6 +1,6 @@
 {
   "schema_version": "ya_monitor_safe_v2",
-  "updated_at": "2026-07-22T08:33:28.313099+08:00",
+  "updated_at": "2026-07-22T08:38:17.807455+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "complete",
   "state": "complete_with_errors",
@@ -34,42 +34,6 @@
     "reports_per_hour": 0.0,
     "report_eta_hours": null,
     "report_history": [
-      {
-        "timestamp": 1784676582,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784676614,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784676646,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784676678,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784676710,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784676742,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784676775,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784676807,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784676839,
-        "reports": 563
-      },
       {
         "timestamp": 1784676871,
         "reports": 563
@@ -513,6 +477,42 @@
       {
         "timestamp": 1784680408,
         "reports": 563
+      },
+      {
+        "timestamp": 1784680441,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784680473,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784680505,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784680537,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784680569,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784680602,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784680634,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784680666,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784680698,
+        "reports": 563
       }
     ]
   },
@@ -562,7 +562,7 @@
     {
       "gpu": 7,
       "memory_mib": 30509,
-      "utilization_pct": 0
+      "utilization_pct": 100
     }
   ],
   "models": {
