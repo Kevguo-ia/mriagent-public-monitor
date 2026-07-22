@@ -1,6 +1,6 @@
 {
   "schema_version": "ya_monitor_safe_v2",
-  "updated_at": "2026-07-22T23:31:36.098123+08:00",
+  "updated_at": "2026-07-22T23:36:25.747745+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "complete",
   "state": "complete_with_errors",
@@ -34,42 +34,6 @@
     "reports_per_hour": 0.0,
     "report_eta_hours": null,
     "report_history": [
-      {
-        "timestamp": 1784730455,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784730487,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784730519,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784730552,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784730584,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784730616,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784730648,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784730681,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784730713,
-        "reports": 563
-      },
       {
         "timestamp": 1784730746,
         "reports": 563
@@ -513,6 +477,42 @@
       {
         "timestamp": 1784734296,
         "reports": 563
+      },
+      {
+        "timestamp": 1784734328,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784734360,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784734392,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784734425,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784734457,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784734489,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784734521,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784734554,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784734586,
+        "reports": 563
       }
     ]
   },
@@ -527,12 +527,12 @@
     {
       "gpu": 0,
       "memory_mib": 21903,
-      "utilization_pct": 100
+      "utilization_pct": 24
     },
     {
       "gpu": 1,
-      "memory_mib": 3830,
-      "utilization_pct": 7
+      "memory_mib": 2922,
+      "utilization_pct": 5
     },
     {
       "gpu": 2,
@@ -552,7 +552,7 @@
     {
       "gpu": 5,
       "memory_mib": 14259,
-      "utilization_pct": 16
+      "utilization_pct": 11
     },
     {
       "gpu": 6,
@@ -561,7 +561,7 @@
     },
     {
       "gpu": 7,
-      "memory_mib": 651,
+      "memory_mib": 683,
       "utilization_pct": 0
     }
   ],
