@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_monitor_safe_v2",
-  "updated_at": "2026-07-22T22:55:55.868266+08:00",
+  "updated_at": "2026-07-22T23:01:05.909065+08:00",
   "job": "cvd_lvgt_matched_1000_20260722_v2",
   "stage": "cache_full",
   "state": "running",
@@ -11,77 +11,17 @@
   "pixel_preflight_passed": 1000,
   "pixel_preflight_excluded": 11,
   "cache_4ch": 1000,
-  "cache_sax": 913,
-  "cache_units_complete": 1913,
+  "cache_sax": 914,
+  "cache_units_complete": 1914,
   "cache_units_total": 2000,
-  "completed": 913,
-  "remaining": 87,
+  "completed": 914,
+  "remaining": 86,
   "errors": 0,
   "error_types": {},
   "required_timepoints": 16,
-  "rate_per_hour": 24.42,
-  "eta_hours": 3.56,
+  "rate_per_hour": 20.01,
+  "eta_hours": 4.3,
   "history": [
-    {
-      "timestamp": 1784728462,
-      "cache_4ch": 1000,
-      "cache_sax": 888,
-      "units": 1888
-    },
-    {
-      "timestamp": 1784728493,
-      "cache_4ch": 1000,
-      "cache_sax": 888,
-      "units": 1888
-    },
-    {
-      "timestamp": 1784728524,
-      "cache_4ch": 1000,
-      "cache_sax": 889,
-      "units": 1889
-    },
-    {
-      "timestamp": 1784728556,
-      "cache_4ch": 1000,
-      "cache_sax": 889,
-      "units": 1889
-    },
-    {
-      "timestamp": 1784728587,
-      "cache_4ch": 1000,
-      "cache_sax": 889,
-      "units": 1889
-    },
-    {
-      "timestamp": 1784728618,
-      "cache_4ch": 1000,
-      "cache_sax": 890,
-      "units": 1890
-    },
-    {
-      "timestamp": 1784728649,
-      "cache_4ch": 1000,
-      "cache_sax": 890,
-      "units": 1890
-    },
-    {
-      "timestamp": 1784728680,
-      "cache_4ch": 1000,
-      "cache_sax": 890,
-      "units": 1890
-    },
-    {
-      "timestamp": 1784728710,
-      "cache_4ch": 1000,
-      "cache_sax": 890,
-      "units": 1890
-    },
-    {
-      "timestamp": 1784728741,
-      "cache_4ch": 1000,
-      "cache_sax": 891,
-      "units": 1891
-    },
     {
       "timestamp": 1784728772,
       "cache_4ch": 1000,
@@ -741,6 +681,66 @@
       "cache_4ch": 1000,
       "cache_sax": 913,
       "units": 1913
+    },
+    {
+      "timestamp": 1784732187,
+      "cache_4ch": 1000,
+      "cache_sax": 913,
+      "units": 1913
+    },
+    {
+      "timestamp": 1784732219,
+      "cache_4ch": 1000,
+      "cache_sax": 913,
+      "units": 1913
+    },
+    {
+      "timestamp": 1784732250,
+      "cache_4ch": 1000,
+      "cache_sax": 913,
+      "units": 1913
+    },
+    {
+      "timestamp": 1784732281,
+      "cache_4ch": 1000,
+      "cache_sax": 913,
+      "units": 1913
+    },
+    {
+      "timestamp": 1784732311,
+      "cache_4ch": 1000,
+      "cache_sax": 913,
+      "units": 1913
+    },
+    {
+      "timestamp": 1784732342,
+      "cache_4ch": 1000,
+      "cache_sax": 914,
+      "units": 1914
+    },
+    {
+      "timestamp": 1784732373,
+      "cache_4ch": 1000,
+      "cache_sax": 914,
+      "units": 1914
+    },
+    {
+      "timestamp": 1784732404,
+      "cache_4ch": 1000,
+      "cache_sax": 914,
+      "units": 1914
+    },
+    {
+      "timestamp": 1784732435,
+      "cache_4ch": 1000,
+      "cache_sax": 914,
+      "units": 1914
+    },
+    {
+      "timestamp": 1784732466,
+      "cache_4ch": 1000,
+      "cache_sax": 914,
+      "units": 1914
     }
   ],
   "workers": {
@@ -762,8 +762,8 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 41831,
-      "utilization_pct": 100,
+      "memory_mib": 19452,
+      "utilization_pct": 84,
       "assigned_to_rebuild": true,
       "role": "SAX分片",
       "shard_state": "running_sax"
@@ -803,7 +803,7 @@
     {
       "gpu": 5,
       "memory_mib": 14257,
-      "utilization_pct": 0,
+      "utilization_pct": 7,
       "assigned_to_rebuild": false,
       "role": "分片完成",
       "shard_state": "success"
@@ -818,8 +818,8 @@
     },
     {
       "gpu": 7,
-      "memory_mib": 31156,
-      "utilization_pct": 0,
+      "memory_mib": 1559,
+      "utilization_pct": 100,
       "assigned_to_rebuild": false,
       "role": "其他任务占用",
       "shard_state": "held"
