@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_monitor_safe_v2",
-  "updated_at": "2026-07-22T17:03:06.146675+08:00",
+  "updated_at": "2026-07-22T17:08:15.514407+08:00",
   "job": "cvd_lvgt_matched_1000_20260722_v2",
   "stage": "cache_full",
   "state": "running",
@@ -11,77 +11,17 @@
   "pixel_preflight_passed": 1000,
   "pixel_preflight_excluded": 11,
   "cache_4ch": 1000,
-  "cache_sax": 513,
-  "cache_units_complete": 1513,
+  "cache_sax": 520,
+  "cache_units_complete": 1520,
   "cache_units_total": 2000,
-  "completed": 513,
-  "remaining": 487,
+  "completed": 520,
+  "remaining": 480,
   "errors": 0,
   "error_types": {},
   "required_timepoints": 16,
-  "rate_per_hour": 282.75,
-  "eta_hours": 1.72,
+  "rate_per_hour": 296.65,
+  "eta_hours": 1.62,
   "history": [
-    {
-      "timestamp": 1784707302,
-      "cache_4ch": 875,
-      "cache_sax": 435,
-      "units": 1310
-    },
-    {
-      "timestamp": 1784707334,
-      "cache_4ch": 875,
-      "cache_sax": 439,
-      "units": 1314
-    },
-    {
-      "timestamp": 1784707365,
-      "cache_4ch": 875,
-      "cache_sax": 441,
-      "units": 1316
-    },
-    {
-      "timestamp": 1784707396,
-      "cache_4ch": 875,
-      "cache_sax": 441,
-      "units": 1316
-    },
-    {
-      "timestamp": 1784707427,
-      "cache_4ch": 875,
-      "cache_sax": 442,
-      "units": 1317
-    },
-    {
-      "timestamp": 1784707458,
-      "cache_4ch": 875,
-      "cache_sax": 442,
-      "units": 1317
-    },
-    {
-      "timestamp": 1784707489,
-      "cache_4ch": 875,
-      "cache_sax": 443,
-      "units": 1318
-    },
-    {
-      "timestamp": 1784707519,
-      "cache_4ch": 875,
-      "cache_sax": 446,
-      "units": 1321
-    },
-    {
-      "timestamp": 1784707550,
-      "cache_4ch": 875,
-      "cache_sax": 447,
-      "units": 1322
-    },
-    {
-      "timestamp": 1784707581,
-      "cache_4ch": 875,
-      "cache_sax": 447,
-      "units": 1322
-    },
     {
       "timestamp": 1784707612,
       "cache_4ch": 875,
@@ -741,6 +681,66 @@
       "cache_4ch": 1000,
       "cache_sax": 513,
       "units": 1513
+    },
+    {
+      "timestamp": 1784711017,
+      "cache_4ch": 1000,
+      "cache_sax": 515,
+      "units": 1515
+    },
+    {
+      "timestamp": 1784711048,
+      "cache_4ch": 1000,
+      "cache_sax": 515,
+      "units": 1515
+    },
+    {
+      "timestamp": 1784711079,
+      "cache_4ch": 1000,
+      "cache_sax": 515,
+      "units": 1515
+    },
+    {
+      "timestamp": 1784711110,
+      "cache_4ch": 1000,
+      "cache_sax": 515,
+      "units": 1515
+    },
+    {
+      "timestamp": 1784711141,
+      "cache_4ch": 1000,
+      "cache_sax": 516,
+      "units": 1516
+    },
+    {
+      "timestamp": 1784711172,
+      "cache_4ch": 1000,
+      "cache_sax": 516,
+      "units": 1516
+    },
+    {
+      "timestamp": 1784711203,
+      "cache_4ch": 1000,
+      "cache_sax": 519,
+      "units": 1519
+    },
+    {
+      "timestamp": 1784711234,
+      "cache_4ch": 1000,
+      "cache_sax": 519,
+      "units": 1519
+    },
+    {
+      "timestamp": 1784711265,
+      "cache_4ch": 1000,
+      "cache_sax": 519,
+      "units": 1519
+    },
+    {
+      "timestamp": 1784711296,
+      "cache_4ch": 1000,
+      "cache_sax": 520,
+      "units": 1520
     }
   ],
   "workers": {
@@ -761,7 +761,7 @@
     "sax_shards": 7,
     "successful_shards": 0,
     "failed_shards": 0,
-    "worker_process_tree": 12,
+    "worker_process_tree": 14,
     "api_calls": 0,
     "supervisors_alive": true
   },
@@ -776,7 +776,7 @@
     },
     {
       "gpu": 1,
-      "memory_mib": 683,
+      "memory_mib": 1547,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "SAX分片",
@@ -800,7 +800,7 @@
     },
     {
       "gpu": 4,
-      "memory_mib": 683,
+      "memory_mib": 651,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "SAX分片",
