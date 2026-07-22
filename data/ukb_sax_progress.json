@@ -1,13 +1,21 @@
 {
-  "schema_version": "ukb_sax_monitor_safe_v1",
-  "updated_at": "2026-07-22T12:17:53.451016+08:00",
-  "job": "ukb_sax_rebuild_20260721_v1",
+  "schema_version": "ukb_lvgt_monitor_safe_v2",
+  "updated_at": "2026-07-22T12:22:18.930465+08:00",
+  "job": "cvd_lvgt_matched_1000_20260722_v2",
   "stage": "cache_full",
-  "state": "waiting_or_complete",
-  "eligible": 999,
-  "excluded_source_qc": 1,
-  "completed": 83,
-  "remaining": 916,
+  "state": "running",
+  "eligible": 1000,
+  "cvd_positive": 500,
+  "cvd_negative": 500,
+  "lv_truth_complete": 1000,
+  "pixel_preflight_passed": 1000,
+  "pixel_preflight_excluded": 11,
+  "cache_4ch": 751,
+  "cache_sax": 14,
+  "cache_units_complete": 765,
+  "cache_units_total": 2000,
+  "completed": 14,
+  "remaining": 986,
   "errors": 0,
   "error_types": {},
   "required_timepoints": 16,
@@ -15,560 +23,116 @@
   "eta_hours": null,
   "history": [
     {
-      "timestamp": 1784690248,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690279,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690309,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690339,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690370,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690400,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690431,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690461,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690492,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690522,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690553,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690583,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690614,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690644,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690674,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690705,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690736,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690766,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690797,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690827,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690857,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690888,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690918,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690949,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784690979,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691010,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691041,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691071,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691102,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691132,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691162,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691193,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691223,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691254,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691284,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691315,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691345,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691376,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691406,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691436,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691467,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691498,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691528,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691559,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691589,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691619,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691650,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691680,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691711,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691741,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691772,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691802,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691832,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691863,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691893,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691924,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691954,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784691984,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692015,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692045,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692076,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692106,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692137,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692167,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692198,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692228,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692258,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692289,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692319,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692350,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692380,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692411,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692441,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692472,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692502,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692533,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692563,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692593,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692624,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692654,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692685,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692715,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692746,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692776,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692807,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692837,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692868,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692898,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692928,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692959,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784692989,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693020,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693050,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693080,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693111,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693141,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693172,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693202,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693233,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693263,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693293,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693324,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693354,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693385,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693415,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693445,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693476,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693506,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693537,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693567,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693598,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693628,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693659,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693689,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693720,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693751,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693782,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693812,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693843,
-      "completed": 83
-    },
-    {
-      "timestamp": 1784693873,
-      "completed": 83
+      "timestamp": 1784694074,
+      "cache_4ch": 751,
+      "cache_sax": 12,
+      "units": 763
+    },
+    {
+      "timestamp": 1784694139,
+      "cache_4ch": 751,
+      "cache_sax": 14,
+      "units": 765
     }
   ],
   "workers": {
-    "base_workers": 0,
-    "acceleration_workers": 0,
-    "active_workers": 0,
-    "worker_process_tree": 10,
+    "active_workers": 6,
+    "active_shards": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "held_shards": [
+      0,
+      7
+    ],
+    "four_ch_shards": 0,
+    "sax_shards": 6,
+    "successful_shards": 0,
+    "failed_shards": 0,
+    "worker_process_tree": 12,
     "api_calls": 0,
-    "supervisors_alive": false
+    "supervisors_alive": true
   },
   "gpus": [
     {
       "gpu": 0,
       "memory_mib": 4,
       "utilization_pct": 0,
-      "assigned_to_rebuild": true,
-      "role": "主分片"
+      "assigned_to_rebuild": false,
+      "role": "保留等待",
+      "shard_state": "held"
     },
     {
       "gpu": 1,
       "memory_mib": 651,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
-      "role": "主分片"
+      "role": "SAX分片",
+      "shard_state": "running_sax"
     },
     {
       "gpu": 2,
-      "memory_mib": 671,
-      "utilization_pct": 56,
+      "memory_mib": 651,
+      "utilization_pct": 0,
       "assigned_to_rebuild": true,
-      "role": "主分片"
+      "role": "SAX分片",
+      "shard_state": "running_sax"
     },
     {
       "gpu": 3,
       "memory_mib": 651,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
-      "role": "主分片"
+      "role": "SAX分片",
+      "shard_state": "running_sax"
     },
     {
       "gpu": 4,
       "memory_mib": 651,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
-      "role": "主分片"
+      "role": "SAX分片",
+      "shard_state": "running_sax"
     },
     {
       "gpu": 5,
       "memory_mib": 651,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
-      "role": "加速分片"
+      "role": "SAX分片",
+      "shard_state": "running_sax"
     },
     {
       "gpu": 6,
-      "memory_mib": 671,
+      "memory_mib": 651,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
-      "role": "加速分片"
+      "role": "SAX分片",
+      "shard_state": "running_sax"
     },
     {
       "gpu": 7,
       "memory_mib": 44762,
       "utilization_pct": 0,
       "assigned_to_rebuild": false,
-      "role": "其他任务"
+      "role": "其他任务占用",
+      "shard_state": "held"
     }
   ],
   "model": {
-    "name": "nnUNet SAX formal model",
+    "four_ch": "4CH V3 formal model",
+    "sax": "nnUNet SAX formal model",
     "version_verified": true,
     "api_calls_required": false
   },
   "gates": {
-    "smoke_cache": "8/8 passed",
-    "smoke_precompute": "8/8 passed",
+    "cohort": "1000/1000 passed",
+    "balance": "500/500; all SMD < 0.1",
+    "smoke_cache": "4CH 8/8; SAX 8/8",
     "input_contract": "matched",
     "automatic_retry": false,
     "old_results_overwritten": false

@@ -10,7 +10,7 @@ const workerNames = {kunming_segmentation_workers:"昆明既有缓存进程",ful
 const yaStages=["waiting_upload","verify_archives","extract","inventory_qc","cache_smoke","cache_full","cache_qc","agent_smoke","agent_full","final_qc","complete"];
 const yaStageNames={waiting_upload:"等待上传",verify_archives:"归档校验",extract:"安全解压",inventory_qc:"数据质量检查",cache_smoke:"缓存Smoke",cache_full:"全量缓存",cache_qc:"缓存QC",agent_smoke:"Agent Smoke",agent_full:"全量Agent",final_qc:"最终QC",complete:"完成"};
 const ukbSaxStages=["smoke","cache_full","cache_qc","precompute","complete"];
-const ukbSaxStageNames={smoke:"Smoke门禁",cache_full:"全量缓存重建",cache_qc:"缓存一致性审计",precompute:"心功能数值重建",complete:"指标计算完成"};
+const ukbSaxStageNames={smoke:"队列与Smoke门禁",cache_full:"4CH与SAX全量缓存",cache_qc:"缓存一致性审计",precompute:"确定性心功能重建",complete:"指标计算完成"};
 
 function fmt(value){return new Intl.NumberFormat("zh-CN").format(Number(value||0));}
 function displayValue(value){
@@ -148,44 +148,45 @@ function renderYaTrend(history){
 function renderUkbSax(d){
   ukbSaxState=d;
   const stage=d.stage||"cache_full",stageIndex=Math.max(0,ukbSaxStages.indexOf(stage));
-  const eligible=Number(d.eligible||999),completed=Number(d.completed||0),remaining=Number(d.remaining||0),errors=Number(d.errors||0);
-  const workers=d.workers||{},percent=pct(completed,eligible),rate=Number(d.rate_per_hour||0);
+  const eligible=Number(d.eligible||1000),four=Number(d.cache_4ch||0),sax=Number(d.cache_sax||0),errors=Number(d.errors||0);
+  const units=Number(d.cache_units_complete||four+sax),unitTotal=Number(d.cache_units_total||eligible*2);
+  const workers=d.workers||{},percent=pct(units,unitTotal),rate=Number(d.rate_per_hour||0);
   $("#ukb-sax-state").textContent=ukbSaxStageNames[stage]||stage;
   document.querySelectorAll("#ukb-sax-pipeline li").forEach((node,index)=>{
     node.classList.toggle("done",index<stageIndex||stage==="complete");
     node.classList.toggle("active",index===stageIndex&&stage!=="complete");
   });
-  $("#ukb-sax-progress-copy").textContent=`合格缓存 ${fmt(completed)} / ${fmt(eligible)}`;
+  $("#ukb-sax-progress-copy").textContent=`缓存单元 ${fmt(units)} / ${fmt(unitTotal)}`;
   $("#ukb-sax-percent").textContent=`${percent}%`;
   $("#ukb-sax-progress").style.width=`${percent}%`;
-  $("#ukb-sax-detail").textContent=`${ukbSaxStageNames[stage]||stage} · 已排除源数据QC失败 ${fmt(d.excluded_source_qc||0)} 例 · 不自动重试`;
+  $("#ukb-sax-detail").textContent=`${ukbSaxStageNames[stage]||stage} · CVD ${fmt(d.cvd_positive||0)}/${fmt(d.cvd_negative||0)} · 左室真值 ${fmt(d.lv_truth_complete||0)}/${fmt(eligible)} · 不自动重试`;
   $("#ukb-sax-cards").innerHTML=[
-    card("合格缓存",`${fmt(completed)} / ${fmt(eligible)}`,`${percent}% · 每例16/16时相`),
-    card("近30分钟速度",rate?`${rate.toFixed(1)} 例/小时`:"校准中",rate?"连续窗口新增≥10例":"运行满30分钟后显示"),
-    card("可靠 ETA",eta(d.eta_hours),rate?`剩余 ${fmt(remaining)} 例`:"速度稳定前不估算"),
-    card("运行错误",fmt(errors),errors?"记录并排除，不自动重试":"当前为0",Boolean(errors)),
+    card("4CH缓存",`${fmt(four)} / ${fmt(eligible)}`,`${pct(four,eligible)}% · 正式V3模型`),
+    card("SAX缓存",`${fmt(sax)} / ${fmt(eligible)}`,`${pct(sax,eligible)}% · 每例16/16时相`),
+    card("近30分钟速度",rate?`${rate.toFixed(1)} 单元/小时`:"校准中",rate?"4CH与SAX合计":"运行满30分钟后显示"),
+    card("可靠 ETA",eta(d.eta_hours),errors?`${fmt(errors)}个错误，已停止对应分片`:"当前零错误",Boolean(errors)),
   ].join("");
-  $("#ukb-sax-rate").textContent=rate?`${rate.toFixed(1)} 例/小时`:"速度校准中";
+  $("#ukb-sax-rate").textContent=rate?`${rate.toFixed(1)} 单元/小时`:"速度校准中";
   $("#ukb-sax-supervisor").className=`status ${workers.supervisors_alive?"complete":"error"}`;
-  $("#ukb-sax-supervisor").textContent=workers.supervisors_alive?"主管在线":"主管离线";
+  $("#ukb-sax-supervisor").textContent=workers.supervisors_alive?`${fmt(workers.active_workers||0)}个分片在线`:"暂无活跃分片";
   $("#ukb-sax-live-stats").innerHTML=[
-    ["真实GPU worker",`${fmt(workers.active_workers||0)} / 8`],
-    ["基础 / 加速",`${fmt(workers.base_workers||0)} + ${fmt(workers.acceleration_workers||0)}`],
+    ["真实GPU分片",`${fmt(workers.active_workers||0)} / 8`],
+    ["4CH / SAX阶段",`${fmt(workers.four_ch_shards||0)} / ${fmt(workers.sax_shards||0)}`],
     ["活跃API调用",fmt(workers.api_calls||0)],
-    ["剩余病例",fmt(remaining)],
+    ["完成 / 保留分片",`${fmt(workers.successful_shards||0)} / ${fmt((workers.held_shards||[]).length)}`],
   ].map(([label,value])=>`<div><span>${esc(label)}</span><b>${esc(value)}</b></div>`).join("");
   const gate=d.gates||{};
   const gateItems=[
+    ["正式队列",gate.cohort||"—",false],
+    ["分组平衡",gate.balance||"—",false],
     ["Smoke缓存",gate.smoke_cache||"—",false],
-    ["数值门禁",gate.smoke_precompute||"—",false],
-    ["输入契约",gate.input_contract||"—",false],
     ["自动重试",gate.automatic_retry?"开启":"关闭",Boolean(gate.automatic_retry)],
   ];
   const errorItems=Object.entries(d.error_types||{}).map(([label,value])=>`<span class="error-chip">${esc(label)} <b>${fmt(value)}</b></span>`);
   $("#ukb-sax-error-list").innerHTML=gateItems.map(([label,value,bad])=>`<span class="health-chip ${bad?"bad":""}">${esc(label)} <b>${esc(value)}</b></span>`).join("")+errorItems.join("");
   $("#ukb-sax-gpus").innerHTML=(d.gpus||[]).map((g)=>{
     const util=Number(g.utilization_pct||0),memory=Number(g.memory_mib||0),assigned=Boolean(g.assigned_to_rebuild);
-    const stateText=assigned?(util>5?"分割中":"已分配"):(memory>1000?"其他任务":"空闲");
+    const stateText=assigned?(util>5?"分割中":"数据准备"):(g.shard_state==="success"?"分片完成":memory>100?"其他任务":"保留等待");
     return `<div class="gpu ${assigned?"gpu-owned":"gpu-external"}"><div class="gpu-top"><strong>GPU ${esc(g.gpu)}</strong><span class="gpu-state ${util>5?"active":""}">${esc(stateText)}</span></div><div class="bar"><i style="width:${Math.min(100,util)}%"></i></div><div class="gpu-meta"><span>${esc(g.role||"—")}</span><span>${fmt(memory)} MiB</span></div></div>`;
   }).join("");
   $("#ukb-sax-updated").textContent=`安全快照 ${new Date(d.updated_at).toLocaleString("zh-CN",{hour12:false})}`;
@@ -196,12 +197,13 @@ function renderUkbSaxTrend(history){
   const svg=$("#ukb-sax-trend"),points=(history||[]).slice(-120);
   if(points.length<2){svg.innerHTML='<text x="380" y="90" text-anchor="middle" class="chart-empty">等待更多聚合快照</text>';return;}
   const width=760,height=170,padX=36,padY=24,first=Number(points[0].timestamp),last=Number(points.at(-1).timestamp)||first+1;
-  const values=points.map((item)=>Number(item.completed||0)),min=Math.min(...values),max=Math.max(...values),span=Math.max(1,max-min);
+  const fourValues=points.map((item)=>Number(item.cache_4ch||0)),saxValues=points.map((item)=>Number(item.cache_sax||0));
+  const min=Math.min(...fourValues,...saxValues),max=Math.max(...fourValues,...saxValues),span=Math.max(1,max-min);
   const x=(value)=>padX+(Number(value)-first)/Math.max(1,last-first)*(width-padX*2);
   const y=(value)=>height-padY-(Number(value)-min)/span*(height-padY*2);
-  const line=points.map((item)=>`${x(item.timestamp).toFixed(1)},${y(item.completed).toFixed(1)}`).join(" ");
-  const area=`${padX},${height-padY} ${line} ${width-padX},${height-padY}`;
-  svg.innerHTML=`<line x1="${padX}" y1="${height-padY}" x2="${width-padX}" y2="${height-padY}" class="chart-axis"/><polygon points="${area}" class="chart-area"/><polyline points="${line}" class="chart-line"/><circle cx="${x(last)}" cy="${y(values.at(-1))}" r="5" class="chart-point"/><text x="${padX}" y="17" class="chart-label">${fmt(max)}</text><text x="${padX}" y="${height-5}" class="chart-label">${new Date(first*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text><text x="${width-padX}" y="${height-5}" text-anchor="end" class="chart-label">${new Date(last*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text>`;
+  const fourLine=points.map((item)=>`${x(item.timestamp).toFixed(1)},${y(item.cache_4ch).toFixed(1)}`).join(" ");
+  const saxLine=points.map((item)=>`${x(item.timestamp).toFixed(1)},${y(item.cache_sax).toFixed(1)}`).join(" ");
+  svg.innerHTML=`<line x1="${padX}" y1="${height-padY}" x2="${width-padX}" y2="${height-padY}" class="chart-axis"/><polyline points="${fourLine}" class="chart-line"/><polyline points="${saxLine}" class="chart-line chart-line-blue"/><circle cx="${x(last)}" cy="${y(fourValues.at(-1))}" r="4" class="chart-point"/><circle cx="${x(last)}" cy="${y(saxValues.at(-1))}" r="4" class="chart-point chart-point-blue"/><text x="${padX}" y="17" class="chart-label">4CH ${fmt(fourValues.at(-1))} · SAX ${fmt(saxValues.at(-1))}</text><text x="${padX}" y="${height-5}" class="chart-label">${new Date(first*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text><text x="${width-padX}" y="${height-5}" text-anchor="end" class="chart-label">${new Date(last*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text>`;
 }
 
 async function load(){
