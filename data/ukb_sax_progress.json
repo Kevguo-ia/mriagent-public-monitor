@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_sax_monitor_safe_v1",
-  "updated_at": "2026-07-22T11:06:47.621355+08:00",
+  "updated_at": "2026-07-22T11:11:52.490748+08:00",
   "job": "ukb_sax_rebuild_20260721_v1",
   "stage": "cache_full",
   "state": "waiting_or_complete",
@@ -417,6 +417,46 @@
     {
       "timestamp": 1784689608,
       "completed": 83
+    },
+    {
+      "timestamp": 1784689638,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784689668,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784689699,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784689730,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784689760,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784689791,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784689821,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784689852,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784689882,
+      "completed": 83
+    },
+    {
+      "timestamp": 1784689912,
+      "completed": 83
     }
   ],
   "workers": {
@@ -480,7 +520,7 @@
     {
       "gpu": 7,
       "memory_mib": 44762,
-      "utilization_pct": 100,
+      "utilization_pct": 30,
       "assigned_to_rebuild": false,
       "role": "其他任务"
     }
