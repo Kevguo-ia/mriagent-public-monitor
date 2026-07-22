@@ -1,0 +1,116 @@
+{
+  "schema_version": "ukb_sax_monitor_safe_v1",
+  "updated_at": "2026-07-22T10:18:34.443709+08:00",
+  "job": "ukb_sax_rebuild_20260721_v1",
+  "stage": "cache_full",
+  "state": "running",
+  "eligible": 999,
+  "excluded_source_qc": 1,
+  "completed": 50,
+  "remaining": 949,
+  "errors": 0,
+  "error_types": {},
+  "required_timepoints": 16,
+  "rate_per_hour": 0.0,
+  "eta_hours": null,
+  "history": [
+    {
+      "timestamp": 1784686617,
+      "completed": 45
+    },
+    {
+      "timestamp": 1784686653,
+      "completed": 47
+    },
+    {
+      "timestamp": 1784686653,
+      "completed": 47
+    },
+    {
+      "timestamp": 1784686684,
+      "completed": 50
+    },
+    {
+      "timestamp": 1784686714,
+      "completed": 50
+    }
+  ],
+  "workers": {
+    "base_workers": 5,
+    "acceleration_workers": 2,
+    "active_workers": 7,
+    "worker_process_tree": 12,
+    "api_calls": 0,
+    "supervisors_alive": true
+  },
+  "gpus": [
+    {
+      "gpu": 0,
+      "memory_mib": 651,
+      "utilization_pct": 0,
+      "assigned_to_rebuild": true,
+      "role": "主分片"
+    },
+    {
+      "gpu": 1,
+      "memory_mib": 651,
+      "utilization_pct": 0,
+      "assigned_to_rebuild": true,
+      "role": "主分片"
+    },
+    {
+      "gpu": 2,
+      "memory_mib": 651,
+      "utilization_pct": 0,
+      "assigned_to_rebuild": true,
+      "role": "主分片"
+    },
+    {
+      "gpu": 3,
+      "memory_mib": 651,
+      "utilization_pct": 0,
+      "assigned_to_rebuild": true,
+      "role": "主分片"
+    },
+    {
+      "gpu": 4,
+      "memory_mib": 651,
+      "utilization_pct": 0,
+      "assigned_to_rebuild": true,
+      "role": "主分片"
+    },
+    {
+      "gpu": 5,
+      "memory_mib": 651,
+      "utilization_pct": 0,
+      "assigned_to_rebuild": true,
+      "role": "加速分片"
+    },
+    {
+      "gpu": 6,
+      "memory_mib": 651,
+      "utilization_pct": 0,
+      "assigned_to_rebuild": true,
+      "role": "加速分片"
+    },
+    {
+      "gpu": 7,
+      "memory_mib": 44762,
+      "utilization_pct": 0,
+      "assigned_to_rebuild": false,
+      "role": "其他任务"
+    }
+  ],
+  "model": {
+    "name": "nnUNet SAX formal model",
+    "version_verified": true,
+    "api_calls_required": false
+  },
+  "gates": {
+    "smoke_cache": "8/8 passed",
+    "smoke_precompute": "8/8 passed",
+    "input_contract": "matched",
+    "automatic_retry": false,
+    "old_results_overwritten": false
+  }
+}
