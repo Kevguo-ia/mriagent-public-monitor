@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_monitor_safe_v2",
-  "updated_at": "2026-07-22T15:00:47.249284+08:00",
+  "updated_at": "2026-07-22T15:05:24.584117+08:00",
   "job": "cvd_lvgt_matched_1000_20260722_v2",
   "stage": "cache_full",
   "state": "running",
@@ -11,71 +11,17 @@
   "pixel_preflight_passed": 1000,
   "pixel_preflight_excluded": 11,
   "cache_4ch": 875,
-  "cache_sax": 331,
-  "cache_units_complete": 1206,
+  "cache_sax": 339,
+  "cache_units_complete": 1214,
   "cache_units_total": 2000,
-  "completed": 331,
-  "remaining": 669,
+  "completed": 339,
+  "remaining": 661,
   "errors": 0,
   "error_types": {},
   "required_timepoints": 16,
-  "rate_per_hour": 138.64,
-  "eta_hours": 5.73,
+  "rate_per_hour": 130.67,
+  "eta_hours": 6.01,
   "history": [
-    {
-      "timestamp": 1784699975,
-      "cache_4ch": 875,
-      "cache_sax": 199,
-      "units": 1074
-    },
-    {
-      "timestamp": 1784700006,
-      "cache_4ch": 875,
-      "cache_sax": 200,
-      "units": 1075
-    },
-    {
-      "timestamp": 1784700037,
-      "cache_4ch": 875,
-      "cache_sax": 201,
-      "units": 1076
-    },
-    {
-      "timestamp": 1784700068,
-      "cache_4ch": 875,
-      "cache_sax": 203,
-      "units": 1078
-    },
-    {
-      "timestamp": 1784700099,
-      "cache_4ch": 875,
-      "cache_sax": 203,
-      "units": 1078
-    },
-    {
-      "timestamp": 1784700130,
-      "cache_4ch": 875,
-      "cache_sax": 206,
-      "units": 1081
-    },
-    {
-      "timestamp": 1784700161,
-      "cache_4ch": 875,
-      "cache_sax": 207,
-      "units": 1082
-    },
-    {
-      "timestamp": 1784700192,
-      "cache_4ch": 875,
-      "cache_sax": 209,
-      "units": 1084
-    },
-    {
-      "timestamp": 1784700223,
-      "cache_4ch": 875,
-      "cache_sax": 210,
-      "units": 1085
-    },
     {
       "timestamp": 1784700253,
       "cache_4ch": 875,
@@ -741,6 +687,60 @@
       "cache_4ch": 875,
       "cache_sax": 331,
       "units": 1206
+    },
+    {
+      "timestamp": 1784703678,
+      "cache_4ch": 875,
+      "cache_sax": 334,
+      "units": 1209
+    },
+    {
+      "timestamp": 1784703709,
+      "cache_4ch": 875,
+      "cache_sax": 334,
+      "units": 1209
+    },
+    {
+      "timestamp": 1784703740,
+      "cache_4ch": 875,
+      "cache_sax": 335,
+      "units": 1210
+    },
+    {
+      "timestamp": 1784703771,
+      "cache_4ch": 875,
+      "cache_sax": 336,
+      "units": 1211
+    },
+    {
+      "timestamp": 1784703802,
+      "cache_4ch": 875,
+      "cache_sax": 336,
+      "units": 1211
+    },
+    {
+      "timestamp": 1784703832,
+      "cache_4ch": 875,
+      "cache_sax": 336,
+      "units": 1211
+    },
+    {
+      "timestamp": 1784703863,
+      "cache_4ch": 875,
+      "cache_sax": 338,
+      "units": 1213
+    },
+    {
+      "timestamp": 1784703894,
+      "cache_4ch": 875,
+      "cache_sax": 338,
+      "units": 1213
+    },
+    {
+      "timestamp": 1784703925,
+      "cache_4ch": 875,
+      "cache_sax": 339,
+      "units": 1214
     }
   ],
   "workers": {
@@ -761,22 +761,22 @@
     "sax_shards": 7,
     "successful_shards": 0,
     "failed_shards": 0,
-    "worker_process_tree": 19,
+    "worker_process_tree": 12,
     "api_calls": 0,
     "supervisors_alive": true
   },
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 35161,
-      "utilization_pct": 0,
+      "memory_mib": 37151,
+      "utilization_pct": 1,
       "assigned_to_rebuild": true,
       "role": "SAX分片",
       "shard_state": "running_sax"
     },
     {
       "gpu": 1,
-      "memory_mib": 13408,
+      "memory_mib": 651,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "SAX分片",
@@ -800,7 +800,7 @@
     },
     {
       "gpu": 4,
-      "memory_mib": 651,
+      "memory_mib": 13404,
       "utilization_pct": 0,
       "assigned_to_rebuild": true,
       "role": "SAX分片",
@@ -824,7 +824,7 @@
     },
     {
       "gpu": 7,
-      "memory_mib": 44762,
+      "memory_mib": 30509,
       "utilization_pct": 0,
       "assigned_to_rebuild": false,
       "role": "其他任务占用",
