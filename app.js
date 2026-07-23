@@ -149,7 +149,7 @@ function renderUkbSax(d){
   const stage=d.stage||"full_cache";
   const eligible=Number(d.eligible||15000),fourCh=Number(d.four_ch_completed||0),sax=Number(d.sax_completed||0);
   const completed=Math.min(fourCh,sax),remaining=Math.max(0,eligible-completed),errors=Number(d.errors||0);
-  const workers=d.workers||{},rates=d.rates||{},percent=pct(completed,eligible),fourChRate=Number(rates.four_ch_per_hour||0),saxRate=Number(rates.sax_per_hour||0);
+  const workers=d.workers||{},rates=d.rates||{},percent=eligible?(completed/eligible*100).toFixed(1):"0.0",fourChRate=Number(rates.four_ch_per_hour||0),saxRate=Number(rates.sax_per_hour||0);
   $("#ukb-sax-state").textContent=ukbSaxStageNames[stage]||stage;
   const pipelineState={queue:"done",smoke:"done",four_ch:fourCh>=eligible?"done":"active",sax:sax>=eligible?"done":"active",audit:stage==="complete"?"done":(fourCh>=eligible&&sax>=eligible?"active":"pending")};
   document.querySelectorAll("#ukb-sax-pipeline li").forEach((node)=>{
@@ -162,8 +162,8 @@ function renderUkbSax(d){
   $("#ukb-sax-progress").style.width=`${percent}%`;
   $("#ukb-sax-detail").textContent=`严格合格池 ${fmt(d.queue_qualified||0)} 例 · 正式 ${fmt(eligible)} 例 · 候补 ${fmt(d.reserve||0)} 例 · 失败不自动重试`;
   $("#ukb-sax-cards").innerHTML=[
-    card("4CH缓存",`${fmt(fourCh)} / ${fmt(eligible)}`,`${pct(fourCh,eligible)}% · 50 Mask/例 · batch 256`),
-    card("SAX缓存",`${fmt(sax)} / ${fmt(eligible)}`,`${pct(sax,eligible)}% · ${fmt(d.sax_masks_completed||0)} / ${fmt(eligible*50)} Mask`),
+    card("4CH缓存",`${fmt(fourCh)} / ${fmt(eligible)}`,`${eligible?(fourCh/eligible*100).toFixed(1):"0.0"}% · 50 Mask/例 · batch 256`),
+    card("SAX缓存",`${fmt(sax)} / ${fmt(eligible)}`,`${eligible?(sax/eligible*100).toFixed(1):"0.0"}% · ${fmt(d.sax_masks_completed||0)} / ${fmt(eligible*50)} Mask`),
     card("SAX可靠 ETA",eta(rates.sax_eta_hours),saxRate?`${saxRate.toFixed(1)} 例/小时 · 剩余 ${fmt(eligible-sax)}`:"速度稳定前不估算"),
     card("运行错误",fmt(errors),errors?"分片已停，不自动重试":"当前为0",Boolean(errors)),
   ].join("");
@@ -172,7 +172,7 @@ function renderUkbSax(d){
   $("#ukb-sax-supervisor").textContent=workers.supervisor_alive?"主管在线":(stage==="complete"?"已完成":"主管离线");
   $("#ukb-sax-live-stats").innerHTML=[
     ["活跃GPU worker",`${fmt(workers.active||0)} / 7`],
-    ["等待安全GPU",fmt(workers.waiting||0)],
+    ["后续待启动分片",fmt(workers.waiting||0)],
     ["活跃API调用",fmt(workers.api_calls||0)],
     ["双序列剩余",fmt(remaining)],
   ].map(([label,value])=>`<div><span>${esc(label)}</span><b>${esc(value)}</b></div>`).join("");
