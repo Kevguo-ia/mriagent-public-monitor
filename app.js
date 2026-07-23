@@ -9,8 +9,7 @@ const centreNames = {UKB:"UK Biobank",Kunming:"Kunming",Chengdu:"Chengdu",SCS:"S
 const workerNames = {kunming_segmentation_workers:"昆明既有缓存进程",full_cohort_segmentation_workers:"正式医院缓存进程",hospital_agent_workers:"医院完整 Agent",ukb_agent_workers:"UKB 完整 Agent",active_codex_calls:"活跃图像调用",formal_supervisor_alive:"正式主管存活",reasoning_effort:"推理强度",active_models:"活跃模型"};
 const yaStages=["waiting_upload","verify_archives","extract","inventory_qc","cache_smoke","cache_full","cache_qc","agent_smoke","agent_full","final_qc","complete"];
 const yaStageNames={waiting_upload:"等待上传",verify_archives:"归档校验",extract:"安全解压",inventory_qc:"数据质量检查",cache_smoke:"缓存Smoke",cache_full:"全量缓存",cache_qc:"缓存QC",agent_smoke:"Agent Smoke",agent_full:"全量Agent",final_qc:"最终QC",complete:"完成"};
-const ukbSaxStages=["smoke","cache_full","cache_qc","precompute","complete"];
-const ukbSaxStageNames={smoke:"队列与Smoke门禁",cache_full:"4CH与SAX全量缓存",cache_qc:"缓存一致性审计",precompute:"确定性心功能重建",complete:"指标计算完成"};
+const ukbSaxStageNames={full_cache:"4CH与SAX全量缓存",complete:"缓存完成",error:"安全停机"};
 
 function fmt(value){return new Intl.NumberFormat("zh-CN").format(Number(value||0));}
 function displayValue(value){
@@ -147,47 +146,49 @@ function renderYaTrend(history){
 
 function renderUkbSax(d){
   ukbSaxState=d;
-  const stage=d.stage||"cache_full",stageIndex=Math.max(0,ukbSaxStages.indexOf(stage));
-  const eligible=Number(d.eligible||1000),four=Number(d.cache_4ch||0),sax=Number(d.cache_sax||0),errors=Number(d.errors||0);
-  const units=Number(d.cache_units_complete||four+sax),unitTotal=Number(d.cache_units_total||eligible*2);
-  const workers=d.workers||{},percent=pct(units,unitTotal),rate=Number(d.rate_per_hour||0);
+  const stage=d.stage||"full_cache";
+  const eligible=Number(d.eligible||15000),fourCh=Number(d.four_ch_completed||0),sax=Number(d.sax_completed||0);
+  const completed=Math.min(fourCh,sax),remaining=Math.max(0,eligible-completed),errors=Number(d.errors||0);
+  const workers=d.workers||{},rates=d.rates||{},percent=pct(completed,eligible),fourChRate=Number(rates.four_ch_per_hour||0),saxRate=Number(rates.sax_per_hour||0);
   $("#ukb-sax-state").textContent=ukbSaxStageNames[stage]||stage;
-  document.querySelectorAll("#ukb-sax-pipeline li").forEach((node,index)=>{
-    node.classList.toggle("done",index<stageIndex||stage==="complete");
-    node.classList.toggle("active",index===stageIndex&&stage!=="complete");
+  const pipelineState={queue:"done",smoke:"done",four_ch:fourCh>=eligible?"done":"active",sax:sax>=eligible?"done":"active",audit:stage==="complete"?"done":(fourCh>=eligible&&sax>=eligible?"active":"pending")};
+  document.querySelectorAll("#ukb-sax-pipeline li").forEach((node)=>{
+    const value=pipelineState[node.dataset.stage]||"pending";
+    node.classList.toggle("done",value==="done");
+    node.classList.toggle("active",value==="active");
   });
-  $("#ukb-sax-progress-copy").textContent=`缓存单元 ${fmt(units)} / ${fmt(unitTotal)}`;
+  $("#ukb-sax-progress-copy").textContent=`双序列完成 ${fmt(completed)} / ${fmt(eligible)}`;
   $("#ukb-sax-percent").textContent=`${percent}%`;
   $("#ukb-sax-progress").style.width=`${percent}%`;
-  $("#ukb-sax-detail").textContent=`${ukbSaxStageNames[stage]||stage} · CVD ${fmt(d.cvd_positive||0)}/${fmt(d.cvd_negative||0)} · 左室真值 ${fmt(d.lv_truth_complete||0)}/${fmt(eligible)} · 不自动重试`;
+  $("#ukb-sax-detail").textContent=`严格合格池 ${fmt(d.queue_qualified||0)} 例 · 正式 ${fmt(eligible)} 例 · 候补 ${fmt(d.reserve||0)} 例 · 失败不自动重试`;
   $("#ukb-sax-cards").innerHTML=[
-    card("4CH缓存",`${fmt(four)} / ${fmt(eligible)}`,`${pct(four,eligible)}% · 正式V3模型`),
-    card("SAX缓存",`${fmt(sax)} / ${fmt(eligible)}`,`${pct(sax,eligible)}% · 每例16/16时相`),
-    card("近30分钟速度",rate?`${rate.toFixed(1)} 单元/小时`:"校准中",rate?"4CH与SAX合计":"运行满30分钟后显示"),
-    card("可靠 ETA",eta(d.eta_hours),errors?`${fmt(errors)}个错误，已停止对应分片`:"当前零错误",Boolean(errors)),
+    card("4CH缓存",`${fmt(fourCh)} / ${fmt(eligible)}`,`${pct(fourCh,eligible)}% · 50 Mask/例 · batch 256`),
+    card("SAX缓存",`${fmt(sax)} / ${fmt(eligible)}`,`${pct(sax,eligible)}% · ${fmt(d.sax_masks_completed||0)} / ${fmt(eligible*50)} Mask`),
+    card("SAX可靠 ETA",eta(rates.sax_eta_hours),saxRate?`${saxRate.toFixed(1)} 例/小时 · 剩余 ${fmt(eligible-sax)}`:"速度稳定前不估算"),
+    card("运行错误",fmt(errors),errors?"分片已停，不自动重试":"当前为0",Boolean(errors)),
   ].join("");
-  $("#ukb-sax-rate").textContent=rate?`${rate.toFixed(1)} 单元/小时`:"速度校准中";
-  $("#ukb-sax-supervisor").className=`status ${workers.supervisors_alive?"complete":"error"}`;
-  $("#ukb-sax-supervisor").textContent=workers.supervisors_alive?`${fmt(workers.active_workers||0)}个分片在线`:"暂无活跃分片";
+  $("#ukb-sax-rate").textContent=`4CH ${fourChRate?fourChRate.toFixed(1):"—"} · SAX ${saxRate?saxRate.toFixed(1):"—"} 例/小时`;
+  $("#ukb-sax-supervisor").className=`status ${workers.supervisor_alive?"complete":"error"}`;
+  $("#ukb-sax-supervisor").textContent=workers.supervisor_alive?"主管在线":(stage==="complete"?"已完成":"主管离线");
   $("#ukb-sax-live-stats").innerHTML=[
-    ["真实GPU分片",`${fmt(workers.active_workers||0)} / 8`],
-    ["4CH / SAX阶段",`${fmt(workers.four_ch_shards||0)} / ${fmt(workers.sax_shards||0)}`],
+    ["活跃GPU worker",`${fmt(workers.active||0)} / 7`],
+    ["等待安全GPU",fmt(workers.waiting||0)],
     ["活跃API调用",fmt(workers.api_calls||0)],
-    ["完成 / 保留分片",`${fmt(workers.successful_shards||0)} / ${fmt((workers.held_shards||[]).length)}`],
+    ["双序列剩余",fmt(remaining)],
   ].map(([label,value])=>`<div><span>${esc(label)}</span><b>${esc(value)}</b></div>`).join("");
   const gate=d.gates||{};
   const gateItems=[
-    ["正式队列",gate.cohort||"—",false],
-    ["分组平衡",gate.balance||"—",false],
-    ["Smoke缓存",gate.smoke_cache||"—",false],
-    ["自动重试",gate.automatic_retry?"开启":"关闭",Boolean(gate.automatic_retry)],
+    ["队列物化",gate.queue_materialized||"—",false],
+    ["4CH Smoke",gate.smoke_four_ch||"—",false],
+    ["SAX Smoke",gate.smoke_sax||"—",false],
+    ["严格审计",gate.strict_audit||"pending",false],
   ];
   const errorItems=Object.entries(d.error_types||{}).map(([label,value])=>`<span class="error-chip">${esc(label)} <b>${fmt(value)}</b></span>`);
   $("#ukb-sax-error-list").innerHTML=gateItems.map(([label,value,bad])=>`<span class="health-chip ${bad?"bad":""}">${esc(label)} <b>${esc(value)}</b></span>`).join("")+errorItems.join("");
   $("#ukb-sax-gpus").innerHTML=(d.gpus||[]).map((g)=>{
-    const util=Number(g.utilization_pct||0),memory=Number(g.memory_mib||0),assigned=Boolean(g.assigned_to_rebuild);
-    const stateText=assigned?(util>5?"分割中":"数据准备"):(g.shard_state==="success"?"分片完成":memory>100?"其他任务":"保留等待");
-    return `<div class="gpu ${assigned?"gpu-owned":"gpu-external"}"><div class="gpu-top"><strong>GPU ${esc(g.gpu)}</strong><span class="gpu-state ${util>5?"active":""}">${esc(stateText)}</span></div><div class="bar"><i style="width:${Math.min(100,util)}%"></i></div><div class="gpu-meta"><span>${esc(g.role||"—")}</span><span>${fmt(memory)} MiB</span></div></div>`;
+    const util=Number(g.utilization_pct||0),assigned=Boolean(g.assigned);
+    const stateText=assigned?(util>5?"分割中":"已分配"):(Number(g.memory_mib||0)>1000?"外部任务":"待命");
+    return `<div class="gpu ${assigned?"gpu-owned":"gpu-external"}"><div class="gpu-top"><strong>GPU ${esc(g.gpu)}</strong><span class="gpu-state ${assigned&&util>5?"active":""}">${esc(stateText)}</span></div><div class="bar"><i style="width:${Math.min(100,util)}%"></i></div><div class="gpu-meta"><span>${esc(g.assignment||"—")}</span><span>空闲 ${fmt(g.free_mib||0)} MiB</span></div></div>`;
   }).join("");
   $("#ukb-sax-updated").textContent=`安全快照 ${new Date(d.updated_at).toLocaleString("zh-CN",{hour12:false})}`;
   renderUkbSaxTrend(d.history||[]);
@@ -197,13 +198,12 @@ function renderUkbSaxTrend(history){
   const svg=$("#ukb-sax-trend"),points=(history||[]).slice(-120);
   if(points.length<2){svg.innerHTML='<text x="380" y="90" text-anchor="middle" class="chart-empty">等待更多聚合快照</text>';return;}
   const width=760,height=170,padX=36,padY=24,first=Number(points[0].timestamp),last=Number(points.at(-1).timestamp)||first+1;
-  const fourValues=points.map((item)=>Number(item.cache_4ch||0)),saxValues=points.map((item)=>Number(item.cache_sax||0));
-  const min=Math.min(...fourValues,...saxValues),max=Math.max(...fourValues,...saxValues),span=Math.max(1,max-min);
+  const values=points.flatMap((item)=>[Number(item.four_ch||0),Number(item.sax||0)]),min=Math.min(...values),max=Math.max(...values),span=Math.max(1,max-min);
   const x=(value)=>padX+(Number(value)-first)/Math.max(1,last-first)*(width-padX*2);
   const y=(value)=>height-padY-(Number(value)-min)/span*(height-padY*2);
-  const fourLine=points.map((item)=>`${x(item.timestamp).toFixed(1)},${y(item.cache_4ch).toFixed(1)}`).join(" ");
-  const saxLine=points.map((item)=>`${x(item.timestamp).toFixed(1)},${y(item.cache_sax).toFixed(1)}`).join(" ");
-  svg.innerHTML=`<line x1="${padX}" y1="${height-padY}" x2="${width-padX}" y2="${height-padY}" class="chart-axis"/><polyline points="${fourLine}" class="chart-line"/><polyline points="${saxLine}" class="chart-line chart-line-blue"/><circle cx="${x(last)}" cy="${y(fourValues.at(-1))}" r="4" class="chart-point"/><circle cx="${x(last)}" cy="${y(saxValues.at(-1))}" r="4" class="chart-point chart-point-blue"/><text x="${padX}" y="17" class="chart-label">4CH ${fmt(fourValues.at(-1))} · SAX ${fmt(saxValues.at(-1))}</text><text x="${padX}" y="${height-5}" class="chart-label">${new Date(first*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text><text x="${width-padX}" y="${height-5}" text-anchor="end" class="chart-label">${new Date(last*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text>`;
+  const fourLine=points.map((item)=>`${x(item.timestamp).toFixed(1)},${y(item.four_ch).toFixed(1)}`).join(" ");
+  const saxLine=points.map((item)=>`${x(item.timestamp).toFixed(1)},${y(item.sax).toFixed(1)}`).join(" ");
+  svg.innerHTML=`<line x1="${padX}" y1="${height-padY}" x2="${width-padX}" y2="${height-padY}" class="chart-axis"/><polyline points="${fourLine}" class="chart-line chart-line-four"/><polyline points="${saxLine}" class="chart-line chart-line-sax"/><text x="${padX}" y="17" class="chart-label">${fmt(max)}</text><text x="${padX}" y="${height-5}" class="chart-label">${new Date(first*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text><text x="${width-padX}" y="${height-5}" text-anchor="end" class="chart-label">${new Date(last*1000).toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"})}</text><text x="${width-132}" y="18" class="chart-label chart-label-four">4CH</text><text x="${width-72}" y="18" class="chart-label chart-label-sax">SAX</text>`;
 }
 
 async function load(){

@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="MRIAgent多中心、YA及UKB 1000例匿名实验进度">
+  <meta name="description" content="MRIAgent多中心及YA新批次匿名实验进度">
   <title>MRIAgent · 多中心实验进度</title>
-  <link rel="stylesheet" href="styles.css?v=ukb-lvgt-v2">
+  <link rel="stylesheet" href="styles.css?v=ukb-lvgt-15000-v2">
 </head>
 <body>
   <header class="topbar">
@@ -31,25 +31,25 @@
 
     <section class="panel ukb-sax-panel" aria-labelledby="ukb-sax-title">
       <div class="panel-head">
-        <div><small>UKB 1000 · LV GROUND TRUTH</small><h2 id="ukb-sax-title">UKB平衡队列全量缓存</h2><p id="ukb-sax-detail">正在读取4CH与SAX双缓存实时进度。</p></div>
+        <div><small>UKB 15K SEGMENTATION</small><h2 id="ukb-sax-title">UKB 15,000例双序列分割缓存</h2><p id="ukb-sax-detail">正在读取4CH与SAX全量缓存进度。</p></div>
         <span id="ukb-sax-state" class="phase-badge">连接中</span>
       </div>
-      <ol class="pipeline ukb-sax-pipeline" id="ukb-sax-pipeline" aria-label="UKB 1000例流水线">
-        <li data-stage="smoke"><i>1</i><span>队列与Smoke</span></li>
-        <li data-stage="cache_full"><i>2</i><span>全量缓存</span></li>
-        <li data-stage="cache_qc"><i>3</i><span>缓存审计</span></li>
-        <li data-stage="precompute"><i>4</i><span>数值重建</span></li>
-        <li data-stage="complete"><i>5</i><span>指标完成</span></li>
+      <ol class="pipeline ukb-sax-pipeline" id="ukb-sax-pipeline" aria-label="UKB 15000例分割流水线">
+        <li data-stage="queue"><i>1</i><span>队列与物化</span></li>
+        <li data-stage="smoke"><i>2</i><span>端到端Smoke</span></li>
+        <li data-stage="four_ch"><i>3</i><span>4CH全量</span></li>
+        <li data-stage="sax"><i>4</i><span>SAX全量</span></li>
+        <li data-stage="audit"><i>5</i><span>严格审计</span></li>
       </ol>
       <div class="ya-run-progress">
-        <div><span id="ukb-sax-progress-copy">缓存单元 0 / 2,000</span><strong id="ukb-sax-percent">0%</strong></div>
+        <div><span id="ukb-sax-progress-copy">双序列完成 0 / 15,000</span><strong id="ukb-sax-percent">0%</strong></div>
         <div class="progress progress-large"><i id="ukb-sax-progress"></i></div>
       </div>
       <div id="ukb-sax-cards" class="cards ya-cards"></div>
       <div class="ya-live-grid">
         <article class="ya-live-card">
-          <div class="ya-live-head"><div><small>30-MINUTE TREND</small><h3>4CH / SAX缓存趋势</h3></div><b id="ukb-sax-rate">—</b></div>
-          <svg id="ukb-sax-trend" viewBox="0 0 760 170" role="img" aria-label="UKB SAX合格缓存趋势"></svg>
+          <div class="ya-live-head"><div><small>LIVE TREND</small><h3>4CH / SAX完成趋势</h3></div><b id="ukb-sax-rate">—</b></div>
+          <svg id="ukb-sax-trend" viewBox="0 0 760 170" role="img" aria-label="UKB 4CH与SAX缓存完成趋势"></svg>
         </article>
         <article class="ya-live-card">
           <div class="ya-live-head"><div><small>LIVE HEALTH</small><h3>工作进程与安全门禁</h3></div><span id="ukb-sax-supervisor" class="status">—</span></div>
@@ -57,8 +57,8 @@
           <div id="ukb-sax-error-list" class="ya-error-list"></div>
         </article>
       </div>
-      <div class="ukb-sax-gpu-wrap"><div class="ya-live-head"><div><small>GPU ASSIGNMENT</small><h3>固定8分片实时状态</h3></div><span>仅使用真正空闲GPU · 保留分片等待释放</span></div><div id="ukb-sax-gpus" class="gpu-grid"></div></div>
-      <div class="ya-foot"><span>4CH V3 + SAX nnUNet · 无API调用 · 不覆盖旧结果</span><span id="ukb-sax-updated">—</span></div>
+      <div class="ukb-sax-gpu-wrap"><div class="ya-live-head"><div><small>GPU ASSIGNMENT</small><h3>8卡实时状态</h3></div><span>最多7卡 · 仅在显存安全时启动</span></div><div id="ukb-sax-gpus" class="gpu-grid"></div></div>
+      <div class="ya-foot"><span>4CH batch 256 · SAX patch batch 32 · API=0 · 不覆盖旧结果</span><span id="ukb-sax-updated">—</span></div>
     </section>
 
     <section class="panel ya-panel" aria-labelledby="ya-title">
@@ -139,6 +139,6 @@
 
     <footer><span>仅展示阶段状态、聚合数量与错误类别</span><span>V3-only · Read-only monitor</span></footer>
   </main>
-  <script src="app.js?v=ukb-lvgt-v2"></script>
+  <script src="app.js?v=ukb-lvgt-15000-v2"></script>
 </body>
 </html>

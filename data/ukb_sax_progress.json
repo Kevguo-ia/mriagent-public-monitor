@@ -1,840 +1,204 @@
 {
-  "schema_version": "ukb_lvgt_monitor_safe_v2",
-  "updated_at": "2026-07-23T09:29:21.346453+08:00",
-  "job": "cvd_lvgt_matched_1000_20260722_v2",
-  "stage": "cache_qc",
-  "state": "waiting_or_complete",
-  "eligible": 1000,
-  "cvd_positive": 500,
-  "cvd_negative": 500,
-  "lv_truth_complete": 1000,
-  "pixel_preflight_passed": 1000,
-  "pixel_preflight_excluded": 11,
-  "cache_4ch": 1000,
-  "cache_sax": 1000,
-  "cache_units_complete": 2000,
-  "cache_units_total": 2000,
-  "completed": 1000,
-  "remaining": 0,
+  "schema_version": "ukb_lvgt_15000_monitor_safe_v2",
+  "updated_at": "2026-07-23T09:33:26.639204+08:00",
+  "job": "ukb_lvgt_15000_20260723_v2",
+  "stage": "full_cache",
+  "state": "running",
+  "eligible": 15000,
+  "queue_qualified": 16206,
+  "reserve": 1000,
+  "four_ch_completed": 3849,
+  "sax_completed": 65,
+  "sax_masks_completed": 3250,
   "errors": 0,
   "error_types": {},
-  "required_timepoints": 16,
-  "rate_per_hour": 0.0,
-  "eta_hours": null,
+  "rates": {
+    "four_ch_per_hour": 0.0,
+    "four_ch_eta_hours": null,
+    "sax_per_hour": 0.0,
+    "sax_eta_hours": null
+  },
   "history": [
     {
-      "timestamp": 1784766481,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
+      "timestamp": 1784770406,
+      "four_ch": 3849,
+      "sax": 65
     },
     {
-      "timestamp": 1784766512,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766543,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766574,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766605,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766636,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766666,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766697,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766728,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766759,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766790,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766821,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766852,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766883,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766914,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766945,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784766976,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767007,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767038,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767069,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767099,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767130,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767161,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767192,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767223,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767254,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767285,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767316,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767347,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767378,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767409,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767440,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767471,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767501,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767532,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767563,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767594,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767625,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767656,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767687,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767718,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767749,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767780,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767811,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767841,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767872,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767903,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767934,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767965,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784767996,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768027,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768058,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768089,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768120,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768151,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768182,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768213,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768244,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768274,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768305,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768336,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768367,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768398,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768429,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768460,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768491,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768522,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768553,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768584,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768615,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768646,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768676,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768707,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768738,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768769,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768800,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768831,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768862,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768893,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768924,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768955,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784768986,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769017,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769047,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769078,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769109,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769140,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769171,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769202,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769233,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769264,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769295,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769326,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769357,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769388,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769419,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769450,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769481,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769511,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769542,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769573,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769604,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769635,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769666,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769697,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769728,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769759,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769790,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769821,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769852,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769883,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769914,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769945,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784769976,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784770007,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784770037,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784770068,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784770099,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784770130,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
-    },
-    {
-      "timestamp": 1784770161,
-      "cache_4ch": 1000,
-      "cache_sax": 1000,
-      "units": 2000
+      "timestamp": 1784770407,
+      "four_ch": 3849,
+      "sax": 65
     }
   ],
-  "workers": {
-    "active_workers": 0,
-    "active_shards": [],
-    "held_shards": [
-      7
-    ],
-    "four_ch_shards": 0,
-    "sax_shards": 1,
-    "successful_shards": 6,
-    "failed_shards": 0,
-    "worker_process_tree": 0,
-    "api_calls": 0,
-    "supervisors_alive": false
-  },
+  "jobs": [
+    {
+      "sequence": "4CH",
+      "shard": 0,
+      "completed": 1505,
+      "selected": 5000,
+      "state": "running",
+      "gpu": 0
+    },
+    {
+      "sequence": "4CH",
+      "shard": 1,
+      "completed": 1495,
+      "selected": 5000,
+      "state": "running",
+      "gpu": 1
+    },
+    {
+      "sequence": "4CH",
+      "shard": 2,
+      "completed": 849,
+      "selected": 5000,
+      "state": "running",
+      "gpu": 6
+    },
+    {
+      "sequence": "SAX",
+      "shard": 0,
+      "completed": 12,
+      "selected": 2143,
+      "state": "running",
+      "gpu": 2
+    },
+    {
+      "sequence": "SAX",
+      "shard": 1,
+      "completed": 17,
+      "selected": 2143,
+      "state": "running",
+      "gpu": 3
+    },
+    {
+      "sequence": "SAX",
+      "shard": 2,
+      "completed": 19,
+      "selected": 2143,
+      "state": "running",
+      "gpu": 4
+    },
+    {
+      "sequence": "SAX",
+      "shard": 3,
+      "completed": 17,
+      "selected": 2143,
+      "state": "running",
+      "gpu": 7
+    },
+    {
+      "sequence": "SAX",
+      "shard": 4,
+      "completed": 0,
+      "selected": 2143,
+      "state": "waiting",
+      "gpu": null
+    },
+    {
+      "sequence": "SAX",
+      "shard": 5,
+      "completed": 0,
+      "selected": 2143,
+      "state": "waiting",
+      "gpu": null
+    },
+    {
+      "sequence": "SAX",
+      "shard": 6,
+      "completed": 0,
+      "selected": 2142,
+      "state": "waiting",
+      "gpu": null
+    }
+  ],
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 41621,
-      "utilization_pct": 100,
-      "assigned_to_rebuild": false,
-      "role": "其他任务占用",
-      "shard_state": "running_sax"
+      "memory_mib": 585,
+      "free_mib": 44904,
+      "utilization_pct": 0,
+      "assignment": "4CH shard 0",
+      "assigned": true
     },
     {
       "gpu": 1,
-      "memory_mib": 43892,
-      "utilization_pct": 100,
-      "assigned_to_rebuild": false,
-      "role": "分片完成",
-      "shard_state": "success"
+      "memory_mib": 2856,
+      "free_mib": 42633,
+      "utilization_pct": 0,
+      "assignment": "4CH shard 1",
+      "assigned": true
     },
     {
       "gpu": 2,
-      "memory_mib": 26911,
+      "memory_mib": 28033,
+      "free_mib": 17456,
       "utilization_pct": 100,
-      "assigned_to_rebuild": false,
-      "role": "分片完成",
-      "shard_state": "success"
+      "assignment": "SAX shard 0",
+      "assigned": true
     },
     {
       "gpu": 3,
-      "memory_mib": 29155,
-      "utilization_pct": 100,
-      "assigned_to_rebuild": false,
-      "role": "分片完成",
-      "shard_state": "success"
+      "memory_mib": 26911,
+      "free_mib": 18578,
+      "utilization_pct": 0,
+      "assignment": "SAX shard 1",
+      "assigned": true
     },
     {
       "gpu": 4,
-      "memory_mib": 4011,
+      "memory_mib": 8493,
+      "free_mib": 36996,
       "utilization_pct": 0,
-      "assigned_to_rebuild": false,
-      "role": "分片完成",
-      "shard_state": "success"
+      "assignment": "SAX shard 2",
+      "assigned": true
     },
     {
       "gpu": 5,
       "memory_mib": 14259,
-      "utilization_pct": 0,
-      "assigned_to_rebuild": false,
-      "role": "分片完成",
-      "shard_state": "success"
+      "free_mib": 31230,
+      "utilization_pct": 11,
+      "assignment": "外部任务",
+      "assigned": false
     },
     {
       "gpu": 6,
-      "memory_mib": 585,
+      "memory_mib": 41621,
+      "free_mib": 3868,
       "utilization_pct": 100,
-      "assigned_to_rebuild": false,
-      "role": "分片完成",
-      "shard_state": "success"
+      "assignment": "4CH shard 2",
+      "assigned": true
     },
     {
       "gpu": 7,
-      "memory_mib": 29151,
-      "utilization_pct": 100,
-      "assigned_to_rebuild": false,
-      "role": "其他任务占用",
-      "shard_state": "held"
+      "memory_mib": 29155,
+      "free_mib": 16334,
+      "utilization_pct": 0,
+      "assignment": "SAX shard 3",
+      "assigned": true
     }
   ],
-  "model": {
-    "four_ch": "4CH V3 formal model",
-    "sax": "nnUNet SAX formal model",
-    "version_verified": true,
-    "api_calls_required": false
+  "workers": {
+    "active": 7,
+    "waiting": 3,
+    "supervisor_alive": true,
+    "api_calls": 0
   },
-  "gates": {
-    "cohort": "1000/1000 passed",
-    "balance": "500/500; all SMD < 0.1",
-    "smoke_cache": "4CH 8/8; SAX 8/8",
-    "input_contract": "matched",
+  "models": {
+    "four_ch_verified": true,
+    "sax_verified": true
+  },
+  "contracts": {
+    "four_ch": "1平面 × 50时相 · batch 256",
+    "sax": "至少8层 × 50时相 · patch batch 32",
+    "deterministic_sax": true,
     "automatic_retry": false,
     "old_results_overwritten": false
+  },
+  "gates": {
+    "queue_materialized": "15000/15000 passed",
+    "smoke_four_ch": "8/8 passed",
+    "smoke_sax": "8/8 passed",
+    "strict_audit": "pending"
   }
 }
