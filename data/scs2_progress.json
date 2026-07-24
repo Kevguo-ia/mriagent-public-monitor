@@ -1,0 +1,31 @@
+{
+  "schema_version": "scs2_segmentation_progress_v1",
+  "updated_at": "2026-07-24T18:34:00+08:00",
+  "mode": "smoke",
+  "state": "running",
+  "progress": {
+    "four_ch_completed": 8,
+    "four_ch_target": 8,
+    "sax_completed": 0,
+    "sax_target": 8
+  },
+  "throughput": {
+    "four_ch_per_hour": 0,
+    "four_ch_eta_hours": null,
+    "sax_per_hour": 0,
+    "sax_eta_hours": null
+  },
+  "errors": {
+    "total": 0,
+    "types": {}
+  },
+  "api_calls": 0,
+  "workers": {
+    "active": 1,
+    "waiting": 0,
+    "automatic_retry": false
+  },
+  "jobs": [],
+  "gpus": [],
+  "history": []
+}
