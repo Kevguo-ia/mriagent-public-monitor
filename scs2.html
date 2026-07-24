@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SCS 第二批分割进度</title>
+  <link rel="stylesheet" href="scs2.css?v=1">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">CMR SEGMENTATION · READ ONLY</p>
+        <h1>SCS 第二批分割缓存</h1>
+        <p id="stage-detail">等待安全状态快照</p>
+      </div>
+      <div class="header-status"><span id="state" class="badge">连接中</span><small id="updated">—</small></div>
+    </header>
+
+    <section class="summary" aria-label="总体进度">
+      <article><span>4CH</span><strong id="four-count">—</strong><div class="bar"><i id="four-bar"></i></div><small id="four-meta">—</small></article>
+      <article><span>SAX</span><strong id="sax-count">—</strong><div class="bar"><i id="sax-bar"></i></div><small id="sax-meta">—</small></article>
+      <article><span>实时吞吐</span><strong id="rate">—</strong><small id="eta">—</small></article>
+      <article><span>错误</span><strong id="errors">—</strong><small>错误即停 · 不自动重试</small></article>
+    </section>
+
+    <section class="layout">
+      <article class="panel">
+        <div class="panel-head"><div><p class="eyebrow">PROGRESS</p><h2>累计完成</h2></div><span class="legend"><i></i>4CH <i></i>SAX</span></div>
+        <svg id="trend" viewBox="0 0 760 230" role="img" aria-label="4CH与SAX累计完成趋势"></svg>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><div><p class="eyebrow">CONTRACT</p><h2>运行门禁</h2></div></div>
+        <dl id="contracts"></dl>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><p class="eyebrow">GPU STATUS</p><h2>七卡分片</h2></div><span id="workers" class="badge">—</span></div>
+      <div id="gpus" class="gpu-grid"></div>
+    </section>
+
+    <footer>仅发布匿名聚合进度、资源状态与错误类别；不包含病例标识、路径或临床内容。</footer>
+  </main>
+  <script src="scs2.js?v=1"></script>
+</body>
+</html>
