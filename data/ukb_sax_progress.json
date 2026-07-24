@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v2",
-  "updated_at": "2026-07-25T01:56:53.318397+08:00",
+  "updated_at": "2026-07-25T02:01:57.513760+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "error",
   "state": "error",
@@ -8,8 +8,8 @@
   "queue_qualified": 16206,
   "reserve": 1000,
   "four_ch_completed": 15000,
-  "sax_completed": 14686,
-  "sax_masks_completed": 734300,
+  "sax_completed": 14693,
+  "sax_masks_completed": 734650,
   "errors": 1,
   "error_types": {
     "其他技术错误": 1
@@ -17,60 +17,10 @@
   "rates": {
     "four_ch_per_hour": 0.0,
     "four_ch_eta_hours": null,
-    "sax_per_hour": 72.25,
-    "sax_eta_hours": 4.35
+    "sax_per_hour": 74.25,
+    "sax_eta_hours": 4.13
   },
   "history": [
-    {
-      "timestamp": 1784912195,
-      "four_ch": 15000,
-      "sax": 14615
-    },
-    {
-      "timestamp": 1784912225,
-      "four_ch": 15000,
-      "sax": 14615
-    },
-    {
-      "timestamp": 1784912255,
-      "four_ch": 15000,
-      "sax": 14616
-    },
-    {
-      "timestamp": 1784912286,
-      "four_ch": 15000,
-      "sax": 14617
-    },
-    {
-      "timestamp": 1784912316,
-      "four_ch": 15000,
-      "sax": 14618
-    },
-    {
-      "timestamp": 1784912347,
-      "four_ch": 15000,
-      "sax": 14618
-    },
-    {
-      "timestamp": 1784912377,
-      "four_ch": 15000,
-      "sax": 14618
-    },
-    {
-      "timestamp": 1784912407,
-      "four_ch": 15000,
-      "sax": 14619
-    },
-    {
-      "timestamp": 1784912438,
-      "four_ch": 15000,
-      "sax": 14619
-    },
-    {
-      "timestamp": 1784912468,
-      "four_ch": 15000,
-      "sax": 14621
-    },
     {
       "timestamp": 1784912499,
       "four_ch": 15000,
@@ -620,6 +570,56 @@
       "timestamp": 1784915813,
       "four_ch": 15000,
       "sax": 14686
+    },
+    {
+      "timestamp": 1784915844,
+      "four_ch": 15000,
+      "sax": 14687
+    },
+    {
+      "timestamp": 1784915874,
+      "four_ch": 15000,
+      "sax": 14687
+    },
+    {
+      "timestamp": 1784915905,
+      "four_ch": 15000,
+      "sax": 14688
+    },
+    {
+      "timestamp": 1784915935,
+      "four_ch": 15000,
+      "sax": 14689
+    },
+    {
+      "timestamp": 1784915965,
+      "four_ch": 15000,
+      "sax": 14690
+    },
+    {
+      "timestamp": 1784915996,
+      "four_ch": 15000,
+      "sax": 14690
+    },
+    {
+      "timestamp": 1784916026,
+      "four_ch": 15000,
+      "sax": 14690
+    },
+    {
+      "timestamp": 1784916057,
+      "four_ch": 15000,
+      "sax": 14691
+    },
+    {
+      "timestamp": 1784916087,
+      "four_ch": 15000,
+      "sax": 14692
+    },
+    {
+      "timestamp": 1784916118,
+      "four_ch": 15000,
+      "sax": 14693
     }
   ],
   "jobs": [
@@ -690,7 +690,7 @@
     {
       "sequence": "SAX",
       "shard": 5,
-      "completed": 2039,
+      "completed": 2046,
       "selected": 2143,
       "state": "running",
       "gpu": 1
@@ -715,8 +715,8 @@
     },
     {
       "gpu": 1,
-      "memory_mib": 23059,
-      "free_mib": 22430,
+      "memory_mib": 24181,
+      "free_mib": 21308,
       "utilization_pct": 100,
       "assignment": "SAX shard 5",
       "assigned": true
@@ -725,15 +725,15 @@
       "gpu": 2,
       "memory_mib": 12765,
       "free_mib": 32724,
-      "utilization_pct": 0,
+      "utilization_pct": 7,
       "assignment": "外部任务",
       "assigned": false
     },
     {
       "gpu": 3,
-      "memory_mib": 4947,
-      "free_mib": 40542,
-      "utilization_pct": 0,
+      "memory_mib": 15945,
+      "free_mib": 29544,
+      "utilization_pct": 100,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -757,7 +757,7 @@
       "gpu": 6,
       "memory_mib": 16987,
       "free_mib": 28502,
-      "utilization_pct": 100,
+      "utilization_pct": 61,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -765,7 +765,7 @@
       "gpu": 7,
       "memory_mib": 14257,
       "free_mib": 31232,
-      "utilization_pct": 7,
+      "utilization_pct": 0,
       "assignment": "外部任务",
       "assigned": false
     }
