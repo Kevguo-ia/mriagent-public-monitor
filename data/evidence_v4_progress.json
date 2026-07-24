@@ -1,18 +1,18 @@
 {
   "schema_version": "mriagent_evidence_v4_public_monitor_v1",
-  "updated_at": "2026-07-24T11:52:49.798573+00:00",
+  "updated_at": "2026-07-24T11:54:52.649405+00:00",
   "stage": "full_running",
   "total": 3906,
   "eligible": 3905,
   "upstream_not_eligible": 1,
-  "graph_complete": 2763,
-  "evidence_complete": 2748,
-  "report_complete": 2676,
-  "released": 1587,
-  "withheld": 1089,
-  "errors": 71,
-  "api_calls": 5625,
-  "current_artifact_api_calls": 5579,
+  "graph_complete": 2855,
+  "evidence_complete": 2842,
+  "report_complete": 2759,
+  "released": 1654,
+  "withheld": 1105,
+  "errors": 80,
+  "api_calls": 5820,
+  "current_artifact_api_calls": 5774,
   "prior_incomplete_api_calls": 46,
   "smoke_api_calls": 20,
   "automatic_retry": false,
@@ -22,12 +22,12 @@
     "UKB": {
       "total": 1000,
       "eligible": 999,
-      "graph": 3,
-      "evidence": 3,
-      "report": 3,
+      "graph": 6,
+      "evidence": 4,
+      "report": 4,
       "errors": 0,
-      "api_calls": 6,
-      "withheld": 3
+      "api_calls": 10,
+      "withheld": 4
     },
     "Kunming": {
       "total": 1994,
@@ -54,13 +54,13 @@
     "SCS": {
       "total": 510,
       "eligible": 510,
-      "graph": 364,
-      "evidence": 351,
-      "report": 330,
-      "api_calls": 733,
-      "withheld": 39,
-      "errors": 18,
-      "released": 291
+      "graph": 453,
+      "evidence": 444,
+      "report": 412,
+      "api_calls": 924,
+      "withheld": 54,
+      "errors": 27,
+      "released": 358
     }
   }
 }
