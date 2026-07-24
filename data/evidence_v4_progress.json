@@ -1,18 +1,18 @@
 {
   "schema_version": "mriagent_evidence_v4_public_monitor_v1",
-  "updated_at": "2026-07-24T11:42:05.566037+00:00",
+  "updated_at": "2026-07-24T11:44:23.513215+00:00",
   "stage": "full_running",
   "total": 3906,
   "eligible": 3905,
   "upstream_not_eligible": 1,
-  "graph_complete": 2321,
-  "evidence_complete": 2307,
-  "report_complete": 2254,
-  "released": 1253,
-  "withheld": 1001,
-  "errors": 51,
-  "api_calls": 4722,
-  "current_artifact_api_calls": 4676,
+  "graph_complete": 2411,
+  "evidence_complete": 2398,
+  "report_complete": 2341,
+  "released": 1301,
+  "withheld": 1040,
+  "errors": 54,
+  "api_calls": 4906,
+  "current_artifact_api_calls": 4860,
   "prior_incomplete_api_calls": 46,
   "smoke_api_calls": 20,
   "automatic_retry": false,
@@ -32,13 +32,13 @@
     "Kunming": {
       "total": 1994,
       "eligible": 1994,
-      "graph": 1914,
-      "evidence": 1900,
-      "report": 1857,
-      "api_calls": 3853,
-      "released": 960,
-      "errors": 41,
-      "withheld": 897
+      "graph": 1978,
+      "evidence": 1972,
+      "report": 1927,
+      "api_calls": 3991,
+      "released": 992,
+      "errors": 43,
+      "withheld": 935
     },
     "Chengdu": {
       "total": 402,
@@ -54,12 +54,13 @@
     "SCS": {
       "total": 510,
       "eligible": 510,
-      "graph": 2,
-      "evidence": 2,
-      "report": 2,
-      "errors": 0,
-      "api_calls": 4,
-      "released": 2
+      "graph": 28,
+      "evidence": 21,
+      "report": 19,
+      "errors": 1,
+      "api_calls": 50,
+      "released": 18,
+      "withheld": 1
     }
   }
 }
