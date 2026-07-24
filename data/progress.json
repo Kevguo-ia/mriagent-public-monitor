@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-24T18:11:31.100332+08:00",
+  "updated_at": "2026-07-24T18:16:05.587899+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -40,7 +40,7 @@
     },
     {
       "gpu": 1,
-      "memory_mib": 19872,
+      "memory_mib": 40042,
       "utilization_pct": 100
     },
     {
@@ -61,7 +61,7 @@
     {
       "gpu": 5,
       "memory_mib": 16494,
-      "utilization_pct": 23
+      "utilization_pct": 0
     },
     {
       "gpu": 6,
@@ -71,7 +71,7 @@
     {
       "gpu": 7,
       "memory_mib": 14257,
-      "utilization_pct": 31
+      "utilization_pct": 27
     }
   ],
   "artifacts": {
@@ -138,38 +138,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784885858,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784885892,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784885927,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784885961,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784885995,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784886030,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784886064,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784886098,
-      "reports": 3905
-    },
     {
       "timestamp": 1784886132,
       "reports": 3905
@@ -376,6 +344,38 @@
     },
     {
       "timestamp": 1784887891,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784887925,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784887959,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784887993,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784888028,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784888062,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784888097,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784888131,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784888165,
       "reports": 3905
     }
   ]
