@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-24T21:40:19.377285+08:00",
+  "updated_at": "2026-07-24T21:45:28.231664+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -40,8 +40,8 @@
     },
     {
       "gpu": 1,
-      "memory_mib": 23059,
-      "utilization_pct": 100
+      "memory_mib": 2891,
+      "utilization_pct": 56
     },
     {
       "gpu": 2,
@@ -50,8 +50,8 @@
     },
     {
       "gpu": 3,
-      "memory_mib": 4947,
-      "utilization_pct": 0
+      "memory_mib": 16989,
+      "utilization_pct": 100
     },
     {
       "gpu": 4,
@@ -61,17 +61,17 @@
     {
       "gpu": 5,
       "memory_mib": 16494,
-      "utilization_pct": 0
+      "utilization_pct": 11
     },
     {
       "gpu": 6,
       "memory_mib": 16985,
-      "utilization_pct": 0
+      "utilization_pct": 100
     },
     {
       "gpu": 7,
       "memory_mib": 14257,
-      "utilization_pct": 0
+      "utilization_pct": 7
     }
   ],
   "artifacts": {
@@ -138,42 +138,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784898395,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784898429,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784898464,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784898498,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784898532,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784898566,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784898601,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784898635,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784898669,
-      "reports": 3905
-    },
     {
       "timestamp": 1784898704,
       "reports": 3905
@@ -376,6 +340,42 @@
     },
     {
       "timestamp": 1784900419,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784900453,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784900487,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784900522,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784900556,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784900590,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784900625,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784900659,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784900693,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784900728,
       "reports": 3905
     }
   ]
