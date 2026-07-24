@@ -1,29 +1,30 @@
 {
   "schema_version": "scs2_segmentation_progress_v1",
-  "updated_at": "2026-07-24T18:47:06.521098+08:00",
+  "updated_at": "2026-07-24T18:52:09.971282+08:00",
   "mode": "full",
   "state": "error",
   "progress": {
     "four_ch_completed": 0,
     "four_ch_target": 3930,
-    "sax_completed": 0,
+    "sax_completed": 34,
     "sax_target": 3930
   },
   "throughput": {
     "four_ch_per_hour": 0.0,
     "four_ch_eta_hours": null,
-    "sax_per_hour": 0.0,
-    "sax_eta_hours": null
+    "sax_per_hour": 336.2,
+    "sax_eta_hours": 11.59
   },
   "errors": {
-    "total": 3,
+    "total": 4,
     "types": {
-      "gpu_inference": 3
+      "gpu_inference": 3,
+      "other_technical": 1
     }
   },
   "api_calls": 0,
   "workers": {
-    "active": 4,
+    "active": 3,
     "waiting": 3,
     "automatic_retry": false
   },
@@ -55,7 +56,7 @@
     {
       "sequence": "SAX",
       "shard": 0,
-      "completed": 0,
+      "completed": 7,
       "selected": 0,
       "state": "running",
       "gpu": 4
@@ -63,7 +64,7 @@
     {
       "sequence": "SAX",
       "shard": 1,
-      "completed": 0,
+      "completed": 11,
       "selected": 0,
       "state": "running",
       "gpu": 6
@@ -71,7 +72,7 @@
     {
       "sequence": "SAX",
       "shard": 2,
-      "completed": 0,
+      "completed": 13,
       "selected": 0,
       "state": "running",
       "gpu": 0
@@ -79,9 +80,9 @@
     {
       "sequence": "SAX",
       "shard": 3,
-      "completed": 0,
+      "completed": 3,
       "selected": 0,
-      "state": "running",
+      "state": "error",
       "gpu": 3
     },
     {
@@ -112,23 +113,23 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_used_mib": 6,
-      "memory_free_mib": 45483,
+      "memory_used_mib": 6779,
+      "memory_free_mib": 38710,
       "utilization_pct": 0,
       "assignment": "SAX-2"
     },
     {
       "gpu": 1,
-      "memory_used_mib": 41162,
-      "memory_free_mib": 4327,
-      "utilization_pct": 44,
+      "memory_used_mib": 24716,
+      "memory_free_mib": 20773,
+      "utilization_pct": 100,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 2,
       "memory_used_mib": 12765,
       "memory_free_mib": 32724,
-      "utilization_pct": 3,
+      "utilization_pct": 0,
       "assignment": "external_or_idle"
     },
     {
@@ -136,12 +137,12 @@
       "memory_used_mib": 4947,
       "memory_free_mib": 40542,
       "utilization_pct": 0,
-      "assignment": "SAX-3"
+      "assignment": "external_or_idle"
     },
     {
       "gpu": 4,
-      "memory_used_mib": 4,
-      "memory_free_mib": 45485,
+      "memory_used_mib": 669,
+      "memory_free_mib": 44820,
       "utilization_pct": 0,
       "assignment": "SAX-0"
     },
@@ -154,8 +155,8 @@
     },
     {
       "gpu": 6,
-      "memory_used_mib": 4,
-      "memory_free_mib": 45485,
+      "memory_used_mib": 6637,
+      "memory_free_mib": 38852,
       "utilization_pct": 0,
       "assignment": "SAX-1"
     },
@@ -163,7 +164,7 @@
       "gpu": 7,
       "memory_used_mib": 14257,
       "memory_free_mib": 31232,
-      "utilization_pct": 28,
+      "utilization_pct": 0,
       "assignment": "external_or_idle"
     }
   ],
@@ -186,6 +187,76 @@
       "timestamp": 1784890026.521098,
       "four_ch": 0,
       "sax": 0,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784890056.892216,
+      "four_ch": 0,
+      "sax": 0,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784890087.239033,
+      "four_ch": 0,
+      "sax": 0,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784890117.587585,
+      "four_ch": 0,
+      "sax": 5,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784890147.89606,
+      "four_ch": 0,
+      "sax": 9,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784890178.27131,
+      "four_ch": 0,
+      "sax": 9,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784890208.646747,
+      "four_ch": 0,
+      "sax": 12,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784890238.988158,
+      "four_ch": 0,
+      "sax": 15,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784890269.315252,
+      "four_ch": 0,
+      "sax": 21,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784890299.632331,
+      "four_ch": 0,
+      "sax": 26,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784890329.971282,
+      "four_ch": 0,
+      "sax": 34,
       "four_ch_target": 3930,
       "sax_target": 3930
     }
