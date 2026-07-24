@@ -1,18 +1,18 @@
 {
   "schema_version": "mriagent_evidence_v4_public_monitor_v1",
-  "updated_at": "2026-07-24T11:50:31.649598+00:00",
+  "updated_at": "2026-07-24T11:52:49.798573+00:00",
   "stage": "full_running",
   "total": 3906,
   "eligible": 3905,
   "upstream_not_eligible": 1,
-  "graph_complete": 2666,
-  "evidence_complete": 2655,
-  "report_complete": 2586,
-  "released": 1508,
-  "withheld": 1077,
-  "errors": 65,
-  "api_calls": 5429,
-  "current_artifact_api_calls": 5383,
+  "graph_complete": 2763,
+  "evidence_complete": 2748,
+  "report_complete": 2676,
+  "released": 1587,
+  "withheld": 1089,
+  "errors": 71,
+  "api_calls": 5625,
+  "current_artifact_api_calls": 5579,
   "prior_incomplete_api_calls": 46,
   "smoke_api_calls": 20,
   "automatic_retry": false,
@@ -54,13 +54,13 @@
     "SCS": {
       "total": 510,
       "eligible": 510,
-      "graph": 267,
-      "evidence": 258,
-      "report": 240,
-      "api_calls": 537,
-      "withheld": 27,
-      "errors": 12,
-      "released": 212
+      "graph": 364,
+      "evidence": 351,
+      "report": 330,
+      "api_calls": 733,
+      "withheld": 39,
+      "errors": 18,
+      "released": 291
     }
   }
 }
