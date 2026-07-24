@@ -1,6 +1,6 @@
 {
   "schema_version": "ya_monitor_safe_v2",
-  "updated_at": "2026-07-24T11:58:11.613460+08:00",
+  "updated_at": "2026-07-24T12:03:34.183623+08:00",
   "job": "ya_full_pipeline_20260719_v1",
   "stage": "complete",
   "state": "complete_with_errors",
@@ -34,46 +34,6 @@
     "reports_per_hour": 0.0,
     "report_eta_hours": null,
     "report_history": [
-      {
-        "timestamp": 1784861666,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784861698,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784861730,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784861762,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784861795,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784861827,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784861859,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784861891,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784861923,
-        "reports": 563
-      },
-      {
-        "timestamp": 1784861955,
-        "reports": 563
-      },
       {
         "timestamp": 1784861987,
         "reports": 563
@@ -513,6 +473,46 @@
       {
         "timestamp": 1784865492,
         "reports": 563
+      },
+      {
+        "timestamp": 1784865524,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784865556,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784865588,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784865621,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784865653,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784865685,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784865717,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784865749,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784865782,
+        "reports": 563
+      },
+      {
+        "timestamp": 1784865814,
+        "reports": 563
       }
     ]
   },
@@ -526,22 +526,22 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 25863,
-      "utilization_pct": 100
+      "memory_mib": 23623,
+      "utilization_pct": 0
     },
     {
       "gpu": 1,
-      "memory_mib": 41162,
+      "memory_mib": 19872,
       "utilization_pct": 100
     },
     {
       "gpu": 2,
-      "memory_mib": 41354,
-      "utilization_pct": 100
+      "memory_mib": 41356,
+      "utilization_pct": 0
     },
     {
       "gpu": 3,
-      "memory_mib": 28564,
+      "memory_mib": 7274,
       "utilization_pct": 0
     },
     {
@@ -552,16 +552,16 @@
     {
       "gpu": 5,
       "memory_mib": 16494,
-      "utilization_pct": 7
+      "utilization_pct": 0
     },
     {
       "gpu": 6,
       "memory_mib": 28593,
-      "utilization_pct": 100
+      "utilization_pct": 0
     },
     {
       "gpu": 7,
-      "memory_mib": 16584,
+      "memory_mib": 42848,
       "utilization_pct": 0
     }
   ],
