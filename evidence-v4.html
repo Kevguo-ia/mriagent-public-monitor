@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="MRIAgent Evidence Graph v4四中心匿名聚合实时进度">
+  <title>MRIAgent · Evidence Graph v4</title>
+  <link rel="stylesheet" href="evidence-v4.css?v=1">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="mark">M</span><span><b>MRIAgent</b><small>Evidence Graph v4</small></span></a>
+    <div class="top-actions"><a href="./">总览</a><span class="live"><i></i><b id="freshness">连接中</b></span></div>
+  </header>
+  <main>
+    <section class="hero">
+      <div><span class="eyebrow">PRE-LLM GRAPH REPLACEMENT · V4</span><h1>四中心证据与报告重建</h1><p>基于既有分割和定量结果，重新生成Evidence Graph、证据、报告与发布门禁。</p></div>
+      <div class="hero-state"><span>当前阶段</span><strong id="stage-name">读取状态</strong><small id="updated-at">—</small></div>
+    </section>
+
+    <section class="panel flow-panel">
+      <div class="panel-head"><div><small>VERIFIED WORKFLOW</small><h2>确定性输入 → 双调用 → 发布门禁</h2></div><span id="state-badge" class="badge">连接中</span></div>
+      <ol class="pipeline" id="pipeline">
+        <li data-stage="prepared"><i>1</i><span>队列与隔离版本</span></li>
+        <li data-stage="preflight"><i>2</i><span>全量离线预检</span></li>
+        <li data-stage="smoke"><i>3</i><span>10例真实Smoke</span></li>
+        <li data-stage="full"><i>4</i><span>3,905例全量</span></li>
+        <li data-stage="audit"><i>5</i><span>最终严格审计</span></li>
+      </ol>
+      <div class="progress-copy"><span id="progress-copy">报告 0 / 3,905</span><strong id="progress-percent">0%</strong></div>
+      <div class="progress"><i id="progress-bar"></i></div>
+    </section>
+
+    <section class="kpis" id="kpis" aria-label="核心进度"></section>
+
+    <section class="split">
+      <article class="panel decision-panel">
+        <div class="panel-head"><div><small>TASK 3 STYLE GATE</small><h2>Graph → Evidence → Decision</h2></div></div>
+        <div class="decision-flow">
+          <div><span class="icon">▦</span><b>Evidence Graph</b><strong id="graph-count">0</strong><small>结构验证完成</small></div>
+          <em>→</em>
+          <div><span class="icon">✓</span><b>Grounded Evidence</b><strong id="evidence-count">0</strong><small>引用门禁完成</small></div>
+          <em>→</em>
+          <div><span class="icon">◈</span><b>Release Decision</b><strong id="decision-count">0</strong><small>已发布或暂缓</small></div>
+        </div>
+        <div class="release-bars">
+          <div><span>允许发布</span><b id="released-copy">0</b></div><div class="bar"><i id="released-bar"></i></div>
+          <div><span>安全暂缓</span><b id="withheld-copy">0</b></div><div class="bar amber"><i id="withheld-bar"></i></div>
+        </div>
+      </article>
+      <article class="panel safety-panel">
+        <div class="panel-head"><div><small>SAFETY CONTRACT</small><h2>运行与隐私门禁</h2></div></div>
+        <ul>
+          <li><span>文本路由</span><b id="text-route">official deepseek-chat</b></li>
+          <li><span>自动重试</span><b id="retry-state">关闭</b></li>
+          <li><span>活跃Worker</span><b id="workers">0</b></li>
+          <li><span>累计API调用</span><b id="api-calls">0</b></li>
+          <li><span>运行错误</span><b id="errors">0</b></li>
+        </ul>
+        <p>公开页面仅展示匿名聚合数，不包含病例编号、路径、临床文本、报告内容或密钥。</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><div><small>CENTRE PROGRESS</small><h2>各中心重建进度</h2><p>每个中心分别展示Graph、Evidence和Report完成率。</p></div></div>
+      <div class="table-wrap"><table><thead><tr><th>中心</th><th>队列</th><th>Graph</th><th>Evidence</th><th>Report</th><th>发布决策</th><th>错误</th></tr></thead><tbody id="center-rows"></tbody></table></div>
+    </section>
+    <footer><span>只读匿名聚合监控</span><span>15秒自动刷新 · automatic retry = 0</span></footer>
+  </main>
+  <script src="evidence-v4.js?v=1"></script>
+</body>
+</html>

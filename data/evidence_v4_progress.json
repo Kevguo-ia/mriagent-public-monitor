@@ -1,0 +1,54 @@
+{
+  "schema_version": "mriagent_evidence_v4_public_monitor_v1",
+  "updated_at": "2026-07-24T10:29:37.669287+00:00",
+  "stage": "blocked_smoke",
+  "total": 3906,
+  "eligible": 3905,
+  "upstream_not_eligible": 1,
+  "graph_complete": 1,
+  "evidence_complete": 1,
+  "report_complete": 1,
+  "released": 0,
+  "withheld": 1,
+  "errors": 1,
+  "api_calls": 0,
+  "smoke_api_calls": 2,
+  "automatic_retry": false,
+  "active_workers": 0,
+  "text_route": "official deepseek-chat",
+  "centers": {
+    "UKB": {
+      "total": 1000,
+      "eligible": 999,
+      "graph": 1,
+      "evidence": 1,
+      "report": 1,
+      "errors": 1,
+      "withheld": 1
+    },
+    "Kunming": {
+      "total": 1994,
+      "eligible": 1994,
+      "graph": 0,
+      "evidence": 0,
+      "report": 0,
+      "errors": 0
+    },
+    "Chengdu": {
+      "total": 402,
+      "eligible": 402,
+      "graph": 0,
+      "evidence": 0,
+      "report": 0,
+      "errors": 0
+    },
+    "SCS": {
+      "total": 510,
+      "eligible": 510,
+      "graph": 0,
+      "evidence": 0,
+      "report": 0,
+      "errors": 0
+    }
+  }
+}

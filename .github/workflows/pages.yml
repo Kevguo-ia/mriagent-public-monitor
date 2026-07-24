@@ -22,6 +22,7 @@ jobs:
       - name: Validate monitor and privacy boundary
         run: |
           node --check app.js
+          node --check evidence-v4.js
           python3 - <<'PY'
           import json
           import re
@@ -30,6 +31,8 @@ jobs:
           required = [
               Path("index.html"), Path("styles.css"), Path("app.js"),
               Path("data/progress.json"), Path("data/ya_progress.json"),
+              Path("evidence-v4.html"), Path("evidence-v4.css"), Path("evidence-v4.js"),
+              Path("data/evidence_v4_progress.json"),
           ]
           missing = [str(path) for path in required if not path.is_file()]
           if missing:
@@ -50,6 +53,18 @@ jobs:
               raise SystemExit("YA monitor must explicitly disable automatic retry")
           if len(json.dumps(ya_payload, ensure_ascii=False).encode("utf-8")) > 50_000:
               raise SystemExit("YA aggregate monitor payload is unexpectedly large")
+
+          evidence_payload = json.loads(Path("data/evidence_v4_progress.json").read_text(encoding="utf-8"))
+          if evidence_payload.get("schema_version") != "mriagent_evidence_v4_public_monitor_v1":
+              raise SystemExit("Unexpected Evidence v4 monitor schema")
+          if evidence_payload.get("total") != 3906 or evidence_payload.get("eligible") != 3905:
+              raise SystemExit("Unexpected Evidence v4 cohort counts")
+          if evidence_payload.get("automatic_retry") is not False:
+              raise SystemExit("Evidence v4 monitor must explicitly disable automatic retry")
+          if set(evidence_payload.get("centers") or {}) != {"UKB", "Kunming", "Chengdu", "SCS"}:
+              raise SystemExit("Unexpected Evidence v4 center set")
+          if len(json.dumps(evidence_payload, ensure_ascii=False).encode("utf-8")) > 50_000:
+              raise SystemExit("Evidence v4 aggregate monitor is unexpectedly large")
 
           forbidden = [
               r"/work/", r"/home/", r"/Users/", r"Traceback", r"API[_ -]?KEY",
