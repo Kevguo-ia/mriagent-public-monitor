@@ -1,6 +1,6 @@
 {
   "schema_version": "monitor_safe_v2",
-  "updated_at": "2026-07-25T05:11:01.760756+08:00",
+  "updated_at": "2026-07-25T05:16:09.439558+08:00",
   "refresh_seconds": 15,
   "total_studies": 3906,
   "segmentation_complete": 3906,
@@ -46,7 +46,7 @@
     {
       "gpu": 2,
       "memory_mib": 12765,
-      "utilization_pct": 7
+      "utilization_pct": 11
     },
     {
       "gpu": 3,
@@ -71,7 +71,7 @@
     {
       "gpu": 7,
       "memory_mib": 14257,
-      "utilization_pct": 7
+      "utilization_pct": 52
     }
   ],
   "artifacts": {
@@ -138,42 +138,6 @@
     }
   ],
   "report_history": [
-    {
-      "timestamp": 1784925442,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784925476,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784925511,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784925545,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784925579,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784925613,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784925647,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784925682,
-      "reports": 3905
-    },
-    {
-      "timestamp": 1784925716,
-      "reports": 3905
-    },
     {
       "timestamp": 1784925750,
       "reports": 3905
@@ -376,6 +340,42 @@
     },
     {
       "timestamp": 1784927461,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784927495,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784927530,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784927564,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784927598,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784927632,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784927666,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784927701,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784927735,
+      "reports": 3905
+    },
+    {
+      "timestamp": 1784927769,
       "reports": 3905
     }
   ]
