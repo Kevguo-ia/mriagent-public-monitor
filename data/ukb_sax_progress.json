@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v2",
-  "updated_at": "2026-07-24T18:31:17.722295+08:00",
+  "updated_at": "2026-07-24T18:31:48.116090+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "error",
   "state": "error",
@@ -21,11 +21,6 @@
     "sax_eta_hours": 16.27
   },
   "history": [
-    {
-      "timestamp": 1784885459,
-      "four_ch": 15000,
-      "sax": 14207
-    },
     {
       "timestamp": 1784885489,
       "four_ch": 15000,
@@ -620,6 +615,11 @@
       "timestamp": 1784889078,
       "four_ch": 15000,
       "sax": 14249
+    },
+    {
+      "timestamp": 1784889108,
+      "four_ch": 15000,
+      "sax": 14249
     }
   ],
   "jobs": [
@@ -715,8 +715,8 @@
     },
     {
       "gpu": 1,
-      "memory_mib": 19872,
-      "free_mib": 25617,
+      "memory_mib": 40040,
+      "free_mib": 5449,
       "utilization_pct": 100,
       "assignment": "SAX shard 5",
       "assigned": true
@@ -731,8 +731,8 @@
     },
     {
       "gpu": 3,
-      "memory_mib": 16989,
-      "free_mib": 28500,
+      "memory_mib": 4947,
+      "free_mib": 40542,
       "utilization_pct": 0,
       "assignment": "外部任务",
       "assigned": false
