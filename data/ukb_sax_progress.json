@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v2",
-  "updated_at": "2026-07-24T23:22:45.620297+08:00",
+  "updated_at": "2026-07-24T23:27:49.819152+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "error",
   "state": "error",
@@ -8,8 +8,8 @@
   "queue_qualified": 16206,
   "reserve": 1000,
   "four_ch_completed": 15000,
-  "sax_completed": 14514,
-  "sax_masks_completed": 725700,
+  "sax_completed": 14520,
+  "sax_masks_completed": 726000,
   "errors": 1,
   "error_types": {
     "其他技术错误": 1
@@ -18,59 +18,9 @@
     "four_ch_per_hour": 0.0,
     "four_ch_eta_hours": null,
     "sax_per_hour": 72.17,
-    "sax_eta_hours": 6.73
+    "sax_eta_hours": 6.65
   },
   "history": [
-    {
-      "timestamp": 1784902944,
-      "four_ch": 15000,
-      "sax": 14443
-    },
-    {
-      "timestamp": 1784902975,
-      "four_ch": 15000,
-      "sax": 14443
-    },
-    {
-      "timestamp": 1784903005,
-      "four_ch": 15000,
-      "sax": 14445
-    },
-    {
-      "timestamp": 1784903036,
-      "four_ch": 15000,
-      "sax": 14445
-    },
-    {
-      "timestamp": 1784903066,
-      "four_ch": 15000,
-      "sax": 14446
-    },
-    {
-      "timestamp": 1784903096,
-      "four_ch": 15000,
-      "sax": 14447
-    },
-    {
-      "timestamp": 1784903127,
-      "four_ch": 15000,
-      "sax": 14448
-    },
-    {
-      "timestamp": 1784903157,
-      "four_ch": 15000,
-      "sax": 14448
-    },
-    {
-      "timestamp": 1784903188,
-      "four_ch": 15000,
-      "sax": 14449
-    },
-    {
-      "timestamp": 1784903218,
-      "four_ch": 15000,
-      "sax": 14449
-    },
     {
       "timestamp": 1784903248,
       "four_ch": 15000,
@@ -620,6 +570,56 @@
       "timestamp": 1784906566,
       "four_ch": 15000,
       "sax": 14514
+    },
+    {
+      "timestamp": 1784906596,
+      "four_ch": 15000,
+      "sax": 14516
+    },
+    {
+      "timestamp": 1784906626,
+      "four_ch": 15000,
+      "sax": 14516
+    },
+    {
+      "timestamp": 1784906657,
+      "four_ch": 15000,
+      "sax": 14517
+    },
+    {
+      "timestamp": 1784906687,
+      "four_ch": 15000,
+      "sax": 14518
+    },
+    {
+      "timestamp": 1784906718,
+      "four_ch": 15000,
+      "sax": 14518
+    },
+    {
+      "timestamp": 1784906748,
+      "four_ch": 15000,
+      "sax": 14518
+    },
+    {
+      "timestamp": 1784906779,
+      "four_ch": 15000,
+      "sax": 14518
+    },
+    {
+      "timestamp": 1784906809,
+      "four_ch": 15000,
+      "sax": 14519
+    },
+    {
+      "timestamp": 1784906839,
+      "four_ch": 15000,
+      "sax": 14519
+    },
+    {
+      "timestamp": 1784906870,
+      "four_ch": 15000,
+      "sax": 14520
     }
   ],
   "jobs": [
@@ -690,7 +690,7 @@
     {
       "sequence": "SAX",
       "shard": 5,
-      "completed": 1867,
+      "completed": 1873,
       "selected": 2143,
       "state": "running",
       "gpu": 1
@@ -709,7 +709,7 @@
       "gpu": 0,
       "memory_mib": 16987,
       "free_mib": 28502,
-      "utilization_pct": 100,
+      "utilization_pct": 0,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -717,7 +717,7 @@
       "gpu": 1,
       "memory_mib": 2891,
       "free_mib": 42598,
-      "utilization_pct": 33,
+      "utilization_pct": 0,
       "assignment": "SAX shard 5",
       "assigned": true
     },
@@ -757,7 +757,7 @@
       "gpu": 6,
       "memory_mib": 16987,
       "free_mib": 28502,
-      "utilization_pct": 100,
+      "utilization_pct": 0,
       "assignment": "外部任务",
       "assigned": false
     },
