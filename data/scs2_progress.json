@@ -1,6 +1,6 @@
 {
   "schema_version": "scs2_segmentation_progress_v1",
-  "updated_at": "2026-07-26T00:14:49.914320+08:00",
+  "updated_at": "2026-07-26T00:19:53.385267+08:00",
   "mode": "full",
   "state": "error",
   "progress": {
@@ -112,9 +112,9 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_used_mib": 859,
-      "memory_free_mib": 44630,
-      "utilization_pct": 8,
+      "memory_used_mib": 1496,
+      "memory_free_mib": 43993,
+      "utilization_pct": 10,
       "assignment": "external_or_idle"
     },
     {
@@ -128,7 +128,7 @@
       "gpu": 2,
       "memory_used_mib": 1882,
       "memory_free_mib": 43607,
-      "utilization_pct": 7,
+      "utilization_pct": 88,
       "assignment": "external_or_idle"
     },
     {
@@ -140,104 +140,34 @@
     },
     {
       "gpu": 4,
-      "memory_used_mib": 1706,
-      "memory_free_mib": 43783,
-      "utilization_pct": 65,
+      "memory_used_mib": 1679,
+      "memory_free_mib": 43810,
+      "utilization_pct": 3,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 5,
       "memory_used_mib": 4266,
       "memory_free_mib": 41223,
-      "utilization_pct": 75,
+      "utilization_pct": 42,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 6,
-      "memory_used_mib": 5565,
-      "memory_free_mib": 39924,
-      "utilization_pct": 14,
+      "memory_used_mib": 6055,
+      "memory_free_mib": 39434,
+      "utilization_pct": 8,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 7,
       "memory_used_mib": 7069,
       "memory_free_mib": 38420,
-      "utilization_pct": 4,
+      "utilization_pct": 12,
       "assignment": "external_or_idle"
     }
   ],
   "history": [
-    {
-      "timestamp": 1784992477.003291,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992507.337603,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992537.657901,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992568.008579,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992598.373359,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992628.688841,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992659.041329,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992689.373189,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992719.693304,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992750.044034,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
     {
       "timestamp": 1784992780.386044,
       "four_ch": 3930,
@@ -1003,6 +933,76 @@
     },
     {
       "timestamp": 1784996089.91432,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784996120.253937,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784996150.631598,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784996180.933349,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784996211.275267,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784996241.637802,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784996272.012545,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784996302.340306,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784996332.720629,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784996363.069285,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784996393.385267,
       "four_ch": 3930,
       "sax": 54,
       "four_ch_target": 3930,
