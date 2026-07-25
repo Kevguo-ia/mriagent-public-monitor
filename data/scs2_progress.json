@@ -1,6 +1,6 @@
 {
   "schema_version": "scs2_segmentation_progress_v1",
-  "updated_at": "2026-07-25T10:32:39.442713+08:00",
+  "updated_at": "2026-07-25T10:37:42.972221+08:00",
   "mode": "full",
   "state": "error",
   "progress": {
@@ -114,21 +114,21 @@
       "gpu": 0,
       "memory_used_mib": 809,
       "memory_free_mib": 44680,
-      "utilization_pct": 0,
+      "utilization_pct": 3,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 1,
-      "memory_used_mib": 3573,
-      "memory_free_mib": 41916,
-      "utilization_pct": 4,
+      "memory_used_mib": 3575,
+      "memory_free_mib": 41914,
+      "utilization_pct": 0,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 2,
       "memory_used_mib": 19830,
       "memory_free_mib": 25659,
-      "utilization_pct": 47,
+      "utilization_pct": 92,
       "assignment": "external_or_idle"
     },
     {
@@ -142,14 +142,14 @@
       "gpu": 4,
       "memory_used_mib": 1137,
       "memory_free_mib": 44352,
-      "utilization_pct": 17,
+      "utilization_pct": 20,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 5,
       "memory_used_mib": 6454,
       "memory_free_mib": 39035,
-      "utilization_pct": 0,
+      "utilization_pct": 7,
       "assignment": "external_or_idle"
     },
     {
@@ -163,81 +163,11 @@
       "gpu": 7,
       "memory_used_mib": 1561,
       "memory_free_mib": 43928,
-      "utilization_pct": 22,
+      "utilization_pct": 28,
       "assignment": "external_or_idle"
     }
   ],
   "history": [
-    {
-      "timestamp": 1784943149.124864,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784943179.460205,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784943209.819374,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784943240.163148,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784943270.494198,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784943300.847952,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784943331.190752,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784943361.520306,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784943391.89941,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784943422.245178,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
     {
       "timestamp": 1784943452.572811,
       "four_ch": 3930,
@@ -1003,6 +933,76 @@
     },
     {
       "timestamp": 1784946759.442713,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784946789.815264,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784946820.175812,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784946850.509306,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784946880.883662,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784946911.253676,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784946941.584271,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784946971.946277,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784947002.28428,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784947032.610278,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784947062.972221,
       "four_ch": 3930,
       "sax": 54,
       "four_ch_target": 3930,
