@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v2",
-  "updated_at": "2026-07-25T21:15:53.360433+08:00",
+  "updated_at": "2026-07-25T21:20:57.057855+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "error",
   "state": "error",
@@ -21,56 +21,6 @@
     "sax_eta_hours": null
   },
   "history": [
-    {
-      "timestamp": 1784981738,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784981768,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784981799,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784981829,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784981859,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784981890,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784981920,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784981951,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784981981,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784982011,
-      "four_ch": 15000,
-      "sax": 14790
-    },
     {
       "timestamp": 1784982042,
       "four_ch": 15000,
@@ -620,6 +570,56 @@
       "timestamp": 1784985353,
       "four_ch": 15000,
       "sax": 14790
+    },
+    {
+      "timestamp": 1784985384,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784985414,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784985444,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784985475,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784985505,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784985536,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784985566,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784985596,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784985627,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784985657,
+      "four_ch": 15000,
+      "sax": 14790
     }
   ],
   "jobs": [
@@ -707,64 +707,64 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 1,
+      "free_mib": 45488,
       "utilization_pct": 0,
       "assignment": "待命",
       "assigned": false
     },
     {
       "gpu": 1,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 1,
+      "free_mib": 45488,
       "utilization_pct": 0,
       "assignment": "待命",
       "assigned": false
     },
     {
       "gpu": 2,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 1,
+      "free_mib": 45488,
       "utilization_pct": 0,
       "assignment": "待命",
       "assigned": false
     },
     {
       "gpu": 3,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 1,
+      "free_mib": 45488,
       "utilization_pct": 0,
       "assignment": "待命",
       "assigned": false
     },
     {
       "gpu": 4,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 1,
+      "free_mib": 45488,
       "utilization_pct": 0,
       "assignment": "待命",
       "assigned": false
     },
     {
       "gpu": 5,
-      "memory_mib": 2239,
-      "free_mib": 43250,
+      "memory_mib": 1,
+      "free_mib": 45488,
       "utilization_pct": 0,
-      "assignment": "外部任务",
+      "assignment": "待命",
       "assigned": false
     },
     {
       "gpu": 6,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 1,
+      "free_mib": 45488,
       "utilization_pct": 0,
       "assignment": "待命",
       "assigned": false
     },
     {
       "gpu": 7,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 1,
+      "free_mib": 45488,
       "utilization_pct": 0,
       "assignment": "待命",
       "assigned": false
