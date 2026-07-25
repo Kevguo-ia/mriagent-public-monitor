@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v2",
-  "updated_at": "2026-07-25T09:10:39.663303+08:00",
+  "updated_at": "2026-07-25T09:16:13.979382+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "error",
   "state": "error",
@@ -21,61 +21,6 @@
     "sax_eta_hours": null
   },
   "history": [
-    {
-      "timestamp": 1784938222,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784938252,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784938282,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784938313,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784938343,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784938374,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784938404,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784938434,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784938465,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784938495,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784938526,
-      "four_ch": 15000,
-      "sax": 14790
-    },
     {
       "timestamp": 1784938556,
       "four_ch": 15000,
@@ -620,6 +565,61 @@
       "timestamp": 1784941840,
       "four_ch": 15000,
       "sax": 14790
+    },
+    {
+      "timestamp": 1784941870,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784941900,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784941931,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784941961,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784941992,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784942022,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784942052,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784942083,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784942113,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784942144,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784942174,
+      "four_ch": 15000,
+      "sax": 14790
     }
   ],
   "jobs": [
@@ -725,7 +725,7 @@
       "gpu": 2,
       "memory_mib": 12765,
       "free_mib": 32724,
-      "utilization_pct": 26,
+      "utilization_pct": 7,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -757,7 +757,7 @@
       "gpu": 6,
       "memory_mib": 17263,
       "free_mib": 28226,
-      "utilization_pct": 100,
+      "utilization_pct": 95,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -765,7 +765,7 @@
       "gpu": 7,
       "memory_mib": 14257,
       "free_mib": 31232,
-      "utilization_pct": 12,
+      "utilization_pct": 68,
       "assignment": "外部任务",
       "assigned": false
     }
