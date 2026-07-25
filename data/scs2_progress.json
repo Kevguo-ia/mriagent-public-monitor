@@ -1,6 +1,6 @@
 {
   "schema_version": "scs2_segmentation_progress_v1",
-  "updated_at": "2026-07-26T00:30:00.927304+08:00",
+  "updated_at": "2026-07-26T00:35:04.426291+08:00",
   "mode": "full",
   "state": "error",
   "progress": {
@@ -112,9 +112,9 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_used_mib": 859,
-      "memory_free_mib": 44630,
-      "utilization_pct": 4,
+      "memory_used_mib": 1,
+      "memory_free_mib": 45488,
+      "utilization_pct": 0,
       "assignment": "external_or_idle"
     },
     {
@@ -142,102 +142,32 @@
       "gpu": 4,
       "memory_used_mib": 1679,
       "memory_free_mib": 43810,
-      "utilization_pct": 3,
+      "utilization_pct": 10,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 5,
       "memory_used_mib": 4266,
       "memory_free_mib": 41223,
-      "utilization_pct": 68,
+      "utilization_pct": 73,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 6,
       "memory_used_mib": 6055,
       "memory_free_mib": 39434,
-      "utilization_pct": 14,
+      "utilization_pct": 13,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 7,
       "memory_used_mib": 7069,
       "memory_free_mib": 38420,
-      "utilization_pct": 16,
+      "utilization_pct": 14,
       "assignment": "external_or_idle"
     }
   ],
   "history": [
-    {
-      "timestamp": 1784993387.224306,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784993417.605126,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784993447.932214,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784993478.259595,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784993508.648779,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784993539.011388,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784993569.342891,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784993599.715517,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784993630.081848,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784993660.436873,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
     {
       "timestamp": 1784993690.826314,
       "four_ch": 3930,
@@ -1003,6 +933,76 @@
     },
     {
       "timestamp": 1784997000.927304,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784997031.264967,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784997061.637317,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784997091.995267,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784997122.3273,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784997152.711293,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784997183.046313,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784997213.362114,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784997243.730911,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784997274.083838,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784997304.426291,
       "four_ch": 3930,
       "sax": 54,
       "four_ch_target": 3930,
