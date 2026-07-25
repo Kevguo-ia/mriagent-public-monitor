@@ -1,6 +1,6 @@
 {
   "schema_version": "scs2_segmentation_progress_v1",
-  "updated_at": "2026-07-26T00:09:46.298269+08:00",
+  "updated_at": "2026-07-26T00:14:49.914320+08:00",
   "mode": "full",
   "state": "error",
   "progress": {
@@ -112,132 +112,62 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_used_mib": 9616,
-      "memory_free_mib": 35873,
-      "utilization_pct": 100,
+      "memory_used_mib": 859,
+      "memory_free_mib": 44630,
+      "utilization_pct": 8,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 1,
-      "memory_used_mib": 11406,
-      "memory_free_mib": 34083,
-      "utilization_pct": 1,
+      "memory_used_mib": 2647,
+      "memory_free_mib": 42842,
+      "utilization_pct": 0,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 2,
-      "memory_used_mib": 10641,
-      "memory_free_mib": 34847,
-      "utilization_pct": 100,
+      "memory_used_mib": 1882,
+      "memory_free_mib": 43607,
+      "utilization_pct": 7,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 3,
-      "memory_used_mib": 8763,
-      "memory_free_mib": 36726,
+      "memory_used_mib": 1,
+      "memory_free_mib": 45488,
       "utilization_pct": 0,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 4,
-      "memory_used_mib": 10463,
-      "memory_free_mib": 35025,
-      "utilization_pct": 100,
+      "memory_used_mib": 1706,
+      "memory_free_mib": 43783,
+      "utilization_pct": 65,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 5,
-      "memory_used_mib": 12801,
-      "memory_free_mib": 32687,
-      "utilization_pct": 100,
+      "memory_used_mib": 4266,
+      "memory_free_mib": 41223,
+      "utilization_pct": 75,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 6,
-      "memory_used_mib": 13842,
-      "memory_free_mib": 31647,
-      "utilization_pct": 100,
+      "memory_used_mib": 5565,
+      "memory_free_mib": 39924,
+      "utilization_pct": 14,
       "assignment": "external_or_idle"
     },
     {
       "gpu": 7,
-      "memory_used_mib": 15826,
-      "memory_free_mib": 29663,
-      "utilization_pct": 100,
+      "memory_used_mib": 7069,
+      "memory_free_mib": 38420,
+      "utilization_pct": 4,
       "assignment": "external_or_idle"
     }
   ],
   "history": [
-    {
-      "timestamp": 1784992173.651375,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992204.002784,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992234.344118,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992264.661447,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992295.013789,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992325.341828,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992355.660163,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992386.015533,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992416.350405,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784992446.667535,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
     {
       "timestamp": 1784992477.003291,
       "four_ch": 3930,
@@ -1003,6 +933,76 @@
     },
     {
       "timestamp": 1784995786.298269,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784995816.658765,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784995847.010617,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784995877.320806,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784995907.640324,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784995938.07435,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784995968.486282,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784995998.837282,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784996029.203276,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784996059.557994,
+      "four_ch": 3930,
+      "sax": 54,
+      "four_ch_target": 3930,
+      "sax_target": 3930
+    },
+    {
+      "timestamp": 1784996089.91432,
       "four_ch": 3930,
       "sax": 54,
       "four_ch_target": 3930,
