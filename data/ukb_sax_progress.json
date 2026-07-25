@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v2",
-  "updated_at": "2026-07-26T00:19:45.233279+08:00",
+  "updated_at": "2026-07-26T00:24:49.167288+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "error",
   "state": "error",
@@ -21,56 +21,6 @@
     "sax_eta_hours": null
   },
   "history": [
-    {
-      "timestamp": 1784992767,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784992797,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784992828,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784992858,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784992888,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784992919,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784992949,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784992979,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784993010,
-      "four_ch": 15000,
-      "sax": 14790
-    },
-    {
-      "timestamp": 1784993040,
-      "four_ch": 15000,
-      "sax": 14790
-    },
     {
       "timestamp": 1784993071,
       "four_ch": 15000,
@@ -620,6 +570,56 @@
       "timestamp": 1784996385,
       "four_ch": 15000,
       "sax": 14790
+    },
+    {
+      "timestamp": 1784996416,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784996446,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784996476,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784996507,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784996537,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784996568,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784996598,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784996628,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784996659,
+      "four_ch": 15000,
+      "sax": 14790
+    },
+    {
+      "timestamp": 1784996689,
+      "four_ch": 15000,
+      "sax": 14790
     }
   ],
   "jobs": [
@@ -707,9 +707,9 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 1496,
-      "free_mib": 43993,
-      "utilization_pct": 5,
+      "memory_mib": 1290,
+      "free_mib": 44199,
+      "utilization_pct": 6,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -717,22 +717,22 @@
       "gpu": 1,
       "memory_mib": 2647,
       "free_mib": 42842,
-      "utilization_pct": 1,
+      "utilization_pct": 0,
       "assignment": "外部任务",
       "assigned": false
     },
     {
       "gpu": 2,
-      "memory_mib": 1882,
-      "free_mib": 43607,
-      "utilization_pct": 8,
-      "assignment": "外部任务",
+      "memory_mib": 1,
+      "free_mib": 45488,
+      "utilization_pct": 0,
+      "assignment": "待命",
       "assigned": false
     },
     {
       "gpu": 3,
-      "memory_mib": 1,
-      "free_mib": 45488,
+      "memory_mib": 669,
+      "free_mib": 44820,
       "utilization_pct": 0,
       "assignment": "待命",
       "assigned": false
@@ -741,7 +741,7 @@
       "gpu": 4,
       "memory_mib": 1679,
       "free_mib": 43810,
-      "utilization_pct": 12,
+      "utilization_pct": 20,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -749,7 +749,7 @@
       "gpu": 5,
       "memory_mib": 4266,
       "free_mib": 41223,
-      "utilization_pct": 86,
+      "utilization_pct": 91,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -757,7 +757,7 @@
       "gpu": 6,
       "memory_mib": 6055,
       "free_mib": 39434,
-      "utilization_pct": 7,
+      "utilization_pct": 17,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -765,7 +765,7 @@
       "gpu": 7,
       "memory_mib": 7069,
       "free_mib": 38420,
-      "utilization_pct": 7,
+      "utilization_pct": 22,
       "assignment": "外部任务",
       "assigned": false
     }
