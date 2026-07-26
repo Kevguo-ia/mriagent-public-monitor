@@ -1,16 +1,16 @@
 {
   "schema_version": "scs2_paired_progress_v2",
-  "updated_at": "2026-07-26T12:50:59.709194+08:00",
-  "state": "running",
-  "stage": "scs2_sax",
+  "updated_at": "2026-07-26T12:52:00.261290+08:00",
+  "state": "error",
+  "stage": "scs2_audit",
   "api_calls": 0,
   "cohort": {
     "paired_candidates": 3930,
     "four_ch_completed": 3930,
     "sax_exact_geometry_eligible": 3446,
     "sax_final_eligible": 3445,
-    "sax_completed": 3444,
-    "paired_completed": 3444
+    "sax_completed": 3445,
+    "paired_completed": 3445
   },
   "exclusions": {
     "coarse_slice_phase_gate": 316,
@@ -19,15 +19,15 @@
     "total": 485
   },
   "throughput": {
-    "sax_per_hour": 387.5,
-    "eta_hours": 0.0
+    "sax_per_hour": 371.6,
+    "eta_hours": null
   },
   "errors": {
-    "active": 0,
+    "active": 3,
     "historical_isolated": 1
   },
   "workers": {
-    "active": 1,
+    "active": 4,
     "expected": 7,
     "automatic_retry": false
   },
@@ -37,15 +37,15 @@
       "shard": 0,
       "gpu": null,
       "running": false,
-      "success": true,
-      "fatal": false
+      "success": false,
+      "fatal": true
     },
     {
       "sequence": "SAX",
       "shard": 1,
-      "gpu": null,
-      "running": false,
-      "success": true,
+      "gpu": 1,
+      "running": true,
+      "success": false,
       "fatal": false
     },
     {
@@ -53,39 +53,39 @@
       "shard": 2,
       "gpu": null,
       "running": false,
-      "success": true,
-      "fatal": false
+      "success": false,
+      "fatal": true
     },
     {
       "sequence": "SAX",
       "shard": 3,
-      "gpu": 3,
+      "gpu": null,
+      "running": false,
+      "success": false,
+      "fatal": true
+    },
+    {
+      "sequence": "SAX",
+      "shard": 4,
+      "gpu": 5,
       "running": true,
       "success": false,
       "fatal": false
     },
     {
       "sequence": "SAX",
-      "shard": 4,
-      "gpu": null,
-      "running": false,
-      "success": true,
-      "fatal": false
-    },
-    {
-      "sequence": "SAX",
       "shard": 5,
-      "gpu": null,
-      "running": false,
-      "success": true,
+      "gpu": 4,
+      "running": true,
+      "success": false,
       "fatal": false
     },
     {
       "sequence": "SAX",
       "shard": 6,
-      "gpu": null,
-      "running": false,
-      "success": true,
+      "gpu": 7,
+      "running": true,
+      "success": false,
       "fatal": false
     }
   ],
@@ -103,8 +103,8 @@
       "memory_used_mib": 4,
       "memory_free_mib": 45485,
       "utilization_pct": 0,
-      "assignment": "external_or_idle",
-      "assigned": false
+      "assignment": "SAX-1",
+      "assigned": true
     },
     {
       "gpu": 2,
@@ -116,27 +116,27 @@
     },
     {
       "gpu": 3,
-      "memory_used_mib": 677,
-      "memory_free_mib": 44812,
+      "memory_used_mib": 4,
+      "memory_free_mib": 45485,
       "utilization_pct": 0,
-      "assignment": "SAX-3",
-      "assigned": true
+      "assignment": "external_or_idle",
+      "assigned": false
     },
     {
       "gpu": 4,
       "memory_used_mib": 1679,
       "memory_free_mib": 43810,
-      "utilization_pct": 5,
-      "assignment": "external_or_idle",
-      "assigned": false
+      "utilization_pct": 3,
+      "assignment": "SAX-5",
+      "assigned": true
     },
     {
       "gpu": 5,
       "memory_used_mib": 4,
       "memory_free_mib": 45485,
       "utilization_pct": 0,
-      "assignment": "external_or_idle",
-      "assigned": false
+      "assignment": "SAX-4",
+      "assigned": true
     },
     {
       "gpu": 6,
@@ -151,8 +151,8 @@
       "memory_used_mib": 2299,
       "memory_free_mib": 43190,
       "utilization_pct": 0,
-      "assignment": "external_or_idle",
-      "assigned": false
+      "assignment": "SAX-6",
+      "assigned": true
     }
   ],
   "contracts": {
@@ -374,6 +374,16 @@
       "timestamp": 1785041460,
       "four_ch": 3930,
       "sax": 3444
+    },
+    {
+      "timestamp": 1785041490,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785041520,
+      "four_ch": 3930,
+      "sax": 3445
     }
   ]
 }
