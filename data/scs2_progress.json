@@ -1,6 +1,6 @@
 {
   "schema_version": "scs2_paired_progress_v2",
-  "updated_at": "2026-07-26T14:46:03.271406+08:00",
+  "updated_at": "2026-07-26T14:47:34.116271+08:00",
   "state": "running",
   "stage": "ukb_sax",
   "api_calls": 0,
@@ -35,48 +35,48 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_used_mib": 667,
-      "memory_free_mib": 44822,
+      "memory_used_mib": 677,
+      "memory_free_mib": 44812,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 1,
-      "memory_used_mib": 667,
-      "memory_free_mib": 44822,
+      "memory_used_mib": 23459,
+      "memory_free_mib": 22030,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 2,
-      "memory_used_mib": 667,
-      "memory_free_mib": 44822,
+      "memory_used_mib": 23137,
+      "memory_free_mib": 22352,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 3,
-      "memory_used_mib": 667,
-      "memory_free_mib": 44822,
-      "utilization_pct": 0,
+      "memory_used_mib": 23137,
+      "memory_free_mib": 22352,
+      "utilization_pct": 100,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 4,
-      "memory_used_mib": 2342,
-      "memory_free_mib": 43147,
-      "utilization_pct": 21,
+      "memory_used_mib": 2352,
+      "memory_free_mib": 43137,
+      "utilization_pct": 3,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 5,
-      "memory_used_mib": 667,
-      "memory_free_mib": 44822,
+      "memory_used_mib": 697,
+      "memory_free_mib": 44792,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
@@ -91,9 +91,9 @@
     },
     {
       "gpu": 7,
-      "memory_used_mib": 2962,
-      "memory_free_mib": 42527,
-      "utilization_pct": 0,
+      "memory_used_mib": 30432,
+      "memory_free_mib": 15057,
+      "utilization_pct": 100,
       "assignment": "external_or_idle",
       "assigned": false
     }
@@ -113,21 +113,6 @@
   },
   "next_stage": "ukb_sax",
   "history": [
-    {
-      "timestamp": 1785044760,
-      "four_ch": 3930,
-      "sax": 3445
-    },
-    {
-      "timestamp": 1785044791,
-      "four_ch": 3930,
-      "sax": 3445
-    },
-    {
-      "timestamp": 1785044821,
-      "four_ch": 3930,
-      "sax": 3445
-    },
     {
       "timestamp": 1785044851,
       "four_ch": 3930,
@@ -710,6 +695,21 @@
     },
     {
       "timestamp": 1785048363,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785048394,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785048424,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785048454,
       "four_ch": 3930,
       "sax": 3445
     }
