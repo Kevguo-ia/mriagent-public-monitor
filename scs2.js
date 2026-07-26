@@ -5,6 +5,7 @@ const esc = (value) => String(value ?? "—").replace(/[&<>"']/g, (char) => ({"&
 
 function statusText(data) {
   if (data.errors?.active) return "错误停机";
+  if (data.state === "error") return "后续任务已停止";
   const map = {
     waiting: "等待", running: "后台运行", starting: "正在启动", complete: "全部完成",
     scs2_remaining_preflight: "重建预检", scs2_audit: "SCS_2审计", scs2_complete: "SCS_2完成",
@@ -75,7 +76,7 @@ function render(data) {
   const candidates = Number(cohort.paired_candidates || 0), four = Number(cohort.four_ch_completed || 0), target = Number(cohort.sax_final_eligible || 0), sax = Number(cohort.sax_completed || 0), paired = Number(cohort.paired_completed || sax);
   const state = $("#state");
   state.textContent = statusText(data);
-  state.classList.toggle("error", Boolean(data.errors?.active));
+  state.classList.toggle("error", Boolean(data.errors?.active) || data.state === "error");
   $("#updated").textContent = data.updated_at ? new Date(data.updated_at).toLocaleString("zh-CN", {hour12:false}) : "—";
   $("#candidate-count").textContent = fmt(candidates);
   $("#four-count").textContent = `${fmt(four)} / ${fmt(candidates)}`;
