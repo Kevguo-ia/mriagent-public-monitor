@@ -1,6 +1,6 @@
 {
   "schema_version": "scs2_paired_progress_v2",
-  "updated_at": "2026-07-26T17:34:39.528344+08:00",
+  "updated_at": "2026-07-26T17:35:40.098334+08:00",
   "state": "complete",
   "stage": "all_complete",
   "api_calls": 0,
@@ -61,7 +61,7 @@
       "gpu": 3,
       "memory_used_mib": 12786,
       "memory_free_mib": 32703,
-      "utilization_pct": 10,
+      "utilization_pct": 100,
       "assignment": "external_or_idle",
       "assigned": false
     },
@@ -69,7 +69,7 @@
       "gpu": 4,
       "memory_used_mib": 1679,
       "memory_free_mib": 43810,
-      "utilization_pct": 11,
+      "utilization_pct": 6,
       "assignment": "external_or_idle",
       "assigned": false
     },
@@ -77,14 +77,14 @@
       "gpu": 5,
       "memory_used_mib": 20745,
       "memory_free_mib": 24744,
-      "utilization_pct": 0,
+      "utilization_pct": 100,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 6,
-      "memory_used_mib": 17080,
-      "memory_free_mib": 28409,
+      "memory_used_mib": 18124,
+      "memory_free_mib": 27365,
       "utilization_pct": 100,
       "assignment": "external_or_idle",
       "assigned": false
@@ -93,7 +93,7 @@
       "gpu": 7,
       "memory_used_mib": 8278,
       "memory_free_mib": 37211,
-      "utilization_pct": 0,
+      "utilization_pct": 100,
       "assignment": "external_or_idle",
       "assigned": false
     }
@@ -113,16 +113,6 @@
   },
   "next_stage": "all_complete",
   "history": [
-    {
-      "timestamp": 1785054874,
-      "four_ch": 3930,
-      "sax": 3445
-    },
-    {
-      "timestamp": 1785054904,
-      "four_ch": 3930,
-      "sax": 3445
-    },
     {
       "timestamp": 1785054935,
       "four_ch": 3930,
@@ -710,6 +700,16 @@
     },
     {
       "timestamp": 1785058480,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785058510,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785058540,
       "four_ch": 3930,
       "sax": 3445
     }
