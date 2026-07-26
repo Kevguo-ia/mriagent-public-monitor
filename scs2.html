@@ -3,45 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SCS 第二批分割进度</title>
-  <link rel="stylesheet" href="scs2.css?v=1">
+  <title>SCS_2 · 双序列分割进度</title>
+  <link rel="stylesheet" href="scs2.css?v=2">
 </head>
 <body>
   <main>
     <header>
       <div>
-        <p class="eyebrow">CMR SEGMENTATION · READ ONLY</p>
-        <h1>SCS 第二批分割缓存</h1>
-        <p id="stage-detail">等待安全状态快照</p>
+        <p class="eyebrow">SCS_2 · PAIRED CMR CACHE</p>
+        <h1>双序列分割进度</h1>
+        <p class="subtitle">仅统计同时拥有4CH与SAX的病例；页面每15秒读取一次匿名聚合快照。</p>
       </div>
-      <div class="header-status"><span id="state" class="badge">连接中</span><small id="updated">—</small></div>
+      <div class="status-block">
+        <span id="state" class="badge">连接中</span>
+        <time id="updated">—</time>
+      </div>
     </header>
 
-    <section class="summary" aria-label="总体进度">
-      <article><span>4CH</span><strong id="four-count">—</strong><div class="bar"><i id="four-bar"></i></div><small id="four-meta">—</small></article>
-      <article><span>SAX</span><strong id="sax-count">—</strong><div class="bar"><i id="sax-bar"></i></div><small id="sax-meta">—</small></article>
-      <article><span>实时吞吐</span><strong id="rate">—</strong><small id="eta">—</small></article>
-      <article><span>错误</span><strong id="errors">—</strong><small>错误即停 · 不自动重试</small></article>
+    <section class="stats" aria-label="核心指标">
+      <article class="stat"><span>双序列候选</span><strong id="candidate-count">—</strong><small>4CH ∩ SAX</small></article>
+      <article class="stat"><span>4CH已完成</span><strong id="four-count">—</strong><small id="four-meta">—</small></article>
+      <article class="stat"><span>SAX严格可用</span><strong id="sax-count">—</strong><small id="sax-meta">—</small></article>
+      <article class="stat"><span>当前配对可用</span><strong id="paired-count">—</strong><small id="paired-meta">—</small></article>
     </section>
 
-    <section class="layout">
+    <section class="panel pipeline-panel">
+      <div class="panel-head">
+        <div><p class="eyebrow">COHORT FLOW</p><h2>病例口径与门禁</h2></div>
+        <span id="next-stage" class="quiet">—</span>
+      </div>
+      <div id="pipeline" class="pipeline" aria-label="配对病例处理流程"></div>
+      <div id="exclusion-note" class="exclusion-note">—</div>
+    </section>
+
+    <section class="two-col">
       <article class="panel">
-        <div class="panel-head"><div><p class="eyebrow">PROGRESS</p><h2>累计完成</h2></div><span class="legend"><i></i>4CH <i></i>SAX</span></div>
-        <svg id="trend" viewBox="0 0 760 230" role="img" aria-label="4CH与SAX累计完成趋势"></svg>
+        <div class="panel-head">
+          <div><p class="eyebrow">LIVE TREND</p><h2>SAX累计完成</h2></div>
+          <div class="rate"><strong id="rate">—</strong><small id="eta">—</small></div>
+        </div>
+        <svg id="trend" viewBox="0 0 760 250" role="img" aria-label="SAX累计完成趋势"></svg>
       </article>
       <article class="panel">
-        <div class="panel-head"><div><p class="eyebrow">CONTRACT</p><h2>运行门禁</h2></div></div>
+        <div class="panel-head"><div><p class="eyebrow">SAFETY</p><h2>运行契约</h2></div></div>
         <dl id="contracts"></dl>
       </article>
     </section>
 
     <section class="panel">
-      <div class="panel-head"><div><p class="eyebrow">GPU STATUS</p><h2>七卡分片</h2></div><span id="workers" class="badge">—</span></div>
+      <div class="panel-head">
+        <div><p class="eyebrow">GPU STATUS</p><h2>分片与资源</h2></div>
+        <span id="workers" class="badge">—</span>
+      </div>
       <div id="gpus" class="gpu-grid"></div>
     </section>
 
-    <footer>仅发布匿名聚合进度、资源状态与错误类别；不包含病例标识、路径或临床内容。</footer>
+    <footer>只发布聚合数量、技术门禁和资源状态；不包含病例标识、文件路径、临床文本或密钥。</footer>
   </main>
-  <script src="scs2.js?v=1"></script>
+  <script src="scs2.js?v=2"></script>
 </body>
 </html>
