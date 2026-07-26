@@ -1,6 +1,6 @@
 {
   "schema_version": "scs2_paired_progress_v2",
-  "updated_at": "2026-07-26T13:15:13.364645+08:00",
+  "updated_at": "2026-07-26T13:16:13.903637+08:00",
   "state": "error",
   "stage": "ukb_sax",
   "api_calls": 0,
@@ -19,7 +19,7 @@
     "total": 485
   },
   "throughput": {
-    "sax_per_hour": 60.4,
+    "sax_per_hour": 46.3,
     "eta_hours": null
   },
   "errors": {
@@ -555,6 +555,16 @@
     },
     {
       "timestamp": 1785042913,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785042944,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785042974,
       "four_ch": 3930,
       "sax": 3445
     }
