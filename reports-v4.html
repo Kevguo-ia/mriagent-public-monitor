@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="UKB 15000与四川第二批报告生成匿名聚合进度">
+  <title>MRIAgent · 批量报告进度</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="reports-v4.css?v=1">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="brand-mark">M</span><span><strong>MRIAgent</strong><small>Cached cohort reports</small></span></a>
+    <nav><a href="evidence-v4.html">Evidence v4</a><span class="connection"><i></i><b id="connection">连接中</b></span></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div><span class="eyebrow">DEEPSEEK-V4-PRO · GRAPH-GROUNDED</span><h1>批量报告实时进度</h1><p>既有4CH / SAX分割缓存 → 确定性定量 → Evidence Graph → 报告与安全门禁</p></div>
+      <div class="stage"><span>当前阶段</span><strong id="stage">读取状态</strong><small id="updated">—</small></div>
+    </section>
+
+    <section class="summary" aria-label="总进度">
+      <article><span>总队列</span><strong id="total">0</strong><small>双序列配对病例</small></article>
+      <article><span>已处理</span><strong id="completed">0</strong><small id="completed-note">0%</small></article>
+      <article><span>成功报告</span><strong id="ok">0</strong><small>严格验证通过</small></article>
+      <article class="error"><span>错误</span><strong id="errors">0</strong><small>失败不自动重试</small></article>
+    </section>
+
+    <section class="overall">
+      <div class="overall-copy"><span>总体完成率</span><strong id="overall-percent">0.00%</strong></div>
+      <div class="track" aria-label="总体完成率"><i id="overall-bar"></i></div>
+    </section>
+
+    <section class="cohorts" id="cohorts" aria-label="分队列进度"></section>
+
+    <section class="lower">
+      <article class="panel">
+        <header><span>WORKFLOW</span><h2>处理链路</h2></header>
+        <ol class="pipeline">
+          <li class="done"><b>01</b><span>Mask缓存审计<small>模型版本、形状、标签、时相</small></span></li>
+          <li class="done"><b>02</b><span>确定性定量<small>ED / ES与心功能指标</small></span></li>
+          <li class="active"><b>03</b><span>Evidence + Report<small>每例2次文本API</small></span></li>
+          <li><b>04</b><span>最终严格审计<small>Graph、路由与产物完整性</small></span></li>
+        </ol>
+      </article>
+      <article class="panel runtime">
+        <header><span>RUNTIME CONTRACT</span><h2>运行状态</h2></header>
+        <dl>
+          <div><dt>活跃Worker</dt><dd id="workers">0</dd></div>
+          <div><dt>累计API调用</dt><dd id="api">0</dd></div>
+          <div><dt>文本模型</dt><dd>deepseek-v4-pro</dd></div>
+          <div><dt>自动重试</dt><dd id="retry">关闭</dd></div>
+        </dl>
+        <p>仅展示匿名聚合数；不公开病例编号、路径、临床文本、报告内容或密钥。</p>
+      </article>
+    </section>
+
+    <footer><span>15秒自动刷新</span><span id="footer-state">等待数据</span></footer>
+  </main>
+  <script src="reports-v4.js?v=1"></script>
+</body>
+</html>
