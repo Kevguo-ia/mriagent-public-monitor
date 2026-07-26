@@ -1,954 +1,199 @@
 {
-  "schema_version": "scs2_segmentation_progress_v1",
-  "updated_at": "2026-07-26T00:55:18.086774+08:00",
-  "mode": "full",
-  "state": "waiting",
-  "progress": {
+  "schema_version": "scs2_paired_progress_v2",
+  "updated_at": "2026-07-26T12:32:49.250645+08:00",
+  "state": "running",
+  "stage": "scs2_sax",
+  "api_calls": 0,
+  "cohort": {
+    "paired_candidates": 3930,
     "four_ch_completed": 3930,
-    "four_ch_target": 3930,
-    "sax_completed": 0,
-    "sax_target": 3930
+    "sax_exact_geometry_eligible": 3446,
+    "sax_final_eligible": 3445,
+    "sax_completed": 3316,
+    "paired_completed": 3316
+  },
+  "exclusions": {
+    "coarse_slice_phase_gate": 316,
+    "exact_dicom_geometry_gate": 168,
+    "reconstruction_gate": 1,
+    "total": 485
   },
   "throughput": {
-    "four_ch_per_hour": 0.0,
-    "four_ch_eta_hours": null,
     "sax_per_hour": 0.0,
-    "sax_eta_hours": null
+    "eta_hours": null
   },
   "errors": {
-    "total": 0,
-    "types": {}
-  },
-  "api_calls": 0,
-  "workers": {
     "active": 0,
-    "waiting": 0,
+    "historical_isolated": 1
+  },
+  "workers": {
+    "active": 7,
+    "expected": 7,
     "automatic_retry": false
   },
   "jobs": [
     {
-      "sequence": "4CH",
+      "sequence": "SAX",
       "shard": 0,
-      "completed": 1310,
-      "selected": 1310,
-      "state": "complete",
-      "gpu": null
+      "gpu": 0,
+      "running": true,
+      "success": false,
+      "fatal": false
     },
     {
-      "sequence": "4CH",
+      "sequence": "SAX",
       "shard": 1,
-      "completed": 1310,
-      "selected": 1310,
-      "state": "complete",
-      "gpu": null
+      "gpu": 1,
+      "running": true,
+      "success": false,
+      "fatal": false
     },
     {
-      "sequence": "4CH",
+      "sequence": "SAX",
       "shard": 2,
-      "completed": 1310,
-      "selected": 1310,
-      "state": "complete",
-      "gpu": null
+      "gpu": 2,
+      "running": true,
+      "success": false,
+      "fatal": false
+    },
+    {
+      "sequence": "SAX",
+      "shard": 3,
+      "gpu": 3,
+      "running": true,
+      "success": false,
+      "fatal": false
+    },
+    {
+      "sequence": "SAX",
+      "shard": 4,
+      "gpu": 5,
+      "running": true,
+      "success": false,
+      "fatal": false
+    },
+    {
+      "sequence": "SAX",
+      "shard": 5,
+      "gpu": 4,
+      "running": true,
+      "success": false,
+      "fatal": false
+    },
+    {
+      "sequence": "SAX",
+      "shard": 6,
+      "gpu": 7,
+      "running": true,
+      "success": false,
+      "fatal": false
     }
   ],
   "gpus": [
     {
       "gpu": 0,
-      "memory_used_mib": 1,
-      "memory_free_mib": 45488,
+      "memory_used_mib": 667,
+      "memory_free_mib": 44822,
       "utilization_pct": 0,
-      "assignment": "external_or_idle"
+      "assignment": "SAX-0",
+      "assigned": true
     },
     {
       "gpu": 1,
-      "memory_used_mib": 2647,
-      "memory_free_mib": 42842,
-      "utilization_pct": 1,
-      "assignment": "external_or_idle"
+      "memory_used_mib": 667,
+      "memory_free_mib": 44822,
+      "utilization_pct": 0,
+      "assignment": "SAX-1",
+      "assigned": true
     },
     {
       "gpu": 2,
-      "memory_used_mib": 1,
-      "memory_free_mib": 45488,
+      "memory_used_mib": 667,
+      "memory_free_mib": 44822,
       "utilization_pct": 0,
-      "assignment": "external_or_idle"
+      "assignment": "SAX-2",
+      "assigned": true
     },
     {
       "gpu": 3,
-      "memory_used_mib": 1,
-      "memory_free_mib": 45488,
+      "memory_used_mib": 667,
+      "memory_free_mib": 44822,
       "utilization_pct": 0,
-      "assignment": "external_or_idle"
+      "assignment": "SAX-3",
+      "assigned": true
     },
     {
       "gpu": 4,
-      "memory_used_mib": 1679,
-      "memory_free_mib": 43810,
-      "utilization_pct": 3,
-      "assignment": "external_or_idle"
+      "memory_used_mib": 2342,
+      "memory_free_mib": 43147,
+      "utilization_pct": 23,
+      "assignment": "SAX-5",
+      "assigned": true
     },
     {
       "gpu": 5,
-      "memory_used_mib": 4266,
-      "memory_free_mib": 41223,
-      "utilization_pct": 76,
-      "assignment": "external_or_idle"
+      "memory_used_mib": 667,
+      "memory_free_mib": 44822,
+      "utilization_pct": 0,
+      "assignment": "SAX-4",
+      "assigned": true
     },
     {
       "gpu": 6,
-      "memory_used_mib": 1,
-      "memory_free_mib": 45488,
+      "memory_used_mib": 4947,
+      "memory_free_mib": 40542,
       "utilization_pct": 0,
-      "assignment": "external_or_idle"
+      "assignment": "external_or_idle",
+      "assigned": false
     },
     {
       "gpu": 7,
-      "memory_used_mib": 7069,
-      "memory_free_mib": 38420,
-      "utilization_pct": 18,
-      "assignment": "external_or_idle"
+      "memory_used_mib": 2962,
+      "memory_free_mib": 42527,
+      "utilization_pct": 0,
+      "assignment": "SAX-6",
+      "assigned": true
     }
   ],
+  "contracts": {
+    "paired_only": true,
+    "four_ch_batch": 128,
+    "sax_patch_batch": 32,
+    "sax_patch_size": [
+      20,
+      256,
+      224
+    ],
+    "model_versions_verified": true,
+    "api_calls": 0,
+    "old_results_overwritten": false
+  },
+  "next_stage": "UKB 15000 remaining SAX",
   "history": [
     {
-      "timestamp": 1784994905.305293,
+      "timestamp": 1785040270,
       "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
+      "sax": 3316
     },
     {
-      "timestamp": 1784994935.668665,
+      "timestamp": 1785040301,
       "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
+      "sax": 3316
     },
     {
-      "timestamp": 1784994966.083311,
+      "timestamp": 1785040331,
       "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
+      "sax": 3316
     },
     {
-      "timestamp": 1784994996.514308,
+      "timestamp": 1785040339,
       "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
+      "sax": 3316
     },
     {
-      "timestamp": 1784995026.859089,
+      "timestamp": 1785040369,
       "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995057.223937,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995087.603776,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995117.98604,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995148.339291,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995178.693468,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995209.078281,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995239.467464,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995269.902354,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995300.263297,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995330.601306,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995360.993308,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995391.43135,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995421.79227,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995452.15439,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995482.547601,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995512.947625,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995543.26246,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995573.624339,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995604.031669,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995634.469307,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995664.789318,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995695.157005,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995725.504202,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995755.906261,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995786.298269,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995816.658765,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995847.010617,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995877.320806,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995907.640324,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995938.07435,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995968.486282,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784995998.837282,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996029.203276,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996059.557994,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996089.91432,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996120.253937,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996150.631598,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996180.933349,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996211.275267,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996241.637802,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996272.012545,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996302.340306,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996332.720629,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996363.069285,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996393.385267,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996423.747117,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996454.094704,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996484.43231,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996514.832268,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996545.182338,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996575.545985,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996605.90392,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996636.242306,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996666.583269,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996696.955695,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996727.308315,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996757.630051,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996787.990452,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996818.343286,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996848.707263,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996879.102278,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996909.534296,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996939.90511,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784996970.565413,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997000.927304,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997031.264967,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997061.637317,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997091.995267,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997122.3273,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997152.711293,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997183.046313,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997213.362114,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997243.730911,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997274.083838,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997304.426291,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997334.765771,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997365.111098,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997395.385303,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997425.761381,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997456.115261,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997486.426495,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997516.768135,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997547.119261,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997577.464279,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997607.837274,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997638.171314,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997668.503363,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997698.866514,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997729.221287,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997759.54126,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997789.881443,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997820.223325,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997850.566286,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997880.913567,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997911.249284,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997941.57126,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784997971.942033,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784998002.288266,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784998032.61026,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784998062.962416,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784998093.298691,
-      "four_ch": 3930,
-      "sax": 0,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784998123.644407,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3614
-    },
-    {
-      "timestamp": 1784998154.007334,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3614
-    },
-    {
-      "timestamp": 1784998184.338425,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3614
-    },
-    {
-      "timestamp": 1784998214.623673,
-      "four_ch": 3930,
-      "sax": 54,
-      "four_ch_target": 3930,
-      "sax_target": 3614
-    },
-    {
-      "timestamp": 1784998244.984629,
-      "four_ch": 3930,
-      "sax": 3,
-      "four_ch_target": 3930,
-      "sax_target": 3614
-    },
-    {
-      "timestamp": 1784998275.339316,
-      "four_ch": 3930,
-      "sax": 9,
-      "four_ch_target": 3930,
-      "sax_target": 3614
-    },
-    {
-      "timestamp": 1784998305.659912,
-      "four_ch": 3930,
-      "sax": 9,
-      "four_ch_target": 3930,
-      "sax_target": 3614
-    },
-    {
-      "timestamp": 1784998336.020181,
-      "four_ch": 3930,
-      "sax": 9,
-      "four_ch_target": 3930,
-      "sax_target": 3614
-    },
-    {
-      "timestamp": 1784998366.381859,
-      "four_ch": 3930,
-      "sax": 9,
-      "four_ch_target": 3930,
-      "sax_target": 3614
-    },
-    {
-      "timestamp": 1784998396.702144,
-      "four_ch": 3930,
-      "sax": 9,
-      "four_ch_target": 3930,
-      "sax_target": 3614
-    },
-    {
-      "timestamp": 1784998427.063635,
-      "four_ch": 3930,
-      "sax": 9,
-      "four_ch_target": 3930,
-      "sax_target": 3614
-    },
-    {
-      "timestamp": 1784998457.40686,
-      "four_ch": 3930,
-      "sax": 0,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784998487.729309,
-      "four_ch": 3930,
-      "sax": 0,
-      "four_ch_target": 3930,
-      "sax_target": 3930
-    },
-    {
-      "timestamp": 1784998518.086774,
-      "four_ch": 3930,
-      "sax": 0,
-      "four_ch_target": 3930,
-      "sax_target": 3930
+      "sax": 3316
     }
   ]
 }
