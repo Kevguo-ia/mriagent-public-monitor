@@ -1,7 +1,7 @@
 {
   "schema_version": "scs2_paired_progress_v2",
-  "updated_at": "2026-07-26T12:54:01.425551+08:00",
-  "state": "running",
+  "updated_at": "2026-07-26T12:55:01.926898+08:00",
+  "state": "error",
   "stage": "ukb_sax",
   "api_calls": 0,
   "cohort": {
@@ -19,7 +19,7 @@
     "total": 485
   },
   "throughput": {
-    "sax_per_hour": 338.7,
+    "sax_per_hour": 324.4,
     "eta_hours": null
   },
   "errors": {
@@ -43,56 +43,56 @@
     },
     {
       "gpu": 1,
-      "memory_used_mib": 667,
-      "memory_free_mib": 44822,
+      "memory_used_mib": 4,
+      "memory_free_mib": 45485,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 2,
-      "memory_used_mib": 667,
-      "memory_free_mib": 44822,
+      "memory_used_mib": 4,
+      "memory_free_mib": 45485,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 3,
-      "memory_used_mib": 667,
-      "memory_free_mib": 44822,
+      "memory_used_mib": 4,
+      "memory_free_mib": 45485,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 4,
-      "memory_used_mib": 2342,
-      "memory_free_mib": 43147,
-      "utilization_pct": 3,
+      "memory_used_mib": 1679,
+      "memory_free_mib": 43810,
+      "utilization_pct": 23,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 5,
-      "memory_used_mib": 667,
-      "memory_free_mib": 44822,
+      "memory_used_mib": 4,
+      "memory_free_mib": 45485,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 6,
-      "memory_used_mib": 16989,
-      "memory_free_mib": 28500,
-      "utilization_pct": 100,
+      "memory_used_mib": 4947,
+      "memory_free_mib": 40542,
+      "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 7,
-      "memory_used_mib": 2962,
-      "memory_free_mib": 42527,
+      "memory_used_mib": 2299,
+      "memory_free_mib": 43190,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
@@ -345,6 +345,16 @@
     },
     {
       "timestamp": 1785041641,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785041672,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785041702,
       "four_ch": 3930,
       "sax": 3445
     }
