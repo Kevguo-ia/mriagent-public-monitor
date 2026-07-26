@@ -1,6 +1,6 @@
 {
   "schema_version": "scs2_paired_progress_v2",
-  "updated_at": "2026-07-26T14:51:36.460144+08:00",
+  "updated_at": "2026-07-26T14:53:07.321372+08:00",
   "state": "running",
   "stage": "ukb_sax",
   "api_calls": 0,
@@ -35,14 +35,6 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_used_mib": 697,
-      "memory_free_mib": 44792,
-      "utilization_pct": 0,
-      "assignment": "external_or_idle",
-      "assigned": false
-    },
-    {
-      "gpu": 1,
       "memory_used_mib": 677,
       "memory_free_mib": 44812,
       "utilization_pct": 0,
@@ -50,33 +42,41 @@
       "assigned": false
     },
     {
-      "gpu": 2,
-      "memory_used_mib": 23257,
-      "memory_free_mib": 22232,
-      "utilization_pct": 100,
-      "assignment": "external_or_idle",
-      "assigned": false
-    },
-    {
-      "gpu": 3,
-      "memory_used_mib": 23337,
-      "memory_free_mib": 22152,
+      "gpu": 1,
+      "memory_used_mib": 23297,
+      "memory_free_mib": 22192,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
+      "gpu": 2,
+      "memory_used_mib": 677,
+      "memory_free_mib": 44812,
+      "utilization_pct": 0,
+      "assignment": "external_or_idle",
+      "assigned": false
+    },
+    {
+      "gpu": 3,
+      "memory_used_mib": 23177,
+      "memory_free_mib": 22312,
+      "utilization_pct": 100,
+      "assignment": "external_or_idle",
+      "assigned": false
+    },
+    {
       "gpu": 4,
-      "memory_used_mib": 24972,
-      "memory_free_mib": 20517,
-      "utilization_pct": 15,
+      "memory_used_mib": 25052,
+      "memory_free_mib": 20437,
+      "utilization_pct": 23,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 5,
-      "memory_used_mib": 23437,
-      "memory_free_mib": 22052,
+      "memory_used_mib": 23377,
+      "memory_free_mib": 22112,
       "utilization_pct": 100,
       "assignment": "external_or_idle",
       "assigned": false
@@ -91,8 +91,8 @@
     },
     {
       "gpu": 7,
-      "memory_used_mib": 7752,
-      "memory_free_mib": 37737,
+      "memory_used_mib": 8423,
+      "memory_free_mib": 37065,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
@@ -113,21 +113,6 @@
   },
   "next_stage": "ukb_sax",
   "history": [
-    {
-      "timestamp": 1785045093,
-      "four_ch": 3930,
-      "sax": 3445
-    },
-    {
-      "timestamp": 1785045124,
-      "four_ch": 3930,
-      "sax": 3445
-    },
-    {
-      "timestamp": 1785045154,
-      "four_ch": 3930,
-      "sax": 3445
-    },
     {
       "timestamp": 1785045184,
       "four_ch": 3930,
@@ -710,6 +695,21 @@
     },
     {
       "timestamp": 1785048696,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785048727,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785048757,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785048787,
       "four_ch": 3930,
       "sax": 3445
     }
