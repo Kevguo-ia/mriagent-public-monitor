@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v3",
-  "updated_at": "2026-07-26T15:32:39.912176+08:00",
+  "updated_at": "2026-07-26T15:33:40.190544+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "ukb_sax",
   "state": "running",
@@ -8,8 +8,8 @@
   "queue_qualified": 16206,
   "reserve": 1000,
   "four_ch_completed": 15000,
-  "sax_completed": 14996,
-  "sax_masks_completed": 749800,
+  "sax_completed": 14998,
+  "sax_masks_completed": 749900,
   "errors": 0,
   "error_types": {},
   "rates": {
@@ -19,16 +19,6 @@
     "sax_eta_hours": null
   },
   "history": [
-    {
-      "timestamp": 1785047591,
-      "four_ch": 15000,
-      "sax": 14815
-    },
-    {
-      "timestamp": 1785047621,
-      "four_ch": 15000,
-      "sax": 14815
-    },
     {
       "timestamp": 1785047651,
       "four_ch": 15000,
@@ -618,6 +608,16 @@
       "timestamp": 1785051160,
       "four_ch": 15000,
       "sax": 14996
+    },
+    {
+      "timestamp": 1785051190,
+      "four_ch": 15000,
+      "sax": 14997
+    },
+    {
+      "timestamp": 1785051220,
+      "four_ch": 15000,
+      "sax": 14998
     }
   ],
   "jobs": [
@@ -664,7 +664,7 @@
     {
       "sequence": "SAX",
       "shard": 5,
-      "completed": 22,
+      "completed": 24,
       "selected": 26,
       "state": "running",
       "gpu": 4
@@ -681,8 +681,8 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 767,
-      "free_mib": 44722,
+      "memory_mib": 903,
+      "free_mib": 44586,
       "utilization_pct": 10,
       "assignment": "待命",
       "assigned": false
@@ -713,17 +713,17 @@
     },
     {
       "gpu": 4,
-      "memory_mib": 24772,
-      "free_mib": 20717,
-      "utilization_pct": 100,
+      "memory_mib": 2372,
+      "free_mib": 43117,
+      "utilization_pct": 3,
       "assignment": "SAX shard 5",
       "assigned": true
     },
     {
       "gpu": 5,
-      "memory_mib": 1707,
-      "free_mib": 43782,
-      "utilization_pct": 0,
+      "memory_mib": 20745,
+      "free_mib": 24744,
+      "utilization_pct": 100,
       "assignment": "外部任务",
       "assigned": false
     },
