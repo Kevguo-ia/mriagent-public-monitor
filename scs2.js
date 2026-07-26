@@ -19,12 +19,13 @@ function pipeline(data) {
   const exact = Number(cohort.sax_exact_geometry_eligible || 0);
   const target = Number(cohort.sax_final_eligible || exact);
   const completed = Number(cohort.sax_completed || 0);
+  const audited = ["scs2_complete", "ukb_prepare", "ukb_sax", "ukb_audit", "all_complete"].includes(String(data.stage)) ? target : 0;
   const steps = [
     ["双序列候选", candidates, candidates, "4CH与SAX同时存在"],
     ["精确DICOM网格", exact, candidates, "层数、时相、方向、位置"],
     ["实际重建合格", target, candidates, "逐时相层面一致"],
     ["SAX缓存完成", completed, target, "正式模型 · batch 32"],
-    ["严格审计", data.stage === "all_complete" || String(data.stage).includes("ukb") ? target : completed, target, "可读性、形状、仿射、标签"]
+    ["严格审计", audited, target, "分割结束后执行"]
   ];
   $("#pipeline").innerHTML = steps.map(([label, value, total, note], index) => {
     const progress = pct(value, total);
@@ -34,6 +35,22 @@ function pipeline(data) {
       <div class="mini-bar"><i style="width:${progress.toFixed(1)}%"></i></div>
     </div>`;
   }).join("");
+}
+
+function renderUkb(data) {
+  const target = Number(data.eligible || 15000);
+  const four = Number(data.four_ch_completed || 0);
+  const sax = Number(data.sax_completed || 0);
+  const remaining = Math.max(0, target - sax);
+  const stateMap = {waiting_for_scs2:"等待SCS_2",running:"后台续跑",complete:"完成",error:"已停止"};
+  const badge = $("#ukb-state");
+  badge.textContent = stateMap[data.state] || data.state || "等待";
+  badge.classList.toggle("error", Number(data.errors || 0) > 0);
+  $("#ukb-four").textContent = `${fmt(four)} / ${fmt(target)}`;
+  $("#ukb-sax").textContent = `${fmt(sax)} / ${fmt(target)}`;
+  $("#ukb-remaining").textContent = remaining ? `待处理 ${fmt(remaining)} 例` : "等待严格审计";
+  $("#ukb-bar").style.width = `${pct(sax,target).toFixed(1)}%`;
+  $("#ukb-updated").textContent = data.updated_at ? `快照 ${new Date(data.updated_at).toLocaleString("zh-CN",{hour12:false})}` : "等待快照";
 }
 
 function trend(history, target) {
@@ -84,9 +101,14 @@ function render(data) {
 
 async function load() {
   try {
-    const response = await fetch(`data/scs2_progress.json?t=${Date.now()}`, {cache:"no-store"});
-    if (!response.ok) throw new Error(String(response.status));
-    render(await response.json());
+    const stamp = Date.now();
+    const [scsResponse, ukbResponse] = await Promise.all([
+      fetch(`data/scs2_progress.json?t=${stamp}`, {cache:"no-store"}),
+      fetch(`data/ukb_sax_progress.json?t=${stamp}`, {cache:"no-store"})
+    ]);
+    if (!scsResponse.ok) throw new Error(String(scsResponse.status));
+    render(await scsResponse.json());
+    if (ukbResponse.ok) renderUkb(await ukbResponse.json());
   } catch (error) {
     $("#state").textContent = "快照未连接";
   }
