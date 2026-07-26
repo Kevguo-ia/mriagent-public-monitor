@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v3",
-  "updated_at": "2026-07-26T16:51:14.016293+08:00",
+  "updated_at": "2026-07-26T16:52:14.278299+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "all_complete",
   "state": "complete",
@@ -19,16 +19,6 @@
     "sax_eta_hours": null
   },
   "history": [
-    {
-      "timestamp": 1785051582,
-      "four_ch": 15000,
-      "sax": 15000
-    },
-    {
-      "timestamp": 1785051612,
-      "four_ch": 15000,
-      "sax": 15000
-    },
     {
       "timestamp": 1785051642,
       "four_ch": 15000,
@@ -618,6 +608,16 @@
       "timestamp": 1785055874,
       "four_ch": 15000,
       "sax": 15000
+    },
+    {
+      "timestamp": 1785055904,
+      "four_ch": 15000,
+      "sax": 15000
+    },
+    {
+      "timestamp": 1785055934,
+      "four_ch": 15000,
+      "sax": 15000
     }
   ],
   "jobs": [
@@ -683,7 +683,7 @@
       "gpu": 0,
       "memory_mib": 903,
       "free_mib": 44586,
-      "utilization_pct": 1,
+      "utilization_pct": 10,
       "assignment": "待命",
       "assigned": false
     },
@@ -707,7 +707,7 @@
       "gpu": 3,
       "memory_mib": 12786,
       "free_mib": 32703,
-      "utilization_pct": 10,
+      "utilization_pct": 8,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -715,7 +715,7 @@
       "gpu": 4,
       "memory_mib": 1679,
       "free_mib": 43810,
-      "utilization_pct": 5,
+      "utilization_pct": 21,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -723,15 +723,15 @@
       "gpu": 5,
       "memory_mib": 20745,
       "free_mib": 24744,
-      "utilization_pct": 3,
+      "utilization_pct": 0,
       "assignment": "外部任务",
       "assigned": false
     },
     {
       "gpu": 6,
-      "memory_mib": 6082,
-      "free_mib": 39407,
-      "utilization_pct": 88,
+      "memory_mib": 17080,
+      "free_mib": 28409,
+      "utilization_pct": 100,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -739,7 +739,7 @@
       "gpu": 7,
       "memory_mib": 8278,
       "free_mib": 37211,
-      "utilization_pct": 93,
+      "utilization_pct": 3,
       "assignment": "外部任务",
       "assigned": false
     }
