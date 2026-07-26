@@ -1,6 +1,6 @@
 {
   "schema_version": "scs2_paired_progress_v2",
-  "updated_at": "2026-07-26T15:02:42.933425+08:00",
+  "updated_at": "2026-07-26T15:04:13.845466+08:00",
   "state": "running",
   "stage": "ukb_sax",
   "api_calls": 0,
@@ -43,8 +43,8 @@
     },
     {
       "gpu": 1,
-      "memory_used_mib": 23459,
-      "memory_free_mib": 22030,
+      "memory_used_mib": 23519,
+      "memory_free_mib": 21970,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
@@ -67,33 +67,33 @@
     },
     {
       "gpu": 4,
-      "memory_used_mib": 24772,
-      "memory_free_mib": 20717,
-      "utilization_pct": 100,
+      "memory_used_mib": 25134,
+      "memory_free_mib": 20355,
+      "utilization_pct": 6,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 5,
-      "memory_used_mib": 43870,
-      "memory_free_mib": 1619,
-      "utilization_pct": 100,
+      "memory_used_mib": 21410,
+      "memory_free_mib": 24079,
+      "utilization_pct": 40,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 6,
-      "memory_used_mib": 4947,
-      "memory_free_mib": 40542,
-      "utilization_pct": 0,
+      "memory_used_mib": 15945,
+      "memory_free_mib": 29544,
+      "utilization_pct": 100,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 7,
-      "memory_used_mib": 26913,
-      "memory_free_mib": 18575,
-      "utilization_pct": 0,
+      "memory_used_mib": 4191,
+      "memory_free_mib": 41297,
+      "utilization_pct": 3,
       "assignment": "external_or_idle",
       "assigned": false
     }
@@ -113,21 +113,6 @@
   },
   "next_stage": "ukb_sax",
   "history": [
-    {
-      "timestamp": 1785045760,
-      "four_ch": 3930,
-      "sax": 3445
-    },
-    {
-      "timestamp": 1785045790,
-      "four_ch": 3930,
-      "sax": 3445
-    },
-    {
-      "timestamp": 1785045820,
-      "four_ch": 3930,
-      "sax": 3445
-    },
     {
       "timestamp": 1785045850,
       "four_ch": 3930,
@@ -710,6 +695,21 @@
     },
     {
       "timestamp": 1785049363,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785049393,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785049424,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785049454,
       "four_ch": 3930,
       "sax": 3445
     }
