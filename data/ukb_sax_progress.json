@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v3",
-  "updated_at": "2026-07-26T19:06:27.740673+08:00",
+  "updated_at": "2026-07-26T19:07:28.080547+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "all_complete",
   "state": "complete",
@@ -19,16 +19,6 @@
     "sax_eta_hours": null
   },
   "history": [
-    {
-      "timestamp": 1785060398,
-      "four_ch": 15000,
-      "sax": 15000
-    },
-    {
-      "timestamp": 1785060428,
-      "four_ch": 15000,
-      "sax": 15000
-    },
     {
       "timestamp": 1785060458,
       "four_ch": 15000,
@@ -618,6 +608,16 @@
       "timestamp": 1785063988,
       "four_ch": 15000,
       "sax": 15000
+    },
+    {
+      "timestamp": 1785064018,
+      "four_ch": 15000,
+      "sax": 15000
+    },
+    {
+      "timestamp": 1785064048,
+      "four_ch": 15000,
+      "sax": 15000
     }
   ],
   "jobs": [
@@ -681,18 +681,18 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 8877,
+      "free_mib": 36612,
       "utilization_pct": 0,
-      "assignment": "待命",
+      "assignment": "外部任务",
       "assigned": false
     },
     {
       "gpu": 1,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 8863,
+      "free_mib": 36626,
       "utilization_pct": 0,
-      "assignment": "待命",
+      "assignment": "外部任务",
       "assigned": false
     },
     {
@@ -707,7 +707,7 @@
       "gpu": 3,
       "memory_mib": 12786,
       "free_mib": 32703,
-      "utilization_pct": 8,
+      "utilization_pct": 10,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -715,7 +715,7 @@
       "gpu": 4,
       "memory_mib": 1679,
       "free_mib": 43810,
-      "utilization_pct": 21,
+      "utilization_pct": 3,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -731,7 +731,7 @@
       "gpu": 6,
       "memory_mib": 6082,
       "free_mib": 39407,
-      "utilization_pct": 11,
+      "utilization_pct": 10,
       "assignment": "外部任务",
       "assigned": false
     },
