@@ -1,6 +1,6 @@
 {
   "schema_version": "scs2_paired_progress_v2",
-  "updated_at": "2026-07-26T14:44:02.182741+08:00",
+  "updated_at": "2026-07-26T14:45:02.708388+08:00",
   "state": "running",
   "stage": "ukb_sax",
   "api_calls": 0,
@@ -35,48 +35,48 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_used_mib": 4,
-      "memory_free_mib": 45485,
+      "memory_used_mib": 667,
+      "memory_free_mib": 44822,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 1,
-      "memory_used_mib": 4,
-      "memory_free_mib": 45485,
+      "memory_used_mib": 667,
+      "memory_free_mib": 44822,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 2,
-      "memory_used_mib": 4,
-      "memory_free_mib": 45485,
+      "memory_used_mib": 667,
+      "memory_free_mib": 44822,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 3,
-      "memory_used_mib": 4,
-      "memory_free_mib": 45485,
+      "memory_used_mib": 667,
+      "memory_free_mib": 44822,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 4,
-      "memory_used_mib": 1679,
-      "memory_free_mib": 43810,
+      "memory_used_mib": 2342,
+      "memory_free_mib": 43147,
       "utilization_pct": 3,
       "assignment": "external_or_idle",
       "assigned": false
     },
     {
       "gpu": 5,
-      "memory_used_mib": 4,
-      "memory_free_mib": 45485,
+      "memory_used_mib": 667,
+      "memory_free_mib": 44822,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
@@ -91,8 +91,8 @@
     },
     {
       "gpu": 7,
-      "memory_used_mib": 2299,
-      "memory_free_mib": 43190,
+      "memory_used_mib": 2962,
+      "memory_free_mib": 42527,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
@@ -113,16 +113,6 @@
   },
   "next_stage": "ukb_sax",
   "history": [
-    {
-      "timestamp": 1785044639,
-      "four_ch": 3930,
-      "sax": 3445
-    },
-    {
-      "timestamp": 1785044670,
-      "four_ch": 3930,
-      "sax": 3445
-    },
     {
       "timestamp": 1785044700,
       "four_ch": 3930,
@@ -710,6 +700,16 @@
     },
     {
       "timestamp": 1785048242,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785048272,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785048303,
       "four_ch": 3930,
       "sax": 3445
     }

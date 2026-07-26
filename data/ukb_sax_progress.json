@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v3",
-  "updated_at": "2026-07-26T14:43:52.599759+08:00",
+  "updated_at": "2026-07-26T14:45:23.104502+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "ukb_sax",
   "state": "running",
@@ -19,21 +19,6 @@
     "sax_eta_hours": null
   },
   "history": [
-    {
-      "timestamp": 1785044691,
-      "four_ch": 15000,
-      "sax": 14815
-    },
-    {
-      "timestamp": 1785044721,
-      "four_ch": 15000,
-      "sax": 14815
-    },
-    {
-      "timestamp": 1785044751,
-      "four_ch": 15000,
-      "sax": 14815
-    },
     {
       "timestamp": 1785044781,
       "four_ch": 15000,
@@ -618,6 +603,21 @@
       "timestamp": 1785048233,
       "four_ch": 15000,
       "sax": 14815
+    },
+    {
+      "timestamp": 1785048263,
+      "four_ch": 15000,
+      "sax": 14815
+    },
+    {
+      "timestamp": 1785048293,
+      "four_ch": 15000,
+      "sax": 14815
+    },
+    {
+      "timestamp": 1785048323,
+      "four_ch": 15000,
+      "sax": 14815
     }
   ],
   "jobs": [
@@ -681,48 +681,48 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 667,
+      "free_mib": 44822,
       "utilization_pct": 0,
       "assignment": "SAX shard 0",
       "assigned": true
     },
     {
       "gpu": 1,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 667,
+      "free_mib": 44822,
       "utilization_pct": 0,
       "assignment": "SAX shard 1",
       "assigned": true
     },
     {
       "gpu": 2,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 667,
+      "free_mib": 44822,
       "utilization_pct": 0,
       "assignment": "SAX shard 2",
       "assigned": true
     },
     {
       "gpu": 3,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 667,
+      "free_mib": 44822,
       "utilization_pct": 0,
       "assignment": "SAX shard 3",
       "assigned": true
     },
     {
       "gpu": 4,
-      "memory_mib": 1679,
-      "free_mib": 43810,
-      "utilization_pct": 3,
+      "memory_mib": 2342,
+      "free_mib": 43147,
+      "utilization_pct": 17,
       "assignment": "SAX shard 5",
       "assigned": true
     },
     {
       "gpu": 5,
-      "memory_mib": 4,
-      "free_mib": 45485,
+      "memory_mib": 667,
+      "free_mib": 44822,
       "utilization_pct": 0,
       "assignment": "SAX shard 4",
       "assigned": true
@@ -737,8 +737,8 @@
     },
     {
       "gpu": 7,
-      "memory_mib": 2299,
-      "free_mib": 43190,
+      "memory_mib": 2962,
+      "free_mib": 42527,
       "utilization_pct": 0,
       "assignment": "SAX shard 6",
       "assigned": true
