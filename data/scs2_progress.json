@@ -1,6 +1,6 @@
 {
   "schema_version": "scs2_paired_progress_v2",
-  "updated_at": "2026-07-26T13:01:35.483918+08:00",
+  "updated_at": "2026-07-26T13:03:06.340072+08:00",
   "state": "error",
   "stage": "ukb_sax",
   "api_calls": 0,
@@ -19,7 +19,7 @@
     "total": 485
   },
   "throughput": {
-    "sax_per_hour": 258.8,
+    "sax_per_hour": 247.8,
     "eta_hours": null
   },
   "errors": {
@@ -69,7 +69,7 @@
       "gpu": 4,
       "memory_used_mib": 1679,
       "memory_free_mib": 43810,
-      "utilization_pct": 3,
+      "utilization_pct": 22,
       "assignment": "external_or_idle",
       "assigned": false
     },
@@ -83,8 +83,8 @@
     },
     {
       "gpu": 6,
-      "memory_used_mib": 4947,
-      "memory_free_mib": 40542,
+      "memory_used_mib": 15945,
+      "memory_free_mib": 29544,
       "utilization_pct": 0,
       "assignment": "external_or_idle",
       "assigned": false
@@ -420,6 +420,21 @@
     },
     {
       "timestamp": 1785042095,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785042126,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785042156,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785042186,
       "four_ch": 3930,
       "sax": 3445
     }
