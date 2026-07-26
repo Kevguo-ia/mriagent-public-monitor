@@ -1,8 +1,8 @@
 {
   "schema_version": "scs2_paired_progress_v2",
-  "updated_at": "2026-07-26T12:52:00.261290+08:00",
-  "state": "error",
-  "stage": "scs2_audit",
+  "updated_at": "2026-07-26T12:53:00.882547+08:00",
+  "state": "waiting_for_gpus",
+  "stage": "ukb_sax",
   "api_calls": 0,
   "cohort": {
     "paired_candidates": 3930,
@@ -19,76 +19,19 @@
     "total": 485
   },
   "throughput": {
-    "sax_per_hour": 371.6,
+    "sax_per_hour": 354.4,
     "eta_hours": null
   },
   "errors": {
-    "active": 3,
+    "active": 0,
     "historical_isolated": 1
   },
   "workers": {
-    "active": 4,
+    "active": 0,
     "expected": 7,
     "automatic_retry": false
   },
-  "jobs": [
-    {
-      "sequence": "SAX",
-      "shard": 0,
-      "gpu": null,
-      "running": false,
-      "success": false,
-      "fatal": true
-    },
-    {
-      "sequence": "SAX",
-      "shard": 1,
-      "gpu": 1,
-      "running": true,
-      "success": false,
-      "fatal": false
-    },
-    {
-      "sequence": "SAX",
-      "shard": 2,
-      "gpu": null,
-      "running": false,
-      "success": false,
-      "fatal": true
-    },
-    {
-      "sequence": "SAX",
-      "shard": 3,
-      "gpu": null,
-      "running": false,
-      "success": false,
-      "fatal": true
-    },
-    {
-      "sequence": "SAX",
-      "shard": 4,
-      "gpu": 5,
-      "running": true,
-      "success": false,
-      "fatal": false
-    },
-    {
-      "sequence": "SAX",
-      "shard": 5,
-      "gpu": 4,
-      "running": true,
-      "success": false,
-      "fatal": false
-    },
-    {
-      "sequence": "SAX",
-      "shard": 6,
-      "gpu": 7,
-      "running": true,
-      "success": false,
-      "fatal": false
-    }
-  ],
+  "jobs": [],
   "gpus": [
     {
       "gpu": 0,
@@ -103,8 +46,8 @@
       "memory_used_mib": 4,
       "memory_free_mib": 45485,
       "utilization_pct": 0,
-      "assignment": "SAX-1",
-      "assigned": true
+      "assignment": "external_or_idle",
+      "assigned": false
     },
     {
       "gpu": 2,
@@ -126,17 +69,17 @@
       "gpu": 4,
       "memory_used_mib": 1679,
       "memory_free_mib": 43810,
-      "utilization_pct": 3,
-      "assignment": "SAX-5",
-      "assigned": true
+      "utilization_pct": 0,
+      "assignment": "external_or_idle",
+      "assigned": false
     },
     {
       "gpu": 5,
       "memory_used_mib": 4,
       "memory_free_mib": 45485,
       "utilization_pct": 0,
-      "assignment": "SAX-4",
-      "assigned": true
+      "assignment": "external_or_idle",
+      "assigned": false
     },
     {
       "gpu": 6,
@@ -151,8 +94,8 @@
       "memory_used_mib": 2299,
       "memory_free_mib": 43190,
       "utilization_pct": 0,
-      "assignment": "SAX-6",
-      "assigned": true
+      "assignment": "external_or_idle",
+      "assigned": false
     }
   ],
   "contracts": {
@@ -168,7 +111,7 @@
     "api_calls": 0,
     "old_results_overwritten": false
   },
-  "next_stage": "UKB 15000 remaining SAX",
+  "next_stage": "ukb_sax",
   "history": [
     {
       "timestamp": 1785040270,
@@ -382,6 +325,16 @@
     },
     {
       "timestamp": 1785041520,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785041551,
+      "four_ch": 3930,
+      "sax": 3445
+    },
+    {
+      "timestamp": 1785041581,
       "four_ch": 3930,
       "sax": 3445
     }
