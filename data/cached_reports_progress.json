@@ -2,7 +2,7 @@
   "schema": "cached_cohort_v4_progress_v1",
   "stage": "full_running_96",
   "automatic_retry": false,
-  "active_workers": 7,
+  "active_workers": 6,
   "cohorts": {
     "SCS_2": {
       "total": 3445,
@@ -16,14 +16,14 @@
     },
     "UKB_15000": {
       "total": 15000,
-      "completed": 14966,
-      "ok": 9311,
+      "completed": 14972,
+      "ok": 9317,
       "errors": 5655,
-      "api_calls": 18622,
+      "api_calls": 18634,
       "released": 0,
-      "withheld": 9311,
-      "active_workers": 7
+      "withheld": 9317,
+      "active_workers": 6
     }
   },
-  "updated_at": "2026-07-26T23:15:20.589058+00:00"
+  "updated_at": "2026-07-26T23:17:20.730475+00:00"
 }
