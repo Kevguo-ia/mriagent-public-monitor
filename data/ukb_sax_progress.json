@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v3",
-  "updated_at": "2026-07-26T16:27:06.280798+08:00",
+  "updated_at": "2026-07-26T16:30:07.247021+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "all_complete",
   "state": "complete",
@@ -19,36 +19,6 @@
     "sax_eta_hours": null
   },
   "history": [
-    {
-      "timestamp": 1785050134,
-      "four_ch": 15000,
-      "sax": 14940
-    },
-    {
-      "timestamp": 1785050164,
-      "four_ch": 15000,
-      "sax": 14944
-    },
-    {
-      "timestamp": 1785050194,
-      "four_ch": 15000,
-      "sax": 14946
-    },
-    {
-      "timestamp": 1785050224,
-      "four_ch": 15000,
-      "sax": 14950
-    },
-    {
-      "timestamp": 1785050255,
-      "four_ch": 15000,
-      "sax": 14951
-    },
-    {
-      "timestamp": 1785050285,
-      "four_ch": 15000,
-      "sax": 14956
-    },
     {
       "timestamp": 1785050315,
       "four_ch": 15000,
@@ -618,6 +588,36 @@
       "timestamp": 1785054426,
       "four_ch": 15000,
       "sax": 15000
+    },
+    {
+      "timestamp": 1785054456,
+      "four_ch": 15000,
+      "sax": 15000
+    },
+    {
+      "timestamp": 1785054487,
+      "four_ch": 15000,
+      "sax": 15000
+    },
+    {
+      "timestamp": 1785054517,
+      "four_ch": 15000,
+      "sax": 15000
+    },
+    {
+      "timestamp": 1785054547,
+      "four_ch": 15000,
+      "sax": 15000
+    },
+    {
+      "timestamp": 1785054577,
+      "four_ch": 15000,
+      "sax": 15000
+    },
+    {
+      "timestamp": 1785054607,
+      "four_ch": 15000,
+      "sax": 15000
     }
   ],
   "jobs": [
@@ -683,7 +683,7 @@
       "gpu": 0,
       "memory_mib": 903,
       "free_mib": 44586,
-      "utilization_pct": 9,
+      "utilization_pct": 10,
       "assignment": "待命",
       "assigned": false
     },
@@ -715,22 +715,22 @@
       "gpu": 4,
       "memory_mib": 1679,
       "free_mib": 43810,
-      "utilization_pct": 6,
+      "utilization_pct": 23,
       "assignment": "外部任务",
       "assigned": false
     },
     {
       "gpu": 5,
-      "memory_mib": 20745,
-      "free_mib": 24744,
+      "memory_mib": 1107,
+      "free_mib": 44382,
       "utilization_pct": 0,
       "assignment": "外部任务",
       "assigned": false
     },
     {
       "gpu": 6,
-      "memory_mib": 18124,
-      "free_mib": 27365,
+      "memory_mib": 17080,
+      "free_mib": 28409,
       "utilization_pct": 100,
       "assignment": "外部任务",
       "assigned": false
@@ -739,7 +739,7 @@
       "gpu": 7,
       "memory_mib": 3498,
       "free_mib": 41991,
-      "utilization_pct": 0,
+      "utilization_pct": 1,
       "assignment": "外部任务",
       "assigned": false
     }
