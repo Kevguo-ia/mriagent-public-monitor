@@ -1,6 +1,6 @@
 {
   "schema_version": "scs2_paired_progress_v2",
-  "updated_at": "2026-07-26T12:45:26.752829+08:00",
+  "updated_at": "2026-07-26T12:46:27.275311+08:00",
   "state": "running",
   "stage": "scs2_sax",
   "api_calls": 0,
@@ -9,8 +9,8 @@
     "four_ch_completed": 3930,
     "sax_exact_geometry_eligible": 3446,
     "sax_final_eligible": 3445,
-    "sax_completed": 3415,
-    "paired_completed": 3415
+    "sax_completed": 3422,
+    "paired_completed": 3422
   },
   "exclusions": {
     "coarse_slice_phase_gate": 316,
@@ -20,7 +20,7 @@
   },
   "throughput": {
     "sax_per_hour": 416.2,
-    "eta_hours": 0.07
+    "eta_hours": 0.06
   },
   "errors": {
     "active": 0,
@@ -116,9 +116,9 @@
     },
     {
       "gpu": 3,
-      "memory_used_mib": 5377,
-      "memory_free_mib": 40112,
-      "utilization_pct": 77,
+      "memory_used_mib": 23179,
+      "memory_free_mib": 22310,
+      "utilization_pct": 0,
       "assignment": "SAX-3",
       "assigned": true
     },
@@ -132,9 +132,9 @@
     },
     {
       "gpu": 5,
-      "memory_used_mib": 8257,
-      "memory_free_mib": 37232,
-      "utilization_pct": 0,
+      "memory_used_mib": 18737,
+      "memory_free_mib": 26752,
+      "utilization_pct": 100,
       "assignment": "SAX-4",
       "assigned": true
     },
@@ -319,6 +319,16 @@
       "timestamp": 1785041127,
       "four_ch": 3930,
       "sax": 3415
+    },
+    {
+      "timestamp": 1785041157,
+      "four_ch": 3930,
+      "sax": 3419
+    },
+    {
+      "timestamp": 1785041187,
+      "four_ch": 3930,
+      "sax": 3422
     }
   ]
 }
