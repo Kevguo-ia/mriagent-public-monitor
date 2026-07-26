@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v3",
-  "updated_at": "2026-07-26T15:36:11.067113+08:00",
+  "updated_at": "2026-07-26T15:37:11.345983+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "ukb_audit",
   "state": "running",
@@ -19,16 +19,6 @@
     "sax_eta_hours": null
   },
   "history": [
-    {
-      "timestamp": 1785047802,
-      "four_ch": 15000,
-      "sax": 14815
-    },
-    {
-      "timestamp": 1785047832,
-      "four_ch": 15000,
-      "sax": 14815
-    },
     {
       "timestamp": 1785047862,
       "four_ch": 15000,
@@ -618,6 +608,16 @@
       "timestamp": 1785051371,
       "four_ch": 15000,
       "sax": 15000
+    },
+    {
+      "timestamp": 1785051401,
+      "four_ch": 15000,
+      "sax": 15000
+    },
+    {
+      "timestamp": 1785051431,
+      "four_ch": 15000,
+      "sax": 15000
     }
   ],
   "jobs": [
@@ -739,7 +739,7 @@
       "gpu": 7,
       "memory_mib": 8278,
       "free_mib": 37211,
-      "utilization_pct": 0,
+      "utilization_pct": 100,
       "assignment": "外部任务",
       "assigned": false
     }
