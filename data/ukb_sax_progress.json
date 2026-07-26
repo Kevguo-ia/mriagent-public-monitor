@@ -1,15 +1,15 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v3",
-  "updated_at": "2026-07-26T15:35:10.715608+08:00",
+  "updated_at": "2026-07-26T15:36:11.067113+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
-  "stage": "ukb_sax",
+  "stage": "ukb_audit",
   "state": "running",
   "eligible": 15000,
   "queue_qualified": 16206,
   "reserve": 1000,
   "four_ch_completed": 15000,
-  "sax_completed": 14999,
-  "sax_masks_completed": 749950,
+  "sax_completed": 15000,
+  "sax_masks_completed": 750000,
   "errors": 0,
   "error_types": {},
   "rates": {
@@ -19,16 +19,6 @@
     "sax_eta_hours": null
   },
   "history": [
-    {
-      "timestamp": 1785047741,
-      "four_ch": 15000,
-      "sax": 14815
-    },
-    {
-      "timestamp": 1785047771,
-      "four_ch": 15000,
-      "sax": 14815
-    },
     {
       "timestamp": 1785047802,
       "four_ch": 15000,
@@ -618,6 +608,16 @@
       "timestamp": 1785051311,
       "four_ch": 15000,
       "sax": 14999
+    },
+    {
+      "timestamp": 1785051341,
+      "four_ch": 15000,
+      "sax": 15000
+    },
+    {
+      "timestamp": 1785051371,
+      "four_ch": 15000,
+      "sax": 15000
     }
   ],
   "jobs": [
@@ -664,10 +664,10 @@
     {
       "sequence": "SAX",
       "shard": 5,
-      "completed": 25,
+      "completed": 26,
       "selected": 26,
-      "state": "running",
-      "gpu": 4
+      "state": "complete",
+      "gpu": null
     },
     {
       "sequence": "SAX",
@@ -713,11 +713,11 @@
     },
     {
       "gpu": 4,
-      "memory_mib": 25194,
-      "free_mib": 20295,
-      "utilization_pct": 3,
-      "assignment": "SAX shard 5",
-      "assigned": true
+      "memory_mib": 1679,
+      "free_mib": 43810,
+      "utilization_pct": 11,
+      "assignment": "外部任务",
+      "assigned": false
     },
     {
       "gpu": 5,
@@ -745,7 +745,7 @@
     }
   ],
   "workers": {
-    "active": 1,
+    "active": 0,
     "waiting": 0,
     "supervisor_alive": true,
     "api_calls": 0
