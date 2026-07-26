@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v3",
-  "updated_at": "2026-07-26T15:00:28.358821+08:00",
+  "updated_at": "2026-07-26T15:01:58.942267+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "ukb_sax",
   "state": "running",
@@ -8,8 +8,8 @@
   "queue_qualified": 16206,
   "reserve": 1000,
   "four_ch_completed": 15000,
-  "sax_completed": 14866,
-  "sax_masks_completed": 743300,
+  "sax_completed": 14874,
+  "sax_masks_completed": 743700,
   "errors": 0,
   "error_types": {},
   "rates": {
@@ -19,21 +19,6 @@
     "sax_eta_hours": null
   },
   "history": [
-    {
-      "timestamp": 1785045686,
-      "four_ch": 15000,
-      "sax": 14815
-    },
-    {
-      "timestamp": 1785045716,
-      "four_ch": 15000,
-      "sax": 14815
-    },
-    {
-      "timestamp": 1785045746,
-      "four_ch": 15000,
-      "sax": 14815
-    },
     {
       "timestamp": 1785045776,
       "four_ch": 15000,
@@ -618,13 +603,28 @@
       "timestamp": 1785049228,
       "four_ch": 15000,
       "sax": 14866
+    },
+    {
+      "timestamp": 1785049259,
+      "four_ch": 15000,
+      "sax": 14868
+    },
+    {
+      "timestamp": 1785049289,
+      "four_ch": 15000,
+      "sax": 14871
+    },
+    {
+      "timestamp": 1785049319,
+      "four_ch": 15000,
+      "sax": 14874
     }
   ],
   "jobs": [
     {
       "sequence": "SAX",
       "shard": 0,
-      "completed": 5,
+      "completed": 6,
       "selected": 27,
       "state": "running",
       "gpu": 0
@@ -632,7 +632,7 @@
     {
       "sequence": "SAX",
       "shard": 1,
-      "completed": 7,
+      "completed": 8,
       "selected": 27,
       "state": "running",
       "gpu": 1
@@ -640,7 +640,7 @@
     {
       "sequence": "SAX",
       "shard": 2,
-      "completed": 9,
+      "completed": 11,
       "selected": 27,
       "state": "running",
       "gpu": 2
@@ -648,7 +648,7 @@
     {
       "sequence": "SAX",
       "shard": 3,
-      "completed": 8,
+      "completed": 9,
       "selected": 26,
       "state": "running",
       "gpu": 3
@@ -656,7 +656,7 @@
     {
       "sequence": "SAX",
       "shard": 4,
-      "completed": 11,
+      "completed": 12,
       "selected": 26,
       "state": "running",
       "gpu": 5
@@ -672,7 +672,7 @@
     {
       "sequence": "SAX",
       "shard": 6,
-      "completed": 6,
+      "completed": 8,
       "selected": 26,
       "state": "running",
       "gpu": 7
@@ -681,32 +681,32 @@
   "gpus": [
     {
       "gpu": 0,
-      "memory_mib": 24060,
-      "free_mib": 21429,
-      "utilization_pct": 10,
+      "memory_mib": 24220,
+      "free_mib": 21269,
+      "utilization_pct": 100,
       "assignment": "SAX shard 0",
       "assigned": true
     },
     {
       "gpu": 1,
-      "memory_mib": 23377,
-      "free_mib": 22112,
+      "memory_mib": 23457,
+      "free_mib": 22032,
       "utilization_pct": 100,
       "assignment": "SAX shard 1",
       "assigned": true
     },
     {
       "gpu": 2,
-      "memory_mib": 23237,
-      "free_mib": 22252,
+      "memory_mib": 677,
+      "free_mib": 44812,
       "utilization_pct": 0,
       "assignment": "SAX shard 2",
       "assigned": true
     },
     {
       "gpu": 3,
-      "memory_mib": 23419,
-      "free_mib": 22070,
+      "memory_mib": 23459,
+      "free_mib": 22030,
       "utilization_pct": 0,
       "assignment": "SAX shard 3",
       "assigned": true
@@ -715,14 +715,14 @@
       "gpu": 4,
       "memory_mib": 2372,
       "free_mib": 43117,
-      "utilization_pct": 19,
+      "utilization_pct": 11,
       "assignment": "SAX shard 5",
       "assigned": true
     },
     {
       "gpu": 5,
-      "memory_mib": 44070,
-      "free_mib": 1419,
+      "memory_mib": 21430,
+      "free_mib": 24059,
       "utilization_pct": 0,
       "assignment": "SAX shard 4",
       "assigned": true
@@ -737,9 +737,9 @@
     },
     {
       "gpu": 7,
-      "memory_mib": 26993,
-      "free_mib": 18495,
-      "utilization_pct": 1,
+      "memory_mib": 26913,
+      "free_mib": 18575,
+      "utilization_pct": 100,
       "assignment": "SAX shard 6",
       "assigned": true
     }
