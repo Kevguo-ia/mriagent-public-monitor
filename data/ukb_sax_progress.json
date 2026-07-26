@@ -1,9 +1,9 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v3",
-  "updated_at": "2026-07-26T15:43:43.436912+08:00",
+  "updated_at": "2026-07-26T15:44:43.699099+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
-  "stage": "ukb_audit",
-  "state": "running",
+  "stage": "all_complete",
+  "state": "complete",
   "eligible": 15000,
   "queue_qualified": 16206,
   "reserve": 1000,
@@ -19,16 +19,6 @@
     "sax_eta_hours": null
   },
   "history": [
-    {
-      "timestamp": 1785048233,
-      "four_ch": 15000,
-      "sax": 14815
-    },
-    {
-      "timestamp": 1785048263,
-      "four_ch": 15000,
-      "sax": 14815
-    },
     {
       "timestamp": 1785048293,
       "four_ch": 15000,
@@ -618,6 +608,16 @@
       "timestamp": 1785051823,
       "four_ch": 15000,
       "sax": 15000
+    },
+    {
+      "timestamp": 1785051854,
+      "four_ch": 15000,
+      "sax": 15000
+    },
+    {
+      "timestamp": 1785051884,
+      "four_ch": 15000,
+      "sax": 15000
     }
   ],
   "jobs": [
@@ -707,7 +707,7 @@
       "gpu": 3,
       "memory_mib": 11855,
       "free_mib": 33634,
-      "utilization_pct": 100,
+      "utilization_pct": 0,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -715,7 +715,7 @@
       "gpu": 4,
       "memory_mib": 1679,
       "free_mib": 43810,
-      "utilization_pct": 3,
+      "utilization_pct": 17,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -747,7 +747,7 @@
   "workers": {
     "active": 0,
     "waiting": 0,
-    "supervisor_alive": true,
+    "supervisor_alive": false,
     "api_calls": 0
   },
   "models": {
@@ -765,6 +765,6 @@
     "queue_materialized": "15000/15000 passed",
     "smoke_four_ch": "8/8 passed",
     "smoke_sax": "8/8 passed",
-    "strict_audit": "pending"
+    "strict_audit": "passed"
   }
 }
