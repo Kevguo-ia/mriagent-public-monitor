@@ -1,6 +1,6 @@
 {
   "schema_version": "ukb_lvgt_15000_monitor_safe_v3",
-  "updated_at": "2026-07-26T17:27:55.664510+08:00",
+  "updated_at": "2026-07-26T17:28:55.940557+08:00",
   "job": "ukb_lvgt_15000_20260723_v2",
   "stage": "all_complete",
   "state": "complete",
@@ -19,16 +19,6 @@
     "sax_eta_hours": null
   },
   "history": [
-    {
-      "timestamp": 1785054487,
-      "four_ch": 15000,
-      "sax": 15000
-    },
-    {
-      "timestamp": 1785054517,
-      "four_ch": 15000,
-      "sax": 15000
-    },
     {
       "timestamp": 1785054547,
       "four_ch": 15000,
@@ -618,6 +608,16 @@
       "timestamp": 1785058076,
       "four_ch": 15000,
       "sax": 15000
+    },
+    {
+      "timestamp": 1785058106,
+      "four_ch": 15000,
+      "sax": 15000
+    },
+    {
+      "timestamp": 1785058136,
+      "four_ch": 15000,
+      "sax": 15000
     }
   ],
   "jobs": [
@@ -707,7 +707,7 @@
       "gpu": 3,
       "memory_mib": 12786,
       "free_mib": 32703,
-      "utilization_pct": 10,
+      "utilization_pct": 34,
       "assignment": "外部任务",
       "assigned": false
     },
@@ -729,17 +729,17 @@
     },
     {
       "gpu": 6,
-      "memory_mib": 18124,
-      "free_mib": 27365,
-      "utilization_pct": 100,
+      "memory_mib": 6082,
+      "free_mib": 39407,
+      "utilization_pct": 10,
       "assignment": "外部任务",
       "assigned": false
     },
     {
       "gpu": 7,
-      "memory_mib": 3498,
-      "free_mib": 41991,
-      "utilization_pct": 2,
+      "memory_mib": 8278,
+      "free_mib": 37211,
+      "utilization_pct": 95,
       "assignment": "外部任务",
       "assigned": false
     }
