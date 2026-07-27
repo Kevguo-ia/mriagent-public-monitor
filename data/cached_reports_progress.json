@@ -2,28 +2,28 @@
   "schema": "cached_cohort_v4_progress_v1",
   "stage": "official_recovery_running_128",
   "automatic_retry": false,
-  "active_workers": 96,
+  "active_workers": 75,
   "cohorts": {
     "SCS_2": {
       "total": 3445,
-      "completed": 3439,
-      "ok": 3436,
-      "errors": 9,
-      "api_calls": 6872,
+      "completed": 3441,
+      "ok": 3438,
+      "errors": 7,
+      "api_calls": 6876,
       "released": 0,
-      "withheld": 3436,
-      "active_workers": 4
+      "withheld": 3438,
+      "active_workers": 3
     },
     "UKB_15000": {
       "total": 15000,
-      "completed": 14845,
-      "ok": 14788,
-      "errors": 212,
-      "api_calls": 29576,
+      "completed": 14892,
+      "ok": 14835,
+      "errors": 165,
+      "api_calls": 29670,
       "released": 0,
-      "withheld": 14788,
-      "active_workers": 92
+      "withheld": 14835,
+      "active_workers": 72
     }
   },
-  "updated_at": "2026-07-27T05:16:20.144610+00:00"
+  "updated_at": "2026-07-27T05:18:20.267839+00:00"
 }
